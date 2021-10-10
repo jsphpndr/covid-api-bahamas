@@ -71,52 +71,74 @@ fields:
   hidden: true
 - type: field_group
   name: sex
-  label: sex
+  label: Sex
   fields:
   - type: text
     name: m
-    label: m
+    label: Male
   - type: text
     name: f
-    label: f
+    label: Female
   hidden: true
+  description: 'Listing of sexes: Male, Female.'
 - type: field_group
   name: report
   label: report
   fields:
   - type: text
     name: number
-    label: number
+    label: Report Number
+    description: This is the identification number of the current report.
+    config:
+      required: true
   - type: datetime
     name: date
-    label: date
+    label: Report Date
+    description: Enter the date of the current report entry.
+    config:
+      date_format: YYYY-DD-MM
+      required: true
   - type: datetime
-    name: datePublished
-    label: datePublished
+    name: entry_date
+    hidden: true
+    label: Entry Date
+    description: This field is the date of entry for the current report.
+    config:
+      display_utc: true
+    default: now
   - type: field_group
     name: cases
-    label: cases
+    label: Cases
     fields:
     - type: field_group_list
-      name: byIsland
-      label: byIsland
+      name: by_island
+      label: Cases by Island
       fields:
       - type: field_group
         name: island
-        label: island
+        label: Island Breakdown
         fields:
         - type: text
           name: name
-          label: name
+          label: Island Name
         - type: number
-          name: toDate
-          label: toDate
+          name: to_date
+          label: Cases To Date
+          description: Current report's island aggregate.
         - type: number
-          name: new
-          label: new
+          name: new_cases
+          label: New Cases
+          config:
+            required: true
+          description: New cases for island from current report.
+        description: Current report island breakdown of COVID-19 cases.
+      description: List case aggregates and new cases by island.
     - type: number
-      name: toDateTotal
-      label: toDateTotal
+      name: to_date_total
+      label: Aggregate Total
+      description: Current report's aggregate case total.
+      config:
+        required: true
     - type: number
       name: newTotal
       label: newTotal
@@ -222,6 +244,7 @@ fields:
       - type: number
         name: underInvestigation
         label: underInvestigation
+    description: Case details for current report entry.
   - type: boolean
     name: ifReported
     label: ifReported
