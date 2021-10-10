@@ -67,6 +67,7 @@ fields:
   - type: text
     name: facility
     label: facility
+  hidden: true
 - type: field_group
   name: sex
   label: sex
@@ -77,6 +78,7 @@ fields:
   - type: text
     name: f
     label: f
+  hidden: true
 - type: field_group
   name: report
   label: report
