@@ -1,0 +1,261 @@
+---
+label: reports
+hide_body: true
+fields:
+- type: field_group
+  name: islands
+  label: islands
+  fields:
+  - type: text
+    name: np
+    label: np
+  - type: text
+    name: gb
+    label: gb
+  - type: text
+    name: ab
+    label: ab
+  - type: text
+    name: bim
+    label: bim
+  - type: text
+    name: el
+    label: el
+  - type: text
+    name: bi
+    label: bi
+  - type: text
+    name: ex
+    label: ex
+  - type: text
+    name: in
+    label: in
+  - type: text
+    name: an
+    label: an
+  - type: text
+    name: li
+    label: li
+  - type: text
+    name: ci
+    label: ci
+  - type: text
+    name: ac
+    label: ac
+  - type: text
+    name: cr
+    label: cr
+  - type: text
+    name: ma
+    label: ma
+  - type: text
+    name: ri
+    label: ri
+  - type: text
+    name: ss
+    label: ss
+  - type: text
+    name: lp
+    label: lp
+- type: field_group_list
+  name: facilities
+  label: facilities
+  fields:
+  - type: text
+    name: facility
+    label: facility
+- type: field_group
+  name: sex
+  label: sex
+  fields:
+  - type: text
+    name: m
+    label: m
+  - type: text
+    name: f
+    label: f
+- type: field_group
+  name: report
+  label: report
+  fields:
+  - type: text
+    name: number
+    label: number
+  - type: datetime
+    name: date
+    label: date
+  - type: datetime
+    name: datePublished
+    label: datePublished
+  - type: field_group
+    name: cases
+    label: cases
+    fields:
+    - type: field_group_list
+      name: byIsland
+      label: byIsland
+      fields:
+      - type: field_group
+        name: island
+        label: island
+        fields:
+        - type: text
+          name: name
+          label: name
+        - type: number
+          name: toDate
+          label: toDate
+        - type: number
+          name: new
+          label: new
+    - type: number
+      name: toDateTotal
+      label: toDateTotal
+    - type: number
+      name: newTotal
+      label: newTotal
+    - type: boolean
+      name: ifHistory
+      label: ifHistory
+    - type: field_group_list
+      name: historyOfTravel
+      label: historyOfTravel
+      fields:
+      - type: field_group
+        name: island
+        label: island
+        fields:
+        - type: text
+          name: name
+          label: name
+        - type: text
+          name: new
+          label: new
+    - type: number
+      name: totalHistoryOfTravel
+      label: totalHistoryOfTravel
+    - type: field_group_list
+      name: bySex
+      label: bySex
+      fields:
+      - type: field_group
+        name: group
+        label: group
+        fields:
+        - type: text
+          name: sex
+          label: sex
+        - type: number
+          name: new
+          label: new
+    - type: field_group
+      name: inHospital
+      label: inHospital
+      fields:
+      - type: field_group_list
+        name: byFacility
+        label: byFacility
+        fields:
+        - type: field_group
+          name: facility
+          label: facility
+          fields:
+          - type: text
+            name: island
+            label: island
+          - type: text
+            name: name
+            label: name
+          - type: number
+            name: total
+            label: total
+          - type: number
+            name: nonICU
+            label: nonICU
+          - type: number
+            name: icu
+            label: icu
+      - type: field_group
+        name: totals
+        label: totals
+        fields:
+        - type: number
+          name: total
+          label: total
+        - type: number
+          name: nonICU
+          label: nonICU
+        - type: number
+          name: icu
+          label: icu
+    - type: number
+      name: active
+      label: active
+    - type: field_group
+      name: recovered
+      label: recovered
+      fields:
+      - type: number
+        name: toDate
+        label: toDate
+      - type: number
+        name: new
+        label: new
+    - type: field_group
+      name: fatalities
+      label: fatalities
+      fields:
+      - type: number
+        name: toDate
+        label: toDate
+      - type: number
+        name: unrelatedToDate
+        label: unrelatedToDate
+      - type: number
+        name: underInvestigation
+        label: underInvestigation
+  - type: boolean
+    name: ifReported
+    label: ifReported
+  - type: field_group_list
+    name: reportedFatalities
+    label: reportedFatalities
+    fields:
+    - type: field_group
+      name: fatality
+      label: fatality
+      fields:
+      - type: number
+        name: age
+        label: age
+      - type: text
+        name: sex
+        label: sex
+      - type: text
+        name: island
+        label: island
+      - type: text
+        name: date
+        label: date
+  - type: field_group
+    name: tests
+    label: tests
+    fields:
+    - type: number
+      name: toDate
+      label: toDate
+    - type: number
+      name: completed
+      label: completed
+    - type: number
+      name: positive
+      label: positive
+    - type: number
+      name: negative
+      label: negative
+    - type: number
+      name: repeated
+      label: repeated
+    - type: number
+      name: inconclusive
+      label: inconclusive
