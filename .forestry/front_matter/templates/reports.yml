@@ -9,9 +9,11 @@ fields:
   - type: text
     name: np
     label: np
+    hidden: true
   - type: text
     name: gb
     label: gb
+    hidden: true
   - type: text
     name: ab
     label: ab
