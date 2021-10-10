@@ -2,6 +2,12 @@
 label: reports
 hide_body: true
 fields:
+- name: report_title
+  type: text
+  config:
+    required: false
+  default: COVID-19 Update {{ .Title }}
+  label: Report Title
 - type: field_group
   name: report
   label: report
