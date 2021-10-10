@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://covidapibs.com/reports/555/index.json</loc>
+  </url>
+  
+  <url>
+    <loc>https://covidapibs.com/reports/556/index.json</loc>
+  </url>
+  
+  <url>
+    <loc>https://covidapibs.com/reports/557/index.json</loc>
+  </url>
+  
+  <url>
+    <loc>https://covidapibs.com/reports/558/index.json</loc>
+  </url>
+  
+  <url>
+    <loc>https://covidapibs.com/reports/559/index.json</loc>
+  </url>
+  
+  <url>
+    <loc>https://covidapibs.com/reports/560/index.json</loc>
+  </url>
+  
+  <url>
+    <loc>https://covidapibs.com/updates/20212808/index.json</loc>
+  </url>
+  
+  <url>
+    <loc>https://covidapibs.com/</loc>
+  </url>
+  
+  <url>
+    <loc>https://covidapibs.com/reports/index.json</loc>
+  </url>
+  
+  <url>
+    <loc>https://covidapibs.com/updates/index.json</loc>
+  </url>
+  
+</urlset>

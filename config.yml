@@ -1,0 +1,153 @@
+baseURL: 'https://covidapibs.com/'
+languageCode: en-uk
+title: COVID-19 API Bahamas
+
+upload_dir: static/uploads
+public_path: /uploads
+
+disableKinds:
+  - taxonomy
+  - taxonomyTerm
+  - categories
+
+outputs:
+  page:
+    - json
+  section:
+    - json
+  home:
+    - HTML
+
+islands: &islands
+  np: &np New Providence
+  gb: &gb Grand Bahama
+  ab: &ab Abaco
+  ac: &ac Acklins
+  an: &an Andros
+  bi: &bi Berry Islands
+  bim: &bim Bimini & Cat Cay
+  ci: &ci Cat Island
+  cr: &cr Crooked Island
+  el: &el Eleuthera
+  ex: &ex Exuma
+  in: &in Inagua
+  li: &li Long Island
+  ma: &ma Mayaguana
+  ri: &ri Ragged Island
+  ss: &ss San Salvador
+  lp: &lp Location Pending
+
+
+fields:
+  
+  - type: boolean
+    name: ifHistory
+    label: Were there any cases with a history of travel?
+    default: false
+    hidden: false
+  
+
+  - type: field_group_list
+    name: historyOfTravel
+    label: History of Travel
+    description: Cases with a history of travel.
+    island:
+
+      fields:
+
+        - type: list
+          name: name
+          label: Island
+          description: Island of residence for those cases with a history of travel.
+          default: *np
+          config:
+            use_select: true
+            min: 1
+            max: 1
+            source:
+              type: simple
+            options: *islands
+          
+        - type: text
+          name: new
+          label: How many cases?
+          description: This field is an integer value for the count of cases with a history of travel.
+
+  - type: boolean
+    name: ifReported
+    label: Were there any cases with a history of travel?
+    default: true
+    hidden: false
+
+  - type: field_group_list
+    name: reportedFatalities
+    label: Reported Fatalities
+    description: Listing of all deaths reported on report date.
+    
+    fields:
+
+      - type: list
+        name: age
+        label: Age
+        description: Age of deceased.
+        required: true
+        config:
+          min: 0
+          max: 99
+          step: 1
+
+      - type: list
+        name: sex
+        label: Sex
+        description: Sex of deceased.
+        required: true
+        config:
+          use_select: true
+          min: 1
+          max: 1
+          source:
+            type: simple
+          options:
+            - Male
+            - Female
+
+      - type: list
+        name: island
+        label: Island
+        description: Deceased's former island of residence.
+        required: true
+        default: *np
+        config:
+          use_select: true
+          min: 1
+          max: 1
+          source:
+            type: simple
+          options:
+            - *np
+            - *gb
+            - *ab
+            - *ac
+            - *an
+            - *bi
+            - *bim
+            - *ci
+            - *cr
+            - *el
+            - *ex
+            - *in
+            - *li
+            - *ma
+            - *ri
+            - *ss
+            - *lp
+
+      - type: datetime
+        name: date
+        label: Date
+        description: Date of death.
+        required: true
+        config:
+          date_format: DD/MM/YYYY
+          display_utc: false
+          export_format: YYYY-DD-MM

@@ -1,0 +1,36 @@
+## Report No:
+## Report Date:
+## Base should be updated everytime date is before
+
+cases:
+
+  total:
+    np: 0
+    gb: 0
+    ab: 0
+    el: 0
+    ex: 0
+    bi: 0
+    an: 0
+    ci: 0
+    li: 0
+    in: 0
+    ss: 0
+    cr: 0
+    ac: 0
+    ma: 0
+    ri: 0
+    lp: 0
+
+  # Need the total recovered on base date.
+  recovered:
+
+  # Need the active cases on base date.
+  active:
+
+  # Need the total deaths on base date.
+  fatalities:
+
+  # Need the total tests on base date.
+  tests:
+  
