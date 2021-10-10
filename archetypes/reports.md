@@ -31,12 +31,13 @@ sex:
     m: &m Male
     f: &f Female
 
+title: {{ replace .Name "-" " " | title }}
+date: {{ .Date }}
+
 report:
   
-  number: "{{ replace .Name "-" " " | title }}"
+  number: 
   date: {{ (now.AddDate 0 0 -1).Format "2006-01-02" }}
-  datePublished: {{ .Date }}
-  #dateModified:
 
   cases:
 
@@ -114,12 +115,40 @@ report:
     newTotal: 
     
     ## Default is set to false.
-    ifHistory: false
+    fields:
     
-    historyOfTravel:
-      - island:
-          name: 
-          new: 
+    - type: boolean
+        name: ifHistory
+        label: Were there any cases with a history of travel?
+        default: false
+        hidden: false
+    
+
+    - type: field_group_list
+        name: historyOfTravel
+        label: History of Travel
+        description: Cases with a history of travel.
+        island:
+
+        fields:
+
+            - type: list
+            name: name
+            label: Island
+            description: Island of residence for those cases with a history of travel.
+            default: *np
+            config:
+                use_select: true
+                min: 1
+                max: 1
+                source:
+                type: simple
+                options: *islands
+            
+            - type: text
+            name: new
+            label: How many cases?
+            description: This field is an integer value for the count of cases with a history of travel.
 
     totalHistoryOfTravel: 
 
