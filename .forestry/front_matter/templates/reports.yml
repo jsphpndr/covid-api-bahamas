@@ -140,27 +140,41 @@ fields:
       config:
         required: true
     - type: number
-      name: newTotal
-      label: newTotal
+      name: new_total
+      label: Total New Cases
+      description: Total of new cases for the country.
+      config:
+        required: true
     - type: boolean
       name: ifHistory
       label: Are there any cases with a history of travel?
       description: Toggle if there are any cases reported with a history of travel.
       default: false
     - type: field_group_list
-      name: historyOfTravel
-      label: historyOfTravel
+      name: history_of_travel
       fields:
       - type: field_group
         name: island
         label: island
         fields:
-        - type: text
-          name: name
-          label: name
+        - name: name
+          type: select
+          default: []
+          config:
+            required: true
+            options: []
+            source:
+              type: pages
+              section: ''
+              file: 
+              path: 
+          label: Island Name
+          description: Select island name.
         - type: text
           name: new
           label: new
+      label: Cases with a History of Travel
+      description: List cases with history of travel.
     - type: number
       name: totalHistoryOfTravel
       label: totalHistoryOfTravel
