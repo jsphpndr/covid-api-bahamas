@@ -60,7 +60,7 @@ fields:
   hidden: true
 - type: field_group_list
   name: facilities
-  label: facilities
+  label: Facilities
   fields:
   - type: text
     name: facility
