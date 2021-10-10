@@ -260,8 +260,9 @@ fields:
         label: underInvestigation
     description: Case details for current report entry.
   - type: boolean
-    name: ifReported
-    label: ifReported
+    name: if_reported
+    label: Are there any deaths reported in the current report?
+    default: true
   - type: field_group_list
     name: reportedFatalities
     label: reportedFatalities
