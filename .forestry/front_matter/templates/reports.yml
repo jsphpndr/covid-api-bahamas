@@ -57,6 +57,7 @@ fields:
   - type: text
     name: lp
     label: lp
+  hidden: true
 - type: field_group_list
   name: facilities
   label: facilities
