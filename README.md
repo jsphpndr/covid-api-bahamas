@@ -20,11 +20,11 @@ For help with HUGO installation if you don't already have it, you can follow Mik
 
 #### Mike Dane's Hugo - Static Site Generator | Tutorial
 
-[![Mike Dane's Hugo - Static Site Generator | Tutorial](https://img.youtube.com/vi/qtIqKaDlqXo.jpg)](https://youtube.com/playlist?list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3)
+[![Mike Dane's Hugo - Static Site Generator | Tutorial](https://i3.ytimg.com/vi/qtIqKaDlqXo/hqdefault.jpg)](https://youtube.com/playlist?list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3)
 
 
 #### Mike Dane's YAML | In One Video
-[![Mike Dane's YAML | In One Video](https://img.youtube.com/vi/cdLNKUoMc6c.jpg)](https://youtu.be/cdLNKUoMc6c)
+[![Mike Dane's YAML | In One Video](https://i3.ytimg.com/vi/cdLNKUoMc6c/hqdefault.jpg)](https://youtu.be/cdLNKUoMc6c)
 
 
 ## Data Entry
