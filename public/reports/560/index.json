@@ -4,7 +4,7 @@
         "number": 560,
         "date": "2021-10-07",
         "permalink" : "https://covidapibs.com/reports/560/index.json",
-        "datePublished": "2021-10-09T16:43:35-04:00",
+        "datePublished": "2021-10-09 16:43:35 -0400 EDT",
         "cases": {
           "byIsland": [
             { 
@@ -130,8 +130,10 @@
           ],
           "newTotal": 62,
           "toDateTotal": 21580,
-          "historyOfTravel": false,
-          "totalHistoryOfTravel": 0,
+            "historyOfTravel": {
+              "byIsland": false,
+              "total": 0
+          },
           "bySex": [
             
               "group": {
@@ -217,5 +219,9 @@
           "inconclusive": 1
         }
       }
-    } 
+    }
+
+
+
+      
 }

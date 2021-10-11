@@ -1,25 +1,25 @@
 {
     "data" :  {
       "report": {
-        "number": 555,
-        "date": "2021-10-02",
-        "permalink" : "https://covidapibs.com/reports/555/index.json",
-        "datePublished": "2021-10-09 17:46:15 -0400 EDT",
+        "number": 553,
+        "date": "2021-30-09",
+        "permalink" : "https://covidapibs.com/reports/553/index.json",
+        "datePublished": "2021-10-11 01:23:28 -0400 EDT",
         "cases": {
           "byIsland": [
             { 
             {
               "island": {
                 "name": "New Providence",
-                "toDate": 16274,
-                "new": 43
+                "toDate": 16172,
+                "new": 78
               }
             },
             {
               "island": {
                 "name": "Grand Bahama",
-                "toDate": 2485,
-                "new": 3
+                "toDate": 2479,
+                "new": 2
               }
             },
             {
@@ -39,8 +39,8 @@
             {
               "island": {
                 "name": "Eleuthera",
-                "toDate": 612,
-                "new": 0
+                "toDate": 609,
+                "new": 2
               }
             },
             {
@@ -53,22 +53,22 @@
             {
               "island": {
                 "name": "Exuma",
-                "toDate": 347,
+                "toDate": 346,
                 "new": 0
               }
             },
             {
               "island": {
                 "name": "Inagua",
-                "toDate": 37,
-                "new": 1
+                "toDate": 35,
+                "new": 0
               }
             },
             {
               "island": {
                 "name": "Andros",
                 "toDate": 266,
-                "new": 0
+                "new": 1
               }
             },
             {
@@ -89,7 +89,7 @@
               "island": {
                 "name": "Acklins",
                 "toDate": 9,
-                "new": 0
+                "new": 1
               }
             },
             {
@@ -128,8 +128,8 @@
               }
             }
           ],
-          "newTotal": 47,
-          "toDateTotal": 21312,
+          "newTotal": 84,
+          "toDateTotal": 21198,
             "historyOfTravel": {
               "byIsland": false,
               "total": 0
@@ -138,16 +138,16 @@
             
               "group": {
                 "sex": "Male",
-                "new": "17"
+                "new": "38"
               }
             },
               "group": {
                 "sex": "Female",
-                "new": "30"
+                "new": "46"
               }
             }
           ],
-          "bySexTotal": 47,
+          "bySexTotal": 84,
           "inHospital": {
             "byFacility": [
               { 
@@ -155,7 +155,7 @@
                   "island": "New Providence",
                   "name": "Doctor's Hospital",
                   "total": 35,
-                  "nonICU": 29,
+                  "nonICU": 26,
                   "icu": 9
                 }
               },
@@ -170,9 +170,9 @@
                 "facility": {
                   "island": "New Providence",
                   "name": "Princess Margaret Hospital",
-                  "total": 71,
-                  "nonICU": 71,
-                  "icu": 0
+                  "total": 77,
+                  "nonICU": 76,
+                  "icu": 1
                 }
               },
                 "facility": {
@@ -186,37 +186,37 @@
                 "facility": {
                   "island": "Grand Bahama",
                   "name": "Grand Bahama Health Services",
-                  "total": 15,
-                  "nonICU": 9,
-                  "icu": 6
+                  "total": 27,
+                  "nonICU": 22,
+                  "icu": 5
                 }
               }
             ],
             "totals": {
-              "total": 127,
-              "nonICU": 111,
+              "total": 145,
+              "nonICU": 126,
               "icu": 19
             }
           },
-          "active": 1398,
+          "active": 1372,
           "recovered": {
-            "new": 14,
-            "toDate": 19172
+            "new": 566,
+            "toDate": 19099
           },
           "fatalities": {
-            "toDate": 557,
+            "toDate": 537,
             "unrelatedToDate": 119,
-            "underInvestigation": 66
+            "underInvestigation": 41
           }
         },
         "reportedFatalities": false,
         "tests": {
-          "toDate": 147633,
-          "completed": 271,
-          "positive": 47,
-          "negative": 210,
-          "repeated": 14,
-          "inconclusive": 0
+          "toDate": 146899,
+          "completed": 650,
+          "positive": 84,
+          "negative": 542,
+          "repeated": 23,
+          "inconclusive": 1
         }
       }
     }

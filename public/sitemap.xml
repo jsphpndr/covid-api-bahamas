@@ -3,39 +3,102 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://covidapibs.com/reports/555/index.json</loc>
-  </url>
-  
-  <url>
-    <loc>https://covidapibs.com/reports/556/index.json</loc>
-  </url>
-  
-  <url>
-    <loc>https://covidapibs.com/reports/557/index.json</loc>
-  </url>
-  
-  <url>
-    <loc>https://covidapibs.com/reports/558/index.json</loc>
-  </url>
-  
-  <url>
-    <loc>https://covidapibs.com/reports/559/index.json</loc>
-  </url>
-  
-  <url>
-    <loc>https://covidapibs.com/reports/560/index.json</loc>
-  </url>
-  
-  <url>
-    <loc>https://covidapibs.com/updates/20212808/index.json</loc>
+    <loc>https://covidapibs.com/reports/544/index.json</loc>
+    <lastmod>2021-10-11T03:14:50-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://covidapibs.com/</loc>
+    <lastmod>2021-10-11T03:14:50-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://covidapibs.com/reports/index.json</loc>
+    <lastmod>2021-10-11T03:14:50-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://covidapibs.com/reports/546/index.json</loc>
+    <lastmod>2021-10-11T03:14:39-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://covidapibs.com/reports/545/index.json</loc>
+    <lastmod>2021-10-11T03:14:28-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://covidapibs.com/reports/547/index.json</loc>
+    <lastmod>2021-10-11T02:45:33-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://covidapibs.com/reports/548/index.json</loc>
+    <lastmod>2021-10-11T02:22:23-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://covidapibs.com/reports/549/index.json</loc>
+    <lastmod>2021-10-11T02:22:10-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://covidapibs.com/reports/550/index.json</loc>
+    <lastmod>2021-10-11T01:53:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://covidapibs.com/reports/551/index.json</loc>
+    <lastmod>2021-10-11T01:52:12-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://covidapibs.com/reports/552/index.json</loc>
+    <lastmod>2021-10-11T01:33:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://covidapibs.com/reports/553/index.json</loc>
+    <lastmod>2021-10-11T01:23:28-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://covidapibs.com/reports/554/index.json</loc>
+    <lastmod>2021-10-11T00:12:21-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://covidapibs.com/reports/555/index.json</loc>
+    <lastmod>2021-10-09T17:46:15-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://covidapibs.com/reports/556/index.json</loc>
+    <lastmod>2021-10-09T17:35:12-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://covidapibs.com/reports/557/index.json</loc>
+    <lastmod>2021-10-09T16:54:30-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://covidapibs.com/reports/560/index.json</loc>
+    <lastmod>2021-10-09T16:43:35-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://covidapibs.com/reports/558/index.json</loc>
+    <lastmod>2021-10-09T16:19:52-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://covidapibs.com/reports/559/index.json</loc>
+    <lastmod>2021-10-08T23:10:12-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://covidapibs.com/updates/20212808/index.json</loc>
   </url>
   
   <url>

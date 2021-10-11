@@ -3,7 +3,7 @@
         "number": {{ .Params.report.number }},
         "date": "{{ .Params.report.date }}",
         "permalink" : "{{ .Permalink }}",
-        "datePublished": "{{ .Params.report.datePublished }}",
+        "datePublished": "{{ .Date }}",
         "cases": {
           "byIsland": [
             { {{ range $i, $e := .Params.report.cases.byIsland }}{{ if $i }},{{ end }}
@@ -17,16 +17,18 @@
           ],
           "newTotal": {{ .Params.report.cases.newTotal }},
           "toDateTotal": {{ .Params.report.cases.toDateTotal }},
-          "historyOfTravel": {{if .Params.report.cases.ifHistory }}[
-            { {{ range $i, $e := .Params.report.cases.historyOfTravel }}{{ if $i }},{{ end }}
-            {
-              "island": {
-                "name": "{{ .island.name }}",
-                "new": {{ .island.new }}
-              }
-            }{{ end }}
-          ]{{ else }}false{{ end }},
-          "totalHistoryOfTravel": {{ .Params.report.cases.totalHistoryOfTravel}},
+            "historyOfTravel": {
+              "byIsland": {{if .Params.report.cases.ifTravelHistory }}[
+                { {{ range $i, $e := .Params.report.cases.historyOfTravel.byIsland }}{{ if $i }},{{ end }}
+                {
+                  "island": {
+                    "name": "{{ .island.name }}",
+                    "new": {{ .island.new }}
+                  }
+                }{{ end }}
+              ]{{ else }}false{{ end }},
+              "total": {{ .Params.report.cases.historyOfTravel.total}}
+          },
           "bySex": [
             {{ range $i, $e := .Params.report.cases.bySex }}{{ if $i }},{{ end }}
               "group": {
@@ -85,3 +87,7 @@
         }
       }
     }
+
+
+
+     

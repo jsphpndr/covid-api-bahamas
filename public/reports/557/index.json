@@ -4,7 +4,7 @@
         "number": 557,
         "date": "2021-10-04",
         "permalink" : "https://covidapibs.com/reports/557/index.json",
-        "datePublished": "2021-10-09T16:54:30-04:00",
+        "datePublished": "2021-10-09 16:54:30 -0400 EDT",
         "cases": {
           "byIsland": [
             { 
@@ -130,16 +130,18 @@
           ],
           "newTotal": 21415,
           "toDateTotal": 53,
-          "historyOfTravel": [
-            { 
-            {
-              "island": {
-                "name": "New Providence",
-                "new": 1
-              }
-            }
-          ],
-          "totalHistoryOfTravel": 1,
+            "historyOfTravel": {
+              "byIsland": [
+                { 
+                {
+                  "island": {
+                    "name": "New Providence",
+                    "new": 1
+                  }
+                }
+              ],
+              "total": 1
+          },
           "bySex": [
             
               "group": {
@@ -225,5 +227,9 @@
           "inconclusive": 0
         }
       }
-    } 
+    }
+
+
+
+      
 }

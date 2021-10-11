@@ -1,31 +1,31 @@
 {
     "data" :  {
       "report": {
-        "number": 555,
-        "date": "2021-10-02",
-        "permalink" : "https://covidapibs.com/reports/555/index.json",
-        "datePublished": "2021-10-09 17:46:15 -0400 EDT",
+        "number": 549,
+        "date": "2021-26-09",
+        "permalink" : "https://covidapibs.com/reports/549/index.json",
+        "datePublished": "2021-10-11 02:22:10 -0400 EDT",
         "cases": {
           "byIsland": [
             { 
             {
               "island": {
                 "name": "New Providence",
-                "toDate": 16274,
-                "new": 43
+                "toDate": 15884,
+                "new": 53
               }
             },
             {
               "island": {
                 "name": "Grand Bahama",
-                "toDate": 2485,
-                "new": 3
+                "toDate": 2461,
+                "new": 0
               }
             },
             {
               "island": {
                 "name": "Abaco",
-                "toDate": 631,
+                "toDate": 628,
                 "new": 0
               }
             },
@@ -39,8 +39,8 @@
             {
               "island": {
                 "name": "Eleuthera",
-                "toDate": 612,
-                "new": 0
+                "toDate": 597,
+                "new": 11
               }
             },
             {
@@ -53,28 +53,28 @@
             {
               "island": {
                 "name": "Exuma",
-                "toDate": 347,
+                "toDate": 344,
                 "new": 0
               }
             },
             {
               "island": {
                 "name": "Inagua",
-                "toDate": 37,
-                "new": 1
+                "toDate": 29,
+                "new": 2
               }
             },
             {
               "island": {
                 "name": "Andros",
-                "toDate": 266,
-                "new": 0
+                "toDate": 263,
+                "new": 1
               }
             },
             {
               "island": {
                 "name": "Long Island",
-                "toDate": 78,
+                "toDate": 68,
                 "new": 0
               }
             },
@@ -88,21 +88,21 @@
             {
               "island": {
                 "name": "Acklins",
-                "toDate": 9,
+                "toDate": 8,
                 "new": 0
               }
             },
             {
               "island": {
                 "name": "Crooked Island",
-                "toDate": 12,
+                "toDate": 11,
                 "new": 0
               }
             },
             {
               "island": {
                 "name": "Mayaguana",
-                "toDate": 17,
+                "toDate": 5,
                 "new": 0
               }
             },
@@ -128,34 +128,42 @@
               }
             }
           ],
-          "newTotal": 47,
-          "toDateTotal": 21312,
+          "newTotal": 67,
+          "toDateTotal": 20842,
             "historyOfTravel": {
-              "byIsland": false,
-              "total": 0
+              "byIsland": [
+                { 
+                {
+                  "island": {
+                    "name": "New Providence",
+                    "new": 1
+                  }
+                }
+              ],
+              "total": 1
           },
           "bySex": [
             
               "group": {
                 "sex": "Male",
-                "new": "17"
+                "new": "26"
               }
             },
               "group": {
                 "sex": "Female",
-                "new": "30"
+                "new": "41"
               }
             }
           ],
-          "bySexTotal": 47,
+          "bySexTotal": 67,
           "inHospital": {
             "byFacility": [
               { 
                 "facility": {
                   "island": "New Providence",
                   "name": "Doctor's Hospital",
-                  "total": 35,
-                  "nonICU": 29,
+                  "total": 36,
+                  "nonICU": 27,
                   "icu": 9
                 }
               },
@@ -163,16 +171,16 @@
                   "island": "New Providence",
                   "name": "South Beach Acute Care and Referral Centre",
                   "total": 6,
-                  "nonICU": 2,
-                  "icu": 4
+                  "nonICU": 4,
+                  "icu": 2
                 }
               },
                 "facility": {
                   "island": "New Providence",
                   "name": "Princess Margaret Hospital",
-                  "total": 71,
-                  "nonICU": 71,
-                  "icu": 0
+                  "total": 75,
+                  "nonICU": 74,
+                  "icu": 1
                 }
               },
                 "facility": {
@@ -186,37 +194,37 @@
                 "facility": {
                   "island": "Grand Bahama",
                   "name": "Grand Bahama Health Services",
-                  "total": 15,
-                  "nonICU": 9,
-                  "icu": 6
+                  "total": 25,
+                  "nonICU": 20,
+                  "icu": 5
                 }
               }
             ],
             "totals": {
-              "total": 127,
-              "nonICU": 111,
-              "icu": 19
+              "total": 142,
+              "nonICU": 125,
+              "icu": 17
             }
           },
-          "active": 1398,
+          "active": 1844,
           "recovered": {
-            "new": 14,
-            "toDate": 19172
+            "new": 0,
+            "toDate": 18321
           },
           "fatalities": {
-            "toDate": 557,
-            "unrelatedToDate": 119,
-            "underInvestigation": 66
+            "toDate": 523,
+            "unrelatedToDate": 111,
+            "underInvestigation": 43
           }
         },
         "reportedFatalities": false,
         "tests": {
-          "toDate": 147633,
-          "completed": 271,
-          "positive": 47,
-          "negative": 210,
-          "repeated": 14,
-          "inconclusive": 0
+          "toDate": 145042,
+          "completed": 272,
+          "positive": 67,
+          "negative": 190,
+          "repeated": 12,
+          "inconclusive": 3
         }
       }
     }
