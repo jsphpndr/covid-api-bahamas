@@ -1,6 +1,6 @@
 # COVID-19 API Bahamas
 
-This is a read-only, public API is an open-source project created by [https://josephpinder.com](Joseph Pinder) to make The Government of The Bahamas' COVID-19 Reports available and accessible for data presentation, manipulation and analysis.
+This is a read-only, public API is an open-source project created by [Joseph Pinder](https://josephpinder.com) to make The Government of The Bahamas' COVID-19 Reports available and accessible for data presentation, manipulation and analysis.
 
 ## Contribution
 
@@ -57,7 +57,7 @@ The flow of the report file corresponds in the reading manner of the physical re
 
 Once done, check your work, save, commit and submit a merge request.
 
-Any questions, please contact me [https://josephpinder.com/get-in-touch] (here).
+Any questions, please contact me [here](https://josephpinder.com/get-in-touch).
 
 ## Checked Out
 
