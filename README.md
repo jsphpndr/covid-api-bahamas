@@ -23,7 +23,7 @@ If you don't have HUGO already installed on your machine, you may follow Mike Da
 
 #### 2) [Mike Dane's YAML | In One Video](https://youtu.be/cdLNKUoMc6c)
 
-### GitHub
+### Cloning the Repo.
 
 Clone the repository on your local machine by running the following command: `git clone https://github.com/jsphpndr/covid-api-bahamas.git`. If the repository is already on your local machine, run the following command to get the latest version of the code: `git pull --rebase`.
 
@@ -34,7 +34,7 @@ Push this branch to the remote repository so that others contibuting know that t
 Now, time to create an entry!
 
 
-### Create a Data Entry
+### Creating a Data Entry
 
 You will only be dealing with the `contents/reports` directory. 
 
@@ -55,7 +55,7 @@ The flow of the report file corresponds in the reading manner of the physical re
 
 We would also like to highlight you and the contribution that you made to this API. In the `layouts/index.html` directory, add your name in the Contributors section, and optionally, you may also link your personal website or social media page.
 
-### GitHub
+### Committing the Changes
 
 After a self review ensuring that you have sucessfully followed the above steps, you are now ready to push your code.
 
