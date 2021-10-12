@@ -7,7 +7,7 @@ This open-source project was created by [Joseph Pinder](https://josephpinder.com
 
 # How To Contribute
 
-Since this is an open-source project, we are relying on the contributions from the community. If you would like to contibute, continue reading the instrctions below.
+Since this is an open-source project, we are relying on the community's assistance. If you would like to contribute, continue reading the instrctions below.
 
 ### Technology
 
@@ -27,9 +27,11 @@ If you don't have HUGO already installed on your machine, you may follow Mike Da
 
 Clone the repository on your local machine by running the following command: `git clone https://github.com/jsphpndr/covid-api-bahamas.git`. If the repository is already on your local machine, run the following command to get the latest version of the code: `git pull --rebase`.
 
-From the main branch, create a separate working branch. This can be done by running `git checkout -b <branchName>`. If your file is 343, Your branch name would be *report/343*
+From the main branch, create a separate working branch. This can be done by running `git checkout -b <branchName>`. If your file is 343, your branch name would be *report/343*. If you would like to do a range of files, i.e. 343 - 350, your branch name would then be *report/343-350*.
 
-Push this branch to the remote repository so that others contibuting know that the file number is taken :) You may do this by running: `git push -u origin <branchName>`
+You may see which files have been done already by evaluating the active branches and viewing the [reports directory](https://github.com/jsphpndr/covid-api-bahamas/tree/main/content/reports). Only select files which are free to take.
+
+Push this branch to the remote repository so that others contributing know which file numbers are taken :) You may do this by running: `git push -u origin <branchName>`
 
 Now, time to create an entry!
 
