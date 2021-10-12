@@ -1,13 +1,13 @@
 # COVID-19 API Bahamas
 
-This open-source project was created by [Joseph Pinder](https://josephpinder.com) as a read-only public API to make the Government of The Bahamas' COVID-19 reports availabale and accessible for data presentation, manipulation, and analysis.
+This open-source project was created by [Joseph Pinder](https://josephpinder.com) as a read-only public API to make the Government of The Bahamas' COVID-19 reports available and accessible for data manipulation, analysis and presentation.
 
 > co-authored by [Sowmya Thottambeti](https://www.linkedin.com/in/sowmyathottambeti/)
 
 
 # How To Contribute
 
-Since this is an open-source project, we are relying on the community's assistance. If you would like to contribute, continue reading the instrctions below.
+Since this is an open-source project, we are relying on the community's assistance. If you would like to contribute, continue reading the instructions below.
 
 ### Technology
 
@@ -18,10 +18,24 @@ This API is generated with HUGO, a Golang static site generator (SSG).
 If you don't have HUGO already installed on your machine, you may follow Mike Dane's (@mikedane) tutorials on how to install it.
 
 
-#### 1) [Mike Dane's Hugo - Static Site Generator | Tutorial](https://youtube.com/playlist?list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3)
+#### 1) [Mike Dane's Hugo - Static Site Generator | Tutorial](https://youtube.com/playlist?list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3){:target="_blank"}
 
 
-#### 2) [Mike Dane's YAML | In One Video](https://youtu.be/cdLNKUoMc6c)
+#### 2) [Mike Dane's YAML | In One Video](https://youtu.be/cdLNKUoMc6c){:target="_blank"}
+
+### Git Tutorials
+
+For non-coders, in addition to HUGO there's an additional knowledge requirement of Git.
+
+Git is the means by which we access this Github repository to make push (upload) and pull (download) requests.
+
+If you want to help out, you will need one or all of the following tutorials.
+
+
+#### 4) [Git and GitHub for Beginners - Crash Course](https://youtu.be/RGOj5yH7evk){:target="_blank"} *(Recommended)*
+#### 1) [Git Tutorial for Beginners: Command-Line Fundamentals](https://youtu.be/HVsySz-h9r4){:target="_blank"}
+#### 1) [Git Tutorial for Beginners: Learn Git in 1 Hour](https://www.youtube.com/watch?v=8JJ101D3knE){:target="_blank"}
+#### 3) [Learn Git In 15 Minutes](https://www.youtube.com/watch?v=USjZcfj8yxE){:target="_blank"}
 
 ### Cloning the Repo.
 
