@@ -18,10 +18,10 @@ This API is generated with HUGO, a Golang static site generator (SSG).
 If you don't have HUGO already installed on your machine, you may follow Mike Dane's (@mikedane) tutorials on how to install it.
 
 
-#### 1) [Mike Dane's Hugo - Static Site Generator | Tutorial](https://youtube.com/playlist?list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3){:target="_blank"}
+#### 1) [Mike Dane's Hugo - Static Site Generator | Tutorial](https://youtube.com/playlist?list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3)
 
 
-#### 2) [Mike Dane's YAML | In One Video](https://youtu.be/cdLNKUoMc6c){:target="_blank"}
+#### 2) [Mike Dane's YAML | In One Video](https://youtu.be/cdLNKUoMc6c)
 
 ### Git Tutorials
 
@@ -32,10 +32,10 @@ Git is the means by which we access this Github repository to make push (upload)
 If you want to help out, you will need one or all of the following tutorials.
 
 
-#### 4) [Git and GitHub for Beginners - Crash Course](https://youtu.be/RGOj5yH7evk){:target="_blank"} *(Recommended)*
-#### 1) [Git Tutorial for Beginners: Command-Line Fundamentals](https://youtu.be/HVsySz-h9r4){:target="_blank"}
-#### 1) [Git Tutorial for Beginners: Learn Git in 1 Hour](https://www.youtube.com/watch?v=8JJ101D3knE){:target="_blank"}
-#### 3) [Learn Git In 15 Minutes](https://www.youtube.com/watch?v=USjZcfj8yxE){:target="_blank"}
+#### 4) [Git and GitHub for Beginners - Crash Course](https://youtu.be/RGOj5yH7evk) *(Recommended)*
+#### 1) [Git Tutorial for Beginners: Command-Line Fundamentals](https://youtu.be/HVsySz-h9r4)
+#### 1) [Git Tutorial for Beginners: Learn Git in 1 Hour](https://www.youtube.com/watch?v=8JJ101D3knE)
+#### 3) [Learn Git In 15 Minutes](https://www.youtube.com/watch?v=USjZcfj8yxE)
 
 ### Cloning the Repo.
 
