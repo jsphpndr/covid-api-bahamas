@@ -43,6 +43,7 @@ report: ### DO NOT TOUCH ###
   number: {{ replace .Name "-" " " | title }}
   # The date format is YYYY-DD-MM. So, October 6, 2021 would be written as 2021-06-10.
   date: # FILL REPORT DATE
+#   date: {{ (now.AddDate 0 0 -1).Format "2006-01-02" }} ### DO NOT TOUCH ###
   contributor: # Are you a contributor? Fill in your name for recognition.
 
   cases: ### DO NOT TOUCH ###
