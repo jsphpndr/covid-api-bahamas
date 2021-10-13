@@ -1,35 +1,38 @@
 ---
+#### Sroll up (or down) this document to find the editable section. ####
 
-islands:
+### VARIABLE LIBRARY #### DO NOT TOUCH ####
 
-    np: &np New Providence
-    gb: &gb Grand Bahama
-    ab: &ab Abaco
-    bim: &bim Bimini & Cat Cay
-    el: &el Eleuthera
-    bi: &bi Berry Islands
-    ex: &ex Exuma
-    in: &in Inagua
-    an: &an Andros
-    li: &li Long Island
-    ci: &ci Cat Island
-    ac: &ac Acklins
-    cr: &cr Crooked Island
-    ma: &ma Mayaguana
-    ri: &ri Ragged Island
-    ss: &ss San Salvador
-    lp: &lp Location Pending
+islands: #### DO NOT TOUCH ####
 
-facilities:
-  - facility: &doctors Doctor's Hospital
-  - facility: &southBeach South Beach Acute Care and Referral Centre
-  - facility: &pmh Princess Margaret Hospital
-  - facility: &sandilands Sandilands Rehabilitation Centre
-  - facility: &gbhs Grand Bahama Health Services
+    np: &np New Providence #### DO NOT TOUCH ####
+    gb: &gb Grand Bahama #### DO NOT TOUCH ####
+    ab: &ab Abaco #### DO NOT TOUCH ####
+    bim: &bim Bimini & Cat Cay #### DO NOT TOUCH ####
+    el: &el Eleuthera #### DO NOT TOUCH ####
+    bi: &bi Berry Islands #### DO NOT TOUCH ####
+    ex: &ex Exuma #### DO NOT TOUCH ####
+    in: &in Inagua #### DO NOT TOUCH ####
+    an: &an Andros #### DO NOT TOUCH ####
+    li: &li Long Island #### DO NOT TOUCH ####
+    ci: &ci Cat Island #### DO NOT TOUCH ####
+    ac: &ac Acklins #### DO NOT TOUCH ####
+    cr: &cr Crooked Island #### DO NOT TOUCH ####
+    ma: &ma Mayaguana #### DO NOT TOUCH ####
+    ri: &ri Ragged Island #### DO NOT TOUCH ####
+    ss: &ss San Salvador #### DO NOT TOUCH ####
+    lp: &lp Location Pending #### DO NOT TOUCH ####
 
-sex:
-    m: &m Male
-    f: &f Female
+facilities: #### DO NOT TOUCH ####
+  - facility: &doctors Doctor's Hospital #### DO NOT TOUCH ####
+  - facility: &southBeach South Beach Acute Care and Referral Centre #### DO NOT TOUCH ####
+  - facility: &pmh Princess Margaret Hospital #### DO NOT TOUCH ####
+  - facility: &sandilands Sandilands Rehabilitation Centre #### DO NOT TOUCH ####
+  - facility: &gbhs Grand Bahama Health Services #### DO NOT TOUCH ####
+
+sex: #### DO NOT TOUCH ####
+    m: &m Male #### DO NOT TOUCH ####
+    f: &f Female #### DO NOT TOUCH ####
 
 title: {{ replace .Name "-" " " | title }} ### DO NOT TOUCH ###
 date: {{ .Date }} ### DO NOT TOUCH ###
@@ -144,13 +147,25 @@ report: ### DO NOT TOUCH ###
 
         byIsland:  ### DO NOT TOUCH ###
             # Copy and paste this object based on the
-            # corresponding number of deaths reported.
-            # If five deaths, copy five times then fill
-            # in data.
+            # corresponding number of islands reported.
+            # Let's say there's New Providence and Grand Bahama, 
+            # copy the object once and then fill in data.
+        
+            ##### EXAMPLE ##################
+
+            # - island: ### DO NOT TOUCH ###
+            #    name: *np
+            #    new: 3
+
+            # - island: ### DO NOT TOUCH ###
+            #    name: *gb
+            #    new: 2
+
             - island: ### DO NOT TOUCH ###
                 name:
                 new: 
-
+        
+        ##### TOTAL CASES WITH HISTORY OF TRAVEL #####
         total: 0
     
     ##### GENDER OF NEWLY CONFIRMED CASES ########
@@ -169,35 +184,35 @@ report: ### DO NOT TOUCH ###
     inHospital: ### DO NOT TOUCH ###
 
       byFacility: ### DO NOT TOUCH ###
-        ################################
+        ##### Doctor's Hospital ########
         - facility: ### DO NOT TOUCH ###
             island: *np ### DO NOT TOUCH ###
             name: *doctors ### DO NOT TOUCH ###
             total: 
             nonICU: 
             icu: 
-        ################################
+        ##### South Beach Acute Care and Referral Centre #####
         - facility: ### DO NOT TOUCH ###
             island: *np ### DO NOT TOUCH ###
             name: *southBeach ### DO NOT TOUCH ###
             total: 
             nonICU: 
             icu: 
-        ################################
+        ##### Princess Margaret Hospital #########
         - facility: ### DO NOT TOUCH ###
             island: *np ### DO NOT TOUCH ###
             name: *pmh ### DO NOT TOUCH ###
             total: 
             nonICU: 
             icu: 
-        ################################
+        #####  Sandilands Rehabilitation Centre ########
         - facility: ### DO NOT TOUCH ###
             island: *np ### DO NOT TOUCH ###
             name: *sandilands ### DO NOT TOUCH ###
             total: 0
             nonICU: 0
             icu: 0
-        ################################
+        ##### Grand Bahama Health Services ############
         - facility: ### DO NOT TOUCH ###
             island: *gb ### DO NOT TOUCH ###
             name: *gbhs ### DO NOT TOUCH ###
