@@ -41,7 +41,7 @@ date: {{ .Date }} ### DO NOT TOUCH ###
 report: ### DO NOT TOUCH ###
   
   number: {{ replace .Name "-" " " | title }}
-  # The date format is YYYY-DD-MM. So, October 6, 2021 would be written as 2021-06-10.
+  # The date format is YYYY-MM-DD. So, October 6, 2021 would be written as 2021-10-06.
   date: # FILL REPORT DATE
 #   date: {{ (now.AddDate 0 0 -1).Format "2006-01-02" }} ### DO NOT TOUCH ###
   contributor: # Are you a contributor? Fill in your name for recognition.
@@ -252,7 +252,7 @@ report: ### DO NOT TOUCH ###
     # If five deaths, copy five times then fill
     # in data.
 
-    # The date format is YYYY-DD-MM. So, October 6, 2021 would be written as 2021-06-10.
+    # The date format is YYYY-MM-DD. So, October 6, 2021 would be written as 2021-10-06.
     - fatality: ### DO NOT TOUCH ###
         age: 
         sex: 
