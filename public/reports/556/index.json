@@ -3,150 +3,112 @@
       "report": {
         "number": 556,
         "date": "2021-10-03",
-        "permalink" : "https://apibahamas.app/reports/556/",
+        "permalink" : "https://api.covidbahamas.app/reports/556/",
         "datePublished": "2021-10-09 17:35:12 -0400 EDT",
         "cases": {
-          "byIsland": [
-            { 
-            {
+          "byIsland": [{ 
               "island": {
                 "name": "New Providence",
                 "toDate": 16295,
                 "new": 21
-              }
-            },
-            {
+          },
               "island": {
                 "name": "Grand Bahama",
                 "toDate": 2486,
                 "new": 1
-              }
-            },
-            {
+          },
               "island": {
                 "name": "Abaco",
                 "toDate": 631,
                 "new": 0
-              }
-            },
-            {
+          },
               "island": {
                 "name": "Bimini & Cat Cay",
                 "toDate": 237,
                 "new": 0
-              }
-            },
-            {
+          },
               "island": {
                 "name": "Eleuthera",
                 "toDate": 617,
                 "new": 5
-              }
-            },
-            {
+          },
               "island": {
                 "name": "Berry Islands",
                 "toDate": 104,
                 "new": 0
-              }
-            },
-            {
+          },
               "island": {
                 "name": "Exuma",
                 "toDate": 347,
                 "new": 0
-              }
-            },
-            {
+          },
               "island": {
                 "name": "Inagua",
                 "toDate": 37,
                 "new": 0
-              }
-            },
-            {
+          },
               "island": {
                 "name": "Andros",
                 "toDate": 267,
                 "new": 1
-              }
-            },
-            {
+          },
               "island": {
                 "name": "Long Island",
                 "toDate": 93,
                 "new": 15
-              }
-            },
-            {
+          },
               "island": {
                 "name": "Cat Island",
                 "toDate": 90,
                 "new": 0
-              }
-            },
-            {
+          },
               "island": {
                 "name": "Acklins",
                 "toDate": 9,
                 "new": 0
-              }
-            },
-            {
+          },
               "island": {
                 "name": "Crooked Island",
                 "toDate": 19,
                 "new": 7
-              }
-            },
-            {
+          },
               "island": {
                 "name": "Mayaguana",
                 "toDate": 17,
                 "new": 0
-              }
-            },
-            {
+          },
               "island": {
                 "name": "Ragged Island",
                 "toDate": 0,
                 "new": 0
-              }
-            },
-            {
+          },
               "island": {
                 "name": "San Salvador",
                 "toDate": 16,
                 "new": 0
-              }
-            },
-            {
+          },
               "island": {
                 "name": "Location Pending",
                 "toDate": 97,
                 "new": 0
-              }
-            }
-          ],
+          }
+          }],
           "newTotal": 50,
           "toDateTotal": 21362,
           "historyOfTravel": {
             "byIsland": false,
             "total": <no value>
           },
-          "bySex": [
-            
-              "group": {
-                "sex": "Male",
-                "new": "23"
-              }
-            },
-              "group": {
-                "sex": "Female",
-                "new": "27"
-              }
-            }
-          ],
+          "bySex": [{ 
+            "group": {
+              "sex": "Male",
+              "new": "23"
+          },
+            "group": {
+              "sex": "Female",
+              "new": "27"
+          }
+          }],
           "bySexTotal": 50,
           "inHospital": {
             "byFacility": [
@@ -157,32 +119,28 @@
                   "total": 40,
                   "nonICU": 34,
                   "icu": 6
-                }
-              },
+                },
                 "facility": {
                   "island": "New Providence",
                   "name": "South Beach Acute Care and Referral Centre",
                   "total": 6,
                   "nonICU": 2,
                   "icu": 4
-                }
-              },
+                },
                 "facility": {
                   "island": "New Providence",
                   "name": "Princess Margaret Hospital",
                   "total": 83,
                   "nonICU": 83,
                   "icu": 0
-                }
-              },
+                },
                 "facility": {
                   "island": "New Providence",
                   "name": "Sandilands Rehabilitation Centre",
                   "total": 0,
                   "nonICU": 0,
                   "icu": 0
-                }
-              },
+                },
                 "facility": {
                   "island": "Grand Bahama",
                   "name": "Grand Bahama Health Services",
@@ -190,8 +148,7 @@
                   "nonICU": 9,
                   "icu": 6
                 }
-              }
-            ],
+              }],
             "totals": {
               "total": 144,
               "nonICU": 128,
@@ -216,16 +173,14 @@
               "island": "New Providence",
               "sex": "Male",
               "date": "2021-09-16"
-            }
-          },
+            },
           "fatality": {
               "age": 55,
               "island": "New Providence",
               "sex": "Male",
               "date": "2021-09-17"
             }
-          }
-        ],
+        }],
         "tests": {
           "toDate": 147849,
           "completed": 216,

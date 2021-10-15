@@ -1,4 +1,4 @@
-baseURL: 'https://apibahamas.app/'
+baseURL: 'https://api.covidbahamas.app/'
 languageCode: en-uk
 title: COVID-19 API Bahamas
 assetDir: 

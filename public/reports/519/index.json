@@ -3,164 +3,123 @@
       "report": {
         "number": 519,
         "date": "2021-08-27",
-        "permalink" : "https://apibahamas.app/reports/519/",
+        "permalink" : "https://api.covidbahamas.app/reports/519/",
         "datePublished": "2021-10-11 08:40:14 -0400 EDT",
         "cases": {
-          "byIsland": [
-            { 
-            {
+          "byIsland": [{ 
               "island": {
                 "name": "New Providence",
                 "toDate": 13556,
                 "new": 81
-              }
-            },
-            {
+          },
               "island": {
                 "name": "Grand Bahama",
                 "toDate": 2276,
                 "new": 6
-              }
-            },
-            {
+          },
               "island": {
                 "name": "Abaco",
                 "toDate": 579,
                 "new": 1
-              }
-            },
-            {
+          },
               "island": {
                 "name": "Bimini & Cat Cay",
                 "toDate": 234,
                 "new": 0
-              }
-            },
-            {
+          },
               "island": {
                 "name": "Eleuthera",
                 "toDate": 479,
                 "new": 0
-              }
-            },
-            {
+          },
               "island": {
                 "name": "Berry Islands",
                 "toDate": 98,
                 "new": 0
-              }
-            },
-            {
+          },
               "island": {
                 "name": "Exuma",
                 "toDate": 319,
                 "new": 1
-              }
-            },
-            {
+          },
               "island": {
                 "name": "Inagua",
                 "toDate": 25,
                 "new": 0
-              }
-            },
-            {
+          },
               "island": {
                 "name": "Andros",
                 "toDate": 217,
                 "new": 0
-              }
-            },
-            {
+          },
               "island": {
                 "name": "Long Island",
                 "toDate": 53,
                 "new": 2
-              }
-            },
-            {
+          },
               "island": {
                 "name": "Cat Island",
                 "toDate": 73,
                 "new": 0
-              }
-            },
-            {
+          },
               "island": {
                 "name": "Acklins",
                 "toDate": 7,
                 "new": 0
-              }
-            },
-            {
+          },
               "island": {
                 "name": "Crooked Island",
                 "toDate": 7,
                 "new": 0
-              }
-            },
-            {
+          },
               "island": {
                 "name": "Mayaguana",
                 "toDate": 4,
                 "new": 0
-              }
-            },
-            {
+          },
               "island": {
                 "name": "Ragged Island",
                 "toDate": 0,
                 "new": 0
-              }
-            },
-            {
+          },
               "island": {
                 "name": "San Salvador",
                 "toDate": 16,
                 "new": 0
-              }
-            },
-            {
+          },
               "island": {
                 "name": "Location Pending",
                 "toDate": 88,
                 "new": 0
-              }
-            }
-          ],
+          }
+          }],
           "newTotal": 91,
           "toDateTotal": 18031,
           "historyOfTravel": {
-            "byIsland": [
-              { 
+            "byIsland": [ 
               {
                 "island": {
                   "name": "New Providence",
                   "new": 12
-                }
-              },
+                },
               {
                 "island": {
                   "name": "Long Island",
                   "new": 1
                 }
-              }
-            ],
+              }],
             "total": 0
           },
-          "bySex": [
-            
-              "group": {
-                "sex": "Male",
-                "new": "44"
-              }
-            },
-              "group": {
-                "sex": "Female",
-                "new": "47"
-              }
-            }
-          ],
+          "bySex": [{ 
+            "group": {
+              "sex": "Male",
+              "new": "44"
+          },
+            "group": {
+              "sex": "Female",
+              "new": "47"
+          }
+          }],
           "bySexTotal": 91,
           "inHospital": {
             "byFacility": [
@@ -171,32 +130,28 @@
                   "total": 54,
                   "nonICU": 44,
                   "icu": 7
-                }
-              },
+                },
                 "facility": {
                   "island": "New Providence",
                   "name": "South Beach Acute Care and Referral Centre",
                   "total": 9,
                   "nonICU": 7,
                   "icu": 2
-                }
-              },
+                },
                 "facility": {
                   "island": "New Providence",
                   "name": "Princess Margaret Hospital",
                   "total": 77,
                   "nonICU": 74,
                   "icu": 3
-                }
-              },
+                },
                 "facility": {
                   "island": "New Providence",
                   "name": "Sandilands Rehabilitation Centre",
                   "total": 0,
                   "nonICU": 0,
                   "icu": 0
-                }
-              },
+                },
                 "facility": {
                   "island": "Grand Bahama",
                   "name": "Grand Bahama Health Services",
@@ -204,8 +159,7 @@
                   "nonICU": 21,
                   "icu": 3
                 }
-              }
-            ],
+              }],
             "totals": {
               "total": 164,
               "nonICU": 14,

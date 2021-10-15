@@ -5,38 +5,31 @@
         "permalink" : "{{ .Permalink }}",
         "datePublished": "{{ .Date }}",
         "cases": {
-          "byIsland": [
-            { {{ range $i, $e := .Params.report.cases.byIsland }}{{ if $i }},{{ end }}
-            {
+          "byIsland": [{ {{ range $i, $e := .Params.report.cases.byIsland }}{{ if $i }},{{ end }}
               "island": {
                 "name": "{{ .island.name }}",
                 "toDate": {{ .island.toDate }},
                 "new": {{ .island.new }}
-              }
-            }{{ end }}
-          ],
+          }{{ end }}
+          }],
           "newTotal": {{ .Params.report.cases.newTotal }},
           "toDateTotal": {{ .Params.report.cases.toDateTotal }},
           "historyOfTravel": {
-            "byIsland": {{if eq .Params.report.cases.ifTravelHistory true }}[
-              { {{ range $i, $e := .Params.report.cases.historyOfTravel.byIsland }}{{ if $i }},{{ end }}
+            "byIsland": {{if eq .Params.report.cases.ifTravelHistory true }}[ {{ range $i, $e := .Params.report.cases.historyOfTravel.byIsland }}{{ if $i }},{{ end }}
               {
                 "island": {
                   "name": "{{ .island.name }}",
                   "new": {{ .island.new }}
-                }
-              }{{ end }}
-            ]{{ else }}false{{ end }},
+                }{{ end }}
+              }]{{ else }}false{{ end }},
             "total": {{ .Params.report.cases.historyOfTravel.total}}
           },
-          "bySex": [
-            {{ range $i, $e := .Params.report.cases.bySex }}{{ if $i }},{{ end }}
-              "group": {
-                "sex": "{{ .group.sex }}",
-                "new": "{{ .group.new }}"
-              }
-            }{{ end }}
-          ],
+          "bySex": [{ {{ range $i, $e := .Params.report.cases.bySex }}{{ if $i }},{{ end }}
+            "group": {
+              "sex": "{{ .group.sex }}",
+              "new": "{{ .group.new }}"
+          }{{ end }}
+          }],
           "bySexTotal": {{ .Params.report.cases.newTotal }},
           "inHospital": {
             "byFacility": [
@@ -47,9 +40,8 @@
                   "total": {{ .facility.total }},
                   "nonICU": {{ .facility.nonICU }},
                   "icu": {{ .facility.icu }}
-                }
-              }{{ end }}
-            ],
+                }{{ end }}
+              }],
             "totals": {
               "total": {{ .Params.report.cases.inHospital.totals.total }},
               "nonICU": {{ .Params.report.cases.inHospital.totals.nonICU }},
@@ -74,9 +66,8 @@
               "island": "{{ .fatality.island }}",
               "sex": "{{ .fatality.sex }}",
               "date": "{{ .fatality.date }}"
-            }
-          }{{ end }}
-        ]{{ else }}false{{ end }},
+            }{{ end }}
+        }]{{ else }}false{{ end }},
         "tests": {
           "toDate": {{ .Params.report.tests.toDate }},
           "completed": {{ .Params.report.tests.completed }},
