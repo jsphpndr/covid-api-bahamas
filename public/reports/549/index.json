@@ -2,8 +2,8 @@
     "data" :  {
       "report": {
         "number": 549,
-        "date": "2021-26-09",
-        "permalink" : "https://covidapibs.com/reports/549/index.json",
+        "date": "2021-09-26",
+        "permalink" : "https://apibahamas.app/reports/549/",
         "datePublished": "2021-10-11 02:22:10 -0400 EDT",
         "cases": {
           "byIsland": [
@@ -130,17 +130,17 @@
           ],
           "newTotal": 67,
           "toDateTotal": 20842,
-            "historyOfTravel": {
-              "byIsland": [
-                { 
-                {
-                  "island": {
-                    "name": "New Providence",
-                    "new": 1
-                  }
+          "historyOfTravel": {
+            "byIsland": [
+              { 
+              {
+                "island": {
+                  "name": "New Providence",
+                  "new": 1
                 }
-              ],
-              "total": 1
+              }
+            ],
+            "total": 1
           },
           "bySex": [
             

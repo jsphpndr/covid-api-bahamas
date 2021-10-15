@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COVID-19 Case Report {{ .Title }} | Bahamas</title>
+  <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+
+  {{ partial "navbar.html" . }}
+
+  <main class="[ x--wide pt--9 pb--3 ]">
+
+    <header class="[ mb--2 ]">
+    
+      <h1>COVID-19 Report Update {{ .Title }}</h1>
+
+      <time datetime="{{ .Params.report.date }}">{{ .Params.report.date | dateFormat "Monday, Jan 2, 2006" }}</time>
+
+      <a href="{{ .Permalink }}/index.json">View JSON</a>
+      
+    </header>
+    
+    {{ partial "islandBreakdown.html" . }}
+    
+    {{ partial "bySex.html" . }}
+    
+    {{ partial "travelHistory.html" . }}
+
+    {{ partial "hospitalizations.html" . }}
+    
+    {{ partial "cases.html" . }}
+    
+    {{ partial "reported.html" . }}
+    
+    {{ partial "deaths.html" . }}
+
+    {{ partial "testing.html" . }}
+
+  </main>
+
+  {{ partial "footer.html"}}
+  
+</body>
+</html>

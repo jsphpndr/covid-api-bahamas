@@ -17,17 +17,17 @@
           ],
           "newTotal": {{ .Params.report.cases.newTotal }},
           "toDateTotal": {{ .Params.report.cases.toDateTotal }},
-            "historyOfTravel": {
-              "byIsland": {{if .Params.report.cases.ifTravelHistory }}[
-                { {{ range $i, $e := .Params.report.cases.historyOfTravel.byIsland }}{{ if $i }},{{ end }}
-                {
-                  "island": {
-                    "name": "{{ .island.name }}",
-                    "new": {{ .island.new }}
-                  }
-                }{{ end }}
-              ]{{ else }}false{{ end }},
-              "total": {{ .Params.report.cases.historyOfTravel.total}}
+          "historyOfTravel": {
+            "byIsland": {{if eq .Params.report.cases.ifTravelHistory true }}[
+              { {{ range $i, $e := .Params.report.cases.historyOfTravel.byIsland }}{{ if $i }},{{ end }}
+              {
+                "island": {
+                  "name": "{{ .island.name }}",
+                  "new": {{ .island.new }}
+                }
+              }{{ end }}
+            ]{{ else }}false{{ end }},
+            "total": {{ .Params.report.cases.historyOfTravel.total}}
           },
           "bySex": [
             {{ range $i, $e := .Params.report.cases.bySex }}{{ if $i }},{{ end }}
@@ -67,7 +67,7 @@
             "underInvestigation": {{ .Params.report.cases.fatalities.underInvestigation }}
           }
         },
-        "reportedFatalities": {{if .Params.report.cases.ifReported }}[ 
+        "reportedFatalities": {{if eq .Params.report.ifReported true }}[ 
           { {{ range $i, $e := .Params.report.reportedFatalities }}{{ if $i }},{{ end }}
           "fatality": {
               "age": {{ .fatality.age }},

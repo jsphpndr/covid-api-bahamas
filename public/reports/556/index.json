@@ -3,7 +3,7 @@
       "report": {
         "number": 556,
         "date": "2021-10-03",
-        "permalink" : "https://covidapibs.com/reports/556/index.json",
+        "permalink" : "https://apibahamas.app/reports/556/",
         "datePublished": "2021-10-09 17:35:12 -0400 EDT",
         "cases": {
           "byIsland": [
@@ -130,9 +130,9 @@
           ],
           "newTotal": 50,
           "toDateTotal": 21362,
-            "historyOfTravel": {
-              "byIsland": false,
-              "total": 0
+          "historyOfTravel": {
+            "byIsland": false,
+            "total": <no value>
           },
           "bySex": [
             
@@ -209,7 +209,23 @@
             "underInvestigation": 64
           }
         },
-        "reportedFatalities": false,
+        "reportedFatalities": [ 
+          { 
+          "fatality": {
+              "age": 70,
+              "island": "New Providence",
+              "sex": "Male",
+              "date": "2021-09-16"
+            }
+          },
+          "fatality": {
+              "age": 55,
+              "island": "New Providence",
+              "sex": "Male",
+              "date": "2021-09-17"
+            }
+          }
+        ],
         "tests": {
           "toDate": 147849,
           "completed": 216,

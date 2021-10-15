@@ -1,0 +1,35 @@
+<section class="[ mb--2 ]">
+  
+  <h2 class="[ mb--050 ]">Confirmed Cases of Covid-19</h2>
+
+  <table class="[ table ]">
+
+    <thead>
+
+      <tr>
+        <th class="[ text--left ]">Island</td>
+        <th class="[ text--right ]">New</td>
+        <th class="[ text--right ]">Total</td>
+      </tr>
+
+    </thead>
+
+    <tbody>
+      {{ range $i, $e := .Params.report.cases.byIsland }}
+      <tr>
+        <th class="[ text--left ]">{{ .island.name }}</th>
+        <td class="[ text--right ]">{{ if eq .island.new 0 }}-{{ else }}{{.island.new}}{{ end}}</td>
+        <td class="[ text--right ]">{{ .island.toDate }}</td>
+      </tr>
+      {{ end }}
+      <tr>
+        <th class="[ text--left ]">Aggregate Total</th>
+        <td class="[ text--right bold ]">{{ .Params.report.cases.newTotal }}</td>
+        <td class="[ text--right bold ]">{{ .Params.report.cases.toDateTotal }}</td>
+      </tr>
+    
+    </tbody>
+
+  </table>
+
+</section>

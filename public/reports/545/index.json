@@ -2,8 +2,8 @@
     "data" :  {
       "report": {
         "number": 546,
-        "date": "2021-22-09",
-        "permalink" : "https://covidapibs.com/reports/545/index.json",
+        "date": "2021-09-22",
+        "permalink" : "https://apibahamas.app/reports/545/",
         "datePublished": "2021-10-11 03:14:28 -0400 EDT",
         "cases": {
           "byIsland": [
@@ -130,9 +130,9 @@
           ],
           "newTotal": 111,
           "toDateTotal": 20490,
-            "historyOfTravel": {
-              "byIsland": false,
-              "total": 0
+          "historyOfTravel": {
+            "byIsland": false,
+            "total": 0
           },
           "bySex": [
             
@@ -209,7 +209,79 @@
             "underInvestigation": 32
           }
         },
-        "reportedFatalities": false,
+        "reportedFatalities": [ 
+          { 
+          "fatality": {
+              "age": 50,
+              "island": "New Providence",
+              "sex": "Male",
+              "date": "2021-09-08"
+            }
+          },
+          "fatality": {
+              "age": 63,
+              "island": "New Providence",
+              "sex": "Male",
+              "date": "2021-09-09"
+            }
+          },
+          "fatality": {
+              "age": 71,
+              "island": "New Providence",
+              "sex": "Female",
+              "date": "2021-11-09"
+            }
+          },
+          "fatality": {
+              "age": 82,
+              "island": "Grand Bahama",
+              "sex": "Female",
+              "date": "2021-11-09"
+            }
+          },
+          "fatality": {
+              "age": 44,
+              "island": "New Providence",
+              "sex": "Male",
+              "date": "2021-09-14"
+            }
+          },
+          "fatality": {
+              "age": 47,
+              "island": "New Providence",
+              "sex": "Female",
+              "date": "2021-09-15"
+            }
+          },
+          "fatality": {
+              "age": 45,
+              "island": "New Providence",
+              "sex": "Female",
+              "date": "2021-09-16"
+            }
+          },
+          "fatality": {
+              "age": 59,
+              "island": "New Providence",
+              "sex": "Male",
+              "date": "2021-09-18"
+            }
+          },
+          "fatality": {
+              "age": 55,
+              "island": "Grand Bahama",
+              "sex": "Male",
+              "date": "2021-09-18"
+            }
+          },
+          "fatality": {
+              "age": 58,
+              "island": "Grand Bahama",
+              "sex": "Female",
+              "date": "2021-09-19"
+            }
+          }
+        ],
         "tests": {
           "toDate": 143239,
           "completed": 329,

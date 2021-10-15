@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COVID-19 Vaccination Updates | Bahamas</title>
+  <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+
+  {{ partial "navbar.html" }}
+
+  <main class="[ x--wide pt--6 ]">
+
+    <header class="[ py--3 mb--1 ]">
+
+      <h1>COVID-19 Vaccination Updates</h1>
+
+      <a href="{{ .Permalink }}/index.json">View JSON</a>
+
+    </header>
+
+    <ul class="[ mb--2 ]">
+      {{ range ( where .Site.RegularPages.ByDate "Type" "updates" | last 5 ).Reverse  }}
+      <li class="[ flex flex--between--middle mb--025 ]">
+        <div>COVID-19 Vaccination Update {{ .Date.Format "January 02, 2006" }}</div>
+        <div class="[ flex ]">
+          <a href="{{ .Permalink }}">View Update</a>
+          <b class="[ block mx--050 ]"></b>
+          <a href="{{ .Permalink }}/index.json">View JSON</a>
+        </div>
+      </li>
+      {{ end }}
+    </ul>
+
+  </main>
+</body>
+</html>

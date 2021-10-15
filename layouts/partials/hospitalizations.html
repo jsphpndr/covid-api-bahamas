@@ -1,0 +1,64 @@
+<section class="[ mb--2 ]">
+
+  <h2 class="[ mb--050 ]">Hospitalizations</h2>
+
+  <table class="[ table ] [ mb--2 ]">
+
+    <thead>
+      
+      <tr>
+        <th colspan="4">New Providence</th>
+      </tr>
+      <tr>
+        <th class="[ text--left ]">Healthcare Institution</th>
+        <th class="[ text--right ]">ICU</th>
+        <th class="[ text--right ]">Moderately Ill</th>
+        <th class="[ text--right ]">Total</th>
+      </tr>
+
+    </thead>
+    
+    <tbody>
+
+      
+      {{ range first 3 .Params.report.cases.inHospital.byFacility }}
+      <tr></tr>
+
+        <th class="[ text--left ]">{{ .facility.name }}</th>
+        <td class="[ text--right ]">{{ .facility.icu }}</td>
+        <td class="[ text--right ]">{{ .facility.nonICU }}</td>
+        <td class="[ text--right ]">{{ .facility.total }}</td>
+      </tr>
+      {{ end }}
+    
+  </table>
+  
+  <table class="[ table ]">
+      
+    <thead>
+      <tr>
+        <th colspan="4">Grand Bahama</th>
+      </tr>
+      <tr>
+        <th class="[ text--left ]">Healthcare Institution</th>
+        <th class="[ text--right ]">ICU</th>
+        <th class="[ text--right ]">Moderately Ill</th>
+        <th class="[ text--right ]">Total</th>
+      </tr>
+    </thead>
+
+    <tbody>
+        {{ range last 1 .Params.report.cases.inHospital.byFacility }}
+        <tr>
+          <th class="[ text--left ]">{{ .facility.name }}</th>
+          <td class="[ text--right ]">{{ .facility.nonICU }}</td>
+          <td class="[ text--right ]">{{ .facility.icu }}</td>
+          <td class="[ text--right ]">{{ .facility.total }}</td>
+        </tr>
+        {{ end }}
+      </tr>
+    </tbody>
+
+  </table>
+
+</section>

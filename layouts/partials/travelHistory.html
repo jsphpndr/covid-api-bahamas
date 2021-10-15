@@ -1,0 +1,35 @@
+{{if eq .Params.report.cases.ifTravelHistory true }}
+  <section class="[ mb--2 ]">
+
+    <h2 class="[ mb--050 ]">Cases With History of Travel</h2>
+    
+    <figure>
+
+      <table class="[ table ] [ mb--1 ]">
+      
+        <thead>
+  
+          <tr>
+            <th class="[ text--left ]">Island</td>
+            <th class="[ text--right ]">New</td>
+          </tr>
+  
+        </thead>
+  
+        <tbody>
+          {{ range $i, $e := .Params.report.cases.historyOfTravel.byIsland }}
+          <tr>
+            <th class="[ text--left ]">{{ .island.name }}</th>
+            <td class="[ text--right ]">{{ .island.new }}</td>
+          </tr>
+          {{ end }}
+        </tbody>
+  
+      </table>
+
+      <figcaption><strong>Note:</strong> This data refers to confirmed cases with history of travel in the last fourteen (14) days.</figcaption>
+    </figure>
+
+
+  </section>
+  {{ end }}

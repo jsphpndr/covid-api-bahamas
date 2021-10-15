@@ -2,8 +2,8 @@
     "data" :  {
       "report": {
         "number": 554,
-        "date": "2021-01-10",
-        "permalink" : "https://covidapibs.com/reports/554/index.json",
+        "date": "2021-10-01",
+        "permalink" : "https://apibahamas.app/reports/554/",
         "datePublished": "2021-10-11 00:12:21 -0400 EDT",
         "cases": {
           "byIsland": [
@@ -130,9 +130,9 @@
           ],
           "newTotal": 67,
           "toDateTotal": 21265,
-            "historyOfTravel": {
-              "byIsland": false,
-              "total": 0
+          "historyOfTravel": {
+            "byIsland": false,
+            "total": 0
           },
           "bySex": [
             
@@ -209,7 +209,135 @@
             "underInvestigation": 68
           }
         },
-        "reportedFatalities": false,
+        "reportedFatalities": [ 
+          { 
+          "fatality": {
+              "age": 72,
+              "island": "Abaco",
+              "sex": "Male",
+              "date": "2020-10-14"
+            }
+          },
+          "fatality": {
+              "age": 74,
+              "island": "Bimini & Cat Cay",
+              "sex": "Male",
+              "date": "2021-03-30"
+            }
+          },
+          "fatality": {
+              "age": 44,
+              "island": "Abaco",
+              "sex": "Male",
+              "date": "2021-05-16"
+            }
+          },
+          "fatality": {
+              "age": 49,
+              "island": "Berry Islands",
+              "sex": "Male",
+              "date": "2021-07-21"
+            }
+          },
+          "fatality": {
+              "age": 50,
+              "island": "Andros",
+              "sex": "Female",
+              "date": "2021-01-08"
+            }
+          },
+          "fatality": {
+              "age": 57,
+              "island": "Andros",
+              "sex": "Male",
+              "date": "2021-08-17"
+            }
+          },
+          "fatality": {
+              "age": 62,
+              "island": "Abaco",
+              "sex": "Male",
+              "date": "2021-08-19"
+            }
+          },
+          "fatality": {
+              "age": 87,
+              "island": "Exuma",
+              "sex": "Male",
+              "date": "2021-08-20"
+            }
+          },
+          "fatality": {
+              "age": 74,
+              "island": "Exuma",
+              "sex": "Male",
+              "date": "2021-08-20"
+            }
+          },
+          "fatality": {
+              "age": 52,
+              "island": "Abaco",
+              "sex": "Female",
+              "date": "2021-08-25"
+            }
+          },
+          "fatality": {
+              "age": 63,
+              "island": "Exuma",
+              "sex": "Male",
+              "date": "2021-08-31"
+            }
+          },
+          "fatality": {
+              "age": 79,
+              "island": "Eleuthera",
+              "sex": "Female",
+              "date": "2021-09-16"
+            }
+          },
+          "fatality": {
+              "age": 80,
+              "island": "New Providence",
+              "sex": "Male",
+              "date": "2021-09-16"
+            }
+          },
+          "fatality": {
+              "age": 42,
+              "island": "Eleuthera",
+              "sex": "Female",
+              "date": "2021-09-16"
+            }
+          },
+          "fatality": {
+              "age": 96,
+              "island": "Andros",
+              "sex": "Male",
+              "date": "2021-09-20"
+            }
+          },
+          "fatality": {
+              "age": 36,
+              "island": "New Providence",
+              "sex": "Male",
+              "date": "2021-09-28"
+            }
+          },
+          "fatality": {
+              "age": 59,
+              "island": "New Providence",
+              "sex": "Female",
+              "date": "2021-09-30"
+            }
+          },
+          "fatality": {
+              "age": 70,
+              "island": "Eleuthera",
+              "sex": "Female",
+              "date": "2021-09-30"
+            }
+          }
+        ],
         "tests": {
           "toDate": 147362,
           "completed": 463,

@@ -2,8 +2,8 @@
     "data" :  {
       "report": {
         "number": 550,
-        "date": "2021-07-09",
-        "permalink" : "https://covidapibs.com/reports/550/index.json",
+        "date": "2021-09-07",
+        "permalink" : "https://apibahamas.app/reports/550/",
         "datePublished": "2021-10-11 01:53:17 -0400 EDT",
         "cases": {
           "byIsland": [
@@ -130,9 +130,9 @@
           ],
           "newTotal": 65,
           "toDateTotal": 20907,
-            "historyOfTravel": {
-              "byIsland": false,
-              "total": 0
+          "historyOfTravel": {
+            "byIsland": false,
+            "total": 0
           },
           "bySex": [
             

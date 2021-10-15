@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COVID-19 Reports | COVID-19 API</title>
+  <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+
+  {{ partial "navbar.html" }}
+
+  <main class="[ main ] [ x--wide pt--6 ]">
+
+    <header class="[ py--3 ]">
+
+      <h1>COVID-19 Case Reports</h1>
+
+      <a href="{{ .Permalink }}/index.json">View JSON</a>
+
+    </header>
+
+    {{ .Content }}
+
+    
+
+    <ul class="[ mb--2 ]">
+      {{ range ( .Pages.ByTitle ).Reverse }}
+      <li class="[ flex flex--between--middle mb--025 ]">
+        <div>COVID-19 Case Report {{ .Title }}</div>
+        <div class="[ flex ]">
+          <a href="{{ .Permalink }}" class="[ mr--1 ]">View Report</a>
+          <a href="{{ .Permalink }}/index.json">View JSON</a>
+        </div>
+      </li>
+      {{ end }}
+    </ul>
+
+    
+  </main>
+
+  {{ partial "footer.html" }}
+  
+</body>
+</html>

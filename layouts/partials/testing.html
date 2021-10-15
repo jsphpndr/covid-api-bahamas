@@ -1,0 +1,70 @@
+<section class="[ mb--2 ]">
+
+  <h2 class="[ mb--050 ]">RT-PCR Test Results</h2>
+
+  <figure>
+
+    <table class="[ table ] [ mb--1 ]">
+      <thead>
+        <tr>
+          <th class="[ text--left ]">Results</th>
+          <th class="[ text--right ]">Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th class="[ text--left ]">Positive</th>
+          <td class="[ text--right ]">{{ .Params.report.tests.positive }}</td>
+        </tr>
+        <tr>
+          <th class="[ text--left ]">Negative</th>
+          <td class="[ text--right ]">{{ .Params.report.tests.negative }}</td>
+        </tr>
+        <tr>
+          <th class="[ text--left ]">Repeated</th>
+          <td class="[ text--right ]">{{ .Params.report.tests.repeated }}</td>
+        </tr>
+        <tr>
+          <th class="[ text--left ]">Inconclusive</th>
+          <td class="[ text--right ]">{{ .Params.report.tests.inconclusive }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <figcaption><strong>Note:</strong> Test results listed are on report date.</figcaption>
+
+  </figure>
+
+
+</section>
+
+
+<section class="[ mb--2 ]">
+
+  <h2 class="[ mb--050 ]">RT-PCR Tests Completed</h2>
+
+  <table class="[ table ]">
+
+    <thead>
+      <tr>
+        <th class="[ text--left ]">Completed</th>
+        <th class="[ text--right ]">Total</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      
+      <tr>
+        <th class="[ text--left ]">On Report Date</th>
+        <td class="[ text--right ]">{{ .Params.report.tests.completed }}</td>
+      </tr>
+      
+      <tr>
+        <th class="[ text--left ]">To Date</th>
+        <td class="[ text--right ]">{{ .Params.report.tests.toDate }}</td>
+      </tr>
+    
+    </tbody>
+
+  </table>
+</section>

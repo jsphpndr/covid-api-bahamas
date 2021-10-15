@@ -21,7 +21,7 @@ islands:
 update:
 
   number: {{ replace .Name "-" " " | title }}
-  date: 
+  date: {{ .Date }}
   # Uncomment .Date to record data modifications
   datePublished: {{ .Date }}
   #dateModified: 

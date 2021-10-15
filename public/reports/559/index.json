@@ -3,7 +3,7 @@
       "report": {
         "number": 559,
         "date": "2021-10-06",
-        "permalink" : "https://covidapibs.com/reports/559/index.json",
+        "permalink" : "https://apibahamas.app/reports/559/",
         "datePublished": "2021-10-08 23:10:12 -0400 EDT",
         "cases": {
           "byIsland": [
@@ -130,9 +130,9 @@
           ],
           "newTotal": 60,
           "toDateTotal": 21518,
-            "historyOfTravel": {
-              "byIsland": false,
-              "total": 0
+          "historyOfTravel": {
+            "byIsland": false,
+            "total": 0
           },
           "bySex": [
             
@@ -209,7 +209,37 @@
             "underInvestigation": 62
           }
         },
-        "reportedFatalities": false,
+        "reportedFatalities": [ 
+          { 
+          "fatality": {
+              "age": 61,
+              "island": "Grand Bahama",
+              "sex": "Female",
+              "date": "2021-09-22"
+            }
+          },
+          "fatality": {
+              "age": 42,
+              "island": "Grand Bahama",
+              "sex": "Female",
+              "date": "2021-09-26"
+            }
+          },
+          "fatality": {
+              "age": 88,
+              "island": "Grand Bahama",
+              "sex": "Female",
+              "date": "2021-10-01"
+            }
+          },
+          "fatality": {
+              "age": 67,
+              "island": "Grand Bahama",
+              "sex": "Female",
+              "date": "2021-10-03"
+            }
+          }
+        ],
         "tests": {
           "toDate": 148987,
           "completed": 463,

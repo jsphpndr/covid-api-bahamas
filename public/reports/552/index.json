@@ -2,8 +2,8 @@
     "data" :  {
       "report": {
         "number": 552,
-        "date": "2021-29-09",
-        "permalink" : "https://covidapibs.com/reports/552/index.json",
+        "date": "2021-09-29",
+        "permalink" : "https://apibahamas.app/reports/552/",
         "datePublished": "2021-10-11 01:33:08 -0400 EDT",
         "cases": {
           "byIsland": [
@@ -130,17 +130,17 @@
           ],
           "newTotal": 130,
           "toDateTotal": 21114,
-            "historyOfTravel": {
-              "byIsland": [
-                { 
-                {
-                  "island": {
-                    "name": "New Providence",
-                    "new": 2
-                  }
+          "historyOfTravel": {
+            "byIsland": [
+              { 
+              {
+                "island": {
+                  "name": "New Providence",
+                  "new": 2
                 }
-              ],
-              "total": 2
+              }
+            ],
+            "total": 2
           },
           "bySex": [
             
@@ -217,7 +217,23 @@
             "underInvestigation": 41
           }
         },
-        "reportedFatalities": false,
+        "reportedFatalities": [ 
+          { 
+          "fatality": {
+              "age": 31,
+              "island": "Grand Bahama",
+              "sex": "Female",
+              "date": "2021-09-16"
+            }
+          },
+          "fatality": {
+              "age": 56,
+              "island": "Grand Bahama",
+              "sex": "Female",
+              "date": "2021-09-19"
+            }
+          }
+        ],
         "tests": {
           "toDate": 146249,
           "completed": 623,

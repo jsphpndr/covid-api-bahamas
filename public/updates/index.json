@@ -6,7 +6,7 @@
   "items" : [{
       "update": {
         "number":  20212808,
-        "date": "2021-28-08",
+        "date": "2021-08-28",
         "datePublished": "2021-10-08T23:10:12-04:00",
         "doses": {
           "aggregate": {
@@ -110,7 +110,7 @@
         "full": 57593,
         "abroad": 2822
       },
-      "permalink" : "https://covidapibs.com/updates/20212808/index.json"
+      "permalink" : "https://apibahamas.app/updates/20212808/"
     }]
 }
 

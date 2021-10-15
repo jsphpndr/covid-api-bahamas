@@ -1,6 +1,8 @@
-baseURL: 'https://covidapibs.com/'
+baseURL: 'https://apibahamas.app/'
 languageCode: en-uk
 title: COVID-19 API Bahamas
+assetDir: 
+  - "assets"
 
 upload_dir: static/uploads
 public_path: /uploads
@@ -12,8 +14,14 @@ disableKinds:
 
 outputs:
   page:
+    - HTML
     - json
   section:
+    - HTML
     - json
   home:
     - HTML
+
+# params:
+#   dateFormat: 02 Jan 2006
+

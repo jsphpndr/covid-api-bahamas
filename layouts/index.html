@@ -3,30 +3,85 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Joseph Pinder's COVID-19 API</title>
+  <title>COVID-19 API | Bahamas</title>
   <meta name="description" content="This a public API for COVID-19 case and vaccination data in The Bahamas.">
-
+  <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
+    {{ partial "navbar.html" . }}  
 
-    <h1>COVID-19 Public API for The Bahamas</h1>
+    <main class="[ x--wide pt--6 ]">
 
-    <p>This is public read-only API read-only and was created for COVID-19 data in The Bahamas.</p>
+      <header class="[ py--3 ]">
 
-    <h2>Creator</h2>
-    <p>Joseph Pinder</p>
+        <h1>COVID-19 Public API for The Bahamas</h1>
 
-    <h2>Contributors</h2>
-    <ul>
-      <!-- Contributing? Add your name to the list. -->
-      <li></li>
-    </ul>
+        <p>This is a public, read-only API created for COVID-19 data in The Bahamas.</p>
 
-    <ul>
-      <li><a href="/reports/index.json" rel="noopener noreferrer">COVID-19 Case Reports</a></li>
-      <li><a href="/updates/index.json" rel="noopener noreferrer">COVID-19 Vaccination Updates</a></li>
-    </ul>
+        <p>You are free to use this API as you see fit and manipulate the data according to your own needs.</p>
+        
+      </header>
 
-    
+      <section class="[ mb--3 ]">
+        <h2>Creator</h2>
+        <p>Joseph Pinder</p>
+
+        <h2>Contributors</h2>
+        <ul>
+        </ul>
+      </section>
+      
+      <section class="mb--2">
+
+        <h3 class="[ mb--050 ]">COVID-19 Case Reports</h3>
+        {{ .Content }}
+      
+        <ul class="[ mb--2 ]">
+          {{ range ( where .Site.RegularPages.ByTitle "Type" "reports" | last 5 ).Reverse  }}
+          <li class="[ flex flex--between--middle mb--025 ]">
+            <div>COVID-19 Case Report {{ .Title }}</div>
+            <div class="[ flex ]">
+              <a href="{{ .Permalink }}">View Report</a>
+              <b class="[ block mx--050 ]"></b>
+              <a href="{{ .Permalink }}/index.json">View JSON</a>
+            </div>
+          </li>
+          {{ end }}
+        </ul>
+
+        <div class="[ flex--end ]">
+          <a href="/reports">All Reports</a>
+          <b class="[ block mx--050 ]"></b>
+          <a href="/reports/index.json">View JSON</a>
+        </div>
+
+      </section>
+
+      <section class="[ mb--2 ]">
+
+        <h3 class="[ mb--050 ]">COVID-19 Vaccination Updates</h3>
+
+        <ul class="[ mb--2 ]">
+          {{ range ( where .Site.RegularPages.ByDate "Type" "updates" | last 5 ).Reverse  }}
+          <li class="[ flex flex--between--middle mb--025 ]">
+            <div>COVID-19 Vaccination Update {{ .Date.Format "January 02, 2006" }}</div>
+            <div class="[ flex ]">
+              <a href="{{ .Permalink }}">View Update</a>
+              <b class="[ block mx--050 ]"></b>
+              <a href="{{ .Permalink }}/index.json">View JSON</a>
+            </div>
+          </li>
+          {{ end }}
+        </ul>
+        <div class="[ flex--end ]">
+          <a href="/updates">All Updates</a>
+          <b class="[ block mx--050 ]"></b>
+          <a href="/updates/index.json">View JSON</a>
+        </div>
+
+      </section>
+
+    </main>
+    {{ partial "footer.html" }}
 </body>
 </html>
