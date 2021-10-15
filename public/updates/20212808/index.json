@@ -1,0 +1,111 @@
+{
+    "data" :  {
+      "update": {
+        "number":  20212808,
+        "date": "2021-08-28",
+        "datePublished": "2021-10-08T23:10:12-04:00",
+        "doses": {
+          "aggregate": {
+            "total": <no value>,
+            "first": <no value>
+          },
+          "byIsland": [
+            { 
+              "island": {
+                "name": New Providence,
+                "first": 71189,
+                "second": 41458
+              }
+            },
+              "island": {
+                "name": Grand Bahama,
+                "first": 11104,
+                "second": 7983
+              }
+            },
+              "island": {
+                "name": Eleuthera,
+                "first": 2228,
+                "second": 1353
+              }
+            },
+              "island": {
+                "name": Abaco,
+                "first": 3229,
+                "second": 1267
+              }
+            },
+              "island": {
+                "name": Exuma,
+                "first": 1160,
+                "second": 800
+              }
+            },
+              "island": {
+                "name": Andros,
+                "first": 892,
+                "second": 428
+              }
+            },
+              "island": {
+                "name": Bimini,
+                "first": 561,
+                "second": 387
+              }
+            },
+              "island": {
+                "name": Long Island & Rum Cay,
+                "first": 456,
+                "second": 309
+              }
+            },
+              "island": {
+                "name": Berry Islands,
+                "first": 353,
+                "second": 280
+              }
+            },
+              "island": {
+                "name": Cat Island,
+                "first": 301,
+                "second": 145
+              }
+            },
+              "island": {
+                "name": Inagua,
+                "first": 215,
+                "second": 117
+              }
+            },
+              "island": {
+                "name": San Salvador,
+                "first": 186,
+                "second": 92
+              }
+            },
+              "island": {
+                "name": Acklins,
+                "first": 46,
+                "second": 26
+              }
+            },
+              "island": {
+                "name": Crooked Island,
+                "first": 24,
+                "second": 21
+              }
+            },
+              "island": {
+                "name": Mayaguana,
+                "first": 23,
+                "second": 15
+              }
+            }
+          ]
+        },
+        "full": 57593,
+        "abroad": 2822
+      },
+      "permalink" : "https://apibahamas.app/updates/20212808/"
+    } 
+}

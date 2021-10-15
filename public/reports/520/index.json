@@ -1,0 +1,418 @@
+{
+    "data" :  {
+      "report": {
+        "number": 520,
+        "date": "2021-08-28",
+        "permalink" : "https://apibahamas.app/reports/520/",
+        "datePublished": "2021-10-11 13:02:21 -0400 EDT",
+        "cases": {
+          "byIsland": [
+            { 
+            {
+              "island": {
+                "name": "New Providence",
+                "toDate": 13636,
+                "new": 80
+              }
+            },
+            {
+              "island": {
+                "name": "Grand Bahama",
+                "toDate": 2286,
+                "new": 10
+              }
+            },
+            {
+              "island": {
+                "name": "Abaco",
+                "toDate": 580,
+                "new": 1
+              }
+            },
+            {
+              "island": {
+                "name": "Bimini & Cat Cay",
+                "toDate": 234,
+                "new": 0
+              }
+            },
+            {
+              "island": {
+                "name": "Eleuthera",
+                "toDate": 483,
+                "new": 4
+              }
+            },
+            {
+              "island": {
+                "name": "Berry Islands",
+                "toDate": 98,
+                "new": 0
+              }
+            },
+            {
+              "island": {
+                "name": "Exuma",
+                "toDate": 320,
+                "new": 1
+              }
+            },
+            {
+              "island": {
+                "name": "Inagua",
+                "toDate": 25,
+                "new": 0
+              }
+            },
+            {
+              "island": {
+                "name": "Andros",
+                "toDate": 220,
+                "new": 3
+              }
+            },
+            {
+              "island": {
+                "name": "Long Island",
+                "toDate": 54,
+                "new": 1
+              }
+            },
+            {
+              "island": {
+                "name": "Cat Island",
+                "toDate": 76,
+                "new": 3
+              }
+            },
+            {
+              "island": {
+                "name": "Acklins",
+                "toDate": 9,
+                "new": 2
+              }
+            },
+            {
+              "island": {
+                "name": "Crooked Island",
+                "toDate": 9,
+                "new": 2
+              }
+            },
+            {
+              "island": {
+                "name": "Mayaguana",
+                "toDate": 4,
+                "new": 0
+              }
+            },
+            {
+              "island": {
+                "name": "Ragged Island",
+                "toDate": 0,
+                "new": 0
+              }
+            },
+            {
+              "island": {
+                "name": "San Salvador",
+                "toDate": 17,
+                "new": 1
+              }
+            },
+            {
+              "island": {
+                "name": "Location Pending",
+                "toDate": 88,
+                "new": 0
+              }
+            }
+          ],
+          "newTotal": 108,
+          "toDateTotal": 18139,
+          "historyOfTravel": {
+            "byIsland": false,
+            "total": 2
+          },
+          "bySex": [
+            
+              "group": {
+                "sex": "Male",
+                "new": "47"
+              }
+            },
+              "group": {
+                "sex": "Female",
+                "new": "61"
+              }
+            }
+          ],
+          "bySexTotal": 108,
+          "inHospital": {
+            "byFacility": [
+              { 
+                "facility": {
+                  "island": "New Providence",
+                  "name": "Doctor's Hospital",
+                  "total": 50,
+                  "nonICU": 43,
+                  "icu": 7
+                }
+              },
+                "facility": {
+                  "island": "New Providence",
+                  "name": "South Beach Acute Care and Referral Centre",
+                  "total": 7,
+                  "nonICU": 7,
+                  "icu": 0
+                }
+              },
+                "facility": {
+                  "island": "New Providence",
+                  "name": "Princess Margaret Hospital",
+                  "total": 79,
+                  "nonICU": 75,
+                  "icu": 4
+                }
+              },
+                "facility": {
+                  "island": "New Providence",
+                  "name": "Sandilands Rehabilitation Centre",
+                  "total": 0,
+                  "nonICU": 0,
+                  "icu": 0
+                }
+              },
+                "facility": {
+                  "island": "Grand Bahama",
+                  "name": "Grand Bahama Health Services",
+                  "total": 28,
+                  "nonICU": 24,
+                  "icu": 4
+                }
+              }
+            ],
+            "totals": {
+              "total": 164,
+              "nonICU": 149,
+              "icu": 15
+            }
+          },
+          "active": 2980,
+          "recovered": {
+            "new": 11,
+            "toDate": 14665
+          },
+          "fatalities": {
+            "toDate": 381,
+            "unrelatedToDate": 93,
+            "underInvestigation": 20
+          }
+        },
+        "reportedFatalities": [ 
+          { 
+          "fatality": {
+              "age": 76,
+              "island": "Grand Bahama",
+              "sex": "Female",
+              "date": "2021-08-16"
+            }
+          },
+          "fatality": {
+              "age": 58,
+              "island": "Grand Bahama",
+              "sex": "Female",
+              "date": "2021-08-23"
+            }
+          },
+          "fatality": {
+              "age": 69,
+              "island": "Grand Bahama",
+              "sex": "Female",
+              "date": "2021-08-27"
+            }
+          },
+          "fatality": {
+              "age": 47,
+              "island": "Grand Bahama",
+              "sex": "Male",
+              "date": "2021-05-29"
+            }
+          },
+          "fatality": {
+              "age": 39,
+              "island": "Grand Bahama",
+              "sex": "Male",
+              "date": "2021-06-21"
+            }
+          },
+          "fatality": {
+              "age": 52,
+              "island": "Grand Bahama",
+              "sex": "Female",
+              "date": "2021-07-20"
+            }
+          },
+          "fatality": {
+              "age": 55,
+              "island": "Grand Bahama",
+              "sex": "Female",
+              "date": "2021-07-23"
+            }
+          },
+          "fatality": {
+              "age": 65,
+              "island": "Grand Bahama",
+              "sex": "Female",
+              "date": "2021-07-24"
+            }
+          },
+          "fatality": {
+              "age": 27,
+              "island": "Grand Bahama",
+              "sex": "Female",
+              "date": "2021-07-24"
+            }
+          },
+          "fatality": {
+              "age": 55,
+              "island": "Grand Bahama",
+              "sex": "Female",
+              "date": "2021-07-26"
+            }
+          },
+          "fatality": {
+              "age": 47,
+              "island": "Grand Bahama",
+              "sex": "Male",
+              "date": "2021-07-27"
+            }
+          },
+          "fatality": {
+              "age": 68,
+              "island": "Grand Bahama",
+              "sex": "Male",
+              "date": "2021-07-28"
+            }
+          },
+          "fatality": {
+              "age": 19,
+              "island": "Grand Bahama",
+              "sex": "Male",
+              "date": "2021-07-29"
+            }
+          },
+          "fatality": {
+              "age": 47,
+              "island": "Grand Bahama",
+              "sex": "Male",
+              "date": "2021-08-01"
+            }
+          },
+          "fatality": {
+              "age": 47,
+              "island": "Grand Bahama",
+              "sex": "Male",
+              "date": "2021-08-01"
+            }
+          },
+          "fatality": {
+              "age": 61,
+              "island": "Grand Bahama",
+              "sex": "Female",
+              "date": "2021-08-01"
+            }
+          },
+          "fatality": {
+              "age": 82,
+              "island": "Grand Bahama",
+              "sex": "Female",
+              "date": "2021-08-04"
+            }
+          },
+          "fatality": {
+              "age": 59,
+              "island": "Grand Bahama",
+              "sex": "Female",
+              "date": "2021-08-05"
+            }
+          },
+          "fatality": {
+              "age": 46,
+              "island": "Grand Bahama",
+              "sex": "Female",
+              "date": "2021-08-06"
+            }
+          },
+          "fatality": {
+              "age": 89,
+              "island": "Grand Bahama",
+              "sex": "Female",
+              "date": "2021-08-12"
+            }
+          },
+          "fatality": {
+              "age": 44,
+              "island": "Grand Bahama",
+              "sex": "Female",
+              "date": "2021-08-13"
+            }
+          },
+          "fatality": {
+              "age": 67,
+              "island": "Grand Bahama",
+              "sex": "Female",
+              "date": "2021-08-13"
+            }
+          },
+          "fatality": {
+              "age": 51,
+              "island": "Grand Bahama",
+              "sex": "Female",
+              "date": "2021-08-13"
+            }
+          },
+          "fatality": {
+              "age": 72,
+              "island": "Grand Bahama",
+              "sex": "Female",
+              "date": "2021-08-15"
+            }
+          },
+          "fatality": {
+              "age": 52,
+              "island": "Grand Bahama",
+              "sex": "Male",
+              "date": "2021-08-16"
+            }
+          },
+          "fatality": {
+              "age": 61,
+              "island": "Grand Bahama",
+              "sex": "Female",
+              "date": "2021-08-19"
+            }
+          },
+          "fatality": {
+              "age": 30,
+              "island": "Grand Bahama",
+              "sex": "Male",
+              "date": "2021-08-24"
+            }
+          }
+        ],
+        "tests": {
+          "toDate": 133155,
+          "completed": 435,
+          "positive": 108,
+          "negative": 298,
+          "repeated": 26,
+          "inconclusive": 3
+        }
+      }
+    }
+
+
+
+      
+}
