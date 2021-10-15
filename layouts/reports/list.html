@@ -16,7 +16,7 @@
 
       <h1>COVID-19 Case Reports</h1>
 
-      <a href="{{ .Permalink }}/index.json">View JSON</a>
+      <a href="{{ .Permalink }}index.json">View JSON</a>
 
     </header>
 
@@ -30,7 +30,7 @@
         <div>COVID-19 Case Report {{ .Title }}</div>
         <div class="[ flex ]">
           <a href="{{ .Permalink }}" class="[ mr--1 ]">View Report</a>
-          <a href="{{ .Permalink }}/index.json">View JSON</a>
+          <a href="{{ .Permalink }}index.json">View JSON</a>
         </div>
       </li>
       {{ end }}
