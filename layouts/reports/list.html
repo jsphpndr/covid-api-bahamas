@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>COVID-19 Case Reports | COVID-19 API | Bahamas</title>
+  {{ $url := .Permalink }} 
+  {{ $url = replace $url ":" "%3A" }}
+  {{ $url = replace $url "/" "%2F" }}
+
   {{ $paged := (where .Data.Pages.ByTitle.Reverse "Section" "reports") }}
   {{ $paginator := .Paginate $paged }}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COVID-19 Case Reports{{ if ne $paginator.PageNumber 1 }} | Page {{ $paginator.PageNumber }}{{end}} | COVID-19 API | Bahamas</title>
   <link rel="canonical" href="{{ if eq $paginator.PageNumber 1 }}{{ .Permalink }}{{else}}{{ .Permalink }}page/{{ $paginator.PageNumber }}{{end}}">
   <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
-
+  
   {{ partial "navbar.html" }}
 
   <main class="[ main ]">
@@ -19,7 +23,7 @@
       
       <div class="[ wrapper ] [ x--wide ]">
 
-        <h1>COVID-19 Case Reports</h1>
+        <h1>COVID-19 Case Reports{{ if ne $paginator.PageNumber 1 }} | Page {{ $paginator.PageNumber }}{{end}}</h1>
 
         <a class="[ btn btn--ghost--lg ] [ no--print ]" href="{{ .Permalink }}/index.json">View JSON</a>
 
@@ -27,18 +31,21 @@
       
     </header>
 
-    <div class="[ share__bar ] [ x--wide flex--between--middle flex--wrap pt--d15 pb--2 no--print ]">
+    <div class="[ x--wide flex--between--middle flex--wrap g--1 pt--d15 pb--2 no--print ]">
 
-      <nav class="[ breadcrumbs ] [ pb--1 ]">
+      <nav class="[ breadcrumbs ]">
 
         <ul class="[ flex ]">
           <li class="[ breadcrumb__item ] [ mr--1 ]"><a href="/">Home</a></li>
-          <li class="[ breadcrumb__item ]">COVID-19 Case Reports</li>
+          {{ if eq $paginator.PageNumber 1 }}<li class="[ breadcrumb__item ]">COVID-19 Case Reports</li>{{else}}
+          <li class="[ breadcrumb__item ] [ wsnw mr--1 ]"><a href="/reports">COVID-19 Case Reports</a></li>
+          <li class="[ breadcrumb__item ]">Page {{ $paginator.PageNumber }}</li>{{end}}
+          
         </ul>
 
       </nav>
 
-      <div class="[ flex--middle mb--1 ]">
+      <div class="[ flex--middle ]">
         <span class="[ mr--1 ]">Share on:</span>
         {{ partial "social.html" }}
       </div>
