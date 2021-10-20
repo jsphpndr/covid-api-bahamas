@@ -2,38 +2,64 @@
 
   <h2 class="[ mb--050 ]">Hospitalizations</h2>
 
-  <table class="[ table ] [ mb--2 ]">
+  <div class="[ wrapper for--table ]">
+    <table class="[ table--breakdown ] [ mb--2 ]">
 
-    <thead>
-      
-      <tr>
-        <th colspan="4">New Providence</th>
-      </tr>
-      <tr>
-        <th class="[ text--left ]">Healthcare Institution</th>
-        <th class="[ text--right ]">ICU</th>
-        <th class="[ text--right ]">Moderately Ill</th>
-        <th class="[ text--right ]">Total</th>
-      </tr>
-
-    </thead>
-    
-    <tbody>
-
-      
-      {{ range first 3 .Params.report.cases.inHospital.byFacility }}
-      <tr></tr>
-
-        <th class="[ text--left ]">{{ .facility.name }}</th>
-        <td class="[ text--right ]">{{ .facility.icu }}</td>
-        <td class="[ text--right ]">{{ .facility.nonICU }}</td>
-        <td class="[ text--right ]">{{ .facility.total }}</td>
-      </tr>
-      {{ end }}
-    
-  </table>
+      <thead>
+        
+        
+        <tr>
+          <th class="[ column--head text--left ]">Healthcare Institution</th>
+          <th class="[ text--center ]">Island</th>
+          <th class="[ text--center ]">ICU</th>
+          <th class="[ text--center ]">Non-ICU</th>
+          <th class="[ text--center ]">Total</th>
+        </tr>
   
-  <table class="[ table ]">
+      </thead>
+      
+      <tbody>
+        <!-- <tr>
+          <th class="[ column--head text--left ]">New Providence</th>
+          <td colspan="3"></td>
+        </tr> -->
+        {{ range first 4 .Params.report.cases.inHospital.byFacility }}
+        <tr>
+  
+          <th class="[ column--head text--left ]">{{ .facility.name }}</th>
+          <td class="[ text--center ]"><abbr title="New Providence">NP</abbr></td>
+          <td class="[ text--center ]">{{ .facility.icu }}</td>
+          <td class="[ text--center ]">{{ .facility.nonICU }}</td>
+          <td class="[ text--center ]">{{ .facility.total }}</td>
+        </tr>
+        {{ end }}
+        
+        {{ range last 1 .Params.report.cases.inHospital.byFacility }}
+          <!-- <tr>
+            <th class="[ column--head text--left ]">Grand Bahama</th>
+            <td colspan="3"></td>
+          </tr> -->
+          <tr>
+            <th class="[ column--head text--left ]">{{ .facility.name }}</th>
+            <td class="[ text--center ]"><abbr title="Grand Bahama">GB</abbr></td>
+            <td class="[ text--center ]">{{ .facility.nonICU }}</td>
+            <td class="[ text--center ]">{{ .facility.icu }}</td>
+            <td class="[ text--center ]">{{ .facility.total }}</td>
+          </tr>
+        {{ end }}
+        <tr>
+          <th class="[ column--head text--left ]">Total</th>
+          <td></td>
+          <td class="[ text--center ]">{{ .Params.report.cases.inHospital.totals.total }}</td>
+          <td class="[ text--center ]">{{ .Params.report.cases.inHospital.totals.nonICU }}</td>
+          <td class="[ text--center ]">{{ .Params.report.cases.inHospital.totals.icu }}</td>
+        </tr>
+        
+  
+    </table>
+  </div>
+  
+  <!-- <table class="[ table ]">
       
     <thead>
       <tr>
@@ -42,7 +68,7 @@
       <tr>
         <th class="[ text--left ]">Healthcare Institution</th>
         <th class="[ text--right ]">ICU</th>
-        <th class="[ text--right ]">Moderately Ill</th>
+        <th class="[ text--right ]">Non-ICU</th>
         <th class="[ text--right ]">Total</th>
       </tr>
     </thead>
@@ -59,6 +85,6 @@
       </tr>
     </tbody>
 
-  </table>
+  </table> -->
 
 </section>

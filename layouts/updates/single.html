@@ -1,18 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>COVID-19 Vaccination Updates | Bahamas</title>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Case Report {{ .Title }} | Bahamas</title>
+    <meta name="description" content="Access COVID-19 (Coronavirus) data for The Bahamas from the Ministry of Health & Wellness from COVID-19 Case Report {{ .Title }} issued on.">
+    <link rel="stylesheet" href="/styles/style.css">
+  </head>
 <body>
 
-  <header>
+  {{ partial "navbar.html" }}
 
-    <h1>COVID-19 Vaccination Updates</h1>
+  <main>
+
+    <header class="[ hero ] [ py--3 ]">
+
+      <div class="[ wrapper ] [ x--wide ]">
+        <h1>COVID-19 Vaccination Update {{ .Title }}</h1>
   
-  </header>
+        <a class="[ btn btn--ghost--lg ] [ no--print ]" href="{{ .Permalink }}/index.json">View JSON</a>
   
+      </div>
+    
+    </header>
+
+    <div class="[ share__bar ] [ x--wide flex--between--middle flex--wrap pt--d15 pb--2 no--print ]">
+
+      <nav class="[ breadcrumbs ] [ pb--1 ]">
+
+        <ul class="[ flex ]">
+          <li class="[ breadcrumb__item ] [ mr--1 ]"><a href="/">Home</a></li>
+          <li class="[ breadcrumb__item ] [ wsnw mr--1 ]"><a href="/updates/">COVID-19 Vaccination Updates</a></li>
+          <li class="[ breadcrumb__item ]">COVID-19 Vaccination Update {{ .Title }}</li>
+        </ul>
+
+      </nav>
+
+      <div class="[ flex--middle mb--1 ]">
+        <span class="[ mr--1 ]">Share on:</span>
+        {{ partial "social.html" }}
+      </div>
+
+    </div>
+
+    <div class="[ x--wide ]">
+
+      <section class="[ mb--2 page--break ]">
+  
+        <h2 class="[ mb--050 ]">Vaccination by Island</h2>
+      
+        <table class="[ table ]">
+      
+          <thead>
+      
+            <tr>
+              <th class="[ text--left ]">Island</td>
+              <th class="[ text--right ]">New</td>
+              <th class="[ text--right ]">Total</td>
+            </tr>
+      
+          </thead>
+      
+          <tbody>
+            {{ range $i, $e := .Params.update.doses.byIsland }}
+            <tr>
+              <th class="[ text--left ]">{{ .island.name }}</th>
+              <td class="[ text--right ]">{{ .island.first }}</td>
+              <td class="[ text--right ]">{{ .island.second }}</td>
+            </tr>
+            {{ end }}
+            <!-- <tr>
+              <th class="[ text--left ]">Aggregate Total</th>
+              <td class="[ text--right bold ]">{{ .Params.update.doses.aggregate.first }}</td>
+              <td class="[ text--right bold ]">{{ .Params.update.doses.aggregate.total }}</td>
+            </tr>
+           -->
+          </tbody>
+      
+        </table>
+      
+      </section>
+
+    </div>
+
+  </main>
+
+  {{ partial "footer.html" }}
+
 </body>
 </html>

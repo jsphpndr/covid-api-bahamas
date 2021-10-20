@@ -1,8 +1,8 @@
-<section class="[ mb--2 ]">
+<section class="[ mb--2 {{if eq .Params.report.cases.ifTravelHistory true }}page--break{{end}} ]">
 
-  <h2 class="[ mb--050 ]">RT-PCR Test Results</h2>
+  <h2 class="[ mb--050 ]">RT-PCR Testing</h2>
 
-  <figure>
+  <figure class="[ mb--1 ]">
 
     <table class="[ table ] [ mb--1 ]">
       <thead>
@@ -31,23 +31,16 @@
       </tbody>
     </table>
 
-    <figcaption><strong>Note:</strong> Test results listed are on report date.</figcaption>
+    <figcaption><strong>Note:</strong> Test results listed above are from tests taken on report date ({{ .Params.report.date | dateFormat "January 02, 2006" }}).</figcaption>
 
   </figure>
 
-
-</section>
-
-
-<section class="[ mb--2 ]">
-
-  <h2 class="[ mb--050 ]">RT-PCR Tests Completed</h2>
 
   <table class="[ table ]">
 
     <thead>
       <tr>
-        <th class="[ text--left ]">Completed</th>
+        <th class="[ column--head text--left ]">Completed</th>
         <th class="[ text--right ]">Total</th>
       </tr>
     </thead>
@@ -55,12 +48,12 @@
     <tbody>
       
       <tr>
-        <th class="[ text--left ]">On Report Date</th>
+        <th class="[ column--head text--left ]">Report Date</th>
         <td class="[ text--right ]">{{ .Params.report.tests.completed }}</td>
       </tr>
       
       <tr>
-        <th class="[ text--left ]">To Date</th>
+        <th class="[ column--head text--left ]">To Date</th>
         <td class="[ text--right ]">{{ .Params.report.tests.toDate }}</td>
       </tr>
     

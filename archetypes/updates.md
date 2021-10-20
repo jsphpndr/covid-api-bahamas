@@ -18,6 +18,9 @@ islands:
   ma: &ma Mayaguana
   # ri: &ri Ragged Island
 
+title: &no {{ replace .Name "-" " " | title }}
+summary: View
+
 update:
 
   number: {{ replace .Name "-" " " | title }}

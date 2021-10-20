@@ -152,4 +152,9 @@
     <lastmod>2021-08-23T00:00:00+00:00</lastmod>
   </url>
   
+  <url>
+    <loc>https://api.covidbahamas.app/become-sponsor/</loc>
+    <priority>0</priority>
+  </url>
+  
 </urlset>

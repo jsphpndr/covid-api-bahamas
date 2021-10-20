@@ -1,4 +1,4 @@
-<section class="[ mb--2 ]">
+<section class="[ mb--2 {{if eq .Params.report.cases.ifTravelHistory false }}page--break{{end}} ]">
 
   <h2 class="[ mb--050 ]">Active Cases</h2>
 
@@ -8,17 +8,17 @@
 
     <tbody>
       <tr>
-        <th class="[ text--left ]">Active</th>
+        <th class="[ column--head text--left ]">Active</th>
         <td class="[ text--right ]">{{ .Params.report.cases.active }}</td>
         
       </tr>
       <tr>
-        <th class="[ text--left ]">Recovered</th>
+        <th class="[ column--head text--left ]">Recovered</th>
         <td class="[ text--right ]">{{ .Params.report.cases.recovered.new }}</td>
         
       </tr>
       <tr>
-        <th class="[ text--left ]">Recovered on Report Date</th>
+        <th class="[ column--head text--left ]">Recovered on Report Date</th>
         <td class="[ text--right ]">{{ .Params.report.cases.recovered.toDate }}</td>
       </tr>
     </tbody>

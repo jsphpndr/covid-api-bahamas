@@ -1,12 +1,12 @@
 <section class="[ mb--2 ]">
       
-  <h2 class="[ mb--050 ]">Cases By Sex</h2>
+  <h2 class="[ mb--050 ]">Cases by Sex</h2>
 
   <table class="[ table ]">
 
     <thead>
       <tr>
-        <th class="[ text--left ]">Sex</th>
+        <th class="[ column--head text--left ]">Sex</th>
         <th class="[ text--right ]">New</th>
       </tr>
     </thead>
@@ -14,13 +14,13 @@
     <tbody>
       {{ range $i, $e := .Params.report.cases.bySex }}
       <tr>
-        <th class="[ text--left ]">{{ .group.sex }}</th>
+        <th class="[ column--head text--left ]">{{ .group.sex }}</th>
         <td class="[ text--right ]">{{ .group.new }}</td>
       </tr>
       {{ end }}
 
       <tr>
-        <th class="[ text--left ]">Total</th>
+        <th class="[ column--head text--left ]">Total</th>
         <td class="[ text--right ]">{{ .Params.report.cases.newTotal }}</td>
       </tr>
     

@@ -1,87 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>COVID-19 API | Bahamas</title>
-  <meta name="description" content="This a public API for COVID-19 case and vaccination data in The Bahamas.">
-  <link rel="stylesheet" href="/styles/style.css">
-</head>
-<body>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>COVID-19 API | Bahamas</title>
+    <meta name="description" content="Access COVID-19 (Coronavirus) case and vaccination data for The Bahamas from The Ministry of Health & Wellness' COVID-19 Case Reports and COVID-19 Vaccination Updates.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <link rel="canonical" href="{{ .Permalink }}">
+    <link rel="preload" href="/styles/style.css" as="style">
+    <link rel="stylesheet" href="/styles/style.css" type="text/css">
+    <noscript><style>.script {display: none}</style></noscript>
+    <link rel="icon" href="/favicon.svg">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#9395A1">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  {{ $moe := "https://www.bahamas.gov.bs/wps/portal/public/!ut/p/b1/vZbZcqM4GIWfJQ-QICEWcclqxI5ZDNy4jIltwAYbE2N4-nFmMtWV7k48Fz2Wrqg6P5_OkX4BlVEJlTWrS7ld9WXbrPbvzxm3RDPX9mUG25hjBEBg6BBF9dAMQWpBJXo6WUpLBlWNl7uITqZoBP6-Xqkoqcgzu02ZjBaraFSdruVhnzXZdaqHc9-rfNCIWatp7Nv1udjV5yDQSG7Pw0rAsNmtNsdaLzbHsRfS2qvKSyPb19TbhIYa-w2XnxYbz94E42F7fj2cwLSvsrZIQbxaeGTlHu1TjvRD0-haFhWVt4LLQVMkPalvptKbKfDFEME_nsHMFsWbZ5cO3z3LkDMjFmCF-6j_RvApMxBHEiC6bSpYxgjo_M_1MxZwgESeJXq8TrsM-I_1Xwvu7Nmd9TP39zz7HNFvHPwt-C7i70Nm7gm4fwUzl7HVdwGLtfdlspbHCRBLgEpvAv7rN_BUSCWAWQbVeCRTPc2ryQd2GBMnTCc4RcO5nhZOqCKnX8FQSSHIo8GOzsCebNRPcycsdK-I55EkKp6yHd--BwYW81ggDrlHA9GDgQg8Gkg_Gsg-GGg8-pSiP9-HBpWV-eFlWB9ewAsLIKQRxCyNeI6nqdhYb1m5FW-fK2V-hjubA9feZEqHVtO8DLKWSP2VeDqd98nSk3xGX49X0bdMtygOxSZa6Jp0hUdBtP1IO8pz63IiM7o1Gn7eNPlwqkSpm-WH_VKaDK8WNnjdCnTHtblxypJJfHqiHL09vN5JRfrNyZ67TqcRRzEHYEXAVpeRE2qG42hOqJArANCwc8kOw9hxIgwCwfpIRXJlLHH3bifusUAswUcD-f8daNLoBrSQ5WAZBjP0YCD-84fmUythAdECywPMYMhCAKm4ShlewWRQSLgMdq8eNPhMlciAJSPkUiuAp3KO90Z5uFgXORdHW0f04nXN557Ila2_VzXFfStWRZf0l-0i6xKRmMAXxO2V7CcsiZdkI4edIiiWsxWRz-QLvusGrpY5p3pdn_nWpDfjoV0eR6-J5RrF7oaYcZQ4p2vwnDbL_bpaH0NptAi_bcdd-OyWNt-65lhm5y1rXNsCFenS5uUzDRIeiOIUlZ1_69GPoL_4xYp_XJLIMiyZJ8FqApN6MUKVOQfFwlPUtrfO4AjWAow1XxW9qMO79ok6Hi7mbVjcXJ1j-MtEu479MS-O-BdhcZn4/dl4/d5/L2dJQSEvUUt3QS80SmtFL1o2XzMwR01BQTQ4TU8yVDkwSTFDMTZLVTUwOEQ2/"}}
+  <body>
     {{ partial "navbar.html" . }}  
 
-    <main class="[ x--wide pt--6 ]">
+    <main class="[ main ]">
 
-      <header class="[ py--3 ]">
+      <header class="[ hero ] [ py--3 mb--3 ]">
 
-        <h1>COVID-19 Public API for The Bahamas</h1>
-
-        <p>This is a public, read-only API created for COVID-19 data in The Bahamas.</p>
-
-        <p>You are free to use this API as you see fit and manipulate the data according to your own needs.</p>
+        <div class="[ wrapper ] [  x--wide ]">
+          <h1>COVID-19 API | The Bahamas</h1>
+          
+          <p class="[ ch--45 ]">Access COVID-19 (Coronavirus) case and vaccination data for The Bahamas from The Ministry of Health & Wellness' COVID-19 Case Reports and COVID-19 Vaccination Updates.</p>
+          
+          <!-- <p class="[ ch--45 ]">Access data on COVID19 through an easy API for free. Build dashboards, mobile apps or integrate into other applications. Data is sourced from <a href="{{ $moe }}" target="_blank">The Ministry of Health & Wellness</a></p> -->
+          
+          <div class="[ flex--middle ]">
+            {{ range ( where .Site.RegularPages.ByTitle "Type" "reports" | last 1 ).Reverse  }}
+            <a class="[ btn btn--solid--lg btn--blk ] [ mr--1 ]" href="{{ .Permalink }}">Latest Report</a>
+            {{ end }}
+            <a class="[ btn btn--ghost--lg ]" href="/become-sponsor">Become a sponsor</a>
+          </div>
+          
+        </div>
         
       </header>
-
-      <section class="[ mb--3 ]">
-        <h2>Creator</h2>
-        <p>Joseph Pinder</p>
-
-        <h2>Contributors</h2>
-        <ul>
-        </ul>
-      </section>
       
-      <section class="mb--2">
+      <div class="[ x--wide ]">
 
-        <h3 class="[ mb--050 ]">COVID-19 Case Reports</h3>
-        {{ .Content }}
+        <section class="mb--2">
+
+          <h2 class="[ h3 mb--050 ]">COVID-19 Case Reports</h2>
+          {{ .Content }}
+        
+          <ul class="[ loop ] [ mb--2 ]">
+            {{ range ( where .Site.RegularPages.ByTitle "Type" "reports" | last 5 ).Reverse  }}
+            <li class="[ loop__item ] [ flex--between flex--wrap p--1 mb--050 ]">
+              <div>
+                <h3 class="[ h5 mb--025 ]"><a href="{{ .Permalink }}">COVID-19 Case Report {{ .Title }}</a></h3>
+                <p>{{ .Params.report.date | dateFormat "Monday, Jan 2, 2006" }}</p>
+              </div>
+              <div>
+                <a href="{{ .Permalink }}index.json">View JSON</a>
+              </div>
+            </li>
+            {{ end }}
+          </ul>
+
+          <div class="[ flex--end ]">
+            <a href="/reports">All Reports</a>
+            <b class="[ block mx--050 ]"></b>
+            <a href="/reports/index.json">View JSON</a>
+          </div>
+
+        </section>
+
+        <section class="[ mb--3 ]">
+
+          <h2 class="[ h3 mb--050 ]">COVID-19 Vaccination Updates</h2>
+
+          <ul class="[ loop ] [ mb--2 ]">
+            {{ range ( where .Site.RegularPages.ByDate "Type" "updates" | last 5 ).Reverse  }}
+            <li class="[ loop__item ] [ flex--between flex--wrap p--1 mb--050 ]">
+                <div>
+                  <h3 class="[ h5 mb--025 ]"><a href="{{ .Permalink }}">COVID-19 Vaccination Update {{ .Date.Format "060102" }}</a></h3>
+                  <p>{{ .Date.Format "January 02, 2006" }}</p>
+                </div>
+                
+                <div><a href="{{ .Permalink }}index.json">View JSON</a></div>
+
+            </li>
+            {{ end }}
+          </ul>
+          <div class="[ flex--end ]">
+            <a href="/updates">All Updates</a>
+            <b class="[ block mx--050 ]"></b>
+            <a href="/updates/index.json">View JSON</a>
+          </div>
+        
+        <!-- 
+              
+          Are you a contributor? 
+          
+          Add your name to the 'data/contributors.yml' file.
+        
+        -->
+
+        </section>
+        {{ if .Site.Params.contributors }}
+        <section class="[ mb--3 ]">
+          
+          <hr class="[ mb--3 ]">
+
+          <h3 class="[ mb--050 ]">Contributors</h3>
+          <ul class="[ contributors ] [ g--2 ]">
+            {{ range $.Site.Data.contributors }}
+            <li class="[ contributor ] [ bold wsnw mb--1 ]">https://{{ if .website }}<a href="{{ .website }}" rel="noopener" target="_blank">{{ .name}}</a>{{ else }}{{ .name}}{{ end }}</li>
+            {{ end }}
+          </ul>
+        </section>
+        {{ end }}          
+
+      </div>
       
-        <ul class="[ mb--2 ]">
-          {{ range ( where .Site.RegularPages.ByTitle "Type" "reports" | last 5 ).Reverse  }}
-          <li class="[ flex flex--between--middle mb--025 ]">
-            <div>COVID-19 Case Report {{ .Title }}</div>
-            <div class="[ flex ]">
-              <a href="{{ .Permalink }}">View Report</a>
-              <b class="[ block mx--050 ]"></b>
-              <a href="{{ .Permalink }}index.json">View JSON</a>
-            </div>
-          </li>
-          {{ end }}
-        </ul>
-
-        <div class="[ flex--end ]">
-          <a href="/reports">All Reports</a>
-          <b class="[ block mx--050 ]"></b>
-          <a href="/reports/index.json">View JSON</a>
-        </div>
-
-      </section>
-
-      <section class="[ mb--2 ]">
-
-        <h3 class="[ mb--050 ]">COVID-19 Vaccination Updates</h3>
-
-        <ul class="[ mb--2 ]">
-          {{ range ( where .Site.RegularPages.ByDate "Type" "updates" | last 5 ).Reverse  }}
-          <li class="[ flex flex--between--middle mb--025 ]">
-            <div>COVID-19 Vaccination Update {{ .Date.Format "January 02, 2006" }}</div>
-            <div class="[ flex ]">
-              <a href="{{ .Permalink }}">View Update</a>
-              <b class="[ block mx--050 ]"></b>
-              <a href="{{ .Permalink }}index.json">View JSON</a>
-            </div>
-          </li>
-          {{ end }}
-        </ul>
-        <div class="[ flex--end ]">
-          <a href="/updates">All Updates</a>
-          <b class="[ block mx--050 ]"></b>
-          <a href="/updates/index.json">View JSON</a>
-        </div>
-
-      </section>
-
     </main>
+    
     {{ partial "footer.html" }}
+
 </body>
 </html>

@@ -4,39 +4,82 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>COVID-19 Case Report {{ .Title }} | Bahamas</title>
+  <meta name="description" content="Access COVID-19 (Coronavirus) data for The Bahamas from the Ministry of Health & Wellness from COVID-19 Case Report {{ .Title }} issued on {{ .Params.report.date | dateFormat "Monday, Jan 2, 2006" }}.">
   <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
 
   {{ partial "navbar.html" . }}
 
-  <main class="[ x--wide pt--9 pb--3 ]">
+  <main class="[ pb--3 ]">
 
-    <header class="[ mb--2 ]">
-    
-      <h1>COVID-19 Report Update {{ .Title }}</h1>
+    <header class="[ hero ] [ py--3 ]">
 
-      <time datetime="{{ .Params.report.date }}">{{ .Params.report.date | dateFormat "Monday, Jan 2, 2006" }}</time>
+      <div class="[ wrapper ] [ x--wide ]">
 
-      <a href="{{ .Permalink }}/index.json">View JSON</a>
+        <h1>COVID-19 Case Report {{ .Title }}</h1>
+      
+        <time class="[ block mb--1 ]"  datetime="{{ .Params.report.date }}">{{ .Params.report.date | dateFormat "Monday, Jan 2, 2006" }}</time>
+
+        <a class="[ btn btn--ghost--lg ] [ no--print ]" href="{{ .Permalink }}/index.json">View JSON</a>
+
+        <div>
+          {{ $pages := where site.RegularPages "Section" .Section }}
+          {{ with $pages.ByTitle.Next . }}
+            <a title="Next page in {{ .Section }}" href="{{ .Permalink }}">Next</a>
+          {{ end }}
+
+          {{ with $pages.ByTitle.Prev . }}
+            <a title="Previous page in {{ .Section }}" href="{{ .Permalink }}">Previous</a>
+          {{ end }}
+        </div>
+
+      </div>
       
     </header>
-    
-    {{ partial "islandBreakdown.html" . }}
-    
-    {{ partial "bySex.html" . }}
-    
-    {{ partial "travelHistory.html" . }}
 
-    {{ partial "hospitalizations.html" . }}
-    
-    {{ partial "cases.html" . }}
-    
-    {{ partial "reported.html" . }}
-    
-    {{ partial "deaths.html" . }}
+    <div class="[ share__bar ] [ x--wide flex--between--middle flex--wrap pt--d15 pb--2 no--print ]">
 
-    {{ partial "testing.html" . }}
+      <nav class="[ breadcrumbs ] [ pb--1 ]">
+
+        <ul class="[ flex ]">
+          <li class="[ breadcrumb__item ] [ mr--1 ]"><a href="/">Home</a></li>
+          <li class="[ breadcrumb__item ] [ wsnw mr--1 ]"><a href="/reports/">COVID-19 Case Reports</a></li>
+          <li class="[ breadcrumb__item ]">COVID-19 Report {{ .Title }}</li>
+        </ul>
+
+      </nav>
+
+      <div class="[ flex--middle mb--1 ]">
+        <span class="[ mr--1 ]">Share on:</span>
+        {{ partial "social.html" }}
+      </div>
+
+    </div>
+    
+    <div class="[ x--wide ]">
+
+      {{ partial "islandBreakdown.html" . }}
+      
+      {{ partial "bySex.html" . }}
+      
+      {{ partial "travelHistory.html" . }}
+      
+      {{ partial "testing.html" . }}
+      
+      {{ partial "cases.html" . }}
+
+      {{ partial "hospitalizations.html" . }}
+
+      <section>
+
+        {{ partial "reported.html" . }}
+        
+        {{ partial "deaths.html" . }}
+
+      </section>
+
+    </div>
 
   </main>
 

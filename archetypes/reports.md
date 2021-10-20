@@ -35,7 +35,6 @@ sex: #### DO NOT TOUCH ####
     f: &f Female #### DO NOT TOUCH ####
 
 title: {{ replace .Name "-" " " | title }} ### DO NOT TOUCH ###
-date: {{ .Date }} ### DO NOT TOUCH ###
 ###############################################################
 ## START EDITING HERE ... 
 report: ### DO NOT TOUCH ###

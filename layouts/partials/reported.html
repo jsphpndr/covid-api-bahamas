@@ -1,32 +1,34 @@
 {{if eq .Params.report.ifReported true }}
+<h2>Deaths Reported</h2>
+
 <figure class="[ mb--2 ]">
+  <div class="[ wrapper for--table ]">
+    <table class="[ table--breakdown ] [ mb--1 ]">
 
-  <table class="[ table ] [ mb--1 ]">
-
-    <thead>
-      <tr>
-        <th class="[ text--left ]">Island</th>
-        <th class="[ text--right ]">Age</th>
-        <th class="[ text--right ]">Sex</th>
-        <th class="[ text--right ]">Date of Death</th>
-      </tr>
-    </thead>
-  
-    <tbody>
-      {{ range $i, $e := .Params.report.reportedFatalities }}
-      <tr>
-        <td class="[ text--left ]">{{ .fatality.island }}</td>
-        <td class="[ text--right ]">{{ .fatality.age }}</td>
-        <td class="[ text--right ]">{{ .fatality.sex }}</td>
-        <td class="[ text--right ]">{{ .fatality.date  | dateFormat "Jan. 2, 2006" }}</td>
-      </tr>
-      {{ end }}
-    </tbody>
-  
-  </table>
-
+      <thead>
+        <tr>
+          <th class="[ column--head text--left wsnw ]">Island</th>
+          <th class="[ text--center ]">Age</th>
+          <th class="[ text--center ]">Sex</th>
+          <th class="[ text--right ]">Date of Death</th>
+        </tr>
+      </thead>
+    
+      <tbody>
+        {{ range $i, $e := .Params.report.reportedFatalities }}
+        <tr>
+          <th class="[ column--head text--left wsnw ]">{{ .fatality.island }}</td>
+          <td class="[ text--center ]">{{ .fatality.age }}</td>
+          <td class="[ text--center ]">{{ .fatality.sex }}</td>
+          <td class="[ text--right wsnw ]">{{ .fatality.date  | dateFormat "Jan. 2, 2006" }}</td>
+        </tr>
+        {{ end }}
+      </tbody>
+    
+    </table>
+  </div>
   <figcaption>
-    <p>A total of ({{ len .Params.report.reportedFatalities }}) deaths reported as of {{ .Params.report.date | dateFormat "Monday, Jan 2, 2006" }}.</p>
+    <p>A total of {{ len .Params.report.reportedFatalities }} deaths reported as of {{ .Params.report.date | dateFormat "Monday, Jan 2, 2006" }}.</p>
     <p><strong>Note:</strong> Island indicates island of residence.</p>
   </figcaption>
 </figure>
