@@ -27,7 +27,7 @@ If you don't have HUGO already installed on your machine, you may follow Mike Da
 
 For non-coders, in addition to HUGO there's an additional knowledge requirement of Git.
 
-Git is the means by which we access this Github repository to make push (upload) and pull (download) requests.
+Git is the means by which we access this Github repository to push (upload) and pull (download).
 
 If you want to help out, you will need one or all of the following tutorials.
 
@@ -37,15 +37,21 @@ If you want to help out, you will need one or all of the following tutorials.
 #### 1) [Git Tutorial for Beginners: Learn Git in 1 Hour](https://www.youtube.com/watch?v=8JJ101D3knE)
 #### 3) [Learn Git In 15 Minutes](https://www.youtube.com/watch?v=USjZcfj8yxE)
 
+### Forking the Repo.
+
+On the top right corner of this repository, click the "Fork" button. By doing this, you will have your own copy of the repository and may freely experiment without affecting the original repository.
+
 ### Cloning the Repo.
 
-Clone the repository on your local machine by running the following command: `git clone https://github.com/jsphpndr/covid-api-bahamas.git`. If the repository is already on your local machine, run the following command to get the latest version of the code: `git pull --rebase`.
+Let's navigate to **your** verison of the repository. This can be found on your profile under the list of repositories -- look for *covid-api-bahamas*.
+
+Clone the repository on your local machine by running the following command: `git clone <https url>`. The *https url* value can be found by clicking the green dropdown with the word 'Code' on it, simply pressing 'HTTPS' and copying the url below that.
 
 From the main branch, create a separate working branch. This can be done by running `git checkout -b <branchName>`. If your file is 343, your branch name would be *report/343*. If you would like to do a range of files, i.e. 343 - 350, your branch name would then be *report/343-350*.
 
-You may see which files have been done already by evaluating the active branches and viewing the [reports directory](https://github.com/jsphpndr/covid-api-bahamas/tree/main/content/reports). Only select files which are free to take.
+You may see which files have been done already by evaluating the [active pull requests](https://github.com/jsphpndr/covid-api-bahamas/pulls) and viewing the [reports directory](https://github.com/jsphpndr/covid-api-bahamas/tree/main/content/reports). Only select files which are free to take.
 
-Push this branch to the remote repository so that others contributing know which file numbers are taken :) You may do this by running: `git push -u origin <branchName>`
+Create a new remote for the upstream repository by running `git remote add upstream https://github.com/jsphpndr/covid-api-bahamas`
 
 Now, time to create an entry!
 
@@ -81,7 +87,9 @@ Once this is done, a simple `git push` should do the trick.
   
 ### Pull Request
   
-On the GitHub repo, create a pull request wherein you would merge your feature branch into the main branch. A member from our team will review the pull request and if everything was done correctly, we will gladly merge it into the main branch.
+On the GitHub repo, create a pull request wherein you would merge your forked version into the original main branch. The title of your pull request should be 'report 343 by <your name here>' so, in my case, I would put 'report 343 by Sowmya Thottambeti'. 
+  
+A member from our team will review the pull request and if everything was done correctly, we will gladly merge it into the main branch.
 
 
 # Resource
