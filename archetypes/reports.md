@@ -43,7 +43,7 @@ contributor: #Your Name
 con__link: #https://mywebsite.com
 
 # The date format is YYYY-MM-DD. So, October 6, 2021 would be written as 2021-10-06.
-date: &date # FILL REPORT DATE
+date: # FILL REPORT DATE
 
 report: ### DO NOT TOUCH ###
   
