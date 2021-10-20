@@ -83,11 +83,11 @@ After a self review ensuring that you have sucessfully followed the above steps,
 
 In order to commit the new code, run the following code: `git add .` & `git commit -m <message>`. Your message should be 'report 343 by <your name here>' so, in my case, I would put 'report 343 by Sowmya Thottambeti'. 
   
-Once this is done, a simple `git push` should do the trick.
+Once this is done, a simple `git push` should do the trick. If there is no upstream branch, you may have to use `git push --set-upstream origin <branchName>`
   
 ### Pull Request
   
-On the GitHub repo, create a pull request wherein you would merge your forked version into the original main branch. The title of your pull request should be 'report 343 by <your name here>' so, in my case, I would put 'report 343 by Sowmya Thottambeti'. 
+On the forked GitHub repo, create a pull request wherein you would merge your forked version into the original main branch. The title of your pull request should be 'report 343 by <your name here>' so, in my case, I would put 'report 343 by Sowmya Thottambeti'. 
   
 A member from our team will review the pull request and if everything was done correctly, we will gladly merge it into the main branch.
 
