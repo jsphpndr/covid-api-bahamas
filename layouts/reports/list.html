@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>COVID-19 Case Reports | COVID-19 API | Bahamas</title>
-  <link rel="canonical" href="{{ if eq .Paginator.PageNumber 1 }}{{ .Permalink }}{{else}}{{ .Permalink }}page/{{ .Paginator.PageNumber }}{{end}}">
+  {{ $paged := (where .Data.Pages.ByTitle.Reverse "Section" "reports") }}
+  {{ $paginator := .Paginate $paged }}
+  <link rel="canonical" href="{{ if eq $paginator.PageNumber 1 }}{{ .Permalink }}{{else}}{{ .Permalink }}page/{{ $paginator.PageNumber }}{{end}}">
   <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
@@ -48,9 +50,8 @@
     {{ $dir := "reports"}}
     
     <div class="[ x--wide ]">
-      {{ $paginator := .Paginate (where .Data.Pages "Section" "reports") }}
       <ul class="[ loop ] [ mb--2 ]">
-        {{ range $paginator.Pages.ByTitle.Reverse }}
+        {{ range $paginator.Pages }}
         <li class="[ loop__item ] [ flex--between flex--wrap p--1 mb--050 ]">
           <div>
             <h3 class="[ h5 mb--025 ]"><a href="{{ .Permalink }}">COVID-19 Case Report {{ .Title }}</a></h3>
@@ -66,7 +67,6 @@
 
     </div>
 
-    {{ $paginator := .Paginator }}
 
     <!-- Number of links either side of the current page. -->
     {{ $adjacent_links := 1 }}
