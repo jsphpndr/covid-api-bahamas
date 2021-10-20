@@ -1,8 +1,5 @@
 {
-    "data" : 
-{ "section" : "updates",
-  "count" : "1",
-  "items" : [{
+    "data" :  {
       "update": {
         "number":  212808,
         "date": "2021-08-28",
@@ -110,6 +107,5 @@
         "abroad": 2822
       },
       "permalink" : "https://api.covidbahamas.app/updates/212808/"
-    }]
-}
+    } 
 }

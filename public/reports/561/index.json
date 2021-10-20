@@ -2,9 +2,9 @@
     "data" :  {
       "report": {
         "number": 561,
-        "date": "2021-10-08",
+        "date": "2021-10-08 00:00:00 +0000 UTC",
         "permalink" : "https://api.covidbahamas.app/reports/561/",
-        "datePublished": "2021-10-12 21:40:07 -0400 EDT",
+        "datePublished": "2021-10-08 00:00:00 +0000 UTC",
         "cases": {
           "byIsland": [{ 
               "island": {
