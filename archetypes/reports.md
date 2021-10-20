@@ -34,7 +34,7 @@ sex: #### DO NOT TOUCH ####
     m: &m Male #### DO NOT TOUCH ####
     f: &f Female #### DO NOT TOUCH ####
 
-title: {{ replace .Name "-" " " | title }} ### DO NOT TOUCH ###
+title: COVID-19 Case Report {{ replace .Name "-" " " | title }} ### DO NOT TOUCH ###
 ###############################################################
 ## START EDITING HERE ... 
 # Are you a contributor? Fill in your name for recognition. Each contributor's name will be displayed on the report page that they contributed.
