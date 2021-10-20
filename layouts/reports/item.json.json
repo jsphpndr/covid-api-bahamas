@@ -1,7 +1,7 @@
 {
       "report": {
         "number": {{ .Params.report.number }},
-        "date": "{{ .Params.report.date }}",
+        "date": "{{ .Date }}",
         "permalink" : "{{ .Permalink }}",
         "datePublished": "{{ .Date }}",
         "cases": {

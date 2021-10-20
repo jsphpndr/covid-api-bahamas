@@ -1,7 +1,5 @@
 {{ define "response" }}
-{
-  {{ with .Section }}"section" : "{{ . }}",{{ end }}
+{ {{ with .Section }}"section" : "{{ . }}",{{ end }}
   "count" : "{{ len .Data.Pages }}",
   "items" : [{{ range $i, $e := .Data.Pages }}{{ if $i }}, {{ end }}{{ .Render "item" }}{{ end }}]
-}
-{{ end }}
+}{{ end }}

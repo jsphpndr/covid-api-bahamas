@@ -53,7 +53,7 @@
             <li class="[ loop__item ] [ flex--between flex--wrap p--1 mb--050 ]">
               <div>
                 <h3 class="[ h5 mb--025 ]"><a href="{{ .Permalink }}">COVID-19 Case Report {{ .Title }}</a></h3>
-                <p>{{ .Params.report.date | dateFormat "Monday, Jan 2, 2006" }}</p>
+                <p>{{ .Date | dateFormat "Monday, Jan 2, 2006" }}</p>
               </div>
               <div>
                 <a href="{{ .Permalink }}index.json">View JSON</a>

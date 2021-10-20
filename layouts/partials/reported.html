@@ -28,7 +28,7 @@
     </table>
   </div>
   <figcaption>
-    <p>A total of {{ len .Params.report.reportedFatalities }} deaths reported as of {{ .Params.report.date | dateFormat "Monday, Jan 2, 2006" }}.</p>
+    <p>A total of {{ len .Params.report.reportedFatalities }} deaths reported as of {{ .Date | dateFormat "Monday, Jan 2, 2006" }}.</p>
     <p><strong>Note:</strong> Island indicates island of residence.</p>
   </figcaption>
 </figure>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>COVID-19 Case Report {{ .Title }} | Bahamas</title>
-  <meta name="description" content="Access COVID-19 (Coronavirus) data for The Bahamas from the Ministry of Health & Wellness from COVID-19 Case Report {{ .Title }} issued on {{ .Params.report.date | dateFormat "Monday, Jan 2, 2006" }}.">
+  <meta name="description" content="Access COVID-19 (Coronavirus) data for The Bahamas from the Ministry of Health & Wellness from COVID-19 Case Report {{ .Title }} issued on {{ .Date | dateFormat "Monday, Jan 2, 2006" }}.">
   <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
@@ -19,7 +19,7 @@
 
         <h1>COVID-19 Case Report {{ .Title }}</h1>
       
-        <time class="[ block mb--1 ]"  datetime="{{ .Params.report.date }}">{{ .Params.report.date | dateFormat "Monday, Jan 2, 2006" }}</time>
+        <time class="[ block mb--1 ]"  datetime="{{ .Date }}">{{ .Date | dateFormat "Monday, Jan 2, 2006" }}</time>
 
         <a class="[ btn btn--ghost--lg ] [ no--print ]" href="{{ .Permalink }}/index.json">View JSON</a>
 
