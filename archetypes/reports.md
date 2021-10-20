@@ -37,13 +37,16 @@ sex: #### DO NOT TOUCH ####
 title: {{ replace .Name "-" " " | title }} ### DO NOT TOUCH ###
 ###############################################################
 ## START EDITING HERE ... 
+# Are you a contributor? Fill in your name for recognition. Each contributor's name will be displayed on the report page that they contributed.
+contributor: #Your Name
+# If you have link to a relevant personal or business website or social media profile please provide it here. All links should be https:// enabled.
+con__link: #https://mywebsite.com
+
+# The date format is YYYY-MM-DD. So, October 6, 2021 would be written as 2021-10-06.
+date: # FILL REPORT DATE
 report: ### DO NOT TOUCH ###
   
   number: {{ replace .Name "-" " " | title }}
-  # The date format is YYYY-MM-DD. So, October 6, 2021 would be written as 2021-10-06.
-  date: # FILL REPORT DATE
-#   date: {{ (now.AddDate 0 0 -1).Format "2006-01-02" }} ### DO NOT TOUCH ###
-  contributor: # Are you a contributor? Fill in your name for recognition.
 
   cases: ### DO NOT TOUCH ###
 
