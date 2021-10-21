@@ -1,13 +1,13 @@
 ---
 title: "Privacy Policy"
 date: 2021-10-21T08:22:51-04:00
-summary:
-draft: true
+summary: One of our main priorities is the privacy of our visitors, please take a moment to familiarize yourself with this site's policies.
+draft: false
 ---
 
-# Privacy Policy for Joseph Pinder
+## Summary
 
-At Joseph Pinder, accessible from [](https://josephpinder.com)[https://josephpinder.com](https://josephpinder.com), one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Joseph Pinder and how we use it.
+At Joseph Pinder, accessible from [https://josephpinder.com](https://josephpinder.com), one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Joseph Pinder and how we use it.
 
 If you have additional questions or require more information about our Privacy Policy, do not hesitate to [contact us](/get-in-touch).
 

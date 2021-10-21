@@ -1,17 +1,16 @@
-<header id="navbar" class="[ navbar ] [ no--print ]">
-
-  <div class="[ wrapper ] [ x--wide flex--between--middle ]">
-
-    <a class="[ logo ]" href="/">{{ partial "graphics/covid.svg"}}</a>
-
-    <nav class="">
+<input id="click" type="checkbox" aria-labelledby="menu-prompt">
+<header class="[ navbar ]">
+  <div class="[ wrapper ] [ x--wide--p flex--wrap flex--between--middle ]">
+    <a class="[ logo ] [ flex--middle ]" href="/" aria-label="Home">{{ partial "graphics/covid.svg"}}</a>
+    <label class="[ navicon ] [ flex--middle ]" id="navicon" for="click">
+      <span id="menu-prompt">Open the menu</span>
+      <b class="[ bar ]"></b>
+    </label>
+    <nav class="[ navbar__menu ]">
       <ul class="[ menu ]">
-        <li class="[ menu__item ]"><a class="menu_link" href="/reports">Case Reports</a></li>
-        <li class="[ menu__item ]"><a class="menu_link" href="/updates">Vaccination Updates</a></li>
+        <li class="[ menu__item ]"><a class="[ menu__link ]" href="/reports">Case Reports</a></li>
+        <li class="[ menu__item ]"><a class="[ menu__link ]" href="/updates">Vaccination Updates</a></li>
       </ul>
     </nav>
-
   </div>
-  
-
 </header>

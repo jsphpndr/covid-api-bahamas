@@ -13,7 +13,8 @@
 <body>
   {{ .Scratch.Set "list" "true" }}
   {{ .Scratch.Set "report" "COVID-19 Case Reports" }}
-  {{ partial "navbar.html" }}
+  {{ .Scratch.Set "forReports" "true" }}
+  {{ partial "navbar.html" . }}
 
   <main class="[ main ]">
 
