@@ -20,6 +20,8 @@
   <meta name="twitter:title" content="COVID-19 Case Report {{ .Title }} | COVID-19 API | Bahamas">
   <meta name="twitter:description" content="Access COVID-19 (Coronavirus) data for The Bahamas from the Ministry of Health & Wellness from COVID-19 Case Report {{ .Title }} issued on {{ .Date | dateFormat "Monday, Jan 2, 2006" }}.">
   <meta name="twitter:image" content="{{ $share | absURL }}">
+  <meta name="author" content="{{ if .Params.contributor }}{{ .Params.contributor }}{{else}}Joseph Pinder{{end}}">
+  <meta name="publish_date" property="og:publish_date" content="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}">
 </head>
 <body>
 
