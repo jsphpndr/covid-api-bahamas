@@ -75,7 +75,21 @@ The flow of the report file corresponds in the reading manner of the physical re
 
 ### Contributions
 
-We would also like to highlight you and the contribution that you made to this API. In the `layouts/index.html` directory, add your name in the Contributors section, and optionally, you may also link your personal website or social media page.
+We would also like to highlight you and the contribution that you made to this API. 
+
+Navigate to `data/contributors.yml` and follow the instructions there to add your name, and optionally, link to your personal or company website or social media page.
+
+#### Where to find your name?
+
+If you entered your name in `data/contributors.yml` your name will be featured on the homepage.
+
+As a plus, if you add your name (and link) to the report file, it will be featured on the report page as follows:
+
+```
+Report 000 contributed by Your Name.
+```
+
+Make it a moment to shine and add something nice to the résumé.
 
 ### Committing the Changes
 
