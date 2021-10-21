@@ -1,6 +1,20 @@
-<!-- <ul class="[ page ] [ flex--middle pt--2 ]">
-  <li class="[ page__item prev ] [ mr--1 ]" id="prev"><a href="#" aria-label="Previous Page"></a></li>
-  <li class="[ page__item current ]" id="current">1 of 4</li>
-  <li class="[ page__item next ] [ ml--1 ]" id="next"><a href="#" aria-label="Next Page"></a></li>
-</ul> -->
-
+{{ $report := .Scratch.Get "report" }}
+{{ $pages := where site.RegularPages.ByTitle.Reverse "Section" .Section }}
+<ul class="[ page ] [ x--wide {{ with $pages.Next . }}flex--between--middle{{else}}flex--end--middle{{end}} pb--2 ]">
+  {{ with $pages.Next . }}
+  <li class="[ page__prev ]">
+    <a class="[ page__link ] [ flex--middle ]" title="Next page in {{ .Section }}" href="{{ .Permalink }}">
+      {{ partial "graphics/prev.svg" }}
+      <span class="[ link__text ] [ ml--1 ]">{{ $report }} {{ .Title }}</span> 
+    </a>
+  </li>
+  {{ end }}
+  {{ with $pages.Prev . }}
+  <li class="[ page__next ]">
+    <a class="[ page__link ] [ flex--middle ]" title="Previous page in {{ .Section }}" href="{{ .Permalink }}">
+      <span class="[ link__text ] [ mr--1 ]">{{ $report }} {{ .Title }}</span> 
+      {{ partial "graphics/next.svg" }}
+    </a>
+  </li>
+  {{ end }}
+</ul>

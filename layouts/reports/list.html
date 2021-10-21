@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  {{ $url := .Permalink }} 
-  {{ $url = replace $url ":" "%3A" }}
-  {{ $url = replace $url "/" "%2F" }}
-
   {{ $paged := (where .Data.Pages.ByTitle.Reverse "Section" "reports") }}
   {{ $paginator := .Paginate $paged }}
   <meta charset="UTF-8">
@@ -12,9 +8,11 @@
   <title>COVID-19 Case Reports{{ if ne $paginator.PageNumber 1 }} | Page {{ $paginator.PageNumber }}{{end}} | COVID-19 API | Bahamas</title>
   <link rel="canonical" href="{{ if eq $paginator.PageNumber 1 }}{{ .Permalink }}{{else}}{{ .Permalink }}page/{{ $paginator.PageNumber }}{{end}}">
   <link rel="stylesheet" href="/styles/style.css">
+  
 </head>
 <body>
-  
+  {{ .Scratch.Set "list" "true" }}
+  {{ .Scratch.Set "report" "COVID-19 Case Reports" }}
   {{ partial "navbar.html" }}
 
   <main class="[ main ]">
@@ -47,7 +45,7 @@
 
       <div class="[ flex--middle ]">
         <span class="[ mr--1 ]">Share on:</span>
-        {{ partial "social.html" }}
+        {{ partial "social.html" . }}
       </div>
 
     </div>

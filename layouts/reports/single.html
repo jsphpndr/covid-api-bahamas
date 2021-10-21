@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  {{ $share := "uploads/covid-19-api-bahamas-share.jpg" }}
+  <!-- Access COVID-19 (Coronavirus) data for The Bahamas from the Ministry of Health & Wellness from COVID-19 Case Report {{ .Title }} issued on {{ .Date | dateFormat "Monday, Jan 2, 2006" }}. -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>COVID-19 Case Report {{ .Title }} | Bahamas</title>
   <meta name="description" content="Access COVID-19 (Coronavirus) data for The Bahamas from the Ministry of Health & Wellness from COVID-19 Case Report {{ .Title }} issued on {{ .Date | dateFormat "Monday, Jan 2, 2006" }}.">
   <link rel="canonical" href="{{ .Permalink }}">
   <link rel="stylesheet" href="/styles/style.css">
-  {{ template "_internal/opengraph.html" . }}
-  {{ template "_internal/twitter_cards.html" . }}
-  {{ template "_internal/schema.html" . }}
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="COVID-19 Case Report {{ .Title }} | COVID-19 API | Bahamas">
+  <meta property="og:description" content="Access COVID-19 (Coronavirus) data for The Bahamas from the Ministry of Health & Wellness from COVID-19 Case Report {{ .Title }} issued on {{ .Date | dateFormat "Monday, Jan 2, 2006" }}.">
+  <meta property="og:image" content="{{ $share | absURL }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@jsphpndr">
+  <meta name="twitter:creator" content="@jsphpndr">
+  <meta name="twitter:title" content="COVID-19 Case Report {{ .Title }} | COVID-19 API | Bahamas">
+  <meta name="twitter:description" content="Access COVID-19 (Coronavirus) data for The Bahamas from the Ministry of Health & Wellness from COVID-19 Case Report {{ .Title }} issued on {{ .Date | dateFormat "Monday, Jan 2, 2006" }}.">
+  <meta name="twitter:image" content="{{ $share | absURL }}">
 </head>
 <body>
-  
+
   {{ partial "navbar.html" . }}
 
   <main class="[ pb--3 ]">
@@ -45,7 +55,8 @@
 
       <div class="[ flex--middle ]">
         <span class="[ mr--1 ]">Share on:</span>
-        {{ partial "social.html" }}
+        {{ .Scratch.Set "report" "COVID-19 Case Report" }}
+        {{ partial "social.html" . }}
       </div>
 
     </div>
@@ -76,28 +87,11 @@
     
     
   </main>
-
-  <ul class="[ page ] [ x--wide flex--between--middle pb--2 ]">
-    {{ $pages := where site.RegularPages.ByTitle.Reverse "Section" .Section }}
-    {{ with $pages.Next . }}
-    <li class="[ page__prev ]">
-      <a class="[ page__link ] [ flex--middle ]" title="Next page in {{ .Section }}" href="{{ .Permalink }}">
-        {{ partial "graphics/prev.svg" }}
-        <span class="[ link__text ] [ ml--1 ]">Report {{ .Title }}</span> 
-      </a>
-    </li>
-    {{ end }}
-    {{ with $pages.Prev . }}
-    <li class="[ page__next ]">
-      <a class="[ page__link ] [ flex--middle ]" title="Previous page in {{ .Section }}" href="{{ .Permalink }}">
-        <span class="[ link__text ] [ mr--1 ]">Report {{ .Title }}</span> 
-        {{ partial "graphics/next.svg" }}
-      </a>
-    </li>
-    {{ end }}
-  </ul>
   
-  {{ partial "footer.html"}}
+  {{ .Scratch.Set "report" "Report" }}
+  {{ partial "components/pagination.html" . }}
+  
+  {{ partial "footer.html" . }}
   
 </body>
 </html>

@@ -85,6 +85,9 @@
 
   </main>
 
+  {{ .Scratch.Set "report" "Update" }}
+  {{ partial "components/pagination.html" . }}
+
   {{ partial "footer.html" }}
 
 </body>
