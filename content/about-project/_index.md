@@ -21,7 +21,7 @@ Everybody.
 
 It's our hope that whether it's viewing this site directly or accessing the API, everybody can use it: over breakfast, eating lunch, planning dinner... you see where this is going.
 
-We're also hoping that this data will be beneficial to instutions — like hospitals, research labs, colleges and universities — that rely on data like this to create models, forecasts and projections.
+We're also hoping that this data will be beneficial to institutions — like hospitals, research labs, colleges and universities — that rely on data like this to create models, forecasts and projections.
 
 It's even being used to help teach high school kids how to code.
 
@@ -37,7 +37,7 @@ Your help can help us continue making this resource available to you and the res
 
 [Learn more about how you can sponsor us...](/become-sponsor)
 
-### Upcoming Features
+## Upcoming Features
 
 We're working to make this site even better. Here are some of the upcoming features that we're working on:
 

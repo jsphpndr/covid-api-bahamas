@@ -37,11 +37,11 @@
           
           <!-- <p class="[ ch--45 ]">Access data on COVID19 through an easy API for free. Build dashboards, mobile apps or integrate into other applications. Data is sourced from <a href="{{ $moe }}" target="_blank">The Ministry of Health & Wellness</a></p> -->
           
-          <div class="[ flex--middle ]">
+          <div class="[ flex--middle flex--wrap ]">
             {{ range ( where .Site.RegularPages.ByTitle "Type" "reports" | last 1 ).Reverse  }}
-            <a class="[ btn btn--solid--lg btn--blk ] [ mr--1 ]" href="{{ .Permalink }}">Latest Report</a>
+            <a class="[ btn btn--solid--lg btn--blk btn--flex ] [ mr--1 ]" href="{{ .Permalink }}">Latest Report</a>
             {{ end }}
-            <a class="[ btn btn--ghost--lg ] [ in-bl ]" href="/become-sponsor">Become A Sponsor</a>
+            <a class="[ btn btn--ghost--lg btn--flex ]" href="/become-sponsor">Become A Sponsor</a>
           </div>
           
         </div>
