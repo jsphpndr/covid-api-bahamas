@@ -3,11 +3,8 @@
 {{ $url := replace $url "/" "%2F" }}
 
 {{ $report := .Scratch.Get "report" }}
-{{ $report := replace $report " " "%20"}}
 
 {{ $date := .Date | dateFormat "Monday, Jan 2, 2006" }}
-{{ $date := replace $date " " "%20"}}
-{{ $date := replace $date "," "%2C"}}
 
 {{ $list := .Scratch.Get "list" }}
 
