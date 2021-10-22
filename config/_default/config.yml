@@ -1,8 +1,6 @@
 baseURL: 'https://api.covidbahamas.app/'
 languageCode: en-uk
 title: COVID-19 API Bahamas
-assetDir: 
-  - "assets"
 
 upload_dir: static/uploads
 public_path: /uploads

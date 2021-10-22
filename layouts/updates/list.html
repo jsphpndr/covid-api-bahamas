@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    {{ $paged := (where .Data.Pages.ByTitle.Reverse "Section" "updates") }}
+    {{ $paginator := .Paginate $paged }}
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>COVID-19 Vaccination Updates | COVID-19 API | Bahamas</title>
-    <meta name="description" content="Access COVID-19 (Coronavirus) case and vaccination data for The Bahamas from The Ministry of Health & Wellness' COVID-19 Case Reports and COVID-19 Vaccination Updates.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <link rel="canonical" href="{{ .Permalink }}">
-    <link rel="preload" href="/styles/style.css" as="style">
-    <link rel="stylesheet" href="/styles/style.css" type="text/css">
-    <noscript><style>.script {display: none}</style></noscript>
-    <link rel="icon" href="/favicon.svg">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#9395A1">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="{{.Summary}}">
+    {{ partial "head/defaults.html" . }}
+    <link rel="alternate" href="{{ if eq $paginator.PageNumber 1 }}{{ .Permalink }}{{else}}{{ .Permalink }}page/{{ $paginator.PageNumber }}{{end}}" hreflang="en-us">
+    <link rel="alternate" href="{{ if eq $paginator.PageNumber 1 }}{{ .Permalink }}{{else}}{{ .Permalink }}page/{{ $paginator.PageNumber }}{{end}}" hreflang="en-gb">
+    <link rel="alternate" href="{{ if eq $paginator.PageNumber 1 }}{{ .Permalink }}{{else}}{{ .Permalink }}page/{{ $paginator.PageNumber }}{{end}}" hreflang="en-ca">
+    <link rel="alternate" href="{{ if eq $paginator.PageNumber 1 }}{{ .Permalink }}{{else}}{{ .Permalink }}page/{{ $paginator.PageNumber }}{{end}}" hreflang="en">
+    <link rel="canonical" href="{{ if eq $paginator.PageNumber 1 }}{{ .Permalink }}{{else}}{{ .Permalink }}page/{{ $paginator.PageNumber }}{{end}}">
+    <meta property="og:url" content="{{ if eq $paginator.PageNumber 1 }}{{ .Permalink }}{{else}}{{ .Permalink }}page/{{ $paginator.PageNumber }}{{end}}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="COVID-19 Vaccination Updates{{ if ne $paginator.PageNumber 1 }} | Page {{ $paginator.PageNumber }}{{end}} | COVID-19 API | Bahamas">
+    <meta property="og:description" content="{{.Summary}}">
+    <meta property="og:image" content="{{ .Site.Params.share | absURL }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@jsphpndr">
+    <meta name="twitter:creator" content="@jsphpndr">
+    <meta name="twitter:title" content="COVID-19 Vaccination Updates{{ if ne $paginator.PageNumber 1 }} | Page {{ $paginator.PageNumber }}{{end}} | COVID-19 API | Bahamas">
+    <meta name="twitter:description" content="{{.Summary}}">
+    <meta name="twitter:image" content="{{ .Site.Params.share | absURL }}">
+    <meta name="author" content="Joseph Pinder">
+    <meta name="publish_date" property="og:publish_date" content="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}">
   </head>
 <body>
 
@@ -27,13 +38,15 @@
         
         <h1>COVID-19 Vaccination Updates</h1>
 
+        <p class="[ ch--45 ]">{{.Summary}}</p>
+
         <a class="[ btn btn--ghost--lg ] [ no--print ]" href="{{ .Permalink }}/index.json">View JSON</a>
 
       </div>
 
     </header>
 
-    <div class="[ share__bar ] [ x--wide flex--between--middle flex--wrap pt--d15 pb--2 no--print ]">
+    <div class="[ x--wide flex--between--middle flex--wrap pt--d15 pb--2 no--print ]">
 
       <nav class="[ breadcrumbs ] [ pb--1 ]">
 
@@ -46,27 +59,114 @@
 
       <div class="[ flex--middle mb--1 ]">
         <span class="[ mr--1 ]">Share on:</span>
-        {{ partial "social.html" }}
+        <!-- SOCIAL -->
       </div>
 
     </div>
 
+    {{ $dir := "updates"}}
+    
     <div class="[ x--wide ]">
-
       <ul class="[ loop ] [ mb--2 ]">
-        {{ range ( where .Site.RegularPages.ByDate "Type" "updates" | last 5 ).Reverse  }}
-        <li class="[ loop__item ] [ flex flex--between p--1 mb--025 ]">
+        {{ range $paginator.Pages }}
+        <li class="[ loop__item ] [ flex--between flex--wrap p--1 mb--050 ]">
           <div>
-            <h3 class="[ h5 ]"><a href="{{ .Permalink }}">COVID-19 Vaccination Update</a></h3>
-            {{ .Date.Format "January 02, 2006" }}
+            <h3 class="[ h5 mb--025 ]"><a href="{{ .Permalink }}">COVID-19 Vaccination Update {{ .Title }}</a></h3>
+            <p>{{ .Date | dateFormat "Monday, Jan 2, 2006" }}</p>
           </div>
-
-          <div><a href="{{ .Permalink }}index.json">View JSON</a></div>
+          <div>
+            <a href="{{ .Permalink }}index.json">View JSON</a>
+          </div>
         </li>
         {{ end }}
       </ul>
-      
+  
+
     </div>
+
+
+    <!-- Number of links either side of the current page. -->
+    {{ $adjacent_links := 1 }}
+
+    <!-- $max_links = ($adjacent_links * 2) + 1 -->
+    {{ $max_links := (add (mul $adjacent_links 2) 1) }}
+
+    <!-- $lower_limit = $adjacent_links + 1 -->
+    {{ $lower_limit := (add $adjacent_links 1) }}
+
+    <!-- $upper_limit = $paginator.TotalPages - $adjacent_links -->
+    {{ $upper_limit := (sub $paginator.TotalPages $adjacent_links) }}
+   
+    {{ if gt $paginator.TotalPages 1 }}
+    <div class="[ flex--center ]">
+  
+      <ul class="[ page ] [ flex--middle pb--2 g--2 ]">
+        <li class="[ page__prev{{ if not $paginator.HasPrev }} disabled{{end}} ]"><a {{ if $paginator.HasPrev }}href="{{ $paginator.Prev.URL }}"{{end}}>{{ partial "graphics/prev.svg"}}</a></li>
+        {{ range $paginator.Pagers }}
+        
+        {{ end }}
+           <!-- Page numbers. -->
+        {{ range $paginator.Pagers }}
+        
+        {{ $.Scratch.Set "page_number_flag" false }}
+
+        
+        <!-- Advanced page numbers. -->
+        {{ if gt $paginator.TotalPages $max_links }}
+
+
+          <!-- Lower limit pages. -->
+          <!-- If the user is on a page which is in the lower limit.  -->
+          {{ if le $paginator.PageNumber $lower_limit }}
+
+            <!-- If the current loop page is less than max_links. -->
+            {{ if le .PageNumber $max_links }}
+              {{ $.Scratch.Set "page_number_flag" true }}
+            {{ end }}
+
+
+          <!-- Upper limit pages. -->
+          <!-- If the user is on a page which is in the upper limit. -->
+          {{ else if ge $paginator.PageNumber $upper_limit }}
+
+            <!-- If the current loop page is greater than total pages minus $max_links -->
+            {{ if gt .PageNumber (sub $paginator.TotalPages $max_links) }}
+              {{ $.Scratch.Set "page_number_flag" true }}
+            {{ end }}
+
+
+          <!-- Middle pages. -->
+          {{ else }}
+            
+            {{ if and ( ge .PageNumber (sub $paginator.PageNumber $adjacent_links) ) ( le .PageNumber (add $paginator.PageNumber $adjacent_links) ) }}
+              {{ $.Scratch.Set "page_number_flag" true }}
+            {{ end }}
+
+          {{ end }}
+
+        
+        <!-- Simple page numbers. -->
+        {{ else }}
+
+          {{ $.Scratch.Set "page_number_flag" true }}
+
+        {{ end }}
+
+        <!-- Output page numbers. -->
+        {{ if eq ($.Scratch.Get "page_number_flag") true }}
+        <li class="[ page__item{{ if eq . $paginator }} current{{ end }} ]">
+          <a href="{{ .URL }}" class="[ page__link  ] [ bold px--050 ]">
+            {{ .PageNumber }}
+          </a>
+        </li>
+        {{ end }}
+
+        {{ end }}
+        <li class="[ page__next{{ if not $paginator.HasNext }} disabled{{end}} ]"><a {{ if $paginator.HasNext }}href="{{ $paginator.Next.URL }}"{{end}}>{{ partial "graphics/next.svg"}}</a></li>
+      </ul>
+  
+    </div>
+    {{ end }}
     
     
   </main>

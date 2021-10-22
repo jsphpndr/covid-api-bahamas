@@ -1,27 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  {{ $share := "uploads/covid-19-api-bahamas-share.jpg" }}
   <!-- Access COVID-19 (Coronavirus) data for The Bahamas from the Ministry of Health & Wellness from COVID-19 Case Report {{ .Title }} issued on {{ .Date | dateFormat "Monday, Jan 2, 2006" }}. -->
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>COVID-19 Case Report {{ .Title }} | Bahamas</title>
-  <meta name="description" content="Access COVID-19 (Coronavirus) data for The Bahamas from the Ministry of Health & Wellness from COVID-19 Case Report {{ .Title }} issued on {{ .Date | dateFormat "Monday, Jan 2, 2006" }}.">
+  <meta name="description" content="COVID-19 Case Report {{ .Title }} issued on {{ .Date | dateFormat "Monday, Jan 2, 2006" }} from The Bahamas' Ministry of Health & Wellness.">
   <link rel="canonical" href="{{ .Permalink }}">
-  <link rel="stylesheet" href="/styles/style.css">
-  <meta property="og:url" content="{{ .Permalink }}">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="COVID-19 Case Report {{ .Title }} | COVID-19 API | Bahamas">
-  <meta property="og:description" content="Access COVID-19 (Coronavirus) data for The Bahamas from the Ministry of Health & Wellness from COVID-19 Case Report {{ .Title }} issued on {{ .Date | dateFormat "Monday, Jan 2, 2006" }}.">
-  <meta property="og:image" content="{{ $share | absURL }}">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@jsphpndr">
-  <meta name="twitter:creator" content="@jsphpndr">
-  <meta name="twitter:title" content="COVID-19 Case Report {{ .Title }} | COVID-19 API | Bahamas">
-  <meta name="twitter:description" content="Access COVID-19 (Coronavirus) data for The Bahamas from the Ministry of Health & Wellness from COVID-19 Case Report {{ .Title }} issued on {{ .Date | dateFormat "Monday, Jan 2, 2006" }}.">
-  <meta name="twitter:image" content="{{ $share | absURL }}">
-  <meta name="author" content="{{ if .Params.contributor }}{{ .Params.contributor }}{{else}}Joseph Pinder{{end}}">
-  <meta name="publish_date" property="og:publish_date" content="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}">
+  {{ partial "head/defaults.html" . }}{{ .Scratch.Set "report" "COVID-19 Case Report" }}
+  {{ partial "head/social/single.html" . }}
+  
 </head>
 <body>
 
@@ -57,8 +44,7 @@
 
       <div class="[ flex--middle ]">
         <span class="[ mr--1 ]">Share on:</span>
-        {{ .Scratch.Set "report" "COVID-19 Case Report" }}
-        {{ partial "social.html" . }}
+        {{ partial "social/single.html" . }}
       </div>
 
     </div>

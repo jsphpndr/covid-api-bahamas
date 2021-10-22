@@ -6,14 +6,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>COVID-19 Case Reports{{ if ne $paginator.PageNumber 1 }} | Page {{ $paginator.PageNumber }}{{end}} | COVID-19 API | Bahamas</title>
+  <meta name="description" content="{{.Summary}}">
+  {{ partial "head/defaults.html" . }}
+  <link rel="alternate" href="{{ if eq $paginator.PageNumber 1 }}{{ .Permalink }}{{else}}{{ .Permalink }}page/{{ $paginator.PageNumber }}{{end}}" hreflang="en-us">
+  <link rel="alternate" href="{{ if eq $paginator.PageNumber 1 }}{{ .Permalink }}{{else}}{{ .Permalink }}page/{{ $paginator.PageNumber }}{{end}}" hreflang="en-gb">
+  <link rel="alternate" href="{{ if eq $paginator.PageNumber 1 }}{{ .Permalink }}{{else}}{{ .Permalink }}page/{{ $paginator.PageNumber }}{{end}}" hreflang="en-ca">
+  <link rel="alternate" href="{{ if eq $paginator.PageNumber 1 }}{{ .Permalink }}{{else}}{{ .Permalink }}page/{{ $paginator.PageNumber }}{{end}}" hreflang="en">
   <link rel="canonical" href="{{ if eq $paginator.PageNumber 1 }}{{ .Permalink }}{{else}}{{ .Permalink }}page/{{ $paginator.PageNumber }}{{end}}">
-  <link rel="stylesheet" href="/styles/style.css">
+  <meta property="og:url" content="{{ if eq $paginator.PageNumber 1 }}{{ .Permalink }}{{else}}{{ .Permalink }}page/{{ $paginator.PageNumber }}{{end}}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="COVID-19 Case Reports{{ if ne $paginator.PageNumber 1 }} | Page {{ $paginator.PageNumber }}{{end}} | COVID-19 API | Bahamas">
+  <meta property="og:description" content="{{.Summary}}">
+  <meta property="og:image" content="{{ .Site.Params.share | absURL }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@jsphpndr">
+  <meta name="twitter:creator" content="@jsphpndr">
+  <meta name="twitter:title" content="COVID-19 Case Reports{{ if ne $paginator.PageNumber 1 }} | Page {{ $paginator.PageNumber }}{{end}} | COVID-19 API | Bahamas">
+  <meta name="twitter:description" content="{{.Summary}}">
+  <meta name="twitter:image" content="{{ .Site.Params.share | absURL }}">
+  <meta name="author" content="Joseph Pinder">
+  <meta name="publish_date" property="og:publish_date" content="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}">
   
 </head>
 <body>
   {{ .Scratch.Set "list" "true" }}
   {{ .Scratch.Set "report" "COVID-19 Case Reports" }}
-  {{ .Scratch.Set "forReports" "true" }}
   {{ partial "navbar.html" . }}
 
   <main class="[ main ]">
@@ -23,6 +40,8 @@
       <div class="[ wrapper ] [ x--wide ]">
 
         <h1>COVID-19 Case Reports{{ if ne $paginator.PageNumber 1 }} | Page {{ $paginator.PageNumber }}{{end}}</h1>
+
+        <p class="[ ch--45 ]">{{.Summary}}</p>
 
         <a class="[ btn btn--ghost--lg ] [ no--print ]" href="{{ .Permalink }}/index.json">View JSON</a>
 
@@ -46,7 +65,7 @@
 
       <div class="[ flex--middle ]">
         <span class="[ mr--1 ]">Share on:</span>
-        {{ partial "social.html" . }}
+        <!-- SOCIAL -->
       </div>
 
     </div>
@@ -158,7 +177,7 @@
     {{ end }}
     
   </main>
-
+  
   {{ partial "footer.html" }}
   
 </body>

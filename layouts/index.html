@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head>{{ $desc := "Access COVID-19 (Coronavirus) case and vaccination data for The Bahamas from The Ministry of Health & Wellness' COVID-19 Case Reports and COVID-19 Vaccination Updates." }}
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>COVID-19 API | Bahamas</title>
-    <meta name="description" content="Access COVID-19 (Coronavirus) case and vaccination data for The Bahamas from The Ministry of Health & Wellness' COVID-19 Case Reports and COVID-19 Vaccination Updates.">
+    <meta name="description" content="{{ $desc }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <link rel="canonical" href="{{ .Permalink }}">
-    <link rel="preload" href="/styles/style.css" as="style">
-    <link rel="stylesheet" href="/styles/style.css" type="text/css">
-    <noscript><style>.script {display: none}</style></noscript>
-    <link rel="icon" href="/favicon.svg">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#9395A1">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#ffffff">
-  </head>
-  {{ $moe := "https://www.bahamas.gov.bs/wps/portal/public/!ut/p/b1/vZbZcqM4GIWfJQ-QICEWcclqxI5ZDNy4jIltwAYbE2N4-nFmMtWV7k48Fz2Wrqg6P5_OkX4BlVEJlTWrS7ld9WXbrPbvzxm3RDPX9mUG25hjBEBg6BBF9dAMQWpBJXo6WUpLBlWNl7uITqZoBP6-Xqkoqcgzu02ZjBaraFSdruVhnzXZdaqHc9-rfNCIWatp7Nv1udjV5yDQSG7Pw0rAsNmtNsdaLzbHsRfS2qvKSyPb19TbhIYa-w2XnxYbz94E42F7fj2cwLSvsrZIQbxaeGTlHu1TjvRD0-haFhWVt4LLQVMkPalvptKbKfDFEME_nsHMFsWbZ5cO3z3LkDMjFmCF-6j_RvApMxBHEiC6bSpYxgjo_M_1MxZwgESeJXq8TrsM-I_1Xwvu7Nmd9TP39zz7HNFvHPwt-C7i70Nm7gm4fwUzl7HVdwGLtfdlspbHCRBLgEpvAv7rN_BUSCWAWQbVeCRTPc2ryQd2GBMnTCc4RcO5nhZOqCKnX8FQSSHIo8GOzsCebNRPcycsdK-I55EkKp6yHd--BwYW81ggDrlHA9GDgQg8Gkg_Gsg-GGg8-pSiP9-HBpWV-eFlWB9ewAsLIKQRxCyNeI6nqdhYb1m5FW-fK2V-hjubA9feZEqHVtO8DLKWSP2VeDqd98nSk3xGX49X0bdMtygOxSZa6Jp0hUdBtP1IO8pz63IiM7o1Gn7eNPlwqkSpm-WH_VKaDK8WNnjdCnTHtblxypJJfHqiHL09vN5JRfrNyZ67TqcRRzEHYEXAVpeRE2qG42hOqJArANCwc8kOw9hxIgwCwfpIRXJlLHH3bifusUAswUcD-f8daNLoBrSQ5WAZBjP0YCD-84fmUythAdECywPMYMhCAKm4ShlewWRQSLgMdq8eNPhMlciAJSPkUiuAp3KO90Z5uFgXORdHW0f04nXN557Ila2_VzXFfStWRZf0l-0i6xKRmMAXxO2V7CcsiZdkI4edIiiWsxWRz-QLvusGrpY5p3pdn_nWpDfjoV0eR6-J5RrF7oaYcZQ4p2vwnDbL_bpaH0NptAi_bcdd-OyWNt-65lhm5y1rXNsCFenS5uUzDRIeiOIUlZ1_69GPoL_4xYp_XJLIMiyZJ8FqApN6MUKVOQfFwlPUtrfO4AjWAow1XxW9qMO79ok6Hi7mbVjcXJ1j-MtEu479MS-O-BdhcZn4/dl4/d5/L2dJQSEvUUt3QS80SmtFL1o2XzMwR01BQTQ4TU8yVDkwSTFDMTZLVTUwOEQ2/"}}
+    {{ partial "head/canonical.html" . }}
+    {{ partial "head/defaults.html" . }}
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="COVID-19 API | Bahamas">
+    <meta property="og:description" content="{{ $desc }}">
+    <meta property="og:image" content="{{ .Site.Params.share | absURL }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@jsphpndr">
+    <meta name="twitter:creator" content="@jsphpndr">
+    <meta name="twitter:title" content="COVID-19 API | Bahamas">
+    <meta name="twitter:description" content="{{ $desc }}">
+    <meta name="twitter:image" content="{{ .Site.Params.share | absURL }}">
+    <meta name="author" content="Joseph Pinder">
+    <meta name="publish_date" property="og:publish_date" content="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}">
+  
+  </head>{{ $moe := "https://www.bahamas.gov.bs/wps/portal/public/!ut/p/b1/vZbZcqM4GIWfJQ-QICEWcclqxI5ZDNy4jIltwAYbE2N4-nFmMtWV7k48Fz2Wrqg6P5_OkX4BlVEJlTWrS7ld9WXbrPbvzxm3RDPX9mUG25hjBEBg6BBF9dAMQWpBJXo6WUpLBlWNl7uITqZoBP6-Xqkoqcgzu02ZjBaraFSdruVhnzXZdaqHc9-rfNCIWatp7Nv1udjV5yDQSG7Pw0rAsNmtNsdaLzbHsRfS2qvKSyPb19TbhIYa-w2XnxYbz94E42F7fj2cwLSvsrZIQbxaeGTlHu1TjvRD0-haFhWVt4LLQVMkPalvptKbKfDFEME_nsHMFsWbZ5cO3z3LkDMjFmCF-6j_RvApMxBHEiC6bSpYxgjo_M_1MxZwgESeJXq8TrsM-I_1Xwvu7Nmd9TP39zz7HNFvHPwt-C7i70Nm7gm4fwUzl7HVdwGLtfdlspbHCRBLgEpvAv7rN_BUSCWAWQbVeCRTPc2ryQd2GBMnTCc4RcO5nhZOqCKnX8FQSSHIo8GOzsCebNRPcycsdK-I55EkKp6yHd--BwYW81ggDrlHA9GDgQg8Gkg_Gsg-GGg8-pSiP9-HBpWV-eFlWB9ewAsLIKQRxCyNeI6nqdhYb1m5FW-fK2V-hjubA9feZEqHVtO8DLKWSP2VeDqd98nSk3xGX49X0bdMtygOxSZa6Jp0hUdBtP1IO8pz63IiM7o1Gn7eNPlwqkSpm-WH_VKaDK8WNnjdCnTHtblxypJJfHqiHL09vN5JRfrNyZ67TqcRRzEHYEXAVpeRE2qG42hOqJArANCwc8kOw9hxIgwCwfpIRXJlLHH3bifusUAswUcD-f8daNLoBrSQ5WAZBjP0YCD-84fmUythAdECywPMYMhCAKm4ShlewWRQSLgMdq8eNPhMlciAJSPkUiuAp3KO90Z5uFgXORdHW0f04nXN557Ila2_VzXFfStWRZf0l-0i6xKRmMAXxO2V7CcsiZdkI4edIiiWsxWRz-QLvusGrpY5p3pdn_nWpDfjoV0eR6-J5RrF7oaYcZQ4p2vwnDbL_bpaH0NptAi_bcdd-OyWNt-65lhm5y1rXNsCFenS5uUzDRIeiOIUlZ1_69GPoL_4xYp_XJLIMiyZJ8FqApN6MUKVOQfFwlPUtrfO4AjWAow1XxW9qMO79ok6Hi7mbVjcXJ1j-MtEu479MS-O-BdhcZn4/dl4/d5/L2dJQSEvUUt3QS80SmtFL1o2XzMwR01BQTQ4TU8yVDkwSTFDMTZLVTUwOEQ2/"}}
   <body>
     
     {{ partial "navbar.html" . }}  
@@ -27,7 +33,7 @@
         <div class="[ wrapper ] [  x--wide ]">
           <h1>COVID-19 API | The Bahamas</h1>
           
-          <p class="[ ch--45 ]">Access COVID-19 (Coronavirus) case and vaccination data for The Bahamas from The Ministry of Health & Wellness' COVID-19 Case Reports and COVID-19 Vaccination Updates.</p>
+          <p class="[ ch--45 ]">{{ $desc }}</p>
           
           <!-- <p class="[ ch--45 ]">Access data on COVID19 through an easy API for free. Build dashboards, mobile apps or integrate into other applications. Data is sourced from <a href="{{ $moe }}" target="_blank">The Ministry of Health & Wellness</a></p> -->
           
@@ -120,8 +126,8 @@
       </div>
       
     </main>
-    
-    {{ partial "footer.html" }}
+
+    {{ partial "footer.html" . }}
 
 </body>
 </html>
