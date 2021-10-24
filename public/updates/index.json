@@ -1,115 +1,1706 @@
 {
     "data" : 
 { "section" : "updates",
-  "count" : "1",
+  "count" : "18",
   "items" : [{
       "update": {
-        "number":  212808,
-        "date": "2021-08-28",
-        "datePublished": "2021-10-08T23:10:12-04:00",
-        "doses": {
-          "aggregate": {
-            "total": <no value>,
-            "first": <no value>
-          },
-          "byIsland": [
-            { 
-              "island": {
-                "name": New Providence,
-                "first": 71189,
-                "second": 41458
+        "id":  210611,
+        "date": "2021-06-11 00:00:00 +0000 UTC",
+        "datePublished": "2021-06-11 00:00:00 +0000 UTC",
+        "doses": [{
+          "aggregate": [{
+            "total": 68119,
+            "first": 50292
+          }],
+          "byIsland": [ 
+              {
+                "name": "New Providence",
+                "first": 37687,
+                "second": 14602
+              },
+              {
+                "name": "Grand Bahama",
+                "first": 7343,
+                "second": 3143
+              },
+              {
+                "name": "Eleuthera",
+                "first": 1370,
+                "second": 0
+              },
+              {
+                "name": "Abaco",
+                "first": 874,
+                "second": 0
+              },
+              {
+                "name": "Exuma",
+                "first": 832,
+                "second": 0
+              },
+              {
+                "name": "Andros",
+                "first": 603,
+                "second": 3
+              },
+              {
+                "name": "Bimini",
+                "first": 398,
+                "second": 0
+              },
+              {
+                "name": "Long Island & Rum Cay",
+                "first": 324,
+                "second": 0
+              },
+              {
+                "name": "Berry Islands",
+                "first": 297,
+                "second": 76
+              },
+              {
+                "name": "Cat Island",
+                "first": 252,
+                "second": 3
+              },
+              {
+                "name": "Inagua",
+                "first": 129,
+                "second": 0
+              },
+              {
+                "name": "San Salvador",
+                "first": 101,
+                "second": 0
+              },
+              {
+                "name": "Acklins",
+                "first": 32,
+                "second": 0
+              },
+              {
+                "name": "Crooked Island",
+                "first": 21,
+                "second": 0
+              },
+              {
+                "name": "Mayaguana",
+                "first": 18,
+                "second": 0
+              },
+              {
+                "name": "Rum Cay",
+                "first": 11,
+                "second": 0
               }
-            },
-              "island": {
-                "name": Grand Bahama,
-                "first": 11104,
-                "second": 7983
+          ],
+        "full": 17827,
+        "abroad": 0
+      }],
+      "permalink" : "https://api.covidbahamas.app/updates/210611/"
+    }
+
+}, {
+      "update": {
+        "id":  210619,
+        "date": "2021-06-19 00:00:00 +0000 UTC",
+        "datePublished": "2021-06-19 00:00:00 +0000 UTC",
+        "doses": [{
+          "aggregate": [{
+            "total": 79246,
+            "first": 54199
+          }],
+          "byIsland": [ 
+              {
+                "name": "New Providence",
+                "first": 40350,
+                "second": 19939
+              },
+              {
+                "name": "Grand Bahama",
+                "first": 7917,
+                "second": 4262
+              },
+              {
+                "name": "Eleuthera",
+                "first": 1378,
+                "second": 0
+              },
+              {
+                "name": "Abaco",
+                "first": 1533,
+                "second": 764
+              },
+              {
+                "name": "Exuma",
+                "first": 834,
+                "second": 0
+              },
+              {
+                "name": "Andros",
+                "first": 604,
+                "second": 3
+              },
+              {
+                "name": "Bimini",
+                "first": 398,
+                "second": 0
+              },
+              {
+                "name": "Long Island & Rum Cay",
+                "first": 324,
+                "second": 0
+              },
+              {
+                "name": "Berry Islands",
+                "first": 297,
+                "second": 76
+              },
+              {
+                "name": "Cat Island",
+                "first": 252,
+                "second": 3
+              },
+              {
+                "name": "Inagua",
+                "first": 129,
+                "second": 0
+              },
+              {
+                "name": "San Salvador",
+                "first": 101,
+                "second": 0
+              },
+              {
+                "name": "Acklins",
+                "first": 32,
+                "second": 0
+              },
+              {
+                "name": "Crooked Island",
+                "first": 21,
+                "second": 0
+              },
+              {
+                "name": "Mayaguana",
+                "first": 18,
+                "second": 0
+              },
+              {
+                "name": "Rum Cay",
+                "first": 11,
+                "second": 0
               }
-            },
-              "island": {
-                "name": Eleuthera,
-                "first": 2228,
-                "second": 1353
-              }
-            },
-              "island": {
-                "name": Abaco,
-                "first": 3229,
-                "second": 1267
-              }
-            },
-              "island": {
-                "name": Exuma,
-                "first": 1160,
-                "second": 800
-              }
-            },
-              "island": {
-                "name": Andros,
+          ],
+        "full": 25047,
+        "abroad": 0
+      }],
+      "permalink" : "https://api.covidbahamas.app/updates/210619/"
+    }
+
+}, {
+      "update": {
+        "id":  210626,
+        "date": "2021-06-26 00:00:00 +0000 UTC",
+        "datePublished": "2021-06-26 00:00:00 +0000 UTC",
+        "doses": [{
+          "aggregate": [{
+            "total": 91067,
+            "first": 58122
+          }],
+          "byIsland": [ 
+              {
+                "name": "New Providence",
+                "first": 42082,
+                "second": 23713
+              },
+              {
+                "name": "Grand Bahama",
+                "first": 8239,
+                "second": 4786
+              },
+              {
+                "name": "Eleuthera",
+                "first": 2103,
+                "second": 1211
+              },
+              {
+                "name": "Abaco",
+                "first": 1561,
+                "second": 792
+              },
+              {
+                "name": "Exuma",
+                "first": 1157,
+                "second": 795
+              },
+              {
+                "name": "Andros",
                 "first": 892,
-                "second": 428
-              }
-            },
-              "island": {
-                "name": Bimini,
-                "first": 561,
-                "second": 387
-              }
-            },
-              "island": {
-                "name": Long Island & Rum Cay,
-                "first": 456,
-                "second": 309
-              }
-            },
-              "island": {
-                "name": Berry Islands,
-                "first": 353,
-                "second": 280
-              }
-            },
-              "island": {
-                "name": Cat Island,
+                "second": 422
+              },
+              {
+                "name": "Bimini",
+                "first": 500,
+                "second": 348
+              },
+              {
+                "name": "Long Island & Rum Cay",
+                "first": 451,
+                "second": 301
+              },
+              {
+                "name": "Berry Islands",
+                "first": 342,
+                "second": 162
+              },
+              {
+                "name": "Cat Island",
                 "first": 301,
                 "second": 145
-              }
-            },
-              "island": {
-                "name": Inagua,
+              },
+              {
+                "name": "Inagua",
                 "first": 215,
                 "second": 117
-              }
-            },
-              "island": {
-                "name": San Salvador,
+              },
+              {
+                "name": "San Salvador",
                 "first": 186,
                 "second": 92
-              }
-            },
-              "island": {
-                "name": Acklins,
+              },
+              {
+                "name": "Acklins",
                 "first": 46,
-                "second": 26
-              }
-            },
-              "island": {
-                "name": Crooked Island,
+                "second": 25
+              },
+              {
+                "name": "Crooked Island",
                 "first": 24,
                 "second": 21
-              }
-            },
-              "island": {
-                "name": Mayaguana,
+              },
+              {
+                "name": "Mayaguana",
                 "first": 23,
                 "second": 15
               }
-            }
-          ]
-        },
+          ],
+        "full": 32945,
+        "abroad": 0
+      }],
+      "permalink" : "https://api.covidbahamas.app/updates/210626/"
+    }
+
+}, {
+      "update": {
+        "id":  210702,
+        "date": "2021-07-02 00:00:00 +0000 UTC",
+        "datePublished": "2021-07-02 00:00:00 +0000 UTC",
+        "doses": [{
+          "aggregate": [{
+            "total": 95992,
+            "first": 59731
+          }],
+          "byIsland": [ 
+              {
+                "name": "New Providence",
+                "first": 43234,
+                "second": 26408
+              },
+              {
+                "name": "Grand Bahama",
+                "first": 8509,
+                "second": 5228
+              },
+              {
+                "name": "Eleuthera",
+                "first": 2225,
+                "second": 1346
+              },
+              {
+                "name": "Abaco",
+                "first": 1561,
+                "second": 792
+              },
+              {
+                "name": "Exuma",
+                "first": 1158,
+                "second": 796
+              },
+              {
+                "name": "Andros",
+                "first": 892,
+                "second": 427
+              },
+              {
+                "name": "Bimini",
+                "first": 561,
+                "second": 387
+              },
+              {
+                "name": "Long Island & Rum Cay",
+                "first": 455,
+                "second": 303
+              },
+              {
+                "name": "Berry Islands",
+                "first": 342,
+                "second": 162
+              },
+              {
+                "name": "Cat Island",
+                "first": 301,
+                "second": 145
+              },
+              {
+                "name": "Inagua",
+                "first": 215,
+                "second": 117
+              },
+              {
+                "name": "San Salvador",
+                "first": 186,
+                "second": 92
+              },
+              {
+                "name": "Acklins",
+                "first": 46,
+                "second": 25
+              },
+              {
+                "name": "Crooked Island",
+                "first": 24,
+                "second": 21
+              },
+              {
+                "name": "Mayaguana",
+                "first": 23,
+                "second": 15
+              }
+          ],
+        "full": 36261,
+        "abroad": 0
+      }],
+      "permalink" : "https://api.covidbahamas.app/updates/210702/"
+    }
+
+}, {
+      "update": {
+        "id":  210710,
+        "date": "2021-07-10 00:00:00 +0000 UTC",
+        "datePublished": "2021-07-10 00:00:00 +0000 UTC",
+        "doses": [{
+          "aggregate": [{
+            "total": 97992,
+            "first": 60303
+          }],
+          "byIsland": [ 
+              {
+                "name": "New Providence",
+                "first": 43640,
+                "second": 27372
+              },
+              {
+                "name": "Grand Bahama",
+                "first": 8674,
+                "second": 5689
+              },
+              {
+                "name": "Eleuthera",
+                "first": 2225,
+                "second": 1346
+              },
+              {
+                "name": "Abaco",
+                "first": 1561,
+                "second": 792
+              },
+              {
+                "name": "Exuma",
+                "first": 1158,
+                "second": 796
+              },
+              {
+                "name": "Andros",
+                "first": 892,
+                "second": 427
+              },
+              {
+                "name": "Bimini",
+                "first": 561,
+                "second": 387
+              },
+              {
+                "name": "Long Island & Rum Cay",
+                "first": 455,
+                "second": 303
+              },
+              {
+                "name": "Berry Islands",
+                "first": 342,
+                "second": 162
+              },
+              {
+                "name": "Cat Island",
+                "first": 301,
+                "second": 145
+              },
+              {
+                "name": "Inagua",
+                "first": 215,
+                "second": 117
+              },
+              {
+                "name": "San Salvador",
+                "first": 186,
+                "second": 92
+              },
+              {
+                "name": "Acklins",
+                "first": 46,
+                "second": 25
+              },
+              {
+                "name": "Crooked Island",
+                "first": 24,
+                "second": 21
+              },
+              {
+                "name": "Mayaguana",
+                "first": 23,
+                "second": 15
+              }
+          ],
+        "full": 37689,
+        "abroad": 0
+      }],
+      "permalink" : "https://api.covidbahamas.app/updates/210710/"
+    }
+
+}, {
+      "update": {
+        "id":  210717,
+        "date": "2021-07-17 00:00:00 +0000 UTC",
+        "datePublished": "2021-07-17 00:00:00 +0000 UTC",
+        "doses": [{
+          "aggregate": [{
+            "total": 99755,
+            "first": 60389
+          }],
+          "byIsland": [ 
+              {
+                "name": "New Providence",
+                "first": 43660,
+                "second": 28809
+              },
+              {
+                "name": "Grand Bahama",
+                "first": 8738,
+                "second": 5924
+              },
+              {
+                "name": "Eleuthera",
+                "first": 2226,
+                "second": 1349
+              },
+              {
+                "name": "Abaco",
+                "first": 1561,
+                "second": 792
+              },
+              {
+                "name": "Exuma",
+                "first": 1159,
+                "second": 798
+              },
+              {
+                "name": "Andros",
+                "first": 892,
+                "second": 427
+              },
+              {
+                "name": "Bimini",
+                "first": 561,
+                "second": 387
+              },
+              {
+                "name": "Long Island & Rum Cay",
+                "first": 455,
+                "second": 303
+              },
+              {
+                "name": "Berry Islands",
+                "first": 342,
+                "second": 162
+              },
+              {
+                "name": "Cat Island",
+                "first": 301,
+                "second": 145
+              },
+              {
+                "name": "Inagua",
+                "first": 215,
+                "second": 117
+              },
+              {
+                "name": "San Salvador",
+                "first": 186,
+                "second": 92
+              },
+              {
+                "name": "Acklins",
+                "first": 46,
+                "second": 25
+              },
+              {
+                "name": "Crooked Island",
+                "first": 24,
+                "second": 21
+              },
+              {
+                "name": "Mayaguana",
+                "first": 23,
+                "second": 15
+              }
+          ],
+        "full": 39366,
+        "abroad": 0
+      }],
+      "permalink" : "https://api.covidbahamas.app/updates/210717/"
+    }
+
+}, {
+      "update": {
+        "id":  210724,
+        "date": "2021-07-24 00:00:00 +0000 UTC",
+        "datePublished": "2021-07-24 00:00:00 +0000 UTC",
+        "doses": [{
+          "aggregate": [{
+            "total": 103164,
+            "first": 60578
+          }],
+          "byIsland": [ 
+              {
+                "name": "New Providence",
+                "first": 43825,
+                "second": 31600
+              },
+              {
+                "name": "Grand Bahama",
+                "first": 8761,
+                "second": 6348
+              },
+              {
+                "name": "Eleuthera",
+                "first": 2227,
+                "second": 1352
+              },
+              {
+                "name": "Abaco",
+                "first": 1561,
+                "second": 792
+              },
+              {
+                "name": "Exuma",
+                "first": 1159,
+                "second": 799
+              },
+              {
+                "name": "Andros",
+                "first": 892,
+                "second": 428
+              },
+              {
+                "name": "Bimini",
+                "first": 561,
+                "second": 387
+              },
+              {
+                "name": "Long Island & Rum Cay",
+                "first": 455,
+                "second": 303
+              },
+              {
+                "name": "Berry Islands",
+                "first": 342,
+                "second": 162
+              },
+              {
+                "name": "Cat Island",
+                "first": 301,
+                "second": 145
+              },
+              {
+                "name": "Inagua",
+                "first": 215,
+                "second": 117
+              },
+              {
+                "name": "San Salvador",
+                "first": 186,
+                "second": 92
+              },
+              {
+                "name": "Acklins",
+                "first": 46,
+                "second": 25
+              },
+              {
+                "name": "Crooked Island",
+                "first": 24,
+                "second": 21
+              },
+              {
+                "name": "Mayaguana",
+                "first": 23,
+                "second": 15
+              }
+          ],
+        "full": 43943,
+        "abroad": 0
+      }],
+      "permalink" : "https://api.covidbahamas.app/updates/210724/"
+    }
+
+}, {
+      "update": {
+        "id":  210731,
+        "date": "2021-07-31 00:00:00 +0000 UTC",
+        "datePublished": "2021-07-31 00:00:00 +0000 UTC",
+        "doses": [{
+          "aggregate": [{
+            "total": 106898,
+            "first": 61803
+          }],
+          "byIsland": [ 
+              {
+                "name": "New Providence",
+                "first": 44944,
+                "second": 33741
+              },
+              {
+                "name": "Grand Bahama",
+                "first": 8816,
+                "second": 6709
+              },
+              {
+                "name": "Eleuthera",
+                "first": 2227,
+                "second": 1352
+              },
+              {
+                "name": "Abaco",
+                "first": 1561,
+                "second": 792
+              },
+              {
+                "name": "Exuma",
+                "first": 1160,
+                "second": 800
+              },
+              {
+                "name": "Andros",
+                "first": 892,
+                "second": 428
+              },
+              {
+                "name": "Bimini",
+                "first": 561,
+                "second": 387
+              },
+              {
+                "name": "Long Island & Rum Cay",
+                "first": 455,
+                "second": 309
+              },
+              {
+                "name": "Berry Islands",
+                "first": 342,
+                "second": 162
+              },
+              {
+                "name": "Cat Island",
+                "first": 301,
+                "second": 145
+              },
+              {
+                "name": "Inagua",
+                "first": 215,
+                "second": 117
+              },
+              {
+                "name": "San Salvador",
+                "first": 186,
+                "second": 92
+              },
+              {
+                "name": "Acklins",
+                "first": 46,
+                "second": 25
+              },
+              {
+                "name": "Crooked Island",
+                "first": 24,
+                "second": 21
+              },
+              {
+                "name": "Mayaguana",
+                "first": 23,
+                "second": 15
+              }
+          ],
+        "full": 46793,
+        "abroad": 0
+      }],
+      "permalink" : "https://api.covidbahamas.app/updates/210731/"
+    }
+
+}, {
+      "update": {
+        "id":  210807,
+        "date": "2021-08-07 00:00:00 +0000 UTC",
+        "datePublished": "2021-08-07 00:00:00 +0000 UTC",
+        "doses": [{
+          "aggregate": [{
+            "total": 108506,
+            "first": 62853
+          }],
+          "byIsland": [ 
+              {
+                "name": "New Providence",
+                "first": 45789,
+                "second": 34146
+              },
+              {
+                "name": "Grand Bahama",
+                "first": 9080,
+                "second": 6851
+              },
+              {
+                "name": "Eleuthera",
+                "first": 2228,
+                "second": 1353
+              },
+              {
+                "name": "Abaco",
+                "first": 1561,
+                "second": 792
+              },
+              {
+                "name": "Exuma",
+                "first": 1160,
+                "second": 800
+              },
+              {
+                "name": "Andros",
+                "first": 892,
+                "second": 428
+              },
+              {
+                "name": "Bimini",
+                "first": 561,
+                "second": 387
+              },
+              {
+                "name": "Long Island & Rum Cay",
+                "first": 455,
+                "second": 309
+              },
+              {
+                "name": "Berry Islands",
+                "first": 342,
+                "second": 162
+              },
+              {
+                "name": "Cat Island",
+                "first": 301,
+                "second": 145
+              },
+              {
+                "name": "Inagua",
+                "first": 215,
+                "second": 117
+              },
+              {
+                "name": "San Salvador",
+                "first": 186,
+                "second": 92
+              },
+              {
+                "name": "Acklins",
+                "first": 46,
+                "second": 25
+              },
+              {
+                "name": "Crooked Island",
+                "first": 24,
+                "second": 21
+              },
+              {
+                "name": "Mayaguana",
+                "first": 23,
+                "second": 15
+              }
+          ],
+        "full": 47580,
+        "abroad": 0
+      }],
+      "permalink" : "https://api.covidbahamas.app/updates/210807/"
+    }
+
+}, {
+      "update": {
+        "id":  210814,
+        "date": "2021-08-14 00:00:00 +0000 UTC",
+        "datePublished": "2021-08-14 00:00:00 +0000 UTC",
+        "doses": [{
+          "aggregate": [{
+            "total": 117380,
+            "first": 68323
+          }],
+          "byIsland": [ 
+              {
+                "name": "New Providence",
+                "first": 50650,
+                "second": 37233
+              },
+              {
+                "name": "Grand Bahama",
+                "first": 9678,
+                "second": 7177
+              },
+              {
+                "name": "Eleuthera",
+                "first": 2228,
+                "second": 1353
+              },
+              {
+                "name": "Abaco",
+                "first": 1561,
+                "second": 792
+              },
+              {
+                "name": "Exuma",
+                "first": 1160,
+                "second": 800
+              },
+              {
+                "name": "Andros",
+                "first": 892,
+                "second": 428
+              },
+              {
+                "name": "Bimini",
+                "first": 561,
+                "second": 387
+              },
+              {
+                "name": "Long Island & Rum Cay",
+                "first": 456,
+                "second": 309
+              },
+              {
+                "name": "Berry Islands",
+                "first": 342,
+                "second": 162
+              },
+              {
+                "name": "Cat Island",
+                "first": 301,
+                "second": 145
+              },
+              {
+                "name": "Inagua",
+                "first": 215,
+                "second": 117
+              },
+              {
+                "name": "San Salvador",
+                "first": 186,
+                "second": 92
+              },
+              {
+                "name": "Acklins",
+                "first": 46,
+                "second": 26
+              },
+              {
+                "name": "Crooked Island",
+                "first": 24,
+                "second": 21
+              },
+              {
+                "name": "Mayaguana",
+                "first": 23,
+                "second": 15
+              }
+          ],
+        "full": 51150,
+        "abroad": 0
+      }],
+      "permalink" : "https://api.covidbahamas.app/updates/210814/"
+    }
+
+}, {
+      "update": {
+        "id":  210904,
+        "date": "2021-09-04 00:00:00 +0000 UTC",
+        "datePublished": "2021-09-04 00:00:00 +0000 UTC",
+        "doses": [{
+          "aggregate": [{
+            "total": 161613,
+            "first": 105753
+          }],
+          "byIsland": [ 
+              {
+                "name": "New Providence",
+                "first": 79744,
+                "second": 41915
+              },
+              {
+                "name": "Grand Bahama",
+                "first": 14487,
+                "second": 8134
+              },
+              {
+                "name": "Eleuthera",
+                "first": 4058,
+                "second": 1921
+              },
+              {
+                "name": "Abaco",
+                "first": 3229,
+                "second": 1270
+              },
+              {
+                "name": "Exuma",
+                "first": 1178,
+                "second": 800
+              },
+              {
+                "name": "Andros",
+                "first": 892,
+                "second": 428
+              },
+              {
+                "name": "Bimini",
+                "first": 561,
+                "second": 387
+              },
+              {
+                "name": "Long Island & Rum Cay",
+                "first": 456,
+                "second": 309
+              },
+              {
+                "name": "Berry Islands",
+                "first": 353,
+                "second": 280
+              },
+              {
+                "name": "Cat Island",
+                "first": 301,
+                "second": 145
+              },
+              {
+                "name": "Inagua",
+                "first": 215,
+                "second": 117
+              },
+              {
+                "name": "San Salvador",
+                "first": 186,
+                "second": 92
+              },
+              {
+                "name": "Acklins",
+                "first": 46,
+                "second": 26
+              },
+              {
+                "name": "Crooked Island",
+                "first": 24,
+                "second": 21
+              },
+              {
+                "name": "Mayaguana",
+                "first": 23,
+                "second": 15
+              }
+          ],
+        "full": 59002,
+        "abroad": 3142
+      }],
+      "permalink" : "https://api.covidbahamas.app/updates/210904/"
+    }
+
+}, {
+      "update": {
+        "id":  210910,
+        "date": "2021-09-10 00:00:00 +0000 UTC",
+        "datePublished": "2021-09-10 00:00:00 +0000 UTC",
+        "doses": [{
+          "aggregate": [{
+            "total": 173130,
+            "first": 110712
+          }],
+          "byIsland": [ 
+              {
+                "name": "New Providence",
+                "first": 127954,
+                "second": 45310
+              },
+              {
+                "name": "Grand Bahama",
+                "first": 23755,
+                "second": 9110
+              },
+              {
+                "name": "Eleuthera",
+                "first": 6190,
+                "second": 2440
+              },
+              {
+                "name": "Abaco",
+                "first": 4521,
+                "second": 1720
+              },
+              {
+                "name": "Exuma",
+                "first": 3314,
+                "second": 1300
+              },
+              {
+                "name": "Andros",
+                "first": 2221,
+                "second": 866
+              },
+              {
+                "name": "Bimini",
+                "first": 948,
+                "second": 387
+              },
+              {
+                "name": "Long Island & Rum Cay",
+                "first": 1383,
+                "second": 589
+              },
+              {
+                "name": "Berry Islands",
+                "first": 633,
+                "second": 280
+              },
+              {
+                "name": "Cat Island",
+                "first": 446,
+                "second": 145
+              },
+              {
+                "name": "Inagua",
+                "first": 332,
+                "second": 117
+              },
+              {
+                "name": "San Salvador",
+                "first": 278,
+                "second": 92
+              },
+              {
+                "name": "Acklins",
+                "first": 72,
+                "second": 26
+              },
+              {
+                "name": "Crooked Island",
+                "first": 45,
+                "second": 21
+              },
+              {
+                "name": "Mayaguana",
+                "first": 38,
+                "second": 15
+              }
+          ],
+        "full": 65915,
+        "abroad": 3497
+      }],
+      "permalink" : "https://api.covidbahamas.app/updates/210910/"
+    }
+
+}, {
+      "update": {
+        "id":  210925,
+        "date": "2021-09-25 00:00:00 +0000 UTC",
+        "datePublished": "2021-09-25 00:00:00 +0000 UTC",
+        "doses": [{
+          "aggregate": [{
+            "total": 207834,
+            "first": 119566
+          }],
+          "byIsland": [ 
+              {
+                "name": "New Providence",
+                "first": 155666,
+                "second": 65665
+              },
+              {
+                "name": "Grand Bahama",
+                "first": 27991,
+                "second": 12085
+              },
+              {
+                "name": "Eleuthera",
+                "first": 7534,
+                "second": 3343
+              },
+              {
+                "name": "Abaco",
+                "first": 6353,
+                "second": 2935
+              },
+              {
+                "name": "Exuma",
+                "first": 3344,
+                "second": 1309
+              },
+              {
+                "name": "Andros",
+                "first": 2252,
+                "second": 893
+              },
+              {
+                "name": "Bimini",
+                "first": 1137,
+                "second": 548
+              },
+              {
+                "name": "Long Island & Rum Cay",
+                "first": 1384,
+                "second": 590
+              },
+              {
+                "name": "Berry Islands",
+                "first": 676,
+                "second": 323
+              },
+              {
+                "name": "Cat Island",
+                "first": 446,
+                "second": 145
+              },
+              {
+                "name": "Inagua",
+                "first": 333,
+                "second": 117
+              },
+              {
+                "name": "San Salvador",
+                "first": 483,
+                "second": 207
+              },
+              {
+                "name": "Acklins",
+                "first": 130,
+                "second": 53
+              },
+              {
+                "name": "Crooked Island",
+                "first": 45,
+                "second": 21
+              },
+              {
+                "name": "Mayaguana",
+                "first": 60,
+                "second": 34
+              }
+          ],
+        "full": 92310,
+        "abroad": 4042
+      }],
+      "permalink" : "https://api.covidbahamas.app/updates/210925/"
+    }
+
+}, {
+      "update": {
+        "id":  211009,
+        "date": "2021-10-09 00:00:00 +0000 UTC",
+        "datePublished": "2021-10-09 00:00:00 +0000 UTC",
+        "doses": [{
+          "aggregate": [{
+            "total": 238512,
+            "first": 127798
+          }],
+          "byIsland": [ 
+              {
+                "name": "New Providence",
+                "first": 177327,
+                "second": 81990
+              },
+              {
+                "name": "Grand Bahama",
+                "first": 32059,
+                "second": 15021
+              },
+              {
+                "name": "Eleuthera",
+                "first": 8571,
+                "second": 3968
+              },
+              {
+                "name": "Abaco",
+                "first": 6784,
+                "second": 323
+              },
+              {
+                "name": "Exuma",
+                "first": 4523,
+                "second": 2203
+              },
+              {
+                "name": "Andros",
+                "first": 3021,
+                "second": 1344
+              },
+              {
+                "name": "Bimini",
+                "first": 1500,
+                "second": 679
+              },
+              {
+                "name": "Long Island & Rum Cay",
+                "first": 1884,
+                "second": 963
+              },
+              {
+                "name": "Berry Islands",
+                "first": 677,
+                "second": 323
+              },
+              {
+                "name": "Cat Island",
+                "first": 720,
+                "second": 307
+              },
+              {
+                "name": "Inagua",
+                "first": 474,
+                "second": 258
+              },
+              {
+                "name": "San Salvador",
+                "first": 629,
+                "second": 308
+              },
+              {
+                "name": "Acklins",
+                "first": 194,
+                "second": 85
+              },
+              {
+                "name": "Crooked Island",
+                "first": 89,
+                "second": 28
+              },
+              {
+                "name": "Mayaguana",
+                "first": 60,
+                "second": 34
+              }
+          ],
+        "full": 115153,
+        "abroad": 4439
+      }],
+      "permalink" : "https://api.covidbahamas.app/updates/211009/"
+    }
+
+}, {
+      "update": {
+        "id":  211016,
+        "date": "2021-10-16 00:00:00 +0000 UTC",
+        "datePublished": "2021-10-16 00:00:00 +0000 UTC",
+        "doses": [{
+          "aggregate": [{
+            "total": 244303,
+            "first": 129687
+          }],
+          "byIsland": [ 
+              {
+                "name": "New Providence",
+                "first": 181206,
+                "second": 84579
+              },
+              {
+                "name": "Grand Bahama",
+                "first": 33167,
+                "second": 15844
+              },
+              {
+                "name": "Eleuthera",
+                "first": 8663,
+                "second": 4011
+              },
+              {
+                "name": "Abaco",
+                "first": 7260,
+                "second": 3574
+              },
+              {
+                "name": "Exuma",
+                "first": 4548,
+                "second": 2221
+              },
+              {
+                "name": "Andros",
+                "first": 3047,
+                "second": 1356
+              },
+              {
+                "name": "Bimini",
+                "first": 1500,
+                "second": 679
+              },
+              {
+                "name": "Long Island & Rum Cay",
+                "first": 1884,
+                "second": 963
+              },
+              {
+                "name": "Berry Islands",
+                "first": 677,
+                "second": 323
+              },
+              {
+                "name": "Cat Island",
+                "first": 720,
+                "second": 307
+              },
+              {
+                "name": "Inagua",
+                "first": 646,
+                "second": 297
+              },
+              {
+                "name": "San Salvador",
+                "first": 629,
+                "second": 308
+              },
+              {
+                "name": "Acklins",
+                "first": 203,
+                "second": 92
+              },
+              {
+                "name": "Crooked Island",
+                "first": 93,
+                "second": 28
+              },
+              {
+                "name": "Mayaguana",
+                "first": 60,
+                "second": 34
+              }
+          ],
+        "full": 119172,
+        "abroad": 4556
+      }],
+      "permalink" : "https://api.covidbahamas.app/updates/211016/"
+    }
+
+}, {
+      "update": {
+        "id":  212808,
+        "date": "2021-08-28 00:00:00 +0000 UTC",
+        "datePublished": "2021-08-28 00:00:00 +0000 UTC",
+        "doses": [{
+          "aggregate": [{
+            "total": 146738,
+            "first": 91967
+          }],
+          "byIsland": [ 
+              {
+                "name": "New Providence",
+                "first": 71189,
+                "second": 41458
+              },
+              {
+                "name": "Grand Bahama",
+                "first": 11104,
+                "second": 7983
+              },
+              {
+                "name": "Eleuthera",
+                "first": 2228,
+                "second": 1353
+              },
+              {
+                "name": "Abaco",
+                "first": 3229,
+                "second": 1267
+              },
+              {
+                "name": "Exuma",
+                "first": 1160,
+                "second": 800
+              },
+              {
+                "name": "Andros",
+                "first": 892,
+                "second": 428
+              },
+              {
+                "name": "Bimini",
+                "first": 561,
+                "second": 387
+              },
+              {
+                "name": "Long Island & Rum Cay",
+                "first": 456,
+                "second": 309
+              },
+              {
+                "name": "Berry Islands",
+                "first": 353,
+                "second": 280
+              },
+              {
+                "name": "Cat Island",
+                "first": 301,
+                "second": 145
+              },
+              {
+                "name": "Inagua",
+                "first": 215,
+                "second": 117
+              },
+              {
+                "name": "San Salvador",
+                "first": 186,
+                "second": 92
+              },
+              {
+                "name": "Acklins",
+                "first": 46,
+                "second": 26
+              },
+              {
+                "name": "Crooked Island",
+                "first": 24,
+                "second": 21
+              },
+              {
+                "name": "Mayaguana",
+                "first": 23,
+                "second": 15
+              }
+          ],
         "full": 57593,
         "abroad": 2822
-      },
-      "permalink" : "https://api.covidbahamas.app/updates/212808/"
-    }]
+      }],
+      "permalink" : "https://api.covidbahamas.app/updates/210828/"
+    }
+
+}, {
+      "update": {
+        "id":  210529,
+        "date": "2021-05-29 00:00:00 +0000 UTC",
+        "datePublished": "2021-05-29 00:00:00 +0000 UTC",
+        "doses": [{
+          "aggregate": [{
+            "total": 55037,
+            "first": 46378
+          }],
+          "byIsland": [ 
+              {
+                "name": "New Providence",
+                "first": 34344,
+                "second": 7051
+              },
+              {
+                "name": "Grand Bahama",
+                "first": 6796,
+                "second": 1602
+              },
+              {
+                "name": "Eleuthera",
+                "first": 1354,
+                "second": 0
+              },
+              {
+                "name": "Abaco",
+                "first": 874,
+                "second": 0
+              },
+              {
+                "name": "Exuma",
+                "first": 832,
+                "second": 0
+              },
+              {
+                "name": "Andros",
+                "first": 603,
+                "second": 3
+              },
+              {
+                "name": "Bimini",
+                "first": 398,
+                "second": 0
+              },
+              {
+                "name": "Long Island & Rum Cay",
+                "first": 324,
+                "second": 0
+              },
+              {
+                "name": "Berry Islands",
+                "first": 289,
+                "second": 0
+              },
+              {
+                "name": "Cat Island",
+                "first": 252,
+                "second": 3
+              },
+              {
+                "name": "Inagua",
+                "first": 129,
+                "second": 0
+              },
+              {
+                "name": "San Salvador",
+                "first": 101,
+                "second": 0
+              },
+              {
+                "name": "Acklins",
+                "first": 32,
+                "second": 0
+              },
+              {
+                "name": "Crooked Island",
+                "first": 21,
+                "second": 0
+              },
+              {
+                "name": "Mayaguana",
+                "first": 18,
+                "second": 0
+              },
+              {
+                "name": "Rum Cay",
+                "first": 11,
+                "second": 0
+              }
+          ],
+        "full": 8659,
+        "abroad": 0
+      }],
+      "permalink" : "https://api.covidbahamas.app/updates/210529/"
+    }
+
+}, {
+      "update": {
+        "id":  210521,
+        "date": "2021-05-21 00:00:00 +0000 UTC",
+        "datePublished": "2021-05-21 00:00:00 +0000 UTC",
+        "doses": [{
+          "aggregate": [{
+            "total": 50242,
+            "first": 44226
+          }],
+          "byIsland": [ 
+              {
+                "name": "New Providence",
+                "first": 32631,
+                "second": 4893
+              },
+              {
+                "name": "Grand Bahama",
+                "first": 6381,
+                "second": 1123
+              },
+              {
+                "name": "Eleuthera",
+                "first": 1400,
+                "second": 0
+              },
+              {
+                "name": "Abaco",
+                "first": 874,
+                "second": 0
+              },
+              {
+                "name": "Exuma",
+                "first": 832,
+                "second": 0
+              },
+              {
+                "name": "Andros",
+                "first": 552,
+                "second": 0
+              },
+              {
+                "name": "Bimini",
+                "first": 398,
+                "second": 0
+              },
+              {
+                "name": "Long Island & Rum Cay",
+                "first": 324,
+                "second": 0
+              },
+              {
+                "name": "Berry Islands",
+                "first": 289,
+                "second": 0
+              },
+              {
+                "name": "Cat Island",
+                "first": 201,
+                "second": 0
+              },
+              {
+                "name": "Inagua",
+                "first": 129,
+                "second": 0
+              },
+              {
+                "name": "San Salvador",
+                "first": 101,
+                "second": 0
+              },
+              {
+                "name": "Acklins",
+                "first": 64,
+                "second": 0
+              },
+              {
+                "name": "Crooked Island",
+                "first": 21,
+                "second": 0
+              },
+              {
+                "name": "Mayaguana",
+                "first": 18,
+                "second": 0
+              },
+              {
+                "name": "Mayaguana",
+                "first": 18,
+                "second": 0
+              },
+              {
+                "name": "Rum Cay",
+                "first": 11,
+                "second": 0
+              }
+          ],
+        "full": 6016,
+        "abroad": 0
+      }],
+      "permalink" : "https://api.covidbahamas.app/updates/210521/"
+    }
+
+}]
 }
 }

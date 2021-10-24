@@ -150,6 +150,6 @@
 
     </main>
     {{ partial "footer.html" }}
-    <script src="/scripts/obscure{{if eq .Site.Params.pro "true" }}{{ .Site.Params.version }}.min{{ else }}.build{{ end }}.js" async></script>
+    <script src="/scripts/obscure{{if eq .Site.Params.pro true }}-{{ .Site.Params.version }}.min{{ else }}.build{{ end }}.js" async></script>
   </body>
 </html>
