@@ -1,1 +1,0 @@
-!function(){var e;document.querySelectorAll("[obscure]").forEach((function(n){for(var r in(e=document.createElement("span")).innerHTML=n.innerHTML,n.hasAttribute("class")&&(e.classList=n.classList),n.id&&(e.id=n.id),n.dataset)e.innerHTML=e.innerHTML.replaceAll("%"+r.replace("p",""),n.dataset[r]);n.parentNode.insertBefore(e,n),n.remove()}))}();
