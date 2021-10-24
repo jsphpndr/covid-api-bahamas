@@ -23,7 +23,7 @@ It's our hope that whether it's viewing this site directly or accessing the API,
 
 We're also hoping that this data will be beneficial to institutions — like hospitals, research labs, colleges and universities — that rely on data like this to create models, forecasts and projections.
 
-It's even being used to help teach high school kids how to code.
+It's even being used to help [teach high school kids how to code](https://www.instagram.com/p/CU-1HLfvNsl/).
 
 So... everybody.
 
@@ -31,16 +31,39 @@ So... everybody.
 
 Well, nothing in life is really free and there's so much more that we'd like to do, but it takes time, effort and money.
 
-We need your support to dedicate our time and effort to updating this site and the API with all available [COVID-19 Case Report](/reports) and [COVID-19 Vaccination Update](/updates) data, continue developing and maintaining this site, add new features and just old fashioned pay the bills — this thing's coming outta' pocket.
+We need your support to dedicate our time and effort to keep updating, developing and maintaining this site and the API with all available [COVID-19 Case Report](/reports) and [COVID-19 Vaccination Update](/updates) data, add new features and just old fashioned pay the bills — this thing's coming outta' pocket.
 
 Your help can help us continue making this resource available to you and the rest of The Bahamas.
 
 [Learn more about how you can sponsor us...](/become-sponsor)
 
+## Don't Have Money?
+
+Hey, that's ok. There are ways that you can help, too.
+
+Join others who have supported the API and have dedicated time and effort to entering and uploading report data.
+
+If you're wondering... yes, it requires a bit of code. 
+
+Can you do it? 
+
+Oh, hell yeah.
+
+We've had coders and non-coders alike working and learning together to make this project awesome and a resource for all.
+
+If you become a contributor, your name — linked to your personal website or social media profile, if you'd like — will be added to the homepage and show up on each report that you filled out.
+
+It looks good on the résumé.
+
+Trust us.
+
+By now, we hope that you're just a little curious and wanting to become a contributor. Hop on over to <a href="https://github.com/jsphpndr/covid-api-bahamas" rel="noopener" target="_blank">the repository on GitHub</a> follow the instructions and get started.
+
 ## Upcoming Features
 
 We're working to make this site even better. Here are some of the upcoming features that we're working on:
 
+* Documentation and code bases for the COVID-19 API
 * Daily Newsletters with the lastest COVID-19 Case Report and Vaccination Update
 * Exporting COVID-19 Case Reports and Vaccination Updates to PDF
 * Exporting COVID-19 Case Reports and Vaccination Updates to CSV

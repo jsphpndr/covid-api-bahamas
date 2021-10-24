@@ -9,20 +9,4 @@ draft: false
 
 
 
-## Corporate Partnership
-
-Basic $250 p/m
-
-Logo linked to your website featured on the sponsor page
-
-Gold $500 p/m
-
-Logo linked to your website featured on sponsor page and homepage
-
-Premium $1000 p/m
-
-Have your logo (linked to your website) featured on every page and included in daily newsletter updates 
-
-
-
 

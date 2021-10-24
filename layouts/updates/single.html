@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>COVID-19 Case Report {{ .Title }} | COVID-19 API | Bahamas</title>
+    <title>COVID-19 Vaccination Update {{ .Title }} | COVID-19 API | Bahamas</title>
     <meta name="description" content="COVID-19 Vaccination Update {{ .Title }} issued on {{ .Date | dateFormat "Monday, Jan 2, 2006" }} from The Bahamas' Ministry of Health & Wellness.">
     {{ partial "head/defaults.html" . }}{{ .Scratch.Set "report" "COVID-19 Vaccination Update" }}
     {{ partial "head/social/single.html" . }}
@@ -47,41 +47,15 @@
 
     <div class="[ x--wide ]">
 
-      <section class="[ mb--2 page--break ]">
-  
-        <h2 class="[ mb--050 ]">Vaccination by Island</h2>
-      
-        <table class="[ table ]">
-      
-          <thead>
-      
-            <tr>
-              <th class="[ text--left ]">Island</td>
-              <th class="[ text--right ]">New</td>
-              <th class="[ text--right ]">Total</td>
-            </tr>
-      
-          </thead>
-      
-          <tbody>
-            {{ range $i, $e := .Params.update.doses.byIsland }}
-            <tr>
-              <th class="[ text--left ]">{{ .island.name }}</th>
-              <td class="[ text--right ]">{{ .island.first }}</td>
-              <td class="[ text--right ]">{{ .island.second }}</td>
-            </tr>
-            {{ end }}
-            <!-- <tr>
-              <th class="[ text--left ]">Aggregate Total</th>
-              <td class="[ text--right bold ]">{{ .Params.update.doses.aggregate.first }}</td>
-              <td class="[ text--right bold ]">{{ .Params.update.doses.aggregate.total }}</td>
-            </tr>
-           -->
-          </tbody>
-      
-        </table>
-      
-      </section>
+      {{ partial "updates/totals.html" .  }}
+
+      {{ partial "updates/abroad.html" . }}
+
+      {{ partial "updates/pop.html" . }}
+
+      {{ partial "updates/goal.html" . }}
+
+      {{ partial "updates/island-breakdown.html" . }}
 
     </div>
 

@@ -43,13 +43,113 @@
   
       </div>
 
-      <article class="[ x--wide ]">
+      <article class=" [ heading--margin ][ x--wide ]">
         {{ .Content }}
 
+        <h2 >We Need Your Help</h2>
+
+        {{ $reports := (where .Site.RegularPages "Section" "==" "reports") }}
+        {{ $reportsCount := len $reports }}
+
+        <p>Here's where we are...</p>
+
+        <p>All COVID-19 Vaccination Updates have been entered and made available.</p>
+        
+        <p>And so far, we've completed {{ $reportsCount }} of {{ range ( where .Site.RegularPages.ByDate "Type" "reports" | last 1 ).Reverse  }}{{ .Params.report.number }}{{end}} COVID-19 Case Reports and working our way up.</p>
+
+        <p>There's a number of features we'd like to add and ongoing development, maintenance costs and lots and lots of things we'd like to do, but just like you, we've only got so much time, effort and money.</p>
+
+        <p>That being said, it sure would be nice to have some help keeping the lights on and all that.</p>
+
+        <p>So, here's how you can help...</p>
+
+        <h2 >Make A Donation</h2>
+
+        <p>We're not asking for much.</p>
+        
+        <p>Well, maybe lunch... but if you can and you're willing, you can make a small donation to help support this site, the API and future developments.</p>
+
+        <div class="[ grid x2--xs x4--md g--1 mb--2 ]">
+          <a class="[ btn btn--ghost--lg flex--center--middle ]" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=j_pinder.us@outlook.com&item_name=Supporters+of+the+COVID-19+API&item_number=COVID-19+API+Campaign&amount=10%2e00&currency_code=USD" rel="noopener" target="_blank">$10</a>
+          <a class="[ btn btn--ghost--lg flex--center--middle ]" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=j_pinder.us@outlook.com&item_name=Supporters+of+the+COVID-19+API&item_number=COVID-19+API+Campaign&amount=25%2e00&currency_code=USD" rel="noopener" target="_blank">$25</a>
+          <a class="[ btn btn--ghost--lg flex--center--middle ]" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=j_pinder.us@outlook.com&item_name=Supporters+of+the+COVID-19+API&item_number=COVID-19+API+Campaign&amount=50%2e00&currency_code=USD" rel="noopener" target="_blank">$50</a>
+          <a class="[ btn btn--ghost--lg flex--center--middle ]" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=j_pinder.us@outlook.com&item_name=Supporters+of+the+COVID-19+API&item_number=COVID-19+API+Campaign&amount=100%2e00&currency_code=USD" rel="noopener" target="_blank">$100</a>
+        </div>
+
+        <h2>Corporate Sponsorship</h2>
+
+        <p>We know that there are any number of charities, causes and projects that businesses in The Bahamas support, but we're asking for just one more.</p>
+
+        <p>We're hoping this website and the API itself will prove a benefit to individuals and institutions alike for projects like, I don't know... <a href="https://www.instagram.com/p/CU-1HLfvNsl/" rel="noopener" target="_blank">helping high school kids learn how to code</a>.</p>
+        
+        <p>We expect this project to last over the next 3-6 months (counting on the pandemic to be over by then) and we're looking for a monthly commitment to help keep things going.</p>
+
+        <p>Here's how you can partner with us.</p>
+
+        <h3>Silver</h3>
+
+        <p class="[ bold ]">$250 p/m | 20 Spots</p>
+
+        <p>Hey, every bit counts, so we're starting with something that everyone can afford.</p>
+        
+        <p>With a pledge of $250 whether per month or just for the month, you'll have your logo — linked to your business website or social media page — featured on this page.</p>
+
+        <p>We're sure some people will look at it... but, if you need a little more exposure... Then go for Gold. Literally.</p>
+
+        <h3>Gold</h3>
+
+        <p class="[ bold ]">$500 p/m | 10 Spots</p>
+
+        <p>Needing that exposure, huh? Don't we all.</p>
+
+        <p>So, your logo — linked to your website or social media page — will still be featured on this page, but...</p>
+
+        <p>Everytime someone lands on our homepage, guess what they'll see? Your logo.</p>
+
+        <p>See what we did there? Thought you might like that.</p>
+
+        <p>Need more? There's all kinds of options left.</p>
+        
+        <p>Well, one.</p>
+        
+        <p>There's just one option left...</p>
+        
+        <p>buuuut...</p>
+        
+        <p>It's Platinum, baby!</p>
+
+        <h3>Platinum</h3>
+
+        <p class="[ bold ]">$1000 p/m | 5 Spots</p>
+
+        <p>We're gonna' <a href="https://www.youtube.com/watch?v=5AxwaszFbDw">make the logo bigger</a>. LIKE SO BIG!</p>
+
+        <p>Have your logo — linked to your business website or social media page — featured on every page and, and... </p>
+        
+        <p>Wait for it...</p>
+        
+        <p>Your businesses logo will be included in our daily newsletter updates. That's 30 days of direct, in your face advertising to Bahamian consumers.</p>
+
+        <p>Your business will also have first dibs to future projects and be featured on any adjoining projects, marketing campaigns and shoutouts on our social media page.</p>
+        
+        <p>Wow.</p>
+
+        <p>This is powerful.</p>
+
+        <h3>Want to do more?</h3>
+
+        <p>Ok, big spender... it's totally up to you.</p>
+
+        <p>We're just happy for the help.</p>
+        {{ $subject := "We Want To Sponsor" }}
+        <p>You can contact us about this or any of the other above options at <template obscure data-p1="hello" data-p2="josephpinder.com">
+          <a href="mailto:%1@%2?subject={{$subject}}">%1@%2</a>
+        </template>.</p>{{$subject}}
 
       </article>
 
     </main>
     {{ partial "footer.html" }}
+    <script src="/scripts/obscure{{if eq .Site.Params.pro "true" }}{{ .Site.Params.version }}.min{{ else }}.build{{ end }}.js" async></script>
   </body>
 </html>

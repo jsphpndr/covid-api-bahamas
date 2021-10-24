@@ -1,0 +1,43 @@
+<section>
+  {{ $update := .Params.update }}
+  {{ $aggregate := $update.doses.aggregate }}
+  {{ $total := $aggregate.total }}
+  {{ $first := $aggregate.first }}
+  {{ $second := sub $total $first }}
+  {{ $full := $update.full }}
+  {{ $abroad := $update.abroad }}
+  {{ $jj := $update.jj }}
+  {{ $pop := 389410.00 }}
+  <h2 class="[ h3 mb--025 ]">Population Immunity</h2>
+
+  <figure class="[ mb--2 ]">
+
+    <table class="[ table mb--1 ]">
+
+      <thead>
+        <th class="[ column--head text--left ]">Status</th>
+        <th class="[ text--right ]">%</th>
+        <th class="[ text--right ]">Total</th>
+      </thead>
+      <tbody>{{ $goal := mul $pop 0.7 }}
+        <tr>{{ $fully := math.Round ( mul (div $full $goal  ) 100 ) }}
+          <th class="[ column--head text--left ]">Achieved</th>
+          <td class="[ text--right ]">{{ $fully }}%</td>
+          <td class="[ text--right ]">{{ $full }}</td>
+        </tr>
+        <tr>{{ $partial := math.Round ( mul (div (sub $goal $full ) $goal  ) 100 )}}
+          <th class="[ column--head text--left ]">Remainder</th>
+          <td class="[ text--right ]">{{ $partial }}%</td>
+          <td class="[ text--right ]">{{ sub $goal $full }}</td>
+        </tr>    
+      </tbody>
+  
+    </table>
+    <figcaption>
+      <p><strong>Note:</strong> The Government of The Bahamas' goal for COVID-19 population immunity — better known as herd immunity — is set in line 
+      with <abbr title="World Health Organization">WHO</abbr>'s recommendation of 70% of the population or {{ $goal }} citizens.</p>
+      <p><strong>Note:</strong> Population data is sourced from <a href="https://stats.gov.bs/" rel="noopener" target="_blank">The Bahamas' Department of Statistics</a> and is represented at {{$pop}} as of 2020.</p>
+    </figcaption>
+  </figure>
+
+</section>

@@ -86,7 +86,7 @@
             <li class="[ loop__item ] [ flex--between flex--wrap p--1 mb--050 ]">
                 <div>
                   <h3 class="[ h5 mb--025 ]"><a href="{{ .Permalink }}">COVID-19 Vaccination Update {{ .Date.Format "060102" }}</a></h3>
-                  <p>{{ .Date.Format "January 02, 2006" }}</p>
+                  <p>{{ .Date.Format "Monday, Jan 02, 2006" }}</p>
                 </div>
                 
                 <div><a href="{{ .Permalink }}index.json">View JSON</a></div>
@@ -115,9 +115,9 @@
           <hr class="[ mb--3 ]">
 
           <h3 class="[ mb--050 ]">Contributors</h3>
-          <ul class="[ contributors ] [ g--2 ]">
+          <ul class="[ contributors ] [ flex--wrap g--2 text--center ]">
             {{ range $.Site.Data.contributors }}
-            <li class="[ contributor ] [ bold wsnw mb--1 ]">https://{{ if .website }}<a href="{{ .website }}" rel="noopener" target="_blank">{{ .name}}</a>{{ else }}{{ .name}}{{ end }}</li>
+            <li class="[ contributor ] [ bold wsnw ]">{{ if .website }}<a href="{{ .website }}" rel="noopener" target="_blank">{{ .name}}</a>{{ else }}{{ .name}}{{ end }}</li>
             {{ end }}
           </ul>
         </section>

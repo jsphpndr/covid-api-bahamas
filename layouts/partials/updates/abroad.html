@@ -1,0 +1,48 @@
+<section>
+  {{ $update := .Params.update }}
+  {{ $aggregate := $update.doses.aggregate }}
+  {{ $total := $aggregate.total }}
+  {{ $first := $aggregate.first }}
+  {{ $second := sub $total $first }}
+  {{ $full := $update.full }}
+  {{ $abroad := $update.abroad }}
+  {{ $jj := $update.jj }}
+  <h2 class="[ h3 mb--025 ]">Vaccinations by Administration</h2>
+
+  <figure class="[ mb--2 ]">
+
+    <table class="[ table mb--1 ]">
+
+      <thead>
+        <th class="[ column--head text--left ]">Locale</th>
+        <th class="[ text--right ]">Total</th>
+      </thead>
+
+      <tbody>
+        <tr>
+          <th class="[ column--head text--left ]">Locally</th>
+          <td class="[ text--right ]">{{ $second }}</td>
+        </tr>
+        <tr>
+          <th class="[ column--head text--left ]">Abroad</th>
+          <td class="[ text--right ]">{{ if eq $second $full }}—{{else if and (eq $abroad 0) (lt $second $full) }}{{else}}{{$abroad}}{{end}}</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th class="[ column--head text--left ]">Fully Vaccinated</th>
+          <td class="[ text--right bold ]">{{ $full }}</td>
+        </tr>
+      </tfoot>
+  
+    </table>
+    <figcaption>
+      {{ if and (eq $abroad 0) (lt $second $full) }}
+      <p><strong>Note:</strong> Numbers of registrants vaccinated abroad are reflected in report as of Saturday, Jul 24, 2021.</p>
+      {{ end }}
+    
+    </figcaption>
+  </figure>
+
+
+</section>

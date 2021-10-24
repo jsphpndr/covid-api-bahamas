@@ -3,7 +3,7 @@
 <head>
   <!-- Access COVID-19 (Coronavirus) data for The Bahamas from the Ministry of Health & Wellness from COVID-19 Case Report {{ .Title }} issued on {{ .Date | dateFormat "Monday, Jan 2, 2006" }}. -->
   <meta charset="UTF-8">
-  <title>COVID-19 Case Report {{ .Title }} | Bahamas</title>
+  <title>COVID-19 Case Report {{ .Title }} | COVID-19 API | Bahamas</title>
   <meta name="description" content="COVID-19 Case Report {{ .Title }} issued on {{ .Date | dateFormat "Monday, Jan 2, 2006" }} from The Bahamas' Ministry of Health & Wellness.">
   <link rel="canonical" href="{{ .Permalink }}">
   {{ partial "head/defaults.html" . }}{{ .Scratch.Set "report" "COVID-19 Case Report" }}
@@ -63,19 +63,15 @@
 
       {{ partial "hospitalizations.html" . }}
 
-      <section>
-
-        {{ partial "reported.html" . }}
-        
-        {{ partial "deaths.html" . }}
-
-      </section>
+      {{ partial "reported.html" . }}
 
     </div>
     
+    {{ $contributor := .Params.contributor }}
+    {{ $link := .Params.con__link}}
+    {{ if $contributor }}<div class="[ x--wide bold text--center ]">Report contributed by {{ if $link }}<a href="{{ $link }}" rel="noopener" target="_blank">{{ $contributor}}</a>{{ else }}{{ $contributor}}{{ end }}</div>{{end}}  
     
   </main>
-  
   {{ .Scratch.Set "report" "Report" }}
   {{ partial "components/pagination.html" . }}
   

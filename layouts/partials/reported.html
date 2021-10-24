@@ -1,35 +1,63 @@
-{{if eq .Params.report.ifReported true }}
-<h2>Deaths Reported</h2>
+<section {{if .Params.contributor}}class="[ pb--2 ]"{{end}}>
+  <h2 class="[ h3 mb--025 ]">Deaths Reported</h2>
 
-<figure class="[ mb--2 ]">
-  <div class="[ wrapper for--table ]">
-    <table class="[ table--breakdown ] [ mb--1 ]">
+  {{if eq .Params.report.ifReported true }}
+  <figure class="[ mb--2 ]">
+    <div class="[ wrapper for--table ]">
+      <table class="[ table--breakdown ] [ mb--1 ]">
 
-      <thead>
-        <tr>
-          <th class="[ column--head text--left wsnw ]">Island</th>
-          <th class="[ text--center ]">Age</th>
-          <th class="[ text--center ]">Sex</th>
-          <th class="[ text--right ]">Date of Death</th>
-        </tr>
-      </thead>
+        <thead>
+          <tr>
+            <th class="[ column--head text--left wsnw ]">Island</th>
+            <th class="[ text--center ]">Age</th>
+            <th class="[ text--center ]">Sex</th>
+            <th class="[ text--right ]">Date of Death</th>
+          </tr>
+        </thead>
+      
+        <tbody>
+          {{ range $i, $e := .Params.report.reportedFatalities }}
+          <tr>
+            <th class="[ column--head text--left wsnw ]">{{ .fatality.island }}</td>
+            <td class="[ text--center ]">{{ .fatality.age }}</td>
+            <td class="[ text--center ]">{{ .fatality.sex }}</td>
+            <td class="[ text--right wsnw ]">{{ .fatality.date  | dateFormat "Jan 2, 2006" }}</td>
+          </tr>
+          {{ end }}
+        </tbody>
+      
+      </table>
+    </div>
+    <figcaption>
+      <p>A total of {{ len .Params.report.reportedFatalities }} deaths reported on report date: {{ .Date | dateFormat "Monday, Jan 2, 2006" }}.</p>
+      <p><strong>Note:</strong> Island indicates island of residence.</p>
+    </figcaption>
+  </figure>
+  {{ end }}
+
+  <table class="[ table ]">
+
+    <thead>
+      <tr>
+        <th class="[ text--left ]">To Date</th>
+        <th class="[ text--right ]">Total</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <th class="[ text--left ]">Case Fatalities</th>
+        <td class="[ text--right ]">{{ .Params.report.cases.fatalities.toDate }}</td>
+      </tr>
+      <tr>
+        <th class="[ text--left ]">Unrelated Deaths</th>
+        <td class="[ text--right ]">{{ .Params.report.cases.fatalities.unrelatedToDate }}</td>
+      </tr>
+      <tr>
+        <th class="[ text--left ]">Under Investigation</th>
+        <td class="[ text--right ]">{{ .Params.report.cases.fatalities.underInvestigation }}</td>
+      </tr>
+    </tbody>
     
-      <tbody>
-        {{ range $i, $e := .Params.report.reportedFatalities }}
-        <tr>
-          <th class="[ column--head text--left wsnw ]">{{ .fatality.island }}</td>
-          <td class="[ text--center ]">{{ .fatality.age }}</td>
-          <td class="[ text--center ]">{{ .fatality.sex }}</td>
-          <td class="[ text--right wsnw ]">{{ .fatality.date  | dateFormat "Jan. 2, 2006" }}</td>
-        </tr>
-        {{ end }}
-      </tbody>
-    
-    </table>
-  </div>
-  <figcaption>
-    <p>A total of {{ len .Params.report.reportedFatalities }} deaths reported as of {{ .Date | dateFormat "Monday, Jan 2, 2006" }}.</p>
-    <p><strong>Note:</strong> Island indicates island of residence.</p>
-  </figcaption>
-</figure>
-{{ end }}
+  </table>
+</section>
