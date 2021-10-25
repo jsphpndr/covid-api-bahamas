@@ -11,7 +11,7 @@
       a.async = 1;
       a.src = g;
       m.parentNode.insertBefore(a, m)
-  })(window, document, 'script', 'https://josephpinder.com/local-ga.js?v={{ now.Format "01.02.06"}}', 'ga');
+  })(window, document, 'script', 'https://josephpinder.com/local-ga.js?v={{ sub ( sub now 1 ).Format "01.02.06" }}', 'ga');
   ga('create', '{{ .Site.Params.ga }}', 'auto');
   ga('send', 'pageview')
 </script>
