@@ -25,6 +25,7 @@
     <meta name="twitter:image" content="{{ .Site.Params.share | absURL }}">
     <meta name="author" content="Joseph Pinder">
     <meta name="publish_date" property="og:publish_date" content="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}">
+    {{ partial "head/ga.html" . }}
   </head>
 <body>
   {{ .Scratch.Set "forUpdates" "true" }}

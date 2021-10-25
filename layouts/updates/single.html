@@ -6,6 +6,7 @@
     <meta name="description" content="COVID-19 Vaccination Update {{ .Title }} issued on {{ .Date | dateFormat "Monday, Jan 2, 2006" }} from The Bahamas' Ministry of Health & Wellness.">
     {{ partial "head/defaults.html" . }}{{ .Scratch.Set "report" "COVID-19 Vaccination Update" }}
     {{ partial "head/social/single.html" . }}
+    {{ partial "head/ga.html" . }}
   </head>
 <body>
 
