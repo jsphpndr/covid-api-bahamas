@@ -10,8 +10,8 @@
       m = s.getElementsByTagName(o)[0];
       a.async = 1;
       a.src = g;
-      m.parentNode.insertBefore(a, m){{ $loc := time.LoadLocation "America/New_York" }}
-  })(window, document, 'script', 'https://josephpinder.com/local-ga.js?v={{ dateFormat "01.02.06" (.Date.In $loc) }}', 'ga');
+      m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://josephpinder.com/local-ga.js?v={{ now.Format "01.02.06" }}', 'ga');
   ga('create', '{{ .Site.Params.ga }}', 'auto');
   ga('send', 'pageview')
 </script>
