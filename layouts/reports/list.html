@@ -42,7 +42,7 @@
 
         <p class="[ ch--45 ]">{{.Summary}}</p>
 
-        <a class="[ btn btn--ghost--lg btn--flex ] [ no--print ]" href="{{ .Permalink }}/index.json">View JSON</a>
+        <a class="[ btn btn--ghost--lg btn--flex ] [ no--print ]" href="{{ .Permalink }}/index.json" target="_blank">View JSON</a>
 
       </div>
       
@@ -102,7 +102,7 @@
             <p>{{ .Date | dateFormat "Monday, Jan 2, 2006" }}</p>
           </div>
           <div>
-            <a href="{{ .Permalink }}index.json">View JSON</a>
+            <a href="{{ .Permalink }}index.json" target="_blank">View JSON</a>
           </div>
         </li>
         {{ end }}

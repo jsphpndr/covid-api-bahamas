@@ -12,40 +12,34 @@
 
   <figure>
 
-    <table class="[ table ] [ mb--1 ]">
+    <div class="[ wrapper for--table ]">
+      <table class="[ table--breakdown ] [ mb--1 ]">
 
-      <thead>
+        <thead>
+    
+          <tr>
+            <th class="[ column--head text--left ]">Island</td>
+            <th class="[ text--center ]">First</td>
+            <th class="[ text--center ]">{{ if $jj }}Fully Vaccinated{{else}}Second{{end}}</td>
+            <th class="[ text--right ]">Total</th>
+          </tr>
+    
+        </thead>
+    
+        <tbody>
+          {{ range $i, $e := .Params.update.doses.byIsland }}
+          <tr>
+            <th class="[ column--head text--left ]">{{ .island.name }}</th>
+            <td class="[ text--center ]">{{ sub .island.first .island.second }}</td>
+            <td class="[ text--center ]">{{if ne .island.second 0 }}{{ .island.second }}{{else}}—{{end}}</td>
+            <td class="[ text--right ]">{{ .island.first }}</td>
+          </tr>
+          {{ end }}
   
-        <tr>
-          <th class="[ text--left ]">Island</td>
-          <th class="[ text--right ]">First</td>
-          <th class="[ text--right ]">{{ if $jj }}Fully Vaccinated{{else}}Second{{end}}</td>
-          <th class="[ text--right ]">Total</th>
-        </tr>
-  
-      </thead>
-  
-      <tbody>
-        {{ range $i, $e := .Params.update.doses.byIsland }}
-        <tr>
-          <th class="[ text--left ]">{{ .island.name }}</th>
-          <td class="[ text--right ]">{{ sub .island.first .island.second }}</td>
-          <td class="[ text--right ]">{{if ne .island.second 0 }}{{ .island.second }}{{else}}—{{end}}</td>
-          <td class="[ text--right ]">{{ .island.first }}</td>
-        </tr>
-        {{ end }}
-        <!-- <tr>
-          <th class="[ text--left ]">Aggregate Total</th>
-          <td class="[ text--right bold ]">{{ .Params.update.doses.aggregate.first }}</td>
-          <td class="[ text--right bold ]">{{ .Params.update.doses.aggregate.total }}</td>
-        </tr>
-       -->
-       <tfoot>
-         
-       </tfoot>
-      </tbody>
-  
-    </table>
+        </tbody>
+    
+      </table>
+    </div>
   
     <figcaption>
       <p><strong>Note:</strong> Figures represent dosages of vaccinations administered locally. <b>First</b> refers to those persons having only received one dose of a two dose vaccination{{ if eq $jj true }} and exclusive of Johnson & Johnson{{end}}.</p>

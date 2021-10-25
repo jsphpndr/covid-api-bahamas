@@ -63,7 +63,7 @@
                 <p>{{ .Date | dateFormat "Monday, Jan 2, 2006" }}</p>
               </div>
               <div>
-                <a href="{{ .Permalink }}index.json">View JSON</a>
+                <a href="{{ .Permalink }}index.json" target="_blank">View JSON</a>
               </div>
             </li>
             {{ end }}
@@ -72,7 +72,7 @@
           <div class="[ flex--end ]">
             <a href="/reports">All Reports</a>
             <b class="[ block mx--050 ]"></b>
-            <a href="/reports/index.json">View JSON</a>
+            <a href="/reports/index.json" target="_blank">View JSON</a>
           </div>
 
         </section>
@@ -89,7 +89,7 @@
                   <p>{{ .Date.Format "Monday, Jan 02, 2006" }}</p>
                 </div>
                 
-                <div><a href="{{ .Permalink }}index.json">View JSON</a></div>
+                <div><a href="{{ .Permalink }}index.json" target="_blank">View JSON</a></div>
 
             </li>
             {{ end }}
@@ -97,7 +97,7 @@
           <div class="[ flex--end ]">
             <a href="/updates">All Updates</a>
             <b class="[ block mx--050 ]"></b>
-            <a href="/updates/index.json">View JSON</a>
+            <a href="/updates/index.json" target="_blank">View JSON</a>
           </div>
         
         <!-- 
