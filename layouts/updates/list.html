@@ -41,7 +41,7 @@
 
         <p class="[ ch--45 ]">{{.Summary}}</p>
 
-        <a class="[ btn btn--ghost--lg btn--flex ] [ no--print ]" href="{{ .Permalink }}/index.json">View JSON</a>
+        <a class="[ btn btn--ghost--lg btn--flex ] [ no--print ]" href="{{ .Permalink }}index.json" target="_blank">View JSON</a>
 
       </div>
 
@@ -49,7 +49,7 @@
 
     <div class="[ x--wide flex--between--middle flex--wrap pt--d15 pb--2 no--print ]">
 
-      <nav class="[ breadcrumbs ] [ pb--1 ]">
+      <nav class="[ breadcrumbs ]">
 
         <ul class="[ flex ]">
           <li class="[ breadcrumb__item ] [ mr--1 ]"><a href="/">Home</a></li>
@@ -58,7 +58,7 @@
 
       </nav>
 
-      <div class="[ flex--middle mb--1 ]">
+      <div class="[ flex--middle ]">
         <span class="[ mr--1 ]">Share on:</span>
         {{ $url := .Permalink }}{{ $url := replace $url ":" "%3A" }}{{ $url := replace $url "/" "%2F" }}
         <ul class="[ social ] [ flex mr--015 ]">

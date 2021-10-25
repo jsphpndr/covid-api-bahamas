@@ -1,78 +1,76 @@
-{
-  "report": { {{ $report := .Params.report }}{{ $cases := $report.cases }}{{ $history := $cases.historyOfTravel}}{{ $inHospital := $cases.inHospital}}{{ $active := $cases.active }}{{ $recovered := $cases.recovered }}{{ $fatalities := $cases.fatalities }}{{ $tests := $report.tests }}
-    "id": {{ $report.number }},
-    "date": "{{ .Date.Format "2006-01-02T15:04:05Z0700" }}",
-    "permalink": "{{ .Permalink }}",
-    "cases": {
-      "byIsland": [ {{ range $i, $e := .Params.report.cases.byIsland }}{{ if $i }},{{ end }}
-        {
-          "name": "{{ .island.name }}",
-          "toDate": {{ .island.toDate }},
-          "new": {{ .island.new }}
-        }{{ end }}
-      ],
-      "newTotal": {{ $cases.newTotal }},
-      "toDateTotal": {{ $cases.toDateTotal }},
-      "historyOfTravel": {
-        "byIsland": {{if eq $cases.ifTravelHistory true }} [ {{ range $i, $e := $history.byIsland }}{{ if $i }},{{ end }}
+{ {{ $report := .Params.report }}{{ $cases := $report.cases }}{{ $history := $cases.historyOfTravel}}{{ $inHospital := $cases.inHospital}}{{ $active := $cases.active }}{{ $recovered := $cases.recovered }}{{ $fatalities := $cases.fatalities }}{{ $tests := $report.tests }}
+      "id": {{ $report.number }},
+      "date": "{{ .Date.Format "2006-01-02T15:04:05Z0700" }}",
+      "permalink": "{{ .Permalink }}",
+      "cases": {
+        "byIsland": [ {{ range $i, $e := .Params.report.cases.byIsland }}{{ if $i }},{{ end }}
           {
             "name": "{{ .island.name }}",
+            "toDate": {{ .island.toDate }},
             "new": {{ .island.new }}
-          }
-        {{ end }}
-        ]{{ else }}false{{ end }},
-        "total": {{ $history.total}}
-      },
-      "bySex": [ {{ range $i, $e := .Params.report.cases.bySex }}{{ if $i }},{{ end }}
-        {
-          "sex": "{{ .group.sex }}",
-          "new": "{{ .group.new }}"
-      }{{ end }}
-      ],
-      "bySexTotal": {{ $cases.newTotal }},
-      "inHospital": {
-        "byFacility": [ {{ range $i, $e := $inHospital.byFacility }}{{ if $i }},{{ end }}
-          {
-            "island": "{{ .facility.island }}",
-            "name": "{{ .facility.name }}",
-            "total": {{ .facility.total }},
-            "nonICU": {{ .facility.nonICU }},
-            "icu": {{ .facility.icu }}
           }{{ end }}
         ],
-        "totals": {
-          "total": {{ $inHospital.totals.total }},
-          "nonICU": {{ $inHospital.totals.nonICU }},
-          "icu": {{ $inHospital.totals.icu }}
+        "newTotal": {{ $cases.newTotal }},
+        "toDateTotal": {{ $cases.toDateTotal }},
+        "historyOfTravel": {
+          "byIsland": {{if eq $cases.ifTravelHistory true }} [ {{ range $i, $e := $history.byIsland }}{{ if $i }},{{ end }}
+            {
+              "name": "{{ .island.name }}",
+              "new": {{ .island.new }}
+            }
+          {{ end }}
+          ]{{ else }}false{{ end }},
+          "total": {{ $history.total}}
+        },
+        "bySex": [ {{ range $i, $e := .Params.report.cases.bySex }}{{ if $i }},{{ end }}
+          {
+            "sex": "{{ .group.sex }}",
+            "new": "{{ .group.new }}"
+        }{{ end }}
+        ],
+        "bySexTotal": {{ $cases.newTotal }},
+        "inHospital": {
+          "byFacility": [ {{ range $i, $e := $inHospital.byFacility }}{{ if $i }},{{ end }}
+            {
+              "island": "{{ .facility.island }}",
+              "name": "{{ .facility.name }}",
+              "total": {{ .facility.total }},
+              "nonICU": {{ .facility.nonICU }},
+              "icu": {{ .facility.icu }}
+            }{{ end }}
+          ],
+          "totals": {
+            "total": {{ $inHospital.totals.total }},
+            "nonICU": {{ $inHospital.totals.nonICU }},
+            "icu": {{ $inHospital.totals.icu }}
+          }
+        },
+        "active": {{ $active }},
+        "recovered": {
+          "new": {{ $recovered.new }},
+          "toDate": {{ $recovered.toDate }}
+        },
+        "fatalities": {
+          "toDate": {{ $fatalities.toDate }},
+          "unrelatedToDate": {{ $fatalities.unrelatedToDate }},
+          "underInvestigation": {{ $fatalities.underInvestigation }}
         }
       },
-      "active": {{ $active }},
-      "recovered": {
-        "new": {{ $recovered.new }},
-        "toDate": {{ $recovered.toDate }}
-      },
-      "fatalities": {
-        "toDate": {{ $fatalities.toDate }},
-        "unrelatedToDate": {{ $fatalities.unrelatedToDate }},
-        "underInvestigation": {{ $fatalities.underInvestigation }}
-      }
-    },
-    "reportedFatalities": {{if eq .Params.report.ifReported true }} [ {{ range $i, $e := .Params.report.reportedFatalities }}{{ if $i }},{{ end }}
-      {
-        "age": {{ .fatality.age }},
-        "island": "{{ .fatality.island }}",
-        "sex": "{{ .fatality.sex }}",
-        "date": "{{ .fatality.date | dateFormat "2006-01-02T15:04:05Z0700" }}"
-      }
-      {{ end }}
+      "reportedFatalities": {{if eq .Params.report.ifReported true }} [ {{ range $i, $e := .Params.report.reportedFatalities }}{{ if $i }},{{ end }}
+        {
+          "age": {{ .fatality.age }}, 
+          "island": "{{ .fatality.island }}",
+          "sex": "{{ .fatality.sex }}",
+          "date": "{{ .fatality.date | dateFormat "2006-01-02T15:04:05Z0700" }}"
+        }
+        {{ end }}
       ]{{ else }}false{{ end }},
-    "tests": {
-      "toDate": {{ $tests.toDate }},
-      "completed": {{ $tests.completed }},
-      "positive": {{ $tests.positive }},
-      "negative": {{ $tests.negative }},
-      "repeated": {{ $tests.repeated }},
-      "inconclusive": {{ $tests.inconclusive }}
+      "tests": {
+        "toDate": {{ $tests.toDate }},
+        "completed": {{ $tests.completed }},
+        "positive": {{ $tests.positive }},
+        "negative": {{ $tests.negative }},
+        "repeated": {{ $tests.repeated }},
+        "inconclusive": {{ $tests.inconclusive }}
+      }
     }
-  }
-}

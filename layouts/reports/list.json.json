@@ -1,0 +1,8 @@
+{{ define "response" }}
+  { 
+    {{ with .Section }}"section" : "{{ . }}",{{ end }}
+    "count" : "{{ len .Data.Pages }}",
+    "report" : [ {{ range $i, $e := .Data.Pages }}{{ if $i }}, {{ end }}
+      {{ .Render "item" }}{{ end }}
+    ]
+}{{ end }}

@@ -13,11 +13,6 @@
   </url>
   
   <url>
-    <loc>https://api.covidbahamas.app/reports/517/</loc>
-    <lastmod>2021-08-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://api.covidbahamas.app/reports/518/</loc>
     <lastmod>2021-08-26T00:00:00+00:00</lastmod>
   </url>
@@ -30,6 +25,51 @@
   <url>
     <loc>https://api.covidbahamas.app/reports/520/</loc>
     <lastmod>2021-08-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://api.covidbahamas.app/reports/535/</loc>
+    <lastmod>2021-09-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://api.covidbahamas.app/reports/536/</loc>
+    <lastmod>2021-09-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://api.covidbahamas.app/reports/537/</loc>
+    <lastmod>2021-09-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://api.covidbahamas.app/reports/538/</loc>
+    <lastmod>2021-09-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://api.covidbahamas.app/reports/539/</loc>
+    <lastmod>2021-09-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://api.covidbahamas.app/reports/540/</loc>
+    <lastmod>2021-09-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://api.covidbahamas.app/reports/541/</loc>
+    <lastmod>2021-09-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://api.covidbahamas.app/reports/542/</loc>
+    <lastmod>2021-09-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://api.covidbahamas.app/reports/543/</loc>
+    <lastmod>2021-09-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -188,6 +228,16 @@
   </url>
   
   <url>
+    <loc>https://api.covidbahamas.app/reports/575/</loc>
+    <lastmod>2021-10-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://api.covidbahamas.app/reports/576/</loc>
+    <lastmod>2021-10-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://api.covidbahamas.app/updates/210611/</loc>
     <lastmod>2021-06-11T00:00:00+00:00</lastmod>
   </url>
@@ -260,6 +310,11 @@
   <url>
     <loc>https://api.covidbahamas.app/updates/211016/</loc>
     <lastmod>2021-10-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://api.covidbahamas.app/updates/211023/</loc>
+    <lastmod>2021-10-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
