@@ -13,7 +13,7 @@ Finding information on a global pandemic and how it affects your country shouldn
 
 Even more so, being able to access that data on your desktop, your tablet or your mobile device shouldn't require downloading files and hogging up precious space... that's what the web is for. 
 
-Besides, it's 2021. <a href="https://www.youtube.com/watch?v=waEC-8GFTP4" rel="noopener" target="_blank">Ain't nobody got time for that!</a>
+Besides, it's 2021. [Ain\'t nobody got time for that!](https://www.youtube.com/watch?v=waEC-8GFTP4)
 
 ## Who's It For?
 
@@ -57,7 +57,7 @@ It looks good on the résumé.
 
 Trust us.
 
-By now, we hope that you're just a little curious and wanting to become a contributor. Hop on over to <a href="https://github.com/jsphpndr/covid-api-bahamas" rel="noopener" target="_blank">the repository on GitHub</a> follow the instructions and get started.
+By now, we hope that you're just a little curious and wanting to become a contributor. Hop on over to [the repository on GitHub](https://github.com/jsphpndr/covid-api-bahamas) follow the instructions and get started.
 
 ## Upcoming Features
 
