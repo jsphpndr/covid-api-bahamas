@@ -67,11 +67,9 @@ Running the previous command will create a new file report. For example, if your
 
 ### Entering the Data
 
-Running the command, `hugo new` will populate the necessary fields to be updated.
+You will find your newly created file well commented. Feel free to use the ad hoc variable library to speed up the process of filling in island name and sex values. The flow of the report file corresponds in the reading manner of the physical report, left to right.
 
-You will find your newly created file well commented. Feel free to use the ad hoc variable library to speed up the process of filling in island name and sex values.
-
-The flow of the report file corresponds in the reading manner of the physical report, left to right.
+You will need to enter the data manually according to its respective report. You may find these reports in the 'Resource' section below.
 
 ### Contributions
 
