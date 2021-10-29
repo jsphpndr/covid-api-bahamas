@@ -43,7 +43,7 @@ On the top right corner of this repository, click the "Fork" button. By doing th
 
 ### Cloning the Repo.
 
-Let's navigate to **your** verison of the repository. This can be found on your profile under the list of repositories -- look for *covid-api-bahamas*.
+Let's navigate to **your** version of the repository. This can be found on your profile under the list of repositories -- look for *covid-api-bahamas*.
 
 Clone the repository on your local machine by running the following command: `git clone <https url>`. The *https url* value can be found by clicking the green dropdown with the word 'Code' on it, simply pressing 'HTTPS' and copying the url below that.
 
