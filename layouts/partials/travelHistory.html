@@ -1,7 +1,7 @@
 {{if eq .Params.report.cases.ifTravelHistory true }}
   <section class="[ mb--2 ]">
 
-    <h2 class="[ mb--050 ]">Cases With History of Travel</h2>
+    <h2 class="[ h3 mb--025 ]">Cases With History of Travel</h2>
     
     <figure>
 
@@ -10,7 +10,7 @@
         <thead>
   
           <tr>
-            <th class="[ text--left ]">Island</td>
+            <th class="[ column--head text--left ]">Island</td>
             <th class="[ text--right ]">New</td>
           </tr>
   
@@ -19,10 +19,14 @@
         <tbody>
           {{ range $i, $e := .Params.report.cases.historyOfTravel.byIsland }}
           <tr>
-            <th class="[ text--left ]">{{ .island.name }}</th>
+            <th class="[ column--head text--left ]">{{ .island.name }}</th>
             <td class="[ text--right ]">{{ .island.new }}</td>
           </tr>
           {{ end }}
+          <tr>
+            <th class="[ column--head text--left ]">Total</th>
+            <td class="[ text--right bold ]">{{ .Params.report.cases.historyOfTravel.total }}</td>
+          </tr>
         </tbody>
   
       </table>

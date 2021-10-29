@@ -2,14 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COVID-19 Case Report {{ .Title }} | Bahamas</title>
-    <meta name="description" content="Access COVID-19 (Coronavirus) data for The Bahamas from the Ministry of Health & Wellness from COVID-19 Case Report {{ .Title }} issued on.">
-    <link rel="stylesheet" href="/styles/style.css">
+    <title>COVID-19 Vaccination Update {{ .Title }} | COVID-19 API | Bahamas</title>
+    <meta name="description" content="COVID-19 Vaccination Update {{ .Title }} issued on {{ .Date | dateFormat "Monday, Jan 2, 2006" }} from The Bahamas' Ministry of Health & Wellness.">
+    {{ partial "head/defaults.html" . }}{{ .Scratch.Set "report" "COVID-19 Vaccination Update" }}
+    {{ partial "head/social/single.html" . }}
+    {{ partial "head/ga.html" . }}
   </head>
 <body>
 
-  {{ partial "navbar.html" }}
+  {{ partial "navbar.html" . }}
 
   <main>
 
@@ -17,16 +18,18 @@
 
       <div class="[ wrapper ] [ x--wide ]">
         <h1>COVID-19 Vaccination Update {{ .Title }}</h1>
+
+        <p class="ch--45">COVID-19 Vaccination Update {{ .Title }} issued on <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}">{{ .Date | dateFormat "Monday, Jan 2, 2006" }}</time> from The Bahamas' Ministry of Health & Wellness.</p>
   
-        <a class="[ btn btn--ghost--lg ] [ no--print ]" href="{{ .Permalink }}/index.json">View JSON</a>
+        <a class="[ btn btn--ghost--lg btn--flex ] [ no--print ]" href="{{ .Permalink }}index.json" target="_blank">View JSON</a>
   
       </div>
     
     </header>
 
-    <div class="[ share__bar ] [ x--wide flex--between--middle flex--wrap pt--d15 pb--2 no--print ]">
+    <div class="[ share__bar ] [ x--wide flex--between--middle flex--wrap g--1 pt--d15 pb--2 no--print ]">
 
-      <nav class="[ breadcrumbs ] [ pb--1 ]">
+      <nav class="[ breadcrumbs ]">
 
         <ul class="[ flex ]">
           <li class="[ breadcrumb__item ] [ mr--1 ]"><a href="/">Home</a></li>
@@ -36,54 +39,31 @@
 
       </nav>
 
-      <div class="[ flex--middle mb--1 ]">
+      <div class="[ flex--middle ]">
         <span class="[ mr--1 ]">Share on:</span>
-        {{ partial "social.html" }}
+        {{ partial "social/single.html" . }}
       </div>
 
     </div>
 
     <div class="[ x--wide ]">
 
-      <section class="[ mb--2 page--break ]">
-  
-        <h2 class="[ mb--050 ]">Vaccination by Island</h2>
-      
-        <table class="[ table ]">
-      
-          <thead>
-      
-            <tr>
-              <th class="[ text--left ]">Island</td>
-              <th class="[ text--right ]">New</td>
-              <th class="[ text--right ]">Total</td>
-            </tr>
-      
-          </thead>
-      
-          <tbody>
-            {{ range $i, $e := .Params.update.doses.byIsland }}
-            <tr>
-              <th class="[ text--left ]">{{ .island.name }}</th>
-              <td class="[ text--right ]">{{ .island.first }}</td>
-              <td class="[ text--right ]">{{ .island.second }}</td>
-            </tr>
-            {{ end }}
-            <!-- <tr>
-              <th class="[ text--left ]">Aggregate Total</th>
-              <td class="[ text--right bold ]">{{ .Params.update.doses.aggregate.first }}</td>
-              <td class="[ text--right bold ]">{{ .Params.update.doses.aggregate.total }}</td>
-            </tr>
-           -->
-          </tbody>
-      
-        </table>
-      
-      </section>
+      {{ partial "updates/totals.html" .  }}
+
+      {{ partial "updates/abroad.html" . }}
+
+      {{ partial "updates/pop.html" . }}
+
+      {{ partial "updates/goal.html" . }}
+
+      {{ partial "updates/island-breakdown.html" . }}
 
     </div>
 
   </main>
+
+  {{ .Scratch.Set "report" "Update" }}
+  {{ partial "components/pagination.html" . }}
 
   {{ partial "footer.html" }}
 

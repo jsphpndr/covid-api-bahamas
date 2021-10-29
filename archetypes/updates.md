@@ -17,18 +17,26 @@ islands:
   cr: &cr Crooked Island
   ma: &ma Mayaguana
   # ri: &ri Ragged Island
+  rc: &rc Rum Cay
 
-title: &no {{ replace .Name "-" " " | title }}
-summary: View
+title: {{ replace .Name "-" " " | title }}
+weight: {{ replace .Name "-" " " | title }}
+date:
 
 update:
 
   number: {{ replace .Name "-" " " | title }}
-  date: {{ .Date }}
-  # Uncomment .Date to record data modifications
-  datePublished: {{ .Date }}
-  #dateModified: 
 
+  full: 
+
+  abroad: 
+
+  pfizer: true
+  pfizernote: Pfizer two dose vaccination introduced to numbers between Saturday, Aug 07, 2021 and  Saturday, Aug 14, 2021 period.
+
+  jj: true
+  jjnote: Johnson & Johnson single dose vaccination introduced to numbers between Sat, Sep 4, 2021 and Fri, Sep 10, 2021 period.
+  
   doses:
 
     aggregate:
@@ -39,70 +47,67 @@ update:
       - island:
           name: *np
           first: 
-          second: 
+          second: 0
       - island:
           name: *gb
           first: 
-          second: 
+          second: 0
       - island:
           name: *el
           first: 
-          second: 
+          second: 0
       - island:
           name: *ab
           first: 
-          second: 
+          second: 0
       - island:
           name: *ex
           first: 
-          second: 
+          second: 0
       - island:
           name: *an
           first: 
-          second: 
+          second: 0
       - island:
           name: *bim
           first: 
-          second: 
+          second: 0
       - island:
           name: *li
           first: 
-          second: 
+          second: 0
       - island:
           name: *bi
           first: 
-          second: 
+          second: 0
       - island:
           name: *ci
           first: 
-          second: 
+          second: 0
       - island:
           name: *in
           first: 
-          second: 
+          second: 0
       - island:
           name: *ss
           first: 
-          second: 
+          second: 0
       - island:
           name: *ac
           first: 
-          second: 
+          second: 0
       - island:
           name: *cr
           first: 
-          second: 
+          second: 0
       - island:
           name: *ma
           first: 
-          second: 
-
-
-  full: 
-
-  abroad: 
-
-
+          second: 0
+    #   - island:
+    #       name: *rc
+    #       first: 
+    #       second: 0
 
 draft: true
 ---

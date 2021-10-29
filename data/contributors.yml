@@ -3,8 +3,7 @@
 
 # con0001:
 #   name: Your Name
-    #Company/Personal Website
-#   website: #(www.)mywebsite.com 
+#   website: #(www.)mywebsite.com #Company, personal or social media website
 
 # Naming Conventions
 # Each new contributor should increase the
@@ -22,9 +21,19 @@
 # You can use either mydomain.com or www.mydomain.com.
 # The https:// prefix is already included in the template.
 
+#### BEFORE ADDING ANYTHING, 'git pull' AND VERIFY YOUR SPOT ###
+
 # If you're the first here, uncomment the 
 # below and fill out your info accordingly...
 # con0001:
 #   name: #Your Name
-    #Company/Personal Website
-#   website: #(www.)mywebsite.com
+#   website: #(www.)mywebsite.com #Company, personal or social media website
+
+con0003:
+  name: Javano Collins
+  #https://platoalpha.com/
+  website: https://www.linkedin.com/in/javano-collins/
+
+con004:
+  name: Allen McIntosh II
+  website: https://www.linkedin.com/in/allen-mcintosh-929542137

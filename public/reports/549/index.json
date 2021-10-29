@@ -1,190 +1,182 @@
 {
-    "data" :  {
-      "report": {
-        "number": 549,
-        "date": "2021-09-26 00:00:00 +0000 UTC",
-        "permalink" : "https://api.covidbahamas.app/reports/549/",
-        "datePublished": "2021-09-26 00:00:00 +0000 UTC",
-        "cases": {
-          "byIsland": [{ 
-              "island": {
-                "name": "New Providence",
-                "toDate": 15884,
-                "new": 53
+    "report" :  { 
+      "id": 549,
+      "date": "2021-09-26T00:00:00Z",
+      "permalink": "https://api.covidbahamas.app/reports/549/",
+      "cases": {
+        "byIsland": [ 
+          {
+            "name": "New Providence",
+            "toDate": 15884,
+            "new": 53
           },
-              "island": {
-                "name": "Grand Bahama",
-                "toDate": 2461,
-                "new": 0
+          {
+            "name": "Grand Bahama",
+            "toDate": 2461,
+            "new": 0
           },
-              "island": {
-                "name": "Abaco",
-                "toDate": 628,
-                "new": 0
+          {
+            "name": "Abaco",
+            "toDate": 628,
+            "new": 0
           },
-              "island": {
-                "name": "Bimini & Cat Cay",
-                "toDate": 237,
-                "new": 0
+          {
+            "name": "Bimini & Cat Cay",
+            "toDate": 237,
+            "new": 0
           },
-              "island": {
-                "name": "Eleuthera",
-                "toDate": 597,
-                "new": 11
+          {
+            "name": "Eleuthera",
+            "toDate": 597,
+            "new": 11
           },
-              "island": {
-                "name": "Berry Islands",
-                "toDate": 104,
-                "new": 0
+          {
+            "name": "Berry Islands",
+            "toDate": 104,
+            "new": 0
           },
-              "island": {
-                "name": "Exuma",
-                "toDate": 344,
-                "new": 0
+          {
+            "name": "Exuma",
+            "toDate": 344,
+            "new": 0
           },
-              "island": {
-                "name": "Inagua",
-                "toDate": 29,
-                "new": 2
+          {
+            "name": "Inagua",
+            "toDate": 29,
+            "new": 2
           },
-              "island": {
-                "name": "Andros",
-                "toDate": 263,
-                "new": 1
+          {
+            "name": "Andros",
+            "toDate": 263,
+            "new": 1
           },
-              "island": {
-                "name": "Long Island",
-                "toDate": 68,
-                "new": 0
+          {
+            "name": "Long Island",
+            "toDate": 68,
+            "new": 0
           },
-              "island": {
-                "name": "Cat Island",
-                "toDate": 90,
-                "new": 0
+          {
+            "name": "Cat Island",
+            "toDate": 90,
+            "new": 0
           },
-              "island": {
-                "name": "Acklins",
-                "toDate": 8,
-                "new": 0
+          {
+            "name": "Acklins",
+            "toDate": 8,
+            "new": 0
           },
-              "island": {
-                "name": "Crooked Island",
-                "toDate": 11,
-                "new": 0
+          {
+            "name": "Crooked Island",
+            "toDate": 11,
+            "new": 0
           },
-              "island": {
-                "name": "Mayaguana",
-                "toDate": 5,
-                "new": 0
+          {
+            "name": "Mayaguana",
+            "toDate": 5,
+            "new": 0
           },
-              "island": {
-                "name": "Ragged Island",
-                "toDate": 0,
-                "new": 0
+          {
+            "name": "Ragged Island",
+            "toDate": 0,
+            "new": 0
           },
-              "island": {
-                "name": "San Salvador",
-                "toDate": 16,
-                "new": 0
+          {
+            "name": "San Salvador",
+            "toDate": 16,
+            "new": 0
           },
-              "island": {
-                "name": "Location Pending",
-                "toDate": 97,
-                "new": 0
+          {
+            "name": "Location Pending",
+            "toDate": 97,
+            "new": 0
           }
-          }],
-          "newTotal": 67,
-          "toDateTotal": 20842,
-          "historyOfTravel": {
-            "byIsland": [ 
-              {
-                "island": {
-                  "name": "New Providence",
-                  "new": 1
-                }
-              }],
-            "total": 1
-          },
-          "bySex": [{ 
-            "group": {
-              "sex": "Male",
-              "new": "26"
-          },
-            "group": {
-              "sex": "Female",
-              "new": "41"
-          }
-          }],
-          "bySexTotal": 67,
-          "inHospital": {
-            "byFacility": [
-              { 
-                "facility": {
-                  "island": "New Providence",
-                  "name": "Doctor's Hospital",
-                  "total": 36,
-                  "nonICU": 27,
-                  "icu": 9
-                },
-                "facility": {
-                  "island": "New Providence",
-                  "name": "South Beach Acute Care and Referral Centre",
-                  "total": 6,
-                  "nonICU": 4,
-                  "icu": 2
-                },
-                "facility": {
-                  "island": "New Providence",
-                  "name": "Princess Margaret Hospital",
-                  "total": 75,
-                  "nonICU": 74,
-                  "icu": 1
-                },
-                "facility": {
-                  "island": "New Providence",
-                  "name": "Sandilands Rehabilitation Centre",
-                  "total": 0,
-                  "nonICU": 0,
-                  "icu": 0
-                },
-                "facility": {
-                  "island": "Grand Bahama",
-                  "name": "Grand Bahama Health Services",
-                  "total": 25,
-                  "nonICU": 20,
-                  "icu": 5
-                }
-              }],
-            "totals": {
-              "total": 142,
-              "nonICU": 125,
-              "icu": 17
+        ],
+        "newTotal": 67,
+        "toDateTotal": 20842,
+        "historyOfTravel": {
+          "byIsland":  [ 
+            {
+              "name": "New Providence",
+              "new": 1
             }
-          },
-          "active": 1844,
-          "recovered": {
-            "new": 0,
-            "toDate": 18321
-          },
-          "fatalities": {
-            "toDate": 523,
-            "unrelatedToDate": 111,
-            "underInvestigation": 43
+          
+          ],
+          "total": 1
+        },
+        "bySex": [ 
+          {
+            "sex": "Male",
+            "new": "26"
+        },
+          {
+            "sex": "Female",
+            "new": "41"
+        }
+        ],
+        "bySexTotal": 67,
+        "inHospital": {
+          "byFacility": [ 
+            {
+              "island": "New Providence",
+              "name": "Doctor's Hospital",
+              "total": 36,
+              "nonICU": 27,
+              "icu": 9
+            },
+            {
+              "island": "New Providence",
+              "name": "South Beach Acute Care and Referral Centre",
+              "total": 6,
+              "nonICU": 4,
+              "icu": 2
+            },
+            {
+              "island": "New Providence",
+              "name": "Princess Margaret Hospital",
+              "total": 75,
+              "nonICU": 74,
+              "icu": 1
+            },
+            {
+              "island": "New Providence",
+              "name": "Sandilands Rehabilitation Centre",
+              "total": 0,
+              "nonICU": 0,
+              "icu": 0
+            },
+            {
+              "island": "Grand Bahama",
+              "name": "Grand Bahama Health Services",
+              "total": 25,
+              "nonICU": 20,
+              "icu": 5
+            }
+          ],
+          "totals": {
+            "total": 142,
+            "nonICU": 125,
+            "icu": 17
           }
         },
-        "reportedFatalities": false,
-        "tests": {
-          "toDate": 145042,
-          "completed": 272,
-          "positive": 67,
-          "negative": 190,
-          "repeated": 12,
-          "inconclusive": 3
+        "active": 1844,
+        "recovered": {
+          "new": 0,
+          "toDate": 18321
+        },
+        "fatalities": {
+          "toDate": 523,
+          "unrelatedToDate": 111,
+          "underInvestigation": 43
         }
+      },
+      "reportedFatalities": false,
+      "tests": {
+        "toDate": 145042,
+        "completed": 272,
+        "positive": 67,
+        "negative": 190,
+        "repeated": 12,
+        "inconclusive": 3
       }
-    }
-
-
-
-      
+    } 
 }

@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Access COVID-19 (Coronavirus) data for The Bahamas from the Ministry of Health & Wellness from COVID-19 Case Report {{ .Title }} issued on {{ .Date | dateFormat "Monday, Jan 2, 2006" }}. -->
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>COVID-19 Case Report {{ .Title }} | Bahamas</title>
-  <meta name="description" content="Access COVID-19 (Coronavirus) data for The Bahamas from the Ministry of Health & Wellness from COVID-19 Case Report {{ .Title }} issued on {{ .Date | dateFormat "Monday, Jan 2, 2006" }}.">
+  <title>COVID-19 Case Report {{ .Title }} | COVID-19 API | Bahamas</title>
+  <meta name="description" content="COVID-19 Case Report {{ .Title }} issued on {{ .Date | dateFormat "Monday, Jan 2, 2006" }} from The Bahamas' Ministry of Health & Wellness.">
   <link rel="canonical" href="{{ .Permalink }}">
-  <link rel="stylesheet" href="/styles/style.css">
-  {{ template "_internal/opengraph.html" . }}
-  {{ template "_internal/twitter_cards.html" . }}
-  {{ template "_internal/schema.html" . }}
+  {{ partial "head/defaults.html" . }}{{ .Scratch.Set "report" "COVID-19 Case Report" }}
+  {{ partial "head/social/single.html" . }}
+  {{ partial "head/ga.html" . }}
 </head>
 <body>
-  
+
   {{ partial "navbar.html" . }}
 
   <main class="[ pb--3 ]">
@@ -23,9 +22,9 @@
 
         <h1>COVID-19 Case Report {{ .Title }}</h1>
       
-        <time class="[ block mb--1 ]"  datetime="{{ .Date }}">{{ .Date | dateFormat "Monday, Jan 2, 2006" }}</time>
+        <p class="ch--45">COVID-19 Case Report {{ .Title }} issued on <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}">{{ .Date | dateFormat "Monday, Jan 2, 2006" }}</time> from The Bahamas' Ministry of Health & Wellness.</p>
 
-        <a class="[ btn btn--ghost--lg ] [ no--print ]" href="{{ .Permalink }}/index.json">View JSON</a>
+        <a class="[ btn btn--ghost--lg btn--flex ] [ no--print ]" href="{{ .Permalink }}index.json" target="_blank">View JSON</a>
 
       </div>
       
@@ -45,7 +44,7 @@
 
       <div class="[ flex--middle ]">
         <span class="[ mr--1 ]">Share on:</span>
-        {{ partial "social.html" }}
+        {{ partial "social/single.html" . }}
       </div>
 
     </div>
@@ -64,40 +63,19 @@
 
       {{ partial "hospitalizations.html" . }}
 
-      <section>
-
-        {{ partial "reported.html" . }}
-        
-        {{ partial "deaths.html" . }}
-
-      </section>
+      {{ partial "reported.html" . }}
 
     </div>
     
+    {{ $contributor := .Params.contributor }}
+    {{ $link := .Params.con__link}}
+    {{ if $contributor }}<div class="[ x--wide bold text--center ]">Report contributed by {{ if $link }}<a href="{{ $link }}" rel="noopener" target="_blank">{{ $contributor}}</a>{{ else }}{{ $contributor}}{{ end }}</div>{{end}}  
     
   </main>
-
-  <ul class="[ page ] [ x--wide flex--between--middle pb--2 ]">
-    {{ $pages := where site.RegularPages.ByTitle.Reverse "Section" .Section }}
-    {{ with $pages.Next . }}
-    <li class="[ page__prev ]">
-      <a class="[ page__link ] [ flex--middle ]" title="Next page in {{ .Section }}" href="{{ .Permalink }}">
-        {{ partial "graphics/prev.svg" }}
-        <span class="[ link__text ] [ ml--1 ]">Report {{ .Title }}</span> 
-      </a>
-    </li>
-    {{ end }}
-    {{ with $pages.Prev . }}
-    <li class="[ page__next ]">
-      <a class="[ page__link ] [ flex--middle ]" title="Previous page in {{ .Section }}" href="{{ .Permalink }}">
-        <span class="[ link__text ] [ mr--1 ]">Report {{ .Title }}</span> 
-        {{ partial "graphics/next.svg" }}
-      </a>
-    </li>
-    {{ end }}
-  </ul>
+  {{ .Scratch.Set "report" "Report" }}
+  {{ partial "components/pagination.html" . }}
   
-  {{ partial "footer.html"}}
+  {{ partial "footer.html" . }}
   
 </body>
 </html>

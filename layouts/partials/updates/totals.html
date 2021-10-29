@@ -1,0 +1,55 @@
+<section class="[ mb--2 ]">
+
+  <h2 class="[ h3 mb--025 ]">Vaccinations by Dosage</h2>
+
+
+  {{ $update := .Params.update }}
+  {{ $aggregate := $update.doses.aggregate }}
+  {{ $total := $aggregate.total }}
+  {{ $first := $aggregate.first }}
+  {{ $second := sub $total $first }}
+  {{ $full := $update.full }}
+  {{ $abroad := $update.abroad }}
+  {{ $jj := $update.jj }}
+
+  <figure class="[ mb--2 ]">
+
+    <table class="[ table mb--1 ]">
+
+      <thead>
+        <th class="[ column--head text--left ]">Dosage</th>
+        <th class="[ text--right ]">Total</th>
+      </thead>
+
+      <tbody>
+        <tr>
+          <th class="[ column--head text--left ]">First</th>
+          <td class="[ text--right ]">{{ $first }}</td>
+        </tr>
+        <tr>
+          <th class="[ column--head text--left ]">{{ if $jj }}Fully Vaccinated{{else}}Second{{end}}</th>
+          <td class="[ text--right ]">{{ $second }}</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th class="[ column--head text--left ]">Total</th>
+          <td class="[ text--right bold ]">{{ add $first $second }}</td>
+        </tr>
+      </tfoot>
+  
+    </table>
+    <figcaption>
+    <p><strong>Note:</strong> Figures represent dosages of vaccinations administered locally. <b>First</b> refers to those persons having only received one dose of a two dose vaccination{{ if eq $jj true }} and exclusive of Johnson & Johnson{{end}}.</p>
+    {{ if eq $update.pfizer true }}
+    
+      <p><strong>Note:</strong> {{ $update.pfizernote }}</p>
+      {{ if eq $jj true }}
+      <p><strong>Note:</strong> {{ $update.jjnote }}</p>
+      <p><strong>Note:</strong> Due to the introduction of Johnson & Johnson single dose vaccination and deficiencies in The Government of The Bahamas' configuration and presentation of data, it is no longer possible to report on second dosages, so the category of <b>Second</b> has been modified to <b>Fully Vaccinated</b>.</p>
+      {{end}}
+    {{end}}
+    </figcaption>
+  </figure>
+
+</section>

@@ -1,25 +1,22 @@
 {
-      "update": {
-        "number":  {{ .Params.update.number }},
-        "date": "{{ .Params.update.date }}",
-        "datePublished": "{{ .Params.update.datePublished }}",
-        "doses": {
-          "aggregate": {
-            "total": {{ .Params.aggregate.total }},
-            "first": {{ .Params.aggregate.first }}
-          },
-          "byIsland": [
-            { {{ range $i, $e := .Params.update.doses.byIsland }}{{ if $i }},{{ end }}
-              "island": {
-                "name": {{ .island.name }},
-                "first": {{ .island.first }},
-                "second": {{ .island.second }}
-              }
-            }{{ end }}
-          ]
-        },
+        "id":  {{ .Params.update.number }},
+        "date": "{{ .Date }}",
+        "datePublished": "{{ .Date }}",
+        "doses": [{
+          "aggregate": [{
+            "total": {{ .Params.update.doses.aggregate.total }},
+            "first": {{ .Params.update.doses.aggregate.first }}
+          }],
+        "byIsland": [{{ range $i, $e := .Params.update.doses.byIsland }}{{ if $i }},{{ end }}
+          {
+            "name": "{{ .island.name }}",
+            "first": {{ .island.first }},
+            "second": {{ .island.second }}
+          }{{ end }}
+        ],
         "full": {{ .Params.update.full }},
         "abroad": {{ .Params.update.abroad }}
-      },
-      "permalink" : "{{ .Permalink }}"
+        }
+      ],
+    "permalink" : "{{ .Permalink }}"
     }
