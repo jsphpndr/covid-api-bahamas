@@ -16,7 +16,8 @@
     <meta name="theme-color" content="#ffffff">
   </head>
   <body>
-    {{ partial "navbar.html" }}
+    {{ .Scratch.Set "forSponsor" "true" }}
+    {{ partial "navbar.html" . }}
     <main class="[ main ]">
 
       <header class="[ hero ] [ py--3 ]">
@@ -49,13 +50,33 @@
   
       </div>
 
-      <div class="[ x--wide ]">
-
-        <article>
+      <div class="[ x--wide pb--3 ]">
 
           {{ .Content }}
 
-        </article>
+          <form class="[ form form--contact ]" id="contact" name="contact" method="POST" data-netlify="true" netlify-honeypot="email" data-validate>
+            <div class="[ form__field ]">
+              <label class="[ form__label ] [ required ]" for="name">Name</label>
+              <input class="[ form__input ]" id="name" name="name" type="text" placeholder="Your Name" autocomplete="off" required>
+            </div>
+            <div class="[ form__field ]">
+              <label class="[ form__label ] [ required ]" for="mailer">Email</label>
+              <input class="[ form__input ]" id="mailer" name="mailer" type="email" placeholder="your@email.com" autocomplete="off" required>
+            </div>
+            <div class="[ form__field ]">
+              <label class="[ form__label ] [ required ]" for="message">Message</label>
+              <textarea class="[ form__message ]" id="message" name="message" placeholder="Say hello..." autocomplete="off" required></textarea>
+            </div>
+            <div id="checking" aria-hidden="true">
+              <label for="email">Please do not fill in this field.</label>
+              <input id="email" name="email" autocomplete="off" type="email">
+            </div>
+            <input id="lead-source" type="hidden" value="Contact Us | COVID-19 API">
+            <input id="lead-url" type="hidden" value="{{ .Permalink }}">
+            <div class="[ form__submit ]">
+              <input class="[ btn btn--ghost--lg ]" id="submit" type="submit" name="submit" value="Send">
+            </div>
+          </form>
         
       </div>
 
