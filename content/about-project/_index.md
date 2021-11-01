@@ -35,7 +35,7 @@ We need your support to dedicate our time and effort to keep updating, developin
 
 Your help can help us continue making this resource available to you and the rest of The Bahamas.
 
-[Learn more about how you can sponsor us...](/become-sponsor)
+[Learn more about how you can sponsor us\...](/become-sponsor)
 
 ## Don't Have Money?
 
