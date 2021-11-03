@@ -14,6 +14,10 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#ffffff">
+    {{ partial "head/canonical.html" . }}
+    {{ partial "head/defaults.html" . }}
+    {{ partial "head/social/list.html" . }}
+    {{ partial "head/ga.html" . }}
   </head>
   <body>
     {{ .Scratch.Set "forSponsor" "true" }}
