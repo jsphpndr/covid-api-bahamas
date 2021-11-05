@@ -106,12 +106,27 @@ A member from our team will review the pull request and if everything was done c
 
 # Resource
 
-You may locate the series of reports for the year 2021 on the government's [website](https://www.bahamas.gov.bs/wps/portal/public/News/!ut/p/b1/vZPZrqM4FEW_5X4AFzPDIyFMAcxgM75EIRNjJkgc-PrKbZXUVS1Vqh-62ufJ0jreOnsf0wWd0cVp86iPm7E-nzbd170Q1xwwPVXlZc8UgAjsOHDVQLJYnxFeQP4CwC-OCt72Oyyd0hng16gBN9-Z2vO004JkmREl27s7WQoccIIOozOTilGU9ZfQKOzoetX2HF-0q63btUZPiWlqiMNGVH3oxJWHAbNyt4I3k2BuG4gVzcezx8BYsb05C-Ey8eFOB0ODnsCNn1g_pXhpTxgbgQc6By0LF2wndrJUK0_5sv8-45sh_pVHvwJ48Lv-lC7eIl8v_AW8i-F3QUDr3O_p_IVJP2A4AcBmgBohJgQyZGj8Pa_pYs_tHDWATHDeQYQ9AOYY4GWGYPkyd9QYT2dWjA4mT-e_zHURaFkE3WCXRPFC1Shf39z-KeizWHkJaozoxAJAgP_Tgqbgyy8jJByoAgtMn_m_BbkvwSZnFjXvEd3O1lPHy0UDV43dKyg1u4Wy0-7TU9TyvhjPRlIr55S6jxkismIcy_1enkoqraDI8mDEtibXrpt3XDuMiFCJJZUoFwQnJg_qoZU-iAKBDQlcTG198dBqJp1Zd4FuuvZ9A6tnONyieneahTsc1sTqLXVDHR88cDfV4VFCtw3nliOjtXJQphy1VPf8vMO3c59ylW2Rtj9YFlmWfXeoHpo1umdG2l-Gi-Jdj1dX9u53qpe00j7W87Li_PK01hppWs_XTikNSYGKZGpmfXtitwjYpFkS9ePtipiBD_54Yj99Aj7873dyRRd12X-Sbf8JPmVFZARJ5hVZBDwvS3TS5EBayvZrO4K1NtyhYgp9CGoiG8c8rPbxeN4iB1FdxARUsNGHRp-pUh9Y50aKtgwXan3toFvOOJIV4D93pm2g5hiEZz1zndkILR4S3SRZr8YJ8PvpQVGUX2hjf4TZvbrsrf0qPiXUJpuF-boPeI57VGU7mVuJCbx8ZJOC2g0ch9LDELEiNm4mw0cGOuQZxtvDYAbXsYLHjw_60scPxxUjizDy30U-vgFGyZfh/dl4/d5/L2dBISEvZ0FBIS9nQSEh/).
-
 Reports are listed in globs, i.e. "COVID-19 Report Update #547 - #553".
 
-Older listings from the year 2020 are found [here](https://www.bahamas.gov.bs/wps/portal/public/novel%20coronavirus%20(2019-ncov)/!ut/p/b1/vZTLjqMwEEW_pT-AxjwCzpI3IeAEsCGwQQTIg0CTBhIeXz9pTUuz6sxmJq6VpXt9VFdVpmN6R8cf6f18TPtz85FWX_dYSDhj47gKDx0o8EuwYjBaqdqWMzjmIYgeAvDDkcBvPzAcSXr4Nyz-8iuMsCYLAFWBDumdGc222jhHXfOS0WWs2yQdgZaGhya-1V2vXpXL7rjAd5sjTAb5y8CkbPg5mlxeKYXT7ic27czz_dSFubxLloI1zxem1HMt2VNGONyM1NRhyZo1pZTX-jTfREQVRB3mKxx5jbCbNo3ETJcVwn_IRAkCbfnZ6zIxii47ylTFKCMSk4uJuyAtpbe3756fNPWXzEI6fh4L_y14Eisym7qgo4dM_PEdGdCY3gE-8cvpupovs1eCce3MwQqp2gRsMvhkJghrrJMj1JXuBHBg-ZeF5ZPRQdhl-x5v88AjsqTIFe-Vz4G-LbwWCGXm1UDxvwPXLPcA2pyNoML4BvdiIPz3Q2PR8Xlfvw9Z_Q7e4ZJjlwsRQB4yCwYwdFBGwqh2q0HTUHIqyMVATba3lREORqWAFleat84qfcLZ_aBN13o0sFjsZd2iBGMT8JIU51VacMcQkCLbklvsKFEquZlFespz2WZtSxt726JWGQRXSzAPO3mfE4JMapB2o_-Z6_fHZhei51ZKa0doc8iTBpvZ6JAq2vIirM-ncUL4HqyvDvaDGJgxExL_0HTUuYyRGjuW3R4KQczamuqn_jbS15rcbcGD6PCnnMfn8QvP958K/dl4/d5/L2dBISEvZ0FBIS9nQSEh/).
+Some reports are available in the list below:
 
+* [511-514](https://bit.ly/3bMOJOM)
+* [508-510](https://bit.ly/3bIDbMy)
+* [504-507](https://bit.ly/3GVkzHC)
+* [501-503](https://bit.ly/31pG2YO)
+* [496-500](https://bit.ly/3qbroyI)
+* [490-495](https://bit.ly/3mQkr3W)
+* [487-489](https://bit.ly/3qaTF8P)
+* [483-486](https://bit.ly/3bMRJe0)
+* [481](https://bit.ly/3GWLenu)
+* [475-476](https://bit.ly/3wmIPNL)
+* [474](https://bit.ly/2ZZDDTS)
+* [469-473](https://bit.ly/3wiMY5A)
+
+
+To search the government website, utilize Google search and the following search queary *{reportNumber}+Ministry+of+Health+-+COVID-19+Report* (i.e. *514-+Ministry+of+Health+-+COVID-19+Report*).
+
+Older listings from the year 2020 are found [here](https://bit.ly/3GSBLxj).
 
 # Contact
 For any questions and/or concerns, feel free to fill out the [form](https://josephpinder.com/get-in-touch).
