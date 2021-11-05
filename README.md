@@ -124,7 +124,7 @@ Some reports are available in the list below:
 * [469-473](https://bit.ly/3wiMY5A)
 
 
-To search the government website, utilize Google search and the following search queary *{reportNumber}+Ministry+of+Health+-+COVID-19+Report* (i.e. *514-+Ministry+of+Health+-+COVID-19+Report*).
+To search the government website, utilize Google search and the following search queary *{reportNumber}+Ministry+of+Health+-+COVID-19+Report* (i.e. *514-+Ministry+of+Health+-+COVID-19+Report*). 
 
 Older listings from the year 2020 are found [here](https://bit.ly/3GSBLxj).
 
