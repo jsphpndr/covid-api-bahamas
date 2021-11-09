@@ -1,39 +1,62 @@
+{{ $debug := true }}
 <section class="[ mb--2 page--break ]">
-  
-  <h2 class="[ h3 mb--025 ]">Cases by Island</h2>
 
+  <h2 class="[ h3 mb--025 ]">Cases by Island</h2>
   <figure>
     <table class="[ table ]{{if .Params.report.cases.error}} [ mb--1 ]{{end}}">
-
       <thead>
-  
+
         <tr>
           <th class="[ text--left ]">Island</td>
+          {{ if $debug }}
+            <th class="[ text--right ]">Previous Total</td>
+          {{ end }}
           <th class="[ text--right ]">New</td>
           <th class="[ text--right ]">Total</td>
         </tr>
-  
+
       </thead>
-  
+
       <tbody>
+        {{ $newCasesTotal := 0 }}
+        {{ $prevCasesTotal := 0 }}
+        {{ $casesToDateTotal := 0 }}
+        {{ $prevReportCasesByIsland := "" }}
+        {{ with .NextInSection }}
+          {{ $prevReportCasesByIsland = .Params.report.cases.byIsland  }}
+        {{ end }}
         {{ range $i, $e := .Params.report.cases.byIsland }}
+          {{ $newCases := 0 }}
+          {{ $prevCases := 0 }}
+          {{ $casesToDate := .island.toDate }}
+          {{ $islandName := .island.name }}
+          {{ with $prevReportCasesByIsland }}
+            {{ $prevCases = (index (where . "island.name" $islandName) 0).island.toDate }}
+            {{ $newCases = sub $casesToDate $prevCases }}
+          {{ end }}
+          {{ $newCasesTotal = add $newCasesTotal $newCases }}
+          {{ $prevCasesTotal = add $prevCasesTotal $prevCases }}
+          {{ $casesToDateTotal = add $casesToDateTotal $casesToDate }}
         <tr>
-          <th class="[ text--left ]">{{ .island.name }}</th>
-          <td class="[ text--right ]">{{ if eq .island.new 0 }}-{{ else }}{{.island.new}}{{ end}}</td>
-          <td class="[ text--right ]">{{ .island.toDate }}</td>
+          <th class="[ text--left ]">{{ $islandName }}</th>
+          {{ if $debug }}
+            <td class="[ text--right ]">{{ $prevCases }}</td>
+          {{ end }}
+          <td class="[ text--right ]">{{ if eq $newCases 0 }}-{{ else }}{{ $newCases }}{{ end}}</td>
+          <td class="[ text--right ]">{{ $casesToDate }}</td>
         </tr>
         {{ end }}
         <tr>
           <th class="[ text--left ]">Aggregate Total</th>
-          <td class="[ text--right bold ]">{{ .Params.report.cases.newTotal }}</td>
-          <td class="[ text--right bold ]">{{ .Params.report.cases.toDateTotal }}</td>
+          {{ if $debug }}
+            <td class="[ text--right bold ]">{{ $prevCasesTotal }}</td>
+          {{ end }}
+          <td class="[ text--right bold ]">{{ $newCasesTotal }}</td>
+          <td class="[ text--right bold ]">{{ $casesToDateTotal }}</td>
         </tr>
-      
+
       </tbody>
-  
     </table>
     {{if .Params.report.cases.error}}<figcaption><strong>Note:</strong> {{.Params.report.cases.error}}</figcaption>{{end}}
-
   </figure>
-
 </section>
