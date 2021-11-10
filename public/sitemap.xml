@@ -3,6 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://api.covidbahamas.app/reports/504/</loc>
+    <lastmod>2021-08-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://api.covidbahamas.app/reports/505/</loc>
+    <lastmod>2021-08-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://api.covidbahamas.app/reports/506/</loc>
+    <lastmod>2021-08-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://api.covidbahamas.app/reports/513/</loc>
+    <lastmod>2021-08-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://api.covidbahamas.app/reports/514/</loc>
+    <lastmod>2021-08-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://api.covidbahamas.app/reports/515/</loc>
     <lastmod>2021-08-23T00:00:00+00:00</lastmod>
   </url>
@@ -270,6 +295,41 @@
   <url>
     <loc>https://api.covidbahamas.app/reports/583/</loc>
     <lastmod>2021-10-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://api.covidbahamas.app/reports/584/</loc>
+    <lastmod>2021-10-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://api.covidbahamas.app/reports/585/</loc>
+    <lastmod>2021-11-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://api.covidbahamas.app/reports/586/</loc>
+    <lastmod>2021-11-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://api.covidbahamas.app/reports/587/</loc>
+    <lastmod>2021-11-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://api.covidbahamas.app/reports/588/</loc>
+    <lastmod>2021-11-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://api.covidbahamas.app/reports/589/</loc>
+    <lastmod>2021-11-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://api.covidbahamas.app/reports/590/</loc>
+    <lastmod>2021-11-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
