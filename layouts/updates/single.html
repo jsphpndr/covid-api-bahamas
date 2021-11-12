@@ -60,6 +60,11 @@
 
       {{ partial "updates/island-breakdown.html" . }}
 
+      {{ range $index, $num := .Params.updates.second (seq 2) }}
+      {{$indexStartingAt1 := (sub $index 1)}}
+      {{ $indexStartingAt1 }}
+      {{ end }}
+
     </div>
 
   </main>
