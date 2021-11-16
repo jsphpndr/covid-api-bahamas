@@ -27,7 +27,7 @@
 # below and fill out your info accordingly...
 # con0001:
 #   name: #Your Name
-#   website: #(www.)mywebsite.com #Company, personal or social media website
+#   website: #(www.)mywebsite.com #Personal or social media website
 
 con0003:
   name: Javano Collins
@@ -73,3 +73,12 @@ con012:
 con013:
   name: Chrisworth Roberts
   website: 
+
+con014:
+  name: La'Shae Sturrup
+  website: 
+
+# con014: 
+#   name: Raajni
+#   website: 
+
