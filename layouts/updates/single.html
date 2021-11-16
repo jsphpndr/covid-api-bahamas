@@ -66,7 +66,11 @@
       {{ end }}
 
     </div>
-
+    
+    {{ $contributor := .Params.contributor }}
+    {{ $link := .Params.con__link}}
+    {{ if $contributor }}<div class="[ x--wide bold text--center ]">Report contributed by {{ if $link }}<a href="{{ $link }}" rel="noopener" target="_blank">{{ $contributor}}</a>{{ else }}{{ $contributor}}{{ end }}</div>{{end}}  
+    
   </main>
 
   {{ .Scratch.Set "report" "Update" }}
