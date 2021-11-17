@@ -22,6 +22,16 @@ outputs:
   home:
     - HTML
 
+uglyURLs: true
+
+outputFormats:
+  html:
+    noUgly: true
+  json:
+    path: api
+
+
+
 # paginate: 2
 
 markup:
