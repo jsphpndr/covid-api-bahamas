@@ -42,6 +42,8 @@
 
         <p class="[ ch--45 ]">{{.Summary}}</p>
 
+        <a class="[ btn btn--solid--lg btn--blk btn--flex ] [ mr--1 ]" href="/become-sponsor">Become A Sponsor</a>
+
       </div>
       
     </header>
@@ -94,14 +96,9 @@
     <div class="[ x--wide ]">
       <ul class="[ loop ] [ mb--2 ]">
         {{ range $paginator.Pages }}
-        <li class="[ loop__item ] [ flex--between flex--wrap p--1 mb--050 ]">
-          <div>
+        <li class="[ loop__item ] [ p--1 mb--050 ]">
             <h3 class="[ h5 mb--025 ]"><a href="{{ .Permalink }}">COVID-19 Case Report {{ .Title }}</a></h3>
             <p>{{ .Date | dateFormat "Monday, Jan 2, 2006" }}</p>
-          </div>
-          <div>
-            <a class="[ btn btn--solid--lg btn--blk btn--flex ] [ mr--1 ]" href="/become-sponsor">Become A Sponsor</a>
-          </div>
         </li>
         {{ end }}
       </ul>
