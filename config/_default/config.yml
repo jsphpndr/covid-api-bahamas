@@ -1,4 +1,4 @@
-baseURL: 'https://api.covidbahamas.app/'
+baseURL: 'https://covidbahamas.app/'
 languageCode: en-uk
 title: COVID-19 API Bahamas
 
@@ -21,7 +21,6 @@ outputs:
     # - CSV
   home:
     - HTML
-
 
 # paginate: 2
 
