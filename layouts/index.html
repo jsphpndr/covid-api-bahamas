@@ -59,22 +59,15 @@
         
           <ul class="[ loop ] [ mb--2 ]">
             {{ range ( where .Site.RegularPages.ByTitle "Type" "reports" | last 5 ).Reverse  }}
-            <li class="[ loop__item ] [ flex--between flex--wrap p--1 mb--050 ]">
-              <div>
+            <li class="[ loop__item ] [ p--1 mb--050 ]">
                 <h3 class="[ h5 mb--025 ]"><a href="{{ .Permalink }}">COVID-19 Case Report {{ .Title }}</a></h3>
                 <p>{{ .Date | dateFormat "Monday, Jan 2, 2006" }}</p>
-              </div>
-              <div>
-                <a href="{{ .Permalink }}index.json" target="_blank">View JSON</a>
-              </div>
             </li>
             {{ end }}
           </ul>
 
           <div class="[ flex--end ]">
             <a href="/reports">All Reports</a>
-            <b class="[ block mx--050 ]"></b>
-            <a href="/reports/index.json" target="_blank">View JSON</a>
           </div>
 
         </section>
@@ -90,16 +83,11 @@
                   <h3 class="[ h5 mb--025 ]"><a href="{{ .Permalink }}">COVID-19 Vaccination Update {{ .Date.Format "060102" }}</a></h3>
                   <p>{{ .Date.Format "Monday, Jan 02, 2006" }}</p>
                 </div>
-                
-                <div><a href="{{ .Permalink }}index.json" target="_blank">View JSON</a></div>
-
             </li>
             {{ end }}
           </ul>
           <div class="[ flex--end ]">
             <a href="/updates">All Updates</a>
-            <b class="[ block mx--050 ]"></b>
-            <a href="/updates/index.json" target="_blank">View JSON</a>
           </div>
         
         <!-- 
