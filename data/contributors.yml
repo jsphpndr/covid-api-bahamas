@@ -45,6 +45,10 @@ con005:
 con006:
   name: Edison Hanchell
   website: https://www.linkedin.com/in/ehanchell/
+  
+con007:
+  name: La'Shae Sturrup
+  website: 
 
 con008:
   name: Destiny Gibson
@@ -74,11 +78,6 @@ con013:
   name: Chrisworth Roberts
   website: 
 
-con014:
-  name: La'Shae Sturrup
-  website: 
-
 # con014: 
 #   name: Raajni
 #   website: 
-
