@@ -22,6 +22,17 @@ outputs:
   home:
     - HTML
 
+# uglyURLs: true
+
+# outputFormats:
+#   html:
+#     noUgly: true
+#   json:
+#     path: api
+
+# git clone --single-branch -b hugo-forum-topic-23945 https://github.com/jmooring/hugo-testing hugo-forum-topic-23945
+# cd hugo-forum-topic-23945
+# hugo && tree public
 
 # paginate: 2
 

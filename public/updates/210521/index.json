@@ -1,0 +1,104 @@
+{
+  "update" :  {
+        "id":  210521,
+        "date": "2021-05-21 00:00:00 +0000 UTC",
+        "datePublished": "2021-05-21 00:00:00 +0000 UTC",
+        "doses": [{
+          "aggregate": [{
+            "total": 50242,
+            "first": 44226
+          }],
+        "byIsland": [
+          {
+            "name": "New Providence",
+            "first": 32631,
+            "second": 4893
+          },
+          {
+            "name": "Grand Bahama",
+            "first": 6381,
+            "second": 1123
+          },
+          {
+            "name": "Eleuthera",
+            "first": 1400,
+            "second": 0
+          },
+          {
+            "name": "Abaco",
+            "first": 874,
+            "second": 0
+          },
+          {
+            "name": "Exuma",
+            "first": 832,
+            "second": 0
+          },
+          {
+            "name": "Andros",
+            "first": 552,
+            "second": 0
+          },
+          {
+            "name": "Bimini",
+            "first": 398,
+            "second": 0
+          },
+          {
+            "name": "Long Island & Rum Cay",
+            "first": 324,
+            "second": 0
+          },
+          {
+            "name": "Berry Islands",
+            "first": 289,
+            "second": 0
+          },
+          {
+            "name": "Cat Island",
+            "first": 201,
+            "second": 0
+          },
+          {
+            "name": "Inagua",
+            "first": 129,
+            "second": 0
+          },
+          {
+            "name": "San Salvador",
+            "first": 101,
+            "second": 0
+          },
+          {
+            "name": "Acklins",
+            "first": 64,
+            "second": 0
+          },
+          {
+            "name": "Crooked Island",
+            "first": 21,
+            "second": 0
+          },
+          {
+            "name": "Mayaguana",
+            "first": 18,
+            "second": 0
+          },
+          {
+            "name": "Mayaguana",
+            "first": 18,
+            "second": 0
+          },
+          {
+            "name": "Rum Cay",
+            "first": 11,
+            "second": 0
+          }
+        ],
+        "full": 6016,
+        "abroad": 0
+        }
+      ],
+    "permalink" : "https://api.covidbahamas.app/updates/210521/"
+    } 
+}
