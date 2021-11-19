@@ -27,7 +27,7 @@
 # below and fill out your info accordingly...
 # con0001:
 #   name: #Your Name
-#   website: #(www.)mywebsite.com #Company, personal or social media website
+#   website: #(www.)mywebsite.com #Personal or social media website
 
 con0003:
   name: Javano Collins
@@ -41,3 +41,43 @@ con004:
 con005:
   name: Sowmya Thottambeti
   website: https://www.linkedin.com/in/sowmyathottambeti/
+
+con006:
+  name: Edison Hanchell
+  website: https://www.linkedin.com/in/ehanchell/
+  
+con007:
+  name: La'Shae Sturrup
+  website: 
+
+con008:
+  name: Destiny Gibson
+  website:
+
+con009:
+  name: Morgan Jenkins
+  website:
+
+con010:
+  name: Madison Jenkins
+  website: 
+
+con010:
+  name: Anthia Adderley
+  website:
+
+con011:
+  name: Jusleen Sanghera
+  website:
+
+con012:
+  name: Cierra Rahming
+  website:
+
+con013:
+  name: Chrisworth Roberts
+  website: 
+
+# con014: 
+#   name: Raajni
+#   website: 

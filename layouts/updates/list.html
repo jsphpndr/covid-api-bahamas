@@ -41,7 +41,7 @@
 
         <p class="[ ch--45 ]">{{.Summary}}</p>
 
-        <a class="[ btn btn--ghost--lg btn--flex ] [ no--print ]" href="{{ .Permalink }}index.json" target="_blank">View JSON</a>
+        <a class="[ btn btn--solid--lg btn--blk btn--flex ] [ mr--1 ]" href="/become-sponsor">Become A Sponsor</a>
 
       </div>
 
@@ -92,14 +92,9 @@
     <div class="[ x--wide ]">
       <ul class="[ loop ] [ mb--2 ]">
         {{ range $paginator.Pages }}
-        <li class="[ loop__item ] [ flex--between flex--wrap p--1 mb--050 ]">
-          <div>
-            <h3 class="[ h5 mb--025 ]"><a href="{{ .Permalink }}">COVID-19 Vaccination Update {{ .Title }}</a></h3>
-            <p>{{ .Date | dateFormat "Monday, Jan 2, 2006" }}</p>
-          </div>
-          <div>
-            <a href="{{ .Permalink }}index.json" target="_blank">View JSON</a>
-          </div>
+        <li class="[ loop__item ] [ p--1 mb--050 ]">
+          <h3 class="[ h5 mb--025 ]"><a href="{{ .Permalink }}">COVID-19 Vaccination Update {{ .Title }}</a></h3>
+          <p>{{ .Date | dateFormat "Monday, Jan 2, 2006" }}</p>
         </li>
         {{ end }}
       </ul>

@@ -1,0 +1,94 @@
+{
+  "update" :  {
+        "id":  210910,
+        "date": "2021-09-10 00:00:00 +0000 UTC",
+        "datePublished": "2021-09-10 00:00:00 +0000 UTC",
+        "doses": [{
+          "aggregate": [{
+            "total": 173130,
+            "first": 110712
+          }],
+        "byIsland": [
+          {
+            "name": "New Providence",
+            "first": 127954,
+            "second": 45310
+          },
+          {
+            "name": "Grand Bahama",
+            "first": 23755,
+            "second": 9110
+          },
+          {
+            "name": "Eleuthera",
+            "first": 6190,
+            "second": 2440
+          },
+          {
+            "name": "Abaco",
+            "first": 4521,
+            "second": 1720
+          },
+          {
+            "name": "Exuma",
+            "first": 3314,
+            "second": 1300
+          },
+          {
+            "name": "Andros",
+            "first": 2221,
+            "second": 866
+          },
+          {
+            "name": "Bimini",
+            "first": 948,
+            "second": 387
+          },
+          {
+            "name": "Long Island & Rum Cay",
+            "first": 1383,
+            "second": 589
+          },
+          {
+            "name": "Berry Islands",
+            "first": 633,
+            "second": 280
+          },
+          {
+            "name": "Cat Island",
+            "first": 446,
+            "second": 145
+          },
+          {
+            "name": "Inagua",
+            "first": 332,
+            "second": 117
+          },
+          {
+            "name": "San Salvador",
+            "first": 278,
+            "second": 92
+          },
+          {
+            "name": "Acklins",
+            "first": 72,
+            "second": 26
+          },
+          {
+            "name": "Crooked Island",
+            "first": 45,
+            "second": 21
+          },
+          {
+            "name": "Mayaguana",
+            "first": 38,
+            "second": 15
+          }
+        ],
+        "full": 65915,
+        "abroad": 3497
+        }
+      ],
+    "permalink" : "https://api.covidbahamas.app/updates/210910/"
+    } 
+}

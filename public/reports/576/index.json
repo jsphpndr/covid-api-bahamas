@@ -1,0 +1,182 @@
+{
+    "report" :  { 
+      "id": 576,
+      "date": "2021-10-23T00:00:00Z",
+      "permalink": "https://api.covidbahamas.app/reports/576/",
+      "cases": {
+        "byIsland": [ 
+          {
+            "name": "New Providence",
+            "toDate": 16970,
+            "new": 21
+          },
+          {
+            "name": "Grand Bahama",
+            "toDate": 2540,
+            "new": 2
+          },
+          {
+            "name": "Abaco",
+            "toDate": 651,
+            "new": 0
+          },
+          {
+            "name": "Bimini & Cat Cay",
+            "toDate": 237,
+            "new": 0
+          },
+          {
+            "name": "Eleuthera",
+            "toDate": 678,
+            "new": 6
+          },
+          {
+            "name": "Berry Islands",
+            "toDate": 111,
+            "new": 2
+          },
+          {
+            "name": "Exuma",
+            "toDate": 354,
+            "new": 0
+          },
+          {
+            "name": "Inagua",
+            "toDate": 54,
+            "new": 1
+          },
+          {
+            "name": "Andros",
+            "toDate": 273,
+            "new": 0
+          },
+          {
+            "name": "Long Island",
+            "toDate": 109,
+            "new": 0
+          },
+          {
+            "name": "Cat Island",
+            "toDate": 96,
+            "new": 0
+          },
+          {
+            "name": "Acklins",
+            "toDate": 21,
+            "new": 0
+          },
+          {
+            "name": "Crooked Island",
+            "toDate": 28,
+            "new": 0
+          },
+          {
+            "name": "Mayaguana",
+            "toDate": 18,
+            "new": 0
+          },
+          {
+            "name": "Ragged Island",
+            "toDate": 0,
+            "new": 0
+          },
+          {
+            "name": "San Salvador",
+            "toDate": 16,
+            "new": 0
+          },
+          {
+            "name": "Location Pending",
+            "toDate": 101,
+            "new": 0
+          }
+        ],
+        "newTotal": 32,
+        "toDateTotal": 22257,
+        "historyOfTravel": {
+          "byIsland":  [ 
+            {
+              "name": "New Providence",
+              "new": 5
+            }
+          
+          ],
+          "total": 5
+        },
+        "bySex": [ 
+          {
+            "sex": "Male",
+            "new": "20"
+        },
+          {
+            "sex": "Female",
+            "new": "12"
+        }
+        ],
+        "bySexTotal": 32,
+        "inHospital": {
+          "byFacility": [ 
+            {
+              "island": "New Providence",
+              "name": "Doctor's Hospital",
+              "total": 26,
+              "nonICU": 18,
+              "icu": 8
+            },
+            {
+              "island": "New Providence",
+              "name": "South Beach Acute Care and Referral Centre",
+              "total": 3,
+              "nonICU": 3,
+              "icu": 0
+            },
+            {
+              "island": "New Providence",
+              "name": "Princess Margaret Hospital",
+              "total": 53,
+              "nonICU": 52,
+              "icu": 1
+            },
+            {
+              "island": "New Providence",
+              "name": "Sandilands Rehabilitation Centre",
+              "total": 0,
+              "nonICU": 0,
+              "icu": 0
+            },
+            {
+              "island": "Grand Bahama",
+              "name": "Grand Bahama Health Services",
+              "total": 10,
+              "nonICU": 7,
+              "icu": 3
+            }
+          ],
+          "totals": {
+            "total": 92,
+            "nonICU": 80,
+            "icu": 12
+          }
+        },
+        "active": 1168,
+        "recovered": {
+          "new": 2,
+          "toDate": 20261
+        },
+        "fatalities": {
+          "toDate": 642,
+          "unrelatedToDate": 128,
+          "underInvestigation": 60
+        }
+      },
+      "reportedFatalities": false,
+      "tests": {
+        "toDate": 155049,
+        "completed": 323,
+        "positive": 32,
+        "negative": 274,
+        "repeated": 13,
+        "inconclusive": 4
+      }
+    } 
+}

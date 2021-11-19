@@ -21,7 +21,7 @@
 
         <p class="ch--45">COVID-19 Vaccination Update {{ .Title }} issued on <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}">{{ .Date | dateFormat "Monday, Jan 2, 2006" }}</time> from The Bahamas' Ministry of Health & Wellness.</p>
   
-        <a class="[ btn btn--ghost--lg btn--flex ] [ no--print ]" href="{{ .Permalink }}index.json" target="_blank">View JSON</a>
+        <a class="[ btn btn--solid--lg btn--blk btn--flex ] [ mr--1 ]" href="/become-sponsor">Become A Sponsor</a>
   
       </div>
     
@@ -60,8 +60,17 @@
 
       {{ partial "updates/island-breakdown.html" . }}
 
-    </div>
+      {{ range $index, $num := .Params.updates.second (seq 2) }}
+      {{$indexStartingAt1 := (sub $index 1)}}
+      {{ $indexStartingAt1 }}
+      {{ end }}
 
+    </div>
+    
+    {{ $contributor := .Params.contributor }}
+    {{ $link := .Params.con__link}}
+    {{ if $contributor }}<div class="[ x--wide bold text--center ]">Report contributed by {{ if $link }}<a href="{{ $link }}" rel="noopener" target="_blank">{{ $contributor}}</a>{{ else }}{{ $contributor}}{{ end }}</div>{{end}}  
+    
   </main>
 
   {{ .Scratch.Set "report" "Update" }}

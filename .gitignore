@@ -3,5 +3,7 @@
 notes.txt
 /styles
 /scripts
-/public
 support.txt
+/static/social-profile.jpg
+/static/social-profile.svg
+/layouts/api/
