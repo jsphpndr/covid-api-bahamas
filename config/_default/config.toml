@@ -1,0 +1,28 @@
+baseURL = "https://api.covidbahamas.app/"
+languageCode = "en-uk"
+title = "COVID-19 API Bahamas"
+upload_dir = "static/uploads"
+public_path = "/uploads"
+disableKinds = [ "taxonomy", "term", "categories" ]
+uglyURLs = true
+
+[outputFormats.html]
+noUgly = true
+
+[outputFormats.json]
+path = 'api'
+
+[outputs]
+page = ['html']
+section = ['html']
+home = [ 'html' ]
+
+# [outputs]
+# page = [ "HTML", "json" ]
+# section = [ "HTML", "json" ]
+# home = [ "HTML" ]
+
+
+
+[markup.goldmark.renderer]
+unsafe = true
