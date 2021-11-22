@@ -1,0 +1,112 @@
+{{ $debug := true }}
+{{ $update := .Params.update }}
+{{ $doses := $update.doses }}
+{{ $aggregate := $doses.aggregate }}
+{{ $total := $aggregate.total }}
+{{ $first := $aggregate.first }}
+{{ $second := sub $total $first }}
+{{ $full := $update.full }}
+{{ $abroad := $update.abroad }}
+{{ $jj := $update.jj }}
+<section class="[ mb--2 page--break ]">
+  
+  <h2 class="[ h3 mb--050 ]">Vaccinations by Island</h2>
+
+  <figure>
+
+    <div class="[ wrapper for--table ]">
+      <table class="[ table--breakdown ] [ mb--1 ]">
+        <thead>
+
+          <tr>
+            <th class="[ column--head text--left ]" rowspan="2">Island</td>
+            <th class="[ text--center ]" colspan="2">First</td>
+            <th class="[ text--right ]" colspan="2">Second Dose</td>
+            <th class="[ text--center ]">{{ if $jj }}Fully Vaccinated{{else}}Second{{end}}</td>
+            <th class="[ text--right ]">Total</th>
+          </tr>
+          <tr>
+            <td>New</td>
+            <td>Total</td>
+            <td>New</td>
+            <td>Total</td>
+            <td></td>
+            <td></td>
+          </tr>
+    
+        </thead>
+        <tbody>
+          {{ $newSecondDoses := 0 }}
+          {{ $secondDosesTotal := 0 }}
+
+
+          {{ $prevDosesTotal := 0 }}
+          {{ $dosesToDateTotal := 0 }}
+          {{ $prevDosesByIsland := "" }}
+          {{ $pages := where site.RegularPages.ByTitle.Reverse "Section" .Section }}
+          {{ with $pages.Prev . }}
+            {{ $prevDosesByIsland = .Params.update.doses.byIsland  }}
+          {{ end }}
+          {{ range $i, $e := .Params.update.doses.byIsland }}
+            {{ $newDoses := 0 }}
+            {{ $prevDoses := 0 }}
+            {{ $prevFullDoses := 0 }}
+            {{ $dosesToDate := .island.first }}
+            {{ $islandName := .island.name }}
+            {{ with $prevDosesByIsland }}
+              {{ $prevDoses = (index (where . "island.name" $islandName) 0).island.first }}
+              {{ $prevFullDoses = (index (where . "island.name" $islandName) 0).island.second }}
+              {{ $newDoses = sub $dosesToDate $prevDoses }}
+            {{ end }}
+             <!-- $newDosesTotal = add $newDosesTotal $newDoses  -->
+            {{ $newSecondDoses = sub $dosesToDate $prevDoses }}
+            {{ $secondDosesTotal = add $secondDosesTotal $newSecondDoses }}
+
+            
+          <tr>
+            <th class="[ column--head text--left ]">{{ $islandName }}</th>
+            <!-- First -->
+            {{ $firstShotOnlyTotal := sub .island.first .island.second }}
+            {{ $newFirstShotOnly := sub $firstShotOnlyTotal ( sub $prevDoses $prevFullDoses ) }}
+            <td class="[ text--center ]">{{if ne $newFirstShotOnly 0 }}{{ $newFirstShotOnly }}{{else}}—{{end}}</td>
+            <td class="[ text--center ]">{{ $firstShotOnlyTotal }}</td>
+            <!-- Second -->
+            <td class="[ text--right ]">{{if ne $newSecondDoses 0 }}{{ $newSecondDoses }}{{else}}—{{end}}</td>
+            <td class="[ text--center ]">{{if ne .island.second 0 }}{{ .island.second }}{{else}}—{{end}}</td>
+            <!-- Total -->
+            <td class="[ text--right ]">{{ .island.first }}</td>
+          </tr>
+
+            {{ $first := 0 }}
+            {{ $first = add $first $firstShotOnlyTotal }}
+          {{ end }}
+        </tbody>
+        <tfoot>
+
+          <tr>
+            <th>Totals</th>
+            <td></td>
+            <td>{{ $first }}</td>
+            <td>{{ $secondDosesTotal }}</td>
+            <td></td>
+          </tr>
+        </tfoot>
+    
+      </table>
+    </div>
+
+    <figcaption>
+      <p><strong>Note:</strong> Figures represent dosages of vaccinations administered locally. <b>First</b> refers to those persons having only received one dose of a two dose vaccination{{ if eq $jj true }} and exclusive of Johnson & Johnson{{end}}.</p>
+      {{ if eq $update.pfizer true }}
+      
+        <p><strong>Note:</strong> {{ $update.pfizernote }}</p>
+        {{ if eq $jj true }}
+        <p><strong>Note:</strong> {{ $update.jjnote }}</p>
+        <!-- <p><strong>Note:</strong> Due to the introduction of Johnson & Johnson single dose vaccination and deficiencies in The Government of The Bahamas' configuration and presentation of data, it is no longer possible to report on second dosages, so the category of <b>Second</b> has been modified to <b>Fully Vaccinated</b>.</p> -->
+        {{end}}
+      {{end}}
+    </figcaption>
+
+  </figure>
+
+</section>
