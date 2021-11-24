@@ -1,3 +1,0 @@
-{
-  "update{{ if eq .IsPage false }}s{{end}}" : {{ block "response" .}}{{ end }}
-}

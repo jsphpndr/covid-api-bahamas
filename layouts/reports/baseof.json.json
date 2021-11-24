@@ -1,3 +1,0 @@
-{
-    "report": {{ block "response" .}}{{ end }}
-}
