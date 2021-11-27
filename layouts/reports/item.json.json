@@ -64,7 +64,7 @@
           "date": "{{ .fatality.date | dateFormat "2006-01-02T15:04:05Z0700" }}"
         }
         {{ end }}
-      ]{{ else }}0{{ end }},
+      ]{{ else }}false{{ end }},
       "tests": {
         "toDate": {{ $tests.toDate }},
         "completed": {{ $tests.completed }},
