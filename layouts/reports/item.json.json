@@ -55,8 +55,8 @@
           "unrelatedToDate": {{ $fatalities.unrelatedToDate }},
           "underInvestigation": {{ $fatalities.underInvestigation }}
         }
-      },
-      "reportedFatalities": {{if eq .Params.report.ifReported true }} [ {{ range $i, $e := .Params.report.reportedFatalities }}{{ if $i }},{{ end }}
+      },{{if eq .Params.report.ifReported true }}
+      "reportedFatalities": [ {{ range $i, $e := .Params.report.reportedFatalities }}{{ if $i }},{{ end }}
         {
           "age": {{ .fatality.age }}, 
           "island": "{{ .fatality.island }}",
@@ -64,7 +64,7 @@
           "date": "{{ .fatality.date | dateFormat "2006-01-02T15:04:05Z0700" }}"
         }
         {{ end }}
-      ]{{ else }}false{{ end }},
+      ],{{ end }}
       "tests": {
         "toDate": {{ $tests.toDate }},
         "completed": {{ $tests.completed }},
