@@ -99,6 +99,8 @@
         <p><strong>Note:</strong> Due to the introduction of Johnson & Johnson single dose vaccination and deficiencies in The Government of The Bahamas' configuration and presentation of data, it is no longer possible to report on second dosages, so the category of <b>Second</b> has been modified to <b>Fully Vaccinated</b>.</p>
         {{end}}
       {{end}}
+      {{ if .Params.update.error }}<p><strong>Note:</strong> {{ .Params.update.error }}</p>{{end}}
+      {{ if .Params.update.doses.rumCay }}<p><strong>Note:</strong> Due to later reporting and for calculation purposes, Long Island (324) & Rum Cay (11) were combined to stabalize data and make presentation more consistent.</p>{{end}}
     </figcaption>
 
   </figure>
