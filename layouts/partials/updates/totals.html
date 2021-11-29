@@ -16,7 +16,8 @@
 
     <table class="[ table mb--1 ]">
       {{ with .NextInSection }}
-        {{ $prevTotal := .Params.update.doses.aggregate.total }}
+        {{ $prevSecondTotal := sub .Params.update.doses.aggregate.total .Params.update.doses.aggregate.first }}
+        {{ $prevSecondTotal }} {{ $second }}
       {{end}}
 
       <thead>
@@ -34,7 +35,7 @@
         </tr>
         <tr>
           <th class="[ column--head text--left ]">{{ if $jj }}Fully Vaccinated{{else}}Second{{end}}</th>
-          <td class="[ text--right ]">{{ with .NextInSection }}{{ $prevTotal := .Params.update.full }}{{ sub $full $prevTotal}}{{end}}</td>
+          <td class="[ text--right ]">{{ with .NextInSection }}{{ $prevTotal := sub .Params.update.doses.aggregate.total .Params.update.doses.aggregate.first }}{{ sub $second $prevTotal}}{{end}}</td>
           <td class="[ text--right ]">{{ $second }}</td>
         </tr>
       </tbody>

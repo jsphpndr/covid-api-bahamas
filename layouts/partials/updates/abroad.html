@@ -25,7 +25,7 @@
         </tr>
         <tr>
           <th class="[ column--head text--left ]">Abroad</th>
-          <td class="[ text--right ]">{{ if eq $second $full }}—{{else if and (eq $abroad 0) (lt $second $full) }}{{else}}{{$abroad}}{{end}}</td>
+          <td class="[ text--right ]">{{ if eq $second $full }}—{{else if and (eq $abroad 0) (lt $second $full) }}{{ sub $full $second }}{{else}}{{$abroad}}{{end}}</td>
         </tr>
       </tbody>
       <tfoot>
