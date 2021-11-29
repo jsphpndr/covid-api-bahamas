@@ -57,7 +57,6 @@
             {{ $prevSecondDoseTotal = add $prevSecondDoseTotal $newSecondDose }}
             {{ $prevFirstDoseTotal = add $prevFirstDoseTotal $newFirstDose }}
           {{end}}
-          {{$prevFirstDose}}
           <tr>
             <th class="[ column--head text--left ]">{{ .island.name }}</th>
             <!-- First -->

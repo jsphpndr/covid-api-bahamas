@@ -18,9 +18,6 @@
       {{ with .NextInSection }}
         {{ $prevTotal := .Params.update.doses.aggregate.total }}
         {{ sub $aggregate.total $prevTotal}}
-
-
-        {{$aggregate.total}} {{ $prevTotal}}
       {{end}}
 
       <thead>
