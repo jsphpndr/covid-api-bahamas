@@ -57,8 +57,11 @@
       {{ partial "updates/eligible.html" . }}
 
       {{ partial "updates/goal.html" . }}
-
-      {{ partial "updates/island-breakdown.html" . }}
+      {{ if eq .Params.update.jj true }}
+      {{ partial "updates/byIsland-full.html" . }}
+      {{ else }}
+      {{ partial "updates/byIsland-second.html" . }}
+      {{ end }}
 
       {{ range $index, $num := .Params.updates.second (seq 2) }}
       {{$indexStartingAt1 := (sub $index 1)}}

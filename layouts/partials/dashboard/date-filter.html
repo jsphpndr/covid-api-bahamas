@@ -1,0 +1,11 @@
+{{ range ( where .Site.RegularPages.ByTitle "Type" "reports" | last 1 ).Reverse  }}
+
+{{ $currentTotal := .Params.report.cases.inHospital.totals.total}}
+
+{{ with .NextInSection }}
+    {{ $prevTotal := .Params.report.cases.inHospital.totals.total}}
+
+    {{ sub $currentTotal $prevTotal }}
+{{end}}
+
+{{end}}
