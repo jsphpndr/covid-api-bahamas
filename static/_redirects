@@ -1,1 +1,1 @@
-/reports/*.json          /api/reports/*.json   200
+/reports/index.json   /api/reports/index.json   301!
