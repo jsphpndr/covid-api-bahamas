@@ -13,6 +13,7 @@
   <link rel="alternate" href="{{ if eq $paginator.PageNumber 1 }}{{ .Permalink }}{{else}}{{ .Permalink }}page/{{ $paginator.PageNumber }}{{end}}" hreflang="en-ca">
   <link rel="alternate" href="{{ if eq $paginator.PageNumber 1 }}{{ .Permalink }}{{else}}{{ .Permalink }}page/{{ $paginator.PageNumber }}{{end}}" hreflang="en">
   <link rel="canonical" href="{{ if eq $paginator.PageNumber 1 }}{{ .Permalink }}{{else}}{{ .Permalink }}page/{{ $paginator.PageNumber }}{{end}}">
+  <meta property="fb:app_id" content="384650276688740">
   <meta property="og:url" content="{{ if eq $paginator.PageNumber 1 }}{{ .Permalink }}{{else}}{{ .Permalink }}page/{{ $paginator.PageNumber }}{{end}}">
   <meta property="og:type" content="website">
   <meta property="og:title" content="{{ .Title }}{{ if ne $paginator.PageNumber 1 }} | Page {{ $paginator.PageNumber }}{{end}} | COVID-19 API | Bahamas">
