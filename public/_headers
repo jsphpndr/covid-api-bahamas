@@ -1,0 +1,5 @@
+/*
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  Access-Control-Allow-Origin: *
+  X-Content-Type-Options: nosniff

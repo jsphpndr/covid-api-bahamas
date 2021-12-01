@@ -1,0 +1,54 @@
+<section class="[ mb--2 ]">
+  {{ $update := .Params.update }}
+  {{ $aggregate := $update.doses.aggregate }}
+  {{ $total := $aggregate.total }}
+  {{ $first := $aggregate.first }}
+  {{ $second := sub $total $first }}
+  {{ $full := $update.full }}
+  {{ $abroad := $update.abroad }}
+  {{ $jj := $update.jj }}
+  {{ $pop := 327095.00 }}
+  <h2 class="[ h3 mb--025 ]">Vaccinations by Eligible Population</h2>
+
+  <figure class="[ mb--2 ]">
+
+    <table class="[ table mb--1 ]">
+
+      <thead>
+        <th class="[ column--head text--left ]">Status</th>
+        <th class="[ text--center ]">% of Pop.</th>
+        <!-- <th class="[ text--right ]">Per 100K</th> -->
+        <th class="[ text--right ]">Total</th>
+      </thead>
+      <tbody>
+        <tr>{{ $fully := math.Round ( mul (div $full $pop  ) 100 ) }} {{ $fullyPer := mul (div $full $pop  ) 100000 }}
+          <th class="[ column--head text--left ]">Full</th>
+          <td class="[ text--center ]">{{ $fully }}%</td>
+          <!-- <td class="[ text--right ]">{{ lang.NumFmt 2 $fullyPer  "- ." | safeJS }}</td> -->
+          <td class="[ text--right ]">{{ $full }}</td>
+        </tr>
+        <tr>{{ $partial := math.Round ( mul (div $first $pop  ) 100 )}} {{ $partialPer := mul (div $first $pop  ) 100000 }}
+          <th class="[ column--head text--left ]">Partial</th>
+          <td class="[ text--center ]">{{ $partial }}%</td>
+          <!-- <td class="[ text--right ]">{{ lang.NumFmt 2 $partialPer  "- ." | safeJS }}</td> -->
+          <td class="[ text--right ]">{{$first}}</td>
+        </tr>    
+        <tr>{{ $unvaccinated := math.Round ( mul (div ( sub $pop ( add $first $full ) ) $pop  ) 100 ) }}{{ $unvaccinatedPer := ( mul (div ( sub $pop ( add $first $full ) ) $pop  ) 100000 ) }}
+          <th class="[ column--head text--left ]">Unvaccinated</th>
+          <td class="[ text--center ]">{{ $unvaccinated }}%</td>
+          <!-- <td class="[ text--right ]">{{ lang.NumFmt 2 $unvaccinatedPer  "- ." | safeJS }}</td> -->
+          <td class="[ text--right ]">{{ sub $pop ( add $first $full ) }}</td>
+        </tr>
+      </tbody>
+  
+    </table>
+    <figcaption>
+      <p><strong>Note:</strong> The Ministry of Health & Wellness has set the eligible population for vaccination at 84% of the population or 327095 citizens.</p>
+
+      <p><strong>Note:</strong> Population data is sourced from <a href="https://stats.gov.bs/" rel="noopener" target="_blank">The Bahamas' Department of Statistics</a> and is represented at 389410 as of 2020.</p>
+    </figcaption>
+
+  </figure>
+
+</section>
+

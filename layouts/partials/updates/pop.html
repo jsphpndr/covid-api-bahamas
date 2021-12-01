@@ -16,27 +16,27 @@
 
       <thead>
         <th class="[ column--head text--left ]">Status</th>
-        <th class="[ text--right ]">% of Pop.</th>
-        <th class="[ text--right ]">Per 100K</th>
+        <th class="[ text--center ]">% of Pop.</th>
+        <!-- <th class="[ text--right ]">Per 100K</th> -->
         <th class="[ text--right ]">Total</th>
       </thead>
       <tbody>
         <tr>{{ $fully := math.Round ( mul (div $full $pop  ) 100 ) }} {{ $fullyPer := mul (div $full $pop  ) 100000 }}
           <th class="[ column--head text--left ]">Full</th>
-          <td class="[ text--right ]">{{ $fully }}%</td>
-          <td class="[ text--right ]">{{ lang.NumFmt 2 $fullyPer  "- ." | safeJS }}</td>
+          <td class="[ text--center ]">{{ $fully }}%</td>
+          <!-- <td class="[ text--right ]">{{ lang.NumFmt 2 $fullyPer  "- ." | safeJS }}</td> -->
           <td class="[ text--right ]">{{ $full }}</td>
         </tr>
         <tr>{{ $partial := math.Round ( mul (div $first $pop  ) 100 )}} {{ $partialPer := mul (div $first $pop  ) 100000 }}
           <th class="[ column--head text--left ]">Partial</th>
-          <td class="[ text--right ]">{{ $partial }}%</td>
-          <td class="[ text--right ]">{{ lang.NumFmt 2 $partialPer  "- ." | safeJS }}</td>
+          <td class="[ text--center ]">{{ $partial }}%</td>
+          <!-- <td class="[ text--right ]">{{ lang.NumFmt 2 $partialPer  "- ." | safeJS }}</td> -->
           <td class="[ text--right ]">{{$first}}</td>
         </tr>    
         <tr>{{ $unvaccinated := math.Round ( mul (div ( sub $pop ( add $first $full ) ) $pop  ) 100 ) }}{{ $unvaccinatedPer := ( mul (div ( sub $pop ( add $first $full ) ) $pop  ) 100000 ) }}
           <th class="[ column--head text--left ]">Unvaccinated</th>
-          <td class="[ text--right ]">{{ $unvaccinated }}%</td>
-          <td class="[ text--right ]">{{ lang.NumFmt 2 $unvaccinatedPer  "- ." | safeJS }}</td>
+          <td class="[ text--center ]">{{ $unvaccinated }}%</td>
+          <!-- <td class="[ text--right ]">{{ lang.NumFmt 2 $unvaccinatedPer  "- ." | safeJS }}</td> -->
           <td class="[ text--right ]">{{ sub $pop ( add $first $full ) }}</td>
         </tr>
       </tbody>

@@ -16,18 +16,18 @@
 
       <thead>
         <th class="[ column--head text--left ]">Status</th>
-        <th class="[ text--right ]">%</th>
+        <th class="[ text--center ]">% of Goal</th>
         <th class="[ text--right ]">Total</th>
       </thead>
       <tbody>{{ $goal := mul $pop 0.7 }}
         <tr>{{ $fully := math.Round ( mul (div $full $goal  ) 100 ) }}
           <th class="[ column--head text--left ]">Achieved</th>
-          <td class="[ text--right ]">{{ $fully }}%</td>
+          <td class="[ text--center ]">{{ $fully }}%</td>
           <td class="[ text--right ]">{{ $full }}</td>
         </tr>
         <tr>{{ $partial := math.Round ( mul (div (sub $goal $full ) $goal  ) 100 )}}
           <th class="[ column--head text--left ]">Remainder</th>
-          <td class="[ text--right ]">{{ $partial }}%</td>
+          <td class="[ text--center ]">{{ $partial }}%</td>
           <td class="[ text--right ]">{{ sub $goal $full }}</td>
         </tr>    
       </tbody>

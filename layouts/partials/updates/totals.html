@@ -15,25 +15,34 @@
   <figure class="[ mb--2 ]">
 
     <table class="[ table mb--1 ]">
+      {{ with .NextInSection }}
+        {{ $prevSecondTotal := sub .Params.update.doses.aggregate.total .Params.update.doses.aggregate.first }}
+        {{ $prevSecondTotal }} {{ $second }}
+      {{end}}
 
       <thead>
         <th class="[ column--head text--left ]">Dosage</th>
+        <th class="[ text--right ]" >New</th>
         <th class="[ text--right ]">Total</th>
       </thead>
 
       <tbody>
         <tr>
           <th class="[ column--head text--left ]">First</th>
+          <td class="[ text--right ]">{{ with .NextInSection }}{{ $prevTotal := .Params.update.doses.aggregate.first }}{{ sub $aggregate.first $prevTotal}}{{end}}
+          </td>
           <td class="[ text--right ]">{{ $first }}</td>
         </tr>
         <tr>
           <th class="[ column--head text--left ]">{{ if $jj }}Fully Vaccinated{{else}}Second{{end}}</th>
+          <td class="[ text--right ]">{{ with .NextInSection }}{{ $prevTotal := sub .Params.update.doses.aggregate.total .Params.update.doses.aggregate.first }}{{ sub $second $prevTotal}}{{end}}</td>
           <td class="[ text--right ]">{{ $second }}</td>
         </tr>
       </tbody>
       <tfoot>
         <tr>
           <th class="[ column--head text--left ]">Total</th>
+          <td class="[ text--right ]">{{ with .NextInSection }}{{ $prevTotal := .Params.update.doses.aggregate.total }}{{ sub $aggregate.total $prevTotal}}{{end}}</td>
           <td class="[ text--right bold ]">{{ add $first $second }}</td>
         </tr>
       </tfoot>

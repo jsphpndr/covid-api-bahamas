@@ -47,67 +47,67 @@ update:
       - island:
           name: *np
           first: 
-          second: 0
+          fully: 0
       - island:
           name: *gb
           first: 
-          second: 0
+          fully: 0
       - island:
           name: *el
           first: 
-          second: 0
+          fully: 0
       - island:
           name: *ab
           first: 
-          second: 0
+          fully: 0
       - island:
           name: *ex
           first: 
-          second: 0
+          fully: 0
       - island:
           name: *an
           first: 
-          second: 0
+          fully: 0
       - island:
           name: *bim
           first: 
-          second: 0
+          fully: 0
       - island:
           name: *li
           first: 
-          second: 0
+          fully: 0
       - island:
           name: *bi
           first: 
-          second: 0
+          fully: 0
       - island:
           name: *ci
           first: 
-          second: 0
+          fully: 0
       - island:
           name: *in
           first: 
-          second: 0
+          fully: 0
       - island:
           name: *ss
           first: 
-          second: 0
+          fully: 0
       - island:
           name: *ac
           first: 
-          second: 0
+          fully: 0
       - island:
           name: *cr
           first: 
-          second: 0
+          fully: 0
       - island:
           name: *ma
           first: 
-          second: 0
+          fully: 0
     #   - island:
     #       name: *rc
     #       first: 
-    #       second: 0
+    #       fully: 0
 
 draft: true
 ---

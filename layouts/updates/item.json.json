@@ -1,5 +1,4 @@
 {
-      "update": {
         "id":  {{ .Params.update.number }},
         "date": "{{ .Date }}",
         "datePublished": "{{ .Date }}",
@@ -8,17 +7,16 @@
             "total": {{ .Params.update.doses.aggregate.total }},
             "first": {{ .Params.update.doses.aggregate.first }}
           }],
-          "byIsland": [ {{ range $i, $e := .Params.update.doses.byIsland }}{{ if $i }},{{ end }}
-              {
-                "name": "{{ .island.name }}",
-                "first": {{ .island.first }},
-                "second": {{ .island.second }}
-              }{{ end }}
-          ],
+        "byIsland": [{{ range $i, $e := .Params.update.doses.byIsland }}{{ if $i }},{{ end }}
+          {
+            "name": "{{ .island.name }}",
+            "first": {{ .island.first }},
+            "second": {{ .island.second }}
+          }{{ end }}
+        ],
         "full": {{ .Params.update.full }},
         "abroad": {{ .Params.update.abroad }}
-      }],
-      "permalink" : "{{ .Permalink }}"
+        }
+      ],
+    "permalink" : "{{ .Permalink }}"
     }
-
-}

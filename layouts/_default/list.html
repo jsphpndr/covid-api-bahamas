@@ -23,7 +23,7 @@
         
         <div class="[ wrapper ] [ x--wide ]">
 
-          <h1>.Title</h1>
+          <h1>{{ .Title }}</h1>
 
           <p class="ch--45">{{ .Summary }}</p>
 
@@ -44,7 +44,7 @@
   
         <div class="[ flex--middle mb--1 ]">
           <span class="[ mr--1 ]">Share on:</span>
-          {{ partial "social.html" }}
+          {{ partial "social/list.html" }}
         </div>
   
       </div>

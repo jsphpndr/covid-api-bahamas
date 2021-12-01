@@ -1,0 +1,44 @@
+<section {{if .Params.contributor}}class="[ pb--2 ]"{{end}}>
+  <h2 class="[ h3 mb--025 ]">Deaths Reported</h2>
+
+  {{ $reportDate := .Date.Format "2006-01-02" }}
+  {{ $pages := where site.RegularPages.ByTitle.Reverse "Section" .Section }}
+  
+  {{ $fatalityDate := 0 }}
+  {{ range $pages }}
+  {{ range $i, $e := .Params.report.reportedFatalities }}
+  {{ $fatalityDate := .fatality.date }}
+  {{ if and $fatalityDate (eq $fatalityDate $reportDate)  }}
+  <h3 class="[ h4 mb--025 ]">Deaths on Report Date</h3>
+  <figure class="[ mb--2 ]">
+    <div class="[ wrapper for--table ]">
+      <table class="[ table--breakdown ] [ mb--1 ]">
+
+        <thead>
+          <tr>
+            <th class="[ column--head text--left wsnw ]">Island</th>
+            <th class="[ text--center ]">Age</th>
+            <th class="[ text--center ]">Sex</th>
+            <th class="[ text--right ]">Date of Death</th>
+          </tr>
+        </thead>
+      
+        <tbody>
+          <tr>
+            <th class="[ column--head text--left wsnw ]">{{ .fatality.island }}</td>
+            <td class="[ text--center ]">{{ .fatality.age }}</td>
+            <td class="[ text--center ]">{{ .fatality.sex }}</td>
+            <td class="[ text--right wsnw ]">{{ .fatality.date  | dateFormat "Jan 2, 2006" }}</td>
+          </tr>
+        </tbody>
+      
+      </table>
+    </div>
+    <figcaption>
+      <p>A total of {{ len (where . $fatalityDate "eq" $reportDate) }} deaths occurred on report date: {{ $reportDate | dateFormat "Monday, Jan 2, 2006" }}.</p>
+      <p><strong>Note:</strong> Island indicates island of residence.</p>
+    </figcaption>
+  </figure>
+  {{ end }}
+  {{ end }}
+  {{ end }}

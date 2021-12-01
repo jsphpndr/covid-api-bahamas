@@ -8,7 +8,7 @@
   <link rel="canonical" href="{{ .Permalink }}">
   {{ partial "head/defaults.html" . }}{{ .Scratch.Set "report" "COVID-19 Case Report" }}
   {{ partial "head/social/single.html" . }}
-  
+  {{ partial "head/ga.html" . }}
 </head>
 <body>
 
@@ -24,7 +24,7 @@
       
         <p class="ch--45">COVID-19 Case Report {{ .Title }} issued on <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}">{{ .Date | dateFormat "Monday, Jan 2, 2006" }}</time> from The Bahamas' Ministry of Health & Wellness.</p>
 
-        <a class="[ btn btn--ghost--lg btn--flex ] [ no--print ]" href="{{ .Permalink }}/index.json">View JSON</a>
+        <a class="[ btn btn--solid--lg btn--blk btn--flex ] [ mr--1 ]" href="/become-sponsor">Become A Sponsor</a>
 
       </div>
       
@@ -51,19 +51,21 @@
     
     <div class="[ x--wide ]">
 
-      {{ partial "islandBreakdown.html" . }}
+      {{ partial "reports/islandBreakdown.html" . }}
       
-      {{ partial "bySex.html" . }}
+      {{ partial "reports/bySex.html" . }}
       
-      {{ partial "travelHistory.html" . }}
+      {{ partial "reports/travelHistory.html" . }}
       
-      {{ partial "testing.html" . }}
+      {{ partial "reports/testing.html" . }}
       
-      {{ partial "cases.html" . }}
+      {{ partial "reports/cases.html" . }}
 
-      {{ partial "hospitalizations.html" . }}
+      {{ partial "reports/hospitalizations.html" . }}
 
-      {{ partial "reported.html" . }}
+      <!-- {{ partial "reports/actual-fatalities.html" . }} -->
+
+      {{ partial "reports/reported-fatalities.html" . }}
 
     </div>
     
