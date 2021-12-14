@@ -1,0 +1,67 @@
+<section class="[ mb--2 {{if eq .Params.report.cases.ifTravelHistory true }}page--break{{end}} ]">
+
+  <h2 class="[ title--bar ] [ h4 p--050 mb--050 ]">RT-PCR Testing</h2>
+
+  <figure class="[ mb--1 ]">
+
+    <table class="[ table ] [ mb--1 ]">
+      <thead>
+        <tr>
+          <th class="[ column--head column--blue ] [ text--left pl--1 ]">Results</th>
+          <th class="[ text--center ]">Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th class="[ column--head column--blue ] [ text--left pl--1 ]">Positive</th>
+          <td class="[ text--center ]">{{ if eq .Params.report.tests.positive 0 }}—{{else}}{{ lang.NumFmt 0 .Params.report.tests.positive }}{{end}}</td>
+        </tr>
+        <tr>
+          <th class="[ column--head column--blue ] [ text--left pl--1 ]">Negative</th>
+          <td class="[ text--center ]">{{ if eq .Params.report.tests.negative 0 }}—{{else}}{{ lang.NumFmt 0 .Params.report.tests.negative }}{{end}}</td>
+        </tr>
+        <tr>
+          <th class="[ column--head column--blue ] [ text--left pl--1 ]">Repeated</th>
+          <td class="[ text--center ]">{{ if eq .Params.report.tests.repeated 0 }}—{{else}}{{ lang.NumFmt 0 .Params.report.tests.repeated }}{{end}}</td>
+        </tr>
+        <tr>
+          <th class="[ column--head column--blue ] [ text--left pl--1 ]">Inconclusive</th>
+          <td class="[ text--center ]">{{ if eq .Params.report.tests.inconclusive 0 }}—{{else}}{{ lang.NumFmt 0 .Params.report.tests.inconclusive }}{{end}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <figcaption><strong>Note:</strong> Test results listed above are from tests taken on report date: {{ .Date | dateFormat "Monday, Jan 02, 2006" }}.</figcaption>
+
+  </figure>
+
+  <figure>
+
+    <table class="[ table ]">
+
+      <thead>
+        <tr>
+          <th class="[ column--head column--blue ] [ text--left pl--1 ]">Completed</th>
+          <th class="[ text--center ]">Total</th>
+        </tr>
+      </thead>
+  
+      <tbody>
+        
+        <tr>
+          <th class="[ column--head column--blue ] [ text--left pl--1 ]">Report Date</th>
+          <td class="[ text--center ]">{{ lang.NumFmt 0 .Params.report.tests.completed }}</td>
+        </tr>
+        
+        <tr>
+          <th class="[ column--head column--blue ] [ text--left pl--1 ]">To Date</th>
+          <td class="[ text--center ]">{{ lang.NumFmt 0 .Params.report.tests.toDate }}</td>
+        </tr>
+      
+      </tbody>
+  
+    </table>
+
+  </figure>
+  
+</section>

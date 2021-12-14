@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>{{ .Title }} | COVID-19 API | Bahamas</title>
+    <meta name="description" content="Access COVID-19 (Coronavirus) case and vaccination data for The Bahamas from The Ministry of Health & Wellness' COVID-19 Case Reports and COVID-19 Vaccination Updates.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <link rel="canonical" href="{{ .Permalink }}">
+    <link rel="preload" href="/styles/style.css" as="style">
+    <link rel="stylesheet" href="/styles/style.css" type="text/css">
+    <noscript><style>.script {display: none}</style></noscript>
+    <link rel="icon" href="/favicon.svg">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#9395A1">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  <body>
+    {{ partial "navbar.html" }}
+    <main class="[ main ]">
+
+      <header class="[ hero ] [ py--3 ]">
+        
+        <div class="[ wrapper ] [ x--wide ]">
+
+          <h1>{{ .Title }}</h1>
+
+          <p class="ch--45">{{ .Summary }}</p>
+
+        </div>
+
+      </header>
+      
+      <div class="[ share__bar ] [ x--wide flex--between--middle flex--wrap pt--d15 pb--2 no--print ]">
+
+        <nav class="[ breadcrumbs ] [ pb--1 ]">
+  
+          <ul class="[ flex ]">
+            <li class="[ breadcrumb__item ] [ mr--1 ]"><a href="/">Home</a></li>
+            <li class="[ breadcrumb__item ]">{{ .Title }}</li>
+          </ul>
+  
+        </nav>
+  
+        <div class="[ flex--middle mb--1 ]">
+          <span class="[ mr--1 ]">Share on:</span>
+          {{ partial "social/list.html" }}
+        </div>
+  
+      </div>
+
+      <div class="[ x--wide ]">
+
+        <article>
+
+          {{ .Content }}
+
+        </article>
+        
+      </div>
+
+    </main>
+    {{ partial "footer.html" }}
+  </body>
+</html>

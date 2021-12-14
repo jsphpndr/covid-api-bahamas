@@ -1,0 +1,22 @@
+{
+        "id":  {{ .Params.update.number }},
+        "date": "{{ .Date }}",
+        "datePublished": "{{ .Date }}",
+        "doses": [{
+          "aggregate": [{
+            "total": {{ .Params.update.doses.aggregate.total }},
+            "first": {{ .Params.update.doses.aggregate.first }}
+          }],
+        "byIsland": [{{ range $i, $e := .Params.update.doses.byIsland }}{{ if $i }},{{ end }}
+          {
+            "name": "{{ .island.name }}",
+            "first": {{ .island.first }},
+            "second": {{ if eq .island.second 0 }}{{ .island.second }}{{ else if gt .island.second 0 }}{{ .island.second }}{{end}}{{ if .island.fully }}{{ .island.fully }}{{end}}
+          }{{ end }}
+        ],
+        "full": {{ .Params.update.full }},
+        "abroad": {{ .Params.update.abroad }}
+        }
+      ],
+    "permalink" : "{{ .Permalink }}"
+    }

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Access COVID-19 (Coronavirus) data for The Bahamas from the Ministry of Health & Wellness from COVID-19 Case Report {{ .Title }} issued on {{ .Date | dateFormat "Monday, Jan 2, 2006" }}. -->
+  <meta charset="UTF-8">
+  <title>COVID-19 Case Report {{ .Title }} | COVID-19 API | Bahamas</title>
+  <meta name="description" content="COVID-19 Case Report {{ .Title }} issued on {{ .Date | dateFormat "Monday, Jan 2, 2006" }} from The Bahamas' Ministry of Health & Wellness.">
+  <link rel="canonical" href="{{ .Permalink }}">
+  {{ partial "head/defaults.html" . }}{{ .Scratch.Set "report" "COVID-19 Case Report" }}
+  {{ partial "head/social/single.html" . }}
+  {{ partial "head/ga.html" . }}
+</head>
+<body>
+
+  {{ partial "navbar.html" . }}
+
+  <main class="[ main ] [ pb--3 ]">
+
+    <header class="[ hero ] [ py--3 ]">
+
+      <div class="[ wrapper ] [ x--wide ]">
+
+        <h1>COVID-19 Case Report {{ .Title }}</h1>
+      
+        <p class="ch--45">COVID-19 Case Report {{ .Title }} issued on <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}">{{ .Date | dateFormat "Monday, Jan 2, 2006" }}</time> from The Bahamas' Ministry of Health & Wellness.</p>
+
+        <div class="[ flex--middle flex--wrap mb--1 ]">
+          <a class="[ btn btn--solid--lg btn--blk btn--flex ] [ mr--1 ]" href="/">View Dashboard</a>
+          {{ range ( where .Site.RegularPages.ByTitle "Type" "updates" | last 1 ).Reverse  }}
+          <a class="[ btn btn--ghost--lg btn--flex ]" href="{{ .Permalink }}">Latest Update</a>
+          {{ end }}
+        </div>
+
+        <p>Want to support this project? <a href="/become-sponsor">Become a sponsor</a>.</p>
+        
+
+      </div>
+      
+    </header>
+
+    <div class="[ x--wide flex--between--middle flex--wrap g--1 pt--d15 pb--2 no--print ]">
+
+      <nav class="[ breadcrumbs ]">
+
+        <ul class="[ flex ]">
+          <li class="[ breadcrumb__item ] [ mr--1 ]"><a href="/">Home</a></li>
+          <li class="[ breadcrumb__item ] [ wsnw mr--1 ]"><a href="/reports/">COVID-19 Case Reports</a></li>
+          <li class="[ breadcrumb__item ]">COVID-19 Report {{ .Title }}</li>
+        </ul>
+
+      </nav>
+
+      <div class="[ flex--middle ]">
+        <span class="[ mr--1 ]">Share on:</span>
+        {{ partial "social/single.html" . }}
+      </div>
+
+    </div>
+    
+    <div class="[ x--wide ]">
+
+      {{ partial "reports/islandBreakdown.html" . }}
+      
+      {{ partial "reports/bySex.html" . }}
+      
+      {{ partial "reports/travelHistory.html" . }}
+      
+      {{ partial "reports/testing.html" . }}
+      
+      {{ partial "reports/cases.html" . }}
+
+      {{ partial "reports/hospitalizations.html" . }}
+       
+      {{ partial "reports/actual-fatalities.html" . }}
+
+      {{ partial "reports/reported-fatalities.html" . }}
+        
+    </div>
+    
+    {{ $contributor := .Params.contributor }}
+    {{ $link := .Params.con__link}}
+    {{ if $contributor }}<div class="[ x--wide bold text--center ]">Report contributed by {{ if $link }}<a href="{{ $link }}" rel="noopener" target="_blank">{{ $contributor}}</a>{{ else }}{{ $contributor}}{{ end }}</div>{{end}}  
+    
+  </main>
+  {{ .Scratch.Set "report" "Report" }}
+  {{ partial "components/pagination.html" . }}
+  
+  {{ partial "footer.html" . }}
+  
+</body>
+</html>

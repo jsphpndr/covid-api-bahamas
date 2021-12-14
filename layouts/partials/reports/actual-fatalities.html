@@ -1,0 +1,57 @@
+{{ $reportDate := .Date.Format "2006-01-02" }}
+{{ $fatalityDate := "" }}
+{{ $actual := 0 }}
+{{ $debug := false }}
+{{ range where site.RegularPages.ByTitle.Reverse "Section" .Section }}
+{{ range $i, $e := .Params.report.reportedFatalities }}
+{{ $fatalityDate := .fatality.date }}
+{{ $int := 0 }}
+{{ if and $fatalityDate (eq $fatalityDate $reportDate)  }}
+{{ $int = len $fatalityDate }}
+{{ if eq debug true }}
+<ul>
+  <li>{{ .fatality.island }} | {{ .fatality.age }} | {{ .fatality.sex }} | {{ .fatality.date | dateFormat "Jan 2, 2006" }}</li>
+</ul>
+{{end}}
+{{ $actual = add $actual $int }}
+{{ end }}
+{{ end }}
+{{ end }}
+{{ if gt $actual 0 }}
+<h2 class="[ title--bar ] [ h4 p--050 mb--050 ]">Actual Deaths</h3>
+<figure class="[ mb--2 ]">
+  <div class="[ wrapper for--table ]">
+    <table class="[ table--breakdown ] [ mb--1 ]">
+      <thead>
+        <tr>
+          <th class="[ column--head column--blue ] [ text--left pl--1 ]">Island</th>
+          <th class="[ text--center ]">Age</th>
+          <th class="[ column--blue ] [ text--center ]">Sex</th>
+          <th class="[ text--center ]">Date of Death</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{ range where site.RegularPages.ByTitle.Reverse "Section" .Section }}
+        {{ range $i, $e := .Params.report.reportedFatalities }}
+        {{ $fatalityDate := .fatality.date }}
+        {{ $int := 0 }}
+        {{ if and $fatalityDate (eq $fatalityDate $reportDate)  }}
+        <tr>
+          <th class="[ column--head column--blue ] [ text--left pl--1 ]">{{ .fatality.island }}</td>
+          <td class="[ text--center ]">{{ .fatality.age }}</td>
+          <td class="[ column--blue ] [ text--center ]">{{ .fatality.sex }}</td>
+          <td class="[ text--center ]">{{ .fatality.date | dateFormat "Jan 2, 2006" }}</td>
+        </tr>
+        {{ end }}
+        {{ end }}
+        {{ end }}
+      </tbody>      
+    </table>
+  </div>
+  <figcaption>
+    <p><strong>Note:</strong> A total of {{ div $actual 10 }} case fatalit{{if eq ( div $actual 10 ) 1 }}y{{else}}ies{{end}} occurred on this report date: {{ $reportDate | dateFormat "Monday, Jan 2, 2006" }}.</p>
+    <p><strong>Note:</strong> <em>Actual</em> refers to COVID-19 case fatalities confirmed and reported in later case reports but which occurred on this report date.</p>
+    <p><strong>Note:</strong> Island indicates island of residence.</p>
+  </figcaption>
+</figure>
+{{end}}

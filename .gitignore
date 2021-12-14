@@ -1,0 +1,15 @@
+.forestry
+.DS_Store
+notes.txt
+/styles
+/scripts
+support.txt
+/static/social-profile.jpg
+/static/social-profile.svg
+/layouts/api/
+public/
+json-rejects/
+/static/styles/style.css
+/static/scripts/*.deps.js
+/static/scripts/*.build.js
+/config/_default/params.yml

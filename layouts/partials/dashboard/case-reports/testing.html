@@ -1,0 +1,66 @@
+{{ $pop := 389410.00 }}
+{{ range ( where .Site.RegularPages.ByDate "Type" "reports" | last 1 ).Reverse  }}
+<section>
+  <h2 class="[ h4 p--050 mb--050 ]">RT-PCR Testing</h2>
+  <figure class="[ mb--d15 ]">
+    <table class="[ table--aggregate ] [ mb--1 ]">
+      <thead>{{ $report := .Params.report }}
+        <tr>{{ $tests := $report.tests }}
+          <th class="[ column--head column--sidebar column--blue ] [ text--left pl--050 ]">Result</th>
+          <th class="[ text--center ]">%</th>
+          <th class="[ column--blue ] [ text--center ]">Total</th>
+        </tr>{{ $positive := $tests.positive }}{{ $negative := $tests.negative }}
+      </thead>{{ $repeated := $tests.repeated }}{{ $inconclusive := $tests.inconclusive }}
+      <tbody>{{ $completed := $tests.completed}}
+        <tr> 
+          <th class="[ column--head column--sidebar column--blue ] [ text--left pl--050 ]">Positive</th>
+          <td class="[ text--center ]">{{ lang.NumFmt 1 (mul (div (float $positive) $completed ) 100) }}%</td>
+          <td class="[ column--blue ] [ text--center ]">{{ lang.NumFmt 0 $positive }}</td>
+        </tr>
+        <tr> 
+          <th class="[ column--head column--sidebar column--blue ] [ text--left pl--050 ]">Negative</th>
+          <td class="[ text--center ]">{{ lang.NumFmt 1 (mul (div (float $negative) $completed ) 100) }}%</td>
+          <td class="[ column--blue ] [ text--center ]">{{ lang.NumFmt 0 $negative }}</td>
+        </tr>
+        <tr> 
+          <th class="[ column--head column--sidebar column--blue ] [ text--left pl--050 ]">Repeated</th>
+          <td class="[ text--center ]">{{if eq $repeated 0 }}—{{else}}{{ lang.NumFmt 1 (mul (div (float $repeated) $completed ) 100) }}%{{ end }}</td>
+          <td class="[ column--blue ] [ text--center ]">{{if eq $repeated 0 }}—{{else}}{{ lang.NumFmt 0 $repeated }}{{ end }}</td>
+        </tr>
+        <tr> 
+          <th class="[ column--head column--sidebar column--blue ] [ text--left pl--050 ]">Inconclusive</th>
+          <td class="[ text--center ]">{{if eq $inconclusive 0 }}—{{else}}{{ lang.NumFmt 1 (mul (div (float $inconclusive) $completed ) 100) }}%{{ end }}</td>
+          <td class="[ column--blue ] [ text--center ]">{{if eq $inconclusive 0 }}—{{else}}{{ lang.NumFmt 0 $inconclusive }}{{end}}</td>
+        </tr>
+        <tr> 
+          <th class="[ column--head column--sidebar column--blue ] [ text--left pl--050 ]">Total</th>
+          <td></td>
+          <td class="[ column--blue ] [ text--center ]">{{ lang.NumFmt 0 $completed }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <figcaption>Fig.2.1 — RT-PCR tests completed in The Bahamas on {{ .Date.Format "Monday, Jan 2, 2006" }}.</figcaption>
+  </figure>
+  <figure class="[ mb--d15 ]">
+    <table class="[ table--rates ] [ mb--1 ]"> 
+      <thead> 
+        <tr> 
+          <th class="[ column--head column--sidebar column--blue ] [ text--left pl--050 ]">Rate</th>
+          <th class="[ text--center ]">%</th>
+          <th class="[ column--blue ] [ text--center ]">Per 100K</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th class="[ column--head column--sidebar column--blue ] [ text--left pl--050 ]">Positivity</th>
+          <td class="[ text--center ]">{{ lang.NumFmt 1 (mul (div (float $positive) $completed ) 100) }}%</td>
+          <td class="[ column--blue ] [ text--center ]">{{ lang.NumFmt 2 (mul (div (float $positive) $pop ) 100000) }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <figcaption> 
+      <p>Fig.2.2 — Positivity Rate in The Bahamas as of {{ .Date.Format "Monday, Jan 2, 2006" }}.</p>
+    </figcaption>
+  </figure>
+</section>
+{{ end }}

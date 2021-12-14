@@ -1,0 +1,77 @@
+{{ $pop := 389410.00 }}
+{{ range ( where .Site.RegularPages.ByDate "Type" "reports" | last 1 ).Reverse  }}
+<section>
+  <h2 class="[ h4 p--050 mb--050 ]">Aggregate</h2>
+  <figure class="[ mb--d15 ]">
+    <table class="[ table--aggregate ] [ mb--1 ]">
+      <thead>{{ $report := .Params.report }}{{ $cases := $report.cases}}
+        <tr>{{ $active := $cases.active }}
+          <th class="[ column--head column--sidebar column--blue ] [ text--left pl--050 ]">Status</th>{{ $recovered := $cases.recovered.toDate }}
+          <th class="[ text--center ]">%</th>
+          <th class="[ column--blue ] [ text--center ]">Total</th>{{ $cf := $cases.fatalities.toDate }}{{ $unrelated := $cases.fatalities.unrelatedToDate }}
+        </tr>{{ $dui := $cases.fatalities.underInvestigation }}
+      </thead>{{ $totalCases := $cases.toDateTotal }}
+      <tbody>
+        <tr class="[ table__row ]">
+          <th class="[ column--head column--sidebar column--blue ] [ text--left pl--050 ]">Active</th>
+          <td class="[ text--center ]">{{ lang.NumFmt 1 (mul (div (float $active) $totalCases ) 100) }}%</td>
+          <td class="[ column--blue ] [ text--center ]">{{ lang.NumFmt 0 $active }}</td>
+        </tr>
+        <tr class="[ table__row ]">
+          <th class="[ column--head column--sidebar column--blue ] [ text--left pl--050 ]">Recovered</th>
+          <td class="[ text--center ]">{{ lang.NumFmt 1 (mul (div (float $recovered) $totalCases ) 100) }}%</td>
+          <td class="[ column--blue ] [ text--center ]">{{ lang.NumFmt 0 $recovered }}</td>
+        </tr>
+        <tr class="[ table__row ]">
+          <th class="[ column--head column--sidebar column--blue ] [ text--left pl--050 ]">Case Fatalities</th>
+          <td class="[ text--center ]">{{ lang.NumFmt 1 (mul (div (float $cf) $totalCases ) 100) }}%</td>
+          <td class="[ column--blue ] [ text--center ]">{{ lang.NumFmt 0 $cf }}</td>
+        </tr>
+        <tr class="[ table__row ]">
+          <th class="[ column--head column--sidebar column--blue ] [ text--left pl--050 ]">Unrelated Deaths</th>
+          <td class="[ text--center ]">{{ lang.NumFmt 1 (mul (div (float $unrelated) $totalCases ) 100) }}%</td>
+          <td class="[ column--blue ] [ text--center ]">{{ $unrelated }}</td>
+        </tr>
+        <tr class="[ table__row ]">
+          <th class="[ column--head column--sidebar column--blue ] [ text--left pl--050 ]"><abbr title='Deaths Under Investigation'>DUI</abbr></th>
+          <td class="[ text--center ]">{{ lang.NumFmt 1 (mul (div (float $dui) $totalCases ) 100) }}%</td>
+          <td class="[ column--blue ] [ text--center ]">{{ $dui }}</td>
+        </tr>
+        <tr> 
+          <th class="[ column--head column--sidebar column--blue ] [ text--left pl--050 ]">Total</th>
+          <td></td>
+          <td class="[ column--blue ] [ text--center ]">{{ lang.NumFmt 0 $totalCases }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <figcaption>Fig.1.1 — Aggregate of COVID-19 (Coronavirus) cases in The Bahamas as of {{ .Date.Format "Monday, Jan 2, 2006" }}.</figcaption>
+  </figure>
+  <figure class="[ mb--d15 ]">
+    <table class="[ table--rates ] [ mb--1 ]"> 
+      <thead> 
+        <tr> 
+          <th class="[ column--head column--sidebar column--blue ] [ text--left pl--050 ]">Rate</th>
+          <th class="[ text--center ]">%</th>
+          <th class="[ column--blue ] [ text--center ]">Per 100K</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th class="[ column--head column--sidebar column--blue ] [ text--left pl--050 ]">Recovery</th>
+          <td class="[ text--center ]">{{ lang.NumFmt 1 (mul (div (float $recovered) (add $cf $recovered) ) 100) }}%</td>
+          <td class="[ column--blue ] [ text--center ]">{{ lang.NumFmt 2 (mul (div $recovered $pop) 100000) }}</td>
+        </tr>
+        <tr>
+          <th class="[ column--head column--sidebar column--blue ] [ text--left pl--050 ]"><abbr title="Case Fatality Ratio">CFR</abbr></th>
+          <td class="[ text--center ]">{{ lang.NumFmt 1 (mul (div (float $cf) (add $cf $recovered) ) 100) }}%</td>
+          <td class="[ column--blue ] [ text--center ]">{{ lang.NumFmt 2 (mul (div $cf $pop) 100000) }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <figcaption> 
+      <p>Fig.1.2 — Recovery and Case Fatality Ratio (<abbr title="Case Fatality Ratio">CFR</abbr>) for COVID-19 (Coronavirus) pandemic in The Bahamas as of {{ .Date.Format "Monday, Jan 2, 2006" }}. </p>
+      <p>Metrics are calculated according to recommendations in the  <a href="https://www.who.int/publications/i/item/WHO-2019-nCoV-Sci-Brief-Mortality-2020.1"> <abbr title="World Health Organization">WHO </abbr>brief, <em>Estimating mortality from COVID-19.</em></a></p>
+    </figcaption>
+  </figure>
+</section>
+{{ end }}

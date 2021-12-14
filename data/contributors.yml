@@ -1,0 +1,88 @@
+### Are you a contributor? ###
+# Copy the below object...
+
+# con0001:
+#   name: Your Name
+#   website: #(www.)mywebsite.com #Company, personal or social media website
+
+# Naming Conventions
+# Each new contributor should increase the
+# object variable by one, ie 'con0001',
+# 'con0002', 'con0003'.
+
+# Your proper name is required. This is for 
+# recognition of your work and to help us
+# keep things looking respectable and professional.
+
+# Adding a website is optional. Whether, personal, company
+# or social that's up to you, but all links should be
+# HTTPS.
+
+# You can use either mydomain.com or www.mydomain.com.
+# The https:// prefix is already included in the template.
+
+#### BEFORE ADDING ANYTHING, 'git pull' AND VERIFY YOUR SPOT ###
+
+# If you're the first here, uncomment the 
+# below and fill out your info accordingly...
+# con0001:
+#   name: #Your Name
+#   website: #(www.)mywebsite.com #Personal or social media website
+
+
+con0003:
+  name: Javano Collins
+  website: https://www.linkedin.com/in/javano-collins/
+
+con004:
+  name: Allen McIntosh II
+  website: https://www.linkedin.com/in/allen-mcintosh-929542137
+
+con005:
+  name: Sowmya Thottambeti
+  website: https://www.linkedin.com/in/sowmyathottambeti/
+
+con006:
+  name: Edison Hanchell
+  website: https://www.linkedin.com/in/ehanchell/
+  
+con007:
+  name: La'Shae Sturrup
+  website: 
+
+con008:
+  name: Destiny Gibson
+  website:
+
+con009:
+  name: Morgan Jenkins
+  website:
+
+con010:
+  name: Madison Jenkins
+  website: 
+
+con010:
+  name: Anthia Adderley
+  website:
+
+con011:
+  name: Jusleen Sanghera
+  website:
+
+con012:
+  name: Cierra Rahming
+  website:
+
+con013:
+  name: Chrisworth Roberts
+  website: 
+
+# con014: 
+#   name: Raajni
+#   website: 
+
+con0014:
+  name: Joe Mooring
+  website: https://github.com/jmooring
+

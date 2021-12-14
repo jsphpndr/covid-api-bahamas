@@ -1,0 +1,5 @@
+{{ define "response" }}
+  [ {{ range $i, $e := .Data.Pages }}{{ if $i }}, {{ end }}
+    {{ .Render "item" }}{{ end }}
+  ]
+{{ end }}

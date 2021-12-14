@@ -1,0 +1,62 @@
+<section class="[ mb--2 ]">
+
+  <h2 class="[ title--bar ] [ h4 p--050 mb--050 ]">Vaccinations by Dosage</h2>
+
+
+  {{ $update := .Params.update }}
+  {{ $aggregate := $update.doses.aggregate }}
+  {{ $total := $aggregate.total }}
+  {{ $first := $aggregate.first }}
+  {{ $second := sub $total $first }}
+  {{ $full := $update.full }}
+  {{ $abroad := $update.abroad }}
+  {{ $jj := $update.jj }}
+
+  <figure class="[ mb--2 ]">
+
+    <table class="[ table mb--1 ]">
+      {{ with .NextInSection }}
+        {{ $prevSecondTotal := sub .Params.update.doses.aggregate.total .Params.update.doses.aggregate.first }}
+      {{end}}
+
+      <thead>
+        <th class="[ column--head column--blue ] [ text--left pl--1 ]">Dosage</th>
+        <th class="[ text--center ]" >New</th>
+        <th class="[ column--blue ] [ text--center ]">To Date</th>
+      </thead>
+
+      <tbody>
+        <tr>
+          <th class="[ column--head column--blue ] [ text--left pl--1 ]">First</th>
+          <td class="[ text--center ]">{{ with .NextInSection }}{{ $prevTotal := .Params.update.doses.aggregate.first }}{{ lang.NumFmt 0 (sub $aggregate.first $prevTotal) }}{{end}}</td>
+          <td class="[ column--blue ] [ text--center ]">{{ lang.NumFmt 0 $first }}</td>
+        </tr>
+        <tr>
+          <th class="[ column--head column--blue ] [ text--left pl--1 ]">{{ if $jj }}Fully Vaccinated{{else}}Second{{end}}</th>
+          <td class="[ text--center ]">{{ with .NextInSection }}{{ $prevTotal := sub .Params.update.doses.aggregate.total .Params.update.doses.aggregate.first }}{{ lang.NumFmt 0 (sub $second $prevTotal) }}{{end}}</td>
+          <td class="[ column--blue ] [ text--center ]">{{ lang.NumFmt 0 $second }}</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th class="[ column--head column--blue ] [ text--left pl--1 ]">Totals</th>
+          <td class="[ text--center bold ]">{{ with .NextInSection }}{{ $prevTotal := .Params.update.doses.aggregate.total }}{{ lang.NumFmt 0 (sub $aggregate.total $prevTotal) }}{{end}}</td>
+          <td class="[ column--blue ] [ text--center bold ]">{{ lang.NumFmt 0 (add $first $second) }}</td>
+        </tr>
+      </tfoot>
+  
+    </table>
+    <figcaption>
+    <p><strong>Note:</strong> Figures represent dosages of vaccinations administered locally. <b>First</b> refers to those persons having only received one dose of a two dose vaccination{{ if eq $jj true }} and exclusive of Johnson & Johnson{{end}}.</p>
+    {{ if eq $update.pfizer true }}
+    
+      <p><strong>Note:</strong> {{ $update.pfizernote }}</p>
+      {{ if eq $jj true }}
+      <p><strong>Note:</strong> {{ $update.jjnote }}</p>
+      <p><strong>Note:</strong> Due to the introduction of Johnson & Johnson single dose vaccination and deficiencies in The Government of The Bahamas' configuration and presentation of data, it is no longer possible to report on second dosages, so the category of <b>Second</b> has been modified to <b>Fully Vaccinated</b>.</p>
+      {{end}}
+    {{end}}
+    </figcaption>
+  </figure>
+
+</section>

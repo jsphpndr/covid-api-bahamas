@@ -1,0 +1,39 @@
+<section class="[ mb--2 page--break ]">
+  
+  <h2 class="[ title--bar ] [ h4 p--050 mb--050 ]">Cases by Island</h2>
+
+  <figure>
+    <table class="[ table ]{{if .Params.report.cases.error}} [ mb--1 ]{{end}}">
+
+      <thead>
+  
+        <tr>
+          <th class="[ column--head column--blue ] [ text--left pl--1 ]">Island</td>
+          <th class="[ text--center ]">New</td>
+          <th class="[ column--blue ] [ text--center ]">To Date</td>
+        </tr>
+  
+      </thead>
+  
+      <tbody>
+        {{ range $i, $e := .Params.report.cases.byIsland }}
+        <tr>
+          <th class="[ column--head column--blue ] [ text--left pl--1 ]">{{ .island.name }}</th>
+          <td class="[ text--center ]">{{ if eq .island.new 0 }}-{{ else }}{{ lang.NumFmt 0 .island.new }}{{ end}}</td>
+          <td class="[ column--blue ] [ text--center ]">{{ lang.NumFmt 0 .island.toDate }}</td>
+        </tr>
+        {{ end }}
+        <tr>
+          <th class="[ column--head column--blue ] [ text--left pl--1 ]">Totals</th>
+          <td class="[ text--center bold ]">{{ lang.NumFmt 0 .Params.report.cases.newTotal }}</td>
+          <td class="[ column--blue ] [ text--center bold ]">{{ lang.NumFmt 0 .Params.report.cases.toDateTotal }}</td>
+        </tr>
+      
+      </tbody>
+  
+    </table>
+    {{if .Params.report.cases.error}}<figcaption><strong>Note:</strong> {{.Params.report.cases.error}}</figcaption>{{end}}
+
+  </figure>
+
+</section>

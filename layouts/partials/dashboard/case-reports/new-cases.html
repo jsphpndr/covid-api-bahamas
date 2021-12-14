@@ -1,0 +1,30 @@
+{{ range ( where .Site.RegularPages.ByDate "Type" "reports" | last 1 ).Reverse  }}
+<section>{{ $report := .Params.report }}{{ $cases := $report.cases}}
+  <h2 class="[ h4 p--050 mb--050 ]">New Cases</h2>
+  <figure class="[ mb--d15 ]">{{ $newTotal := $cases.newTotal }}
+    <table class="[ table--aggregate ] [ mb--1 ]">
+      <thead>
+        <tr>
+          <th class="[ column--head column--sidebar column--blue ] [ text--left pl--050 ]">Status </th>
+          <th class="[ text--center ]">%</th>
+          <th class="[ column--blue ] [ text--center ]">Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{ range $cases.bySex }}
+        <tr> 
+          <th class="[ column--head column--sidebar column--blue ] [ text--left pl--050 ]">{{ .group.sex }}</th>
+          <td class="[ column--head ] [ text--center ]">{{ lang.NumFmt 1 (mul (div (float .group.new) $newTotal ) 100) }}%</td>
+          <td class="[ column--head column--sidebar column--blue ] [ text--center ]">{{ .group.new }}</td>
+        </tr>{{end}}
+        <tr>
+          <th class="[ column--head column--sidebar column--blue ] [ text--left pl--050 ]">Total</th>
+          <td></td>
+          <td class="[ column--blue ] [ text--center ]">{{ $newTotal }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <figcaption>Fig.3 — Current COVID-19 (Coronavirus) vaccination status of population in The Bahamas as of {{ .Date.Format "Monday, Jan 2, 2006" }}.</figcaption>
+  </figure>
+</section>
+{{ end }}

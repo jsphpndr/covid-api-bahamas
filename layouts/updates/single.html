@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>COVID-19 Vaccination Update {{ .Title }} | COVID-19 API | Bahamas</title>
+    <meta name="description" content="COVID-19 Vaccination Update {{ .Title }} issued on {{ .Date | dateFormat "Monday, Jan 2, 2006" }} from The Bahamas' Ministry of Health & Wellness.">
+    {{ partial "head/defaults.html" . }}{{ .Scratch.Set "report" "COVID-19 Vaccination Update" }}
+    {{ partial "head/social/single.html" . }}
+    {{ partial "head/ga.html" . }}
+  </head>
+<body>
+
+  {{ partial "navbar.html" . }}
+
+  <main class="[ main ]">
+
+    <header class="[ hero ] [ py--3 ]">
+
+      <div class="[ wrapper ] [ x--wide ]">
+        <h1>COVID-19 Vaccination Update {{ .Title }}</h1>
+
+        <p class="ch--45">COVID-19 Vaccination Update {{ .Title }} issued on <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}">{{ .Date | dateFormat "Monday, Jan 2, 2006" }}</time> from The Bahamas' Ministry of Health & Wellness.</p>
+  
+        <div class="[ flex--middle flex--wrap mb--1 ]">
+          <a class="[ btn btn--solid--lg btn--blk btn--flex ] [ mr--1 ]" href="/">View Dashboard</a>
+          {{ range ( where .Site.RegularPages.ByTitle "Type" "reports" | last 1 ).Reverse  }}
+          <a class="[ btn btn--ghost--lg btn--flex ]" href="{{ .Permalink }}">Latest Report</a>
+          {{ end }}
+        </div>
+
+        <p>Want to support this project? <a href="/become-sponsor">Become a sponsor</a>.</p>
+        
+      </div>
+    
+    </header>
+
+    <div class="[ share__bar ] [ x--wide flex--between--middle flex--wrap g--1 pt--d15 pb--2 no--print ]">
+
+      <nav class="[ breadcrumbs ]">
+
+        <ul class="[ flex ]">
+          <li class="[ breadcrumb__item ] [ mr--1 ]"><a href="/">Home</a></li>
+          <li class="[ breadcrumb__item ] [ wsnw mr--1 ]"><a href="/updates/">COVID-19 Vaccination Updates</a></li>
+          <li class="[ breadcrumb__item ]">COVID-19 Vaccination Update {{ .Title }}</li>
+        </ul>
+
+      </nav>
+
+      <div class="[ flex--middle ]">
+        <span class="[ mr--1 ]">Share on:</span>
+        {{ partial "social/single.html" . }}
+      </div>
+
+    </div>
+
+    <div class="[ x--wide ]">
+
+      {{ partial "updates/totals.html" .  }}
+
+      {{ partial "updates/abroad.html" . }}
+
+      {{ partial "updates/pop.html" . }}
+
+      {{ partial "updates/eligible.html" . }}
+
+      {{ partial "updates/goal.html" . }}
+      
+      {{ if eq .Params.update.jj true }}
+      {{ partial "updates/byIsland-full.html" . }}
+      {{ else }}
+      {{ partial "updates/byIsland-second.html" . }}
+      {{ end }}
+
+      {{ range $index, $num := .Params.updates.second (seq 2) }}
+      {{$indexStartingAt1 := (sub $index 1)}}
+      {{ $indexStartingAt1 }}
+      {{ end }}
+
+    </div>
+    
+    {{ $contributor := .Params.contributor }}
+    {{ $link := .Params.con__link}}
+    {{ if $contributor }}<div class="[ x--wide bold text--center ]">Report contributed by {{ if $link }}<a href="{{ $link }}" rel="noopener" target="_blank">{{ $contributor}}</a>{{ else }}{{ $contributor}}{{ end }}</div>{{end}}  
+    
+  </main>
+
+  {{ .Scratch.Set "report" "Update" }}
+  {{ partial "components/pagination.html" . }}
+
+  {{ partial "footer.html" }}
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+{{ $currentInHospital := 0 }}
+{{ range ( where .Site.RegularPages.ByTitle "Type" "reports" | last 1 ).Reverse  }}
+    {{ $current := .Params.report.cases.inHospital.totals.total }}
+    {{ $currentInHospital = mul (add $currentInHospital $current) 2 }}
+{{ end }}
+{{ $prevInHospital := 0 }}
+{{ range ( where .Site.RegularPages.ByTitle "Type" "reports" | last 2 ).Reverse  }}
+    {{ $previous := .Params.report.cases.inHospital.totals.total }}
+    {{ $prevInHospital = add $prevInHospital $previous }}
+{{ end }}
+{{ $hospitalization := sub $currentInHospital $prevInHospital }}
+{{ range ( where .Site.RegularPages.ByDate "Type" "reports" | last 1 ).Reverse  }}
+  {{ $report := .Params.report }}
+  {{ $cases := $report.cases }}
+  {{ $active := $cases.active }}
+<div class="[ wrapper ] [ x--wide ]">
+  <ul class="[ carousel ] [ flex flex--wrap ]">
+    <li class="[ stats--current ] [ text--center py--1 mb--1 ml--1 ]">
+      <h2 class="[ h5 upper ]">Active</h2><span class="[ h1 bold ]">{{ $active }}</span>
+    </li>
+    <li class="[ stats--current ] [ text--center py--1 mb--1 ml--1 ]">
+      <h2 class="[ h5 upper ]">New</h2><span class="[ h1 bold ]">{{if gt $cases.newTotal 0 }}+{{end}}{{ $cases.newTotal }}</span>
+    </li>
+    <li class="[ stats--current ] [ text--center py--1 mb--1 ml--1 ]">
+      <h2 class="[ h5 upper ]">Recovered</h2><span class="[ h1 bold ]">{{if gt $cases.recovered.new 0 }}+{{end}}{{ $cases.recovered.new }}</span>
+    </li>
+    {{ end }}
+    <li class="[ stats--current ] [ text--center py--1 mb--1 ml--1 ]">
+      <h2 class="[ h5 upper ]">Hospitalized</h2><span class="[ h1 bold ]">{{if gt $hospitalization 0 }}+{{end}}{{$hospitalization}}</span>
+    </li>
+    {{ $pages := where site.RegularPages.ByTitle.Reverse "Section" "reports" }}
+
+    {{ range ( where .Site.RegularPages.ByDate "Type" "reports" | last 1 ).Reverse  }}
+    <li class="[ stats--current ] [ text--center py--1 mb--1 ml--1 ]">
+      <h2 class="[ h5 upper ]">Deaths</h2><span class="[ h1 bold ]">{{ if eq .Params.report.ifReported true }}+{{ len .Params.report.reportedFatalities }}{{else}}0{{ end }}</span>
+    </li>
+    {{end}}
+  </ul>
+</div>
+
+
+
+
+
+

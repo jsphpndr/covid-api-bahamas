@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>{{ .Title }} | COVID-19 API | Bahamas</title>
+    <meta name="description" content="Access COVID-19 (Coronavirus) case and vaccination data for The Bahamas from The Ministry of Health & Wellness' COVID-19 Case Reports and COVID-19 Vaccination Updates.">
+    {{ partial "head/canonical.html" . }}
+    {{ partial "head/defaults.html" . }}
+    {{ partial "head/social/list.html" . }}
+    {{ partial "head/ga.html" . }}
+  </head>
+  <body>
+    {{ partial "navbar.html" . }}
+    <main class="[ main ] [ mb--3 ]">
+
+      <header class="[ hero ] [ py--3 ]">
+        
+        <div class="[ wrapper ] [ x--wide ]">
+
+          <h1>{{ .Title }}</h1>
+
+          <p class="ch--45">{{.Summary}}</p>
+
+        </div>
+
+      </header>
+      
+      <div class="[ share__bar ] [ x--wide flex--between--middle flex--wrap g--1 pt--d15 pb--2 no--print ]">
+
+        <nav class="[ breadcrumbs ]">
+  
+          <ul class="[ flex ]">
+            <li class="[ breadcrumb__item ] [ mr--1 ]"><a href="/">Home</a></li>
+            <li class="[ breadcrumb__item ]">{{ .Title }}</li>
+          </ul>
+  
+        </nav>
+  
+        <div class="[ flex--middle ]">
+          <span class="[ mr--1 ]">Share on:</span>
+          {{ partial "social/list.html" . }}
+        </div>
+  
+      </div>
+
+      <article class=" [ heading--margin ][ x--wide ]">
+        {{ .Content }}
+
+        <h2 >We Need Your Help</h2>
+
+        {{ $reports := (where .Site.RegularPages "Section" "==" "reports") }}
+        {{ $reportsCount := len $reports }}
+
+        <p>Here's where we are...</p>
+
+        <p>All COVID-19 Vaccination Updates have been entered and made available.</p>
+        
+        <p>And so far, we've completed {{ $reportsCount }} of {{ range ( where .Site.RegularPages.ByDate "Type" "reports" | last 1 ).Reverse  }}{{ .Params.report.number }}{{end}} COVID-19 Case Reports and working our way up.</p>
+
+        <p>There's a number of features we'd like to add and ongoing development, maintenance costs and lots and lots of things we'd like to do, but just like you, we've only got so much time, effort and money.</p>
+
+        <p>That being said, it sure would be nice to have some help keeping the lights on and all that.</p>
+
+        <p>So, here's how you can help...</p>
+
+        <h2 >Make A Donation</h2>
+
+        <p>We're not asking for much.</p>
+        
+        <p>Well, maybe lunch... but if you can and you're willing, you can make a small donation to help support this site, the API and future developments.</p>
+
+        <div class="[ grid x2--xs x4--md g--1 mb--2 ]">
+          <a class="[ btn btn--ghost--lg flex--center--middle ]" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=j_pinder.us@outlook.com&item_name=Supporters+of+the+COVID-19+API&item_number=COVID-19+API+Campaign&amount=10%2e00&currency_code=USD" rel="noopener" target="_blank">$10</a>
+          <a class="[ btn btn--ghost--lg flex--center--middle ]" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=j_pinder.us@outlook.com&item_name=Supporters+of+the+COVID-19+API&item_number=COVID-19+API+Campaign&amount=25%2e00&currency_code=USD" rel="noopener" target="_blank">$25</a>
+          <a class="[ btn btn--ghost--lg flex--center--middle ]" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=j_pinder.us@outlook.com&item_name=Supporters+of+the+COVID-19+API&item_number=COVID-19+API+Campaign&amount=50%2e00&currency_code=USD" rel="noopener" target="_blank">$50</a>
+          <a class="[ btn btn--ghost--lg flex--center--middle ]" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=j_pinder.us@outlook.com&item_name=Supporters+of+the+COVID-19+API&item_number=COVID-19+API+Campaign&amount=100%2e00&currency_code=USD" rel="noopener" target="_blank">$100</a>
+        </div>
+
+        <h2>Corporate Sponsorship</h2>
+
+        <p>We know that there are any number of charities, causes and projects that businesses in The Bahamas support, but we're asking for just one more.</p>
+
+        <p>We're hoping this website and the API itself will prove a benefit to individuals and institutions alike for projects like, I don't know... <a href="https://www.instagram.com/p/CU-1HLfvNsl/" rel="noopener" target="_blank">helping high school kids learn how to code</a>.</p>
+        
+        <p>We expect this project to last over the next 3-6 months (counting on the pandemic to be over by then) and we're looking for a monthly commitment to help keep things going.</p>
+
+        <p>Here's how you can partner with us.</p>
+
+        <h3>Silver</h3>
+
+        <p class="[ bold ]">$250 p/m</p>
+
+        <p>Hey, every bit counts, so we're starting with something that everyone can afford.</p>
+        
+        <p>With a pledge of $250 whether per month or just for the month, you'll have your logo — linked to your business website or social media page — featured on this page.</p>
+
+        <p>We're sure some people will look at it... but, if you need a little more exposure... Then go for Gold. Literally.</p>
+
+        <h3>Gold</h3>
+
+        <p class="[ bold ]">$500 p/m</p>
+
+        <p>Needing that exposure, huh? Don't we all.</p>
+
+        <p>So, your logo — linked to your website or social media page — will still be featured on this page, but...</p>
+
+        <p>Everytime someone lands on our homepage, guess what they'll see? Your logo.</p>
+
+        <p>See what we did there? Thought you might like that.</p>
+
+        <p>Need more? There's all kinds of options left.</p>
+        
+        <p>Well, one.</p>
+        
+        <p>There's just one option left...</p>
+        
+        <p>buuuut...</p>
+        
+        <p>It's Platinum, baby!</p>
+
+        <h3>Platinum</h3>
+
+        <p class="[ bold ]">$1000 p/m</p>
+
+        <p>We're gonna' <a href="https://www.youtube.com/watch?v=5AxwaszFbDw">make the logo bigger</a>. LIKE SO BIG!</p>
+
+        <p>Have your logo — linked to your business website or social media page — featured on every page and, and... </p>
+        
+        <p>Wait for it...</p>
+        
+        <p>Your business' logo will be included in our daily newsletter updates. That's 30 days of direct, in your face advertising to Bahamian consumers.</p>
+
+        <p>Your business will also have first dibs to future projects and be featured on any adjoining projects, marketing campaigns and shoutouts on our social media page.</p>
+        
+        <p>Wow.</p>
+
+        <p>This is powerful.</p>
+
+        <h3>Want to do more?</h3>
+
+        <p>Ok, big spender... it's totally up to you.</p>
+
+        <p>We're just happy for the help.</p>
+        {{ $subject := "We Want To Sponsor" }}
+        {{ $body := "Hey%2C%20thanks%20for%20the%20support!%0A%0AWhere%20you%20just%20came%20from%3A%20http%3A%2F%2Flocalhost%3A1313%2Fbecome-sponsor%2F%0A%0AHere%27s%20what%20we%20need%20from%20you%3F%0A%0ABusiness%20Name%3A%20%0ABusiness%20URL%3A%20i.e.%20https%3A%2F%2Fmyshop.com%0AContact%20Person%3A%0ABusiness%20Telephone%3A%0A%0ALogo%20Requirements%3A%0A%0AFormat%3A%20AI%2C%20SVG%2C%20EPS%2C%20PDF%0AStyle%3A%20Print%2FSilhouette%20(Black%20and%20White)%20Copy%0A%0AAttach%20a%20copy%20of%20your%20business%20logo%20to%20this%20email.%0A%0ABusiness%20URL%20Requirements%3A%20%0A%0AFor%20website%20security%20and%20performance%2C%20all%20website%20links%20should%3A%0A%0A-%20have%20an%20SSL%20certificate%2C%0A-%20and%20be%20HTTPS%20enabled.%0A%0AIf%20it%27s%20not%2C%20let%20us%20know%20and%20with%20your%20commitment%20we%20can%20work%20to%20help%20with%20that%2C%20too.%0A%0AWhat%27s%20your%20commitment%3F%0A%0ASilver%20%7C%20%24250%0A%0ALogo%20-%20linked%20to%20your%20website%20or%20social%20media%20page%20%E2%80%94%20on%20Sponsor%20Page%0A%0AGold%20%7C%20%24500%0A%0ALogo%20-%20linked%20to%20your%20website%20or%20social%20media%20page%20%E2%80%94%20on%20Sponsor%20Page%20and%20Homepage%20(Higher%20Visibility).%0A%0APlatinum%20%7C%20%241000%0A%0AYour%20logo%20%E2%80%94%20linked%20to%20your%20business%20website%20or%20social%20media%20page%20%E2%80%94%20featured%20on%20every%20page%20and%20included%20in%20our%20daily%20newsletter%20updates%20(Direct%20to%20consumer%20advertising).%0A%0AYour%20business%20will%20also%20have%20first%20dibs%20to%20future%20projects%20and%20be%20featured%20on%20any%20adjoining%20projects%2C%20marketing%20campaigns%20and%20shoutouts%20on%20our%20social%20media%20page.%0A%0A%3D%3D%3D%3D%0A%0AJust%20want%20to%20support%3F%20You%20can%20do%20that%2C%20too.%20Tell%20us%20what%20you%27re%20willing%20to%20contribute.%0A%0A%3D%3D%3D%3D%0A%0AHow%20many%20months%20are%20you%20willing%20to%20offer%20support%3F%20i.e.%20(1%2C%203%2C%206)%20months%0A%0A%3D%3D%3D%3D%0A%0ANow%2C%20that%20we%27re%20done%20with%20all%20the%20details...%20send%20this%20email%2C%20letting%20us%20know%20the%20method%20in%20which%20you%20wish%20to%20pay%2C%20whether%20cheque%2C%20card%20(PayPal%20or%20Wave)%20or%20wire%20(Local%20or%20US%20bank).%0A%0A%3D%3D%3D%3D%20%0A%0AWe%20are%20grateful%20and%20appreciative%20of%20every%20bit%20of%20generosity%20offered%20to%20us.%0A%0AHave%20any%20questions%3F%20Don%27t%20hesitate%20to%20get%20in%20touch.%0A%0AThank%20you%2C%0A%0AJoseph%20Pinder%0ACreator%0ACOVID-19%20API%20Bahamas%0AOpen%20Source%20Project%0A242-376-3340%0A754-300-0120%0A%0A%0A%0A%0A%0A%0A"}}
+        <p>You can contact us about this or any of the other above options at <template obscure data-p1="support" data-p2="covidbahamas.app">
+          <a href="mailto::1@:2?subject={{$subject | safeURL}}&body={{$body | safeURL}}">:1@:2</a>
+        </template>.</p>
+
+        <h2>Don't Have Money?</h2>
+
+        <p>Hey, the heart is willing, but the pocket is weak.</p>
+
+        <p>We understand.</p>
+        
+        <p>We've all been there, but you can still help. Here's how...</p>
+
+        <h3>Become A Contributor</h3>
+
+        <p>This project is open source resource and we're not exactly raking in the cash, so we rely on the contributions of people just like you.</p>
+
+        <p>Join others who have supported the API and have dedicated time and effort to entering and uploading report data.</p>
+
+        <p>We’ve had coders and non-coders alike working and learning together to make this project awesome and a resource for all.</p>
+
+        <p>If you become a contributor, your name — linked to your personal website or social media profile, if you’d like — will be added to the homepage and show up on each report that you filled out.</p>
+
+        <p>Interested? Hop on over to <a href="https://github.com/jsphpndr/covid-api-bahamas" rel="noopener" target="_blank">the repository on GitHub</a>, follow the instructions and get started.</p>
+
+        <h3>Still Not Your Thing?</h3>
+
+        <p>That's ok.</p>
+        
+        <p>Share this site, reports and updates with your friends, family and wider community. Put these reports and updates in your WhatsApp groups or wherever you have a space.</p>
+        
+        <h2>T'anks</h2>
+
+        <p>At the end of it all, we're grateful for whatever level of support you're able to give. So, umm... t'anks, ay.</p>
+
+      </article>
+
+    </main>
+    {{ partial "footer.html" }}
+    <script src="/scripts/obscure{{if eq .Site.Params.pro true }}-{{ .Site.Params.version }}.min{{ else }}.build{{ end }}.js" async></script>
+  </body>
+</html>

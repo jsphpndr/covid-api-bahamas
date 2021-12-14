@@ -1,0 +1,7 @@
+{{ $pop := 389410.00 }}
+{{ range ( where .Site.RegularPages.ByDate "Type" "reports" | last 1 ).Reverse  }}
+<section class="[ stats--current ] [ text--center px--050 py--1 mb--1 ]"> 
+  <h2 class="[ h5 upper ]">Affected Population</h2>{{ $affected := mul (div .Params.report.cases.active $pop) 100 }}
+  <span class="[ h1 bold ]">{{ lang.NumFmt 2 $affected  "- ." | safeJS }}%</span>
+</section>
+{{ end }}

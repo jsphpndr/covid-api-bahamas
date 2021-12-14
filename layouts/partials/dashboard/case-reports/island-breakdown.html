@@ -1,0 +1,60 @@
+
+{{ $sumByIsland := "" }}
+{{ range ( where .Site.RegularPages.ByTitle "Type" "reports" | last 28 ).Reverse  }}
+
+{{ $sumByIsland = .Params.report.cases.byIsland}}
+{{end}}
+
+{{ range ( where .Site.RegularPages.ByDate "Type" "reports" | last 1 ).Reverse  }}
+
+<section class="mb--2">
+  <h2 class="[ h4 p--050 mb--050 ]">Cases By Island</h2>
+  <figure>{{ $cases := .Params.report.cases }}
+    <div class="[ wrapper for--table ]">{{ $newTotal := $cases.newTotal }}
+      <table class="[ table--breakdown ] [ mb--1 ]">{{ $toDateTotal := $cases.toDateTotal}}
+        <thead>
+          <tr> 
+            <th class="[ column--head column--blue text--left pl--1 ]">Island</th>
+            <th colspan="2">New Cases </th>
+            <!-- <th class="[ column--blue ]" colspan="2">Last 28 Days</th> -->
+            <th class="[ column--blue ]" colspan="2">Total Cases </th>
+          </tr>
+        </thead>
+        <tbody>
+          {{ range $cases.byIsland }}
+
+          {{ $new := .island.new }}
+          {{ $toDate := .island.toDate }}
+          {{ $new28 := 0 }}
+          {{ $toDate28 := 0}}
+          {{ $islandName := .island.name }}
+          {{ with $sumByIsland}}
+          {{end}}
+          <tr> 
+            <th class="[ column--head column--blue ] [ text--left pl--1 ]">{{ .island.name }}</th>
+            <td class="[ text--center ]">{{if eq $new 0}}—{{else}}{{ lang.NumFmt 1 (mul (div (float $new) $newTotal) 100) }}%{{end}}</td>
+            <td class="[ text--center ]">{{if eq $new 0}}—{{else}}{{ $new }}{{end}}</td>
+            <!-- <td class="[ column--blue text--center ]">85.8%</td> -->
+            <!-- <td class="[ column--blue text--center ]">337</td> -->
+            <td class="[ column--blue ] [ text--center ]">{{if eq $toDate 0}}—{{else}}{{ lang.NumFmt 1 (mul (div (float $toDate) $toDateTotal) 100) }}%{{end}}</td>
+            <td class="[ column--blue ] [ text--center ]">{{if eq $toDate 0}}—{{else}}{{ lang.NumFmt 0 $toDate }}{{end}}</td>
+          </tr>
+          {{ end }}
+        </tbody>
+        <tfoot>
+          <tr>
+            <th class="[ column--head column--blue text--left pl--1 ]">Totals</th>
+            <td></td>
+            <td class="[ text--center ]">{{ $newTotal }}</td>
+            <!-- <td class="[ column--blue ]"></td> -->
+            <!-- <td class="[ column--blue text--center ]">393</td> -->
+            <td class="[ column--blue ]"></td>
+            <td class="[ column--blue ] [ text--center ]">{{lang.NumFmt 0 $toDateTotal}}</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <figcaption>Fig.5 — This table reflects new, month to date and total COVID-19 case data by island in The Bahamas as of September 11, 2021.</figcaption>
+  </figure>
+</section>
+{{end}}

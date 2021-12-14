@@ -1,0 +1,55 @@
+<section class="[ mb--2 {{if eq .Params.report.cases.ifTravelHistory false }}page--break{{end}} ]">
+
+  <h2 class="[ title--bar ] [ h4 p--050 mb--050 ]">Active Cases</h2>
+
+  <figure>
+
+    <table class="[ table ]">
+
+      <thead>
+        <th class="[ column--head column--blue ] [ text--left pl--1 ]">Active</th>
+        <th class="[ text--center ]">Total</th>
+      </thead>
+
+      <tbody>
+        <tr>
+          <th class="[ column--head column--blue ] [ text--left pl--1 ]">Report Date</th>
+          <td class="[ text--center ]">{{ .Params.report.cases.active }}</td>
+        </tr>
+      </tbody>
+  
+    </table>
+
+  </figure>
+
+</section>
+
+<section class="[ mb--2 ]">
+
+  <h2 class="[ title--bar ] [ h4 p--050 mb--050 ]">Recovered Cases</h2>
+
+  <figure>
+
+    <table class="[ table ]">
+
+      <thead>
+        <tr>
+          <th class="[ column--head column--blue ] [ text--left pl--1 ]">Recovered</th>
+          <th class="[ text--center ]">Report Date</th>
+          <th class="[ column--blue ] [ text--center ]">To Date</th>
+        </tr>
+      </thead>
+      
+      <tbody>
+        <tr>
+          <th class="[ column--head column--blue ] [ text--left pl--1 ]">Total</th>
+          <td class="[ text--center ]">{{ if eq .Params.report.cases.recovered.new 0 }}—{{else}}{{ lang.NumFmt 0 .Params.report.cases.recovered.new }}{{end}}</td>
+          <td class="[ column--blue ] [ text--center ]">{{ lang.NumFmt 0 .Params.report.cases.recovered.toDate }}</td>
+        </tr>
+      </tbody>
+  
+    </table>
+
+  </figure>
+
+</section>

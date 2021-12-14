@@ -1,0 +1,18 @@
+<input id="click" type="checkbox" aria-labelledby="menu-prompt">
+<header class="[ navbar ]">
+  <div class="[ wrapper ] [ x--wide--p flex--wrap flex--between--middle ]">
+    <a class="[ logo ] [ flex--middle ]" href="/" aria-label="Home">{{ partial "graphics/covid.svg"}}</a>
+    <label class="[ navicon ] [ flex--middle ]" id="navicon" for="click">
+      <span id="menu-prompt">Open the menu</span>
+      <b class="[ bar ]"></b>
+    </label>
+    <nav class="[ navbar__menu ]">
+      <ul class="[ menu ]">
+        <li class="[ menu__item{{ if .Scratch.Get "forReports" }} current{{ end }} ]"><a class="[ menu__link ]" href="/reports">Case Reports</a></li>
+        <li class="[ menu__item{{ if .Scratch.Get "forUpdates" }} current{{ end }} ]"><a class="[ menu__link ]" href="/updates">Vaccinations</a></li>
+        <li class="[ menu__item{{ if .Scratch.Get "forAbout" }} current{{ end }} ]"><a class="[ menu__link ]" href="/about-project">About Us</a></li>
+        <li class="[ menu__item{{ if .Scratch.Get "forSponsor" }} current{{ end }} ]"><a class="[ menu__link ]" href="/contact-us">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

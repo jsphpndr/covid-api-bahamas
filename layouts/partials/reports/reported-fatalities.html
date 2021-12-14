@@ -1,0 +1,64 @@
+<section {{if .Params.contributor}}class="[ pb--2 ]"{{end}}>
+  <h2 class="[ title--bar ] [ h4 p--050 mb--050 ]">Deaths Reported</h2>
+
+  {{if eq .Params.report.ifReported true }}
+  <figure class="[ mb--2 ]">
+    <div class="[ wrapper for--table ]">
+      <table class="[ table--breakdown ] [ mb--1 ]">
+  
+        <thead>
+          <tr>
+            <th class="[ column--head column--blue ] [ text--left pl--1 ]">Island</th>
+            <th class="[ text--center ]">Age</th>
+            <th class="[ column--blue ] [ text--center ]">Sex</th>
+            <th class="[ text--center ]">Date of Death</th>
+          </tr>
+        </thead>
+      
+        <tbody>
+          {{ range $i, $e := .Params.report.reportedFatalities }}
+          <tr>
+            <th class="[ column--head column--blue ] [ text--left pl--1 ]">{{ .fatality.island }}</td>
+            <td class="[ text--center ]">{{ .fatality.age }}</td>
+            <td class="[ column--blue ] [ text--center ]">{{ .fatality.sex }}</td>
+            <td class="[ text--center ]">{{ .fatality.date  | dateFormat "Jan 2, 2006" }}</td>
+          </tr>
+          {{ end }}
+        </tbody>
+      
+      </table>
+    </div>
+    <figcaption>
+      <p><strong>Note:</strong> A total of {{ len .Params.report.reportedFatalities }} case fatalit{{if eq (len .Params.report.reportedFatalities) 1 }}y was{{else}}ies were{{ end }} reported on this report date: {{ .Date | dateFormat "Monday, Jan 2, 2006" }}.</p>
+      <p><strong>Note:</strong> <em>Reported</em> refers to confirmed COVID-19 case fatalities reported on this report date but which may or may not have occurred on this report date.</p>
+      <p><strong>Note:</strong> Island indicates island of residence.</p>
+    </figcaption>
+  </figure>
+  {{ end }}
+  
+  <table class="[ table ]">
+  
+    <thead>
+      <tr>
+        <th class="[ column--head column--blue ] [ text--left pl--1 ]">To Date</th>
+        <th class="[ text--center ]">Total</th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <tr>
+        <th class="[ column--head column--blue ] [ text--left pl--1 ]">Case Fatalities</th>
+        <td class="[ text--center ]">{{ .Params.report.cases.fatalities.toDate }}</td>
+      </tr>
+      <tr>
+        <th class="[ column--head column--blue ] [ text--left pl--1 ]">Unrelated Deaths</th>
+        <td class="[ text--center ]">{{ .Params.report.cases.fatalities.unrelatedToDate }}</td>
+      </tr>
+      <tr>
+        <th class="[ column--head column--blue ] [ text--left pl--1 ]">Under Investigation</th>
+        <td class="[ text--center ]">{{ .Params.report.cases.fatalities.underInvestigation }}</td>
+      </tr>
+    </tbody>
+    
+  </table>
+</section>

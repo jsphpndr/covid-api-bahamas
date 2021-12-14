@@ -1,0 +1,68 @@
+{{ $pop := 389410.00 }}
+{{ $prevTotalICU := 0}}
+{{ $prevTotalNonICU := 0}}
+{{ $prevTotalInHospital := 0 }}
+{{ range ( where .Site.RegularPages.ByTitle "Type" "reports" | last 2 ).Reverse  }}
+    {{ $previousICU := .Params.report.cases.inHospital.totals.icu }}
+    {{ $previousNonICU := .Params.report.cases.inHospital.totals.nonICU }}
+    {{ $previousTotal := .Params.report.cases.inHospital.totals.total }}
+    {{ $prevTotalICU = add $prevTotalICU $previousICU }}
+    {{ $prevTotalNonICU = add $prevTotalNonICU $previousNonICU }}
+    {{ $prevTotalInHospital = add $prevTotalInHospital $previousTotal }}
+{{ end }}
+{{ range ( where .Site.RegularPages.ByDate "Type" "reports" | last 1 ).Reverse  }}
+<section>{{ $report := .Params.report }}{{ $cases := $report.cases }}{{ $active := $cases.active }}
+  <h2 class="[ h4 p--050 mb--050 ]">Hospitalization</h2>{{ $inHospital := $cases.inHospital.totals }}
+  <figure class="[ mb--1 ]">{{ $icu := $inHospital.icu }}
+    <table class="[ table--aggregate ] [ mb--1 ]">
+      <thead>{{ $nonICU := $inHospital.nonICU }}
+        <tr>{{ $total := $inHospital.total }}
+          <th class="[ column--head column--sidebar column--blue ] [ text--left pl--050 ]">Care Unit </th>
+          <th class="[ text--center ]">New</th>
+          <th class="[ column--blue text--center ]">Total</th>
+        </tr>{{ $icuPointChange := sub (mul $icu 2) $prevTotalICU }}
+      </thead>{{ $nonICUPointChange := sub (mul $nonICU 2) $prevTotalNonICU }}
+      <tbody>{{ $totalPointChange := sub (mul $total 2) $prevTotalInHospital }}
+        <tr> 
+          <th class="[ column--head column--sidebar column--blue ] [ text--left pl--050 ]">Non-ICU</th>
+          <td class="[ text--center ]">{{if eq $nonICUPointChange 0}}—{{else}}{{ if gt $nonICUPointChange 0 }}+{{end}}{{$nonICUPointChange}}{{end}}</td>
+          <td class="[ column--blue text--center ]">{{if eq $nonICU 0}}—{{else}}{{ $nonICU }}{{end}}</td>
+        </tr>
+        <tr> 
+          <th class="[ column--head column--sidebar column--blue ] [ text--left pl--050 ]">ICU</th>
+          <td class="[ text--center ]">{{if eq $icuPointChange 0}}—{{else}}{{ if gt $icuPointChange 0 }}+{{end}}{{$icuPointChange}}{{end}}</td>
+          <td class="[ column--blue text--center ]">{{if eq $icu 0}}—{{else}}{{$icu}}{{end}}</td>
+        </tr>
+        <tr> 
+          <th class="[ column--head column--sidebar column--blue ] [ text--left pl--050 ]">Total</th>
+          <td class="[ text--center ]">{{if eq $totalPointChange 0}}—{{else}}{{ if gt $totalPointChange 0 }}+{{end}}{{$totalPointChange}}{{end}}</td>
+          <td class="[ column--blue text--center ]">{{if eq $total 0}}—{{else}}{{$total}}{{end}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <figcaption>Fig.3.1 — COVID-19 (Coronavirus) hospitalizations in The Bahamas as of {{ .Date.Format "Monday, Jan 2, 2006" }}.</figcaption>
+  </figure>
+  <figure class="[ mb--d15 ]">
+    <table class="[ table--rates ] [ mb--1 ]"> 
+      <thead> 
+        <tr> 
+          <th class="[ column--head column--sidebar column--blue ] [ text--left pl--050 ]">Rate </th>
+          <th class="[ text--center ]">%</th>
+          <th class="[ column--blue ] [ text--center ]">Per 100K</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th class="[ column--head column--sidebar column--blue ] [ text--left pl--050 ]">Hospitalization</th>
+          <td class="[ text--center ]">{{ lang.NumFmt 2 (mul (div (float $total) $active ) 100) }}%</td>
+          <td class="[ column--blue ] [ text--center ]">{{ lang.NumFmt 2 (mul (div (float $total) $pop ) 100000) }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <figcaption> 
+      <p>Fig.3.2 — Hospitalization Rate in The Bahamas as of {{ .Date.Format "Monday, Jan 2, 2006" }}.</p>
+      <!-- <p>This rate is calculated using a twenty-eight day average of hospitalization total.</p> -->
+    </figcaption>
+  </figure>
+</section>
+{{end}}

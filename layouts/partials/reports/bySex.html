@@ -1,0 +1,31 @@
+<section class="[ mb--2 ]">
+      
+  <h2 class="[ title--bar ] [ h4 p--050 mb--050 ]">Cases by Sex</h2>
+
+  <table class="[ table ]">
+
+    <thead>
+      <tr>
+        <th class="[ column--head column--blue ] [ text--left pl--1 ]">Sex</th>
+        <th class="[ text--center ]">New</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {{ range $i, $e := .Params.report.cases.bySex }}
+      <tr>
+        <th class="[ column--head column--blue ] [ text--left pl--1 ]">{{ .group.sex }}</th>
+        <td class="[ text--center ]">{{ if eq .group.new 0 }}—{{else}}{{ .group.new }}{{ end }}</td>
+      </tr>
+      {{ end }}
+
+      <tr>
+        <th class="[ column--head column--blue ] [ text--left pl--1 ]">Total</th>
+        <td class="[ text--center bold ]">{{ .Params.report.cases.newTotal }}</td>
+      </tr>
+    
+    </tbody>
+
+  </table>
+
+</section>
