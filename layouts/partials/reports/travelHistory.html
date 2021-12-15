@@ -15,17 +15,17 @@
           </tr>
   
         </thead>
-  
+        {{ $travelTotal := 0 }}
         <tbody>
           {{ range $i, $e := .Params.report.cases.historyOfTravel.byIsland }}
           <tr>
             <th class="[ column--head column--blue ] [ text--left pl--1 ]">{{ .island.name }}</th>
             <td class="[ text--center ]">{{ .island.new }}</td>
-          </tr>
+          </tr>{{ $travelTotal = add $travelTotal .island.new }}
           {{ end }}
           <tr>
             <th class="[ column--head column--blue ] [ text--left pl--1 ]">Total</th>
-            <td class="[ text--center bold ]">{{ .Params.report.cases.historyOfTravel.total }}</td>
+            <td class="[ text--center bold ]">{{ $travelTotal }}</td>
           </tr>
         </tbody>
   
