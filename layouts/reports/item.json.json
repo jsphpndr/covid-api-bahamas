@@ -11,16 +11,16 @@
           }{{ end }}
         ],
         "newTotal": {{ $cases.newTotal }},
-        "toDateTotal": {{ $cases.toDateTotal }},
-        "historyOfTravel": {
-          "byIsland": {{if eq $cases.ifTravelHistory true }} [ {{ range $i, $e := $history.byIsland }}{{ if $i }},{{ end }}
+        "toDateTotal": {{ $cases.toDateTotal }},{{ $travelTotal := 0 }}
+        "historyOfTravel": { {{if eq $cases.ifTravelHistory true }}
+          "byIsland":  [ {{ range $i, $e := $history.byIsland }}{{ if $i }},{{ end }}
             {
               "name": "{{ .island.name }}",
-              "new": {{ .island.new }}
+              "new": {{ .island.new }}{{ $travelTotal = add $travelTotal .island.new }}
             }
           {{ end }}
-          ]{{ else }}false{{ end }},
-          "total": {{ $history.total}}
+          ]{{ end }},
+          "total": {{ $travelTotal }}
         },
         "bySex": [ {{ range $i, $e := .Params.report.cases.bySex }}{{ if $i }},{{ end }}
           {
