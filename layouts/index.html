@@ -57,6 +57,58 @@
         
       </header>
 
+      
+      <!-- <div class="[ x--wide ]"> -->
+
+        <!-- <section class="mb--2">
+
+          <h2 class="[ h3 mb--050 ]">COVID-19 Case Reports</h2>
+          {{ .Content }}
+        
+          <ul class="[ loop ] [ mb--2 ]">
+            {{ range ( where .Site.RegularPages.ByTitle "Type" "reports" | last 5 ).Reverse  }}
+            <li class="[ loop__item ] [ p--1 mb--050 ]">
+                <h3 class="[ h5 mb--025 ]"><a href="{{ .Permalink }}">COVID-19 Case Report {{ .Title }}</a></h3>
+                <p>{{ .Date | dateFormat "Monday, Jan 2, 2006" }}</p>
+            </li>
+            {{ end }}
+          </ul>
+
+          <div class="[ flex--end ]">
+            <a href="/reports">All Reports</a>
+          </div>
+
+        </section> -->
+
+        <!-- <section class="[ mb--3 ]">
+
+          <h2 class="[ h3 mb--050 ]">COVID-19 Vaccination Updates</h2>
+
+          <ul class="[ loop ] [ mb--2 ]">
+            {{ range ( where .Site.RegularPages.ByDate "Type" "updates" | last 5 ).Reverse  }}
+            <li class="[ loop__item ] [ flex--between flex--wrap p--1 mb--050 ]">
+                <div>
+                  <h3 class="[ h5 mb--025 ]"><a href="{{ .Permalink }}">COVID-19 Vaccination Update {{ .Date.Format "060102" }}</a></h3>
+                  <p>{{ .Date.Format "Monday, Jan 02, 2006" }}</p>
+                </div>
+            </li>
+            {{ end }}
+          </ul>
+          <div class="[ flex--end ]">
+            <a href="/updates">All Updates</a>
+          </div> -->
+        
+        <!-- 
+              
+          Are you a contributor? 
+          
+          Add your name to the 'data/contributors.yml' file.
+        
+        -->
+
+        <!-- </section> -->
+        
+      <!-- </div> -->
       <div class="[ stats--current ] [ x--wide text--center py--1 mb--2 ]">
         {{ range ( where .Site.RegularPages.ByTitle "Type" "reports" | last 1 ).Reverse }}
         <time id="dateOfData" class="[ h4 bold ]" datetime="{{.Date}}" data-date="{{.Date.Format "2006-01-02"}}">{{.Date.Format "Monday, January 2, 2006"}}</time>
@@ -122,83 +174,28 @@
               </figure>
             </section>
             <!-- <hr class="[ mb--1 ]">
-              <section> 
-                <h3 class="[ h5 mb--050 ]">Case Fatalities by Age and Sex</h3>
-                <div class="[ mb--1 ]">
-                  <button class="[ chart-btn current ] [ px--050 py--025 mr--050 ]" id="ageSexSeven">Last 7 Days</button>
-                  <button class="[ chart-btn ] [ px--050 py--025 mr--050 ]" id="ageSexFourteen">Last 14 Days</button>
-                  <button class="[ chart-btn ] [ px--050 py--025 ]" id="ageSexTwentyEight">Last 28 Days</button>
+            <section> 
+              <h3 class="[ h5 mb--050 ]">Case Fatalities by Age and Sex</h3>
+              <div class="[ mb--1 ]">
+                <button class="[ chart-btn current ] [ px--050 py--025 mr--050 ]" id="ageSexSeven">Last 7 Days</button>
+                <button class="[ chart-btn ] [ px--050 py--025 mr--050 ]" id="ageSexFourteen">Last 14 Days</button>
+                <button class="[ chart-btn ] [ px--050 py--025 ]" id="ageSexTwentyEight">Last 28 Days</button>
+              </div>
+              <figure class="[ chart ] [ mb--2 ]">
+                <div class="[ wrapper ] [ mb--1 ]">
+                  <canvas id="ageSex"></canvas>
                 </div>
-                <figure class="[ chart ] [ mb--2 ]">
-                  <div class="[ wrapper ] [ mb--1 ]">
-                    <canvas id="ageSex"></canvas>
-                  </div>
-                  <figcaption>This is a caption.</figcaption>
-                </figure>
-              </section> -->
-            </div>
+                <figcaption>This is a caption.</figcaption>
+              </figure>
+            </section> -->
           </div>
         </div>
-        
-        <hr class="[ x--wide mb--2 ]">
-        
-        <div class="[ x--wide ]">
-  
-          <section class="mb--2">
-  
-            <h2 class="[ h3 mb--050 ]">COVID-19 Case Reports</h2>
-            {{ .Content }}
-          
-            <ul class="[ loop ] [ mb--2 ]">
-              {{ range ( where .Site.RegularPages.ByTitle "Type" "reports" | last 5 ).Reverse  }}
-              <li class="[ loop__item ] [ p--1 mb--050 ]">
-                  <h3 class="[ h5 mb--025 ]"><a href="{{ .Permalink }}">COVID-19 Case Report {{ .Title }}</a></h3>
-                  <p>{{ .Date | dateFormat "Monday, Jan 2, 2006" }}</p>
-              </li>
-              {{ end }}
-            </ul>
-  
-            <div class="[ flex--end ]">
-              <a href="/reports">All Reports</a>
-            </div>
-  
-          </section>
-          
-          <hr class="[ x--wide mb--2 ]">
-  
-          <section class="[ mb--3 ]">
-  
-            <h2 class="[ h3 mb--050 ]">COVID-19 Vaccination Updates</h2>
-  
-            <ul class="[ loop ] [ mb--2 ]">
-              {{ range ( where .Site.RegularPages.ByDate "Type" "updates" | last 5 ).Reverse  }}
-              <li class="[ loop__item ] [ flex--between flex--wrap p--1 mb--050 ]">
-                  <div>
-                    <h3 class="[ h5 mb--025 ]"><a href="{{ .Permalink }}">COVID-19 Vaccination Update {{ .Date.Format "060102" }}</a></h3>
-                    <p>{{ .Date.Format "Monday, Jan 02, 2006" }}</p>
-                  </div>
-              </li>
-              {{ end }}
-            </ul>
-            <div class="[ flex--end ]">
-              <a href="/updates">All Updates</a>
-            </div>
-          
-          <!-- 
-                
-            Are you a contributor? 
-            
-            Add your name to the 'data/contributors.yml' file.
-          
-          -->
-  
-          </section>
-          
-        </div>
-      </main>
-      
-      {{ partial "components/sponsor.html" . }}
-      
+      </div>
+
+    </main>
+    
+    {{ partial "components/sponsor.html" . }}
+    
     {{ if .Site.Params.contributors }}
     <section class="[ x--wide mb--3 ]">
       

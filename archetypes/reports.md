@@ -169,7 +169,10 @@ report: ### DO NOT TOUCH ###
             - island: ### DO NOT TOUCH ###
                 name:
                 new: 
-
+        
+        ##### TOTAL CASES WITH HISTORY OF TRAVEL #####
+        total: 0
+    
     ##### GENDER OF NEWLY CONFIRMED CASES ########
     bySex: ### DO NOT TOUCH ###
       #############################
