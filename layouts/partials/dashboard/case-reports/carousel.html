@@ -22,15 +22,11 @@
       <h2 class="[ h5 upper ]">New</h2><span class="[ h1 bold ]">{{if gt $cases.newTotal 0 }}+{{end}}{{ $cases.newTotal }}</span>
     </li>
     <li class="[ stats--current ] [ text--center py--1 mb--1 ml--1 ]">
-      <h2 class="[ h5 upper ]">Recovered</h2><span class="[ h1 bold ]">{{if gt $cases.recovered.new 0 }}+{{end}}{{ $cases.recovered.new }}</span>
-    </li>
-    {{ end }}
-    <li class="[ stats--current ] [ text--center py--1 mb--1 ml--1 ]">
       <h2 class="[ h5 upper ]">Hospitalized</h2><span class="[ h1 bold ]">{{if gt $hospitalization 0 }}+{{end}}{{$hospitalization}}</span>
     </li>
-    {{ $pages := where site.RegularPages.ByTitle.Reverse "Section" "reports" }}
-
-    {{ range ( where .Site.RegularPages.ByDate "Type" "reports" | last 1 ).Reverse  }}
+    <li class="[ stats--current ] [ text--center py--1 mb--1 ml--1 ]">
+      <h2 class="[ h5 upper ]">Recovered</h2><span class="[ h1 bold ]">{{if gt $cases.recovered.new 0 }}+{{end}}{{ $cases.recovered.new }}</span>
+    </li>
     <li class="[ stats--current ] [ text--center py--1 mb--1 ml--1 ]">
       <h2 class="[ h5 upper ]">Deaths</h2><span class="[ h1 bold ]">{{ if eq .Params.report.ifReported true }}+{{ len .Params.report.reportedFatalities }}{{else}}0{{ end }}</span>
     </li>
