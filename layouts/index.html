@@ -8,7 +8,7 @@
     {{ partial "head/canonical.html" . }}
     {{ partial "head/defaults.html" . }}
     <meta property="fb:app_id" content="384650276688740">
-    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:url" content="{{ .Permalink | replaceRE "/$" "" }}">
     <meta property="og:type" content="website">
     <meta property="og:title" content="COVID Dashboard | COVID-19 API | Bahamas">
     <meta property="og:description" content="{{ $desc }}">
@@ -44,10 +44,10 @@
           
           <div class="[ flex--middle flex--wrap mb--1 ]">
             {{ range ( where .Site.RegularPages.ByTitle "Type" "reports" | last 1 ).Reverse  }}
-            <a class="[ btn btn--solid--lg btn--blk btn--flex ] [ mr--1 ]" href="{{ .Permalink }}">Latest Report</a>
+            <a class="[ btn btn--solid--lg btn--blk btn--flex ] [ mr--1 ]" href="{{ .Permalink | replaceRE "/$" "" }}">Latest Report</a>
             {{ end }}
             {{ range ( where .Site.RegularPages.ByTitle "Type" "updates" | last 1 ).Reverse  }}
-            <a class="[ btn btn--ghost--lg btn--flex ]" href="{{ .Permalink }}">Latest Update</a>
+            <a class="[ btn btn--ghost--lg btn--flex ]" href="{{ .Permalink | replaceRE "/$" "" }}">Latest Update</a>
             {{ end }}
           </div>
 
@@ -68,7 +68,7 @@
           <ul class="[ loop ] [ mb--2 ]">
             {{ range ( where .Site.RegularPages.ByTitle "Type" "reports" | last 5 ).Reverse  }}
             <li class="[ loop__item ] [ p--1 mb--050 ]">
-                <h3 class="[ h5 mb--025 ]"><a href="{{ .Permalink }}">COVID-19 Case Report {{ .Title }}</a></h3>
+                <h3 class="[ h5 mb--025 ]"><a href="{{ .Permalink | replaceRE "/$" "" }}">COVID-19 Case Report {{ .Title }}</a></h3>
                 <p>{{ .Date | dateFormat "Monday, Jan 2, 2006" }}</p>
             </li>
             {{ end }}
@@ -88,7 +88,7 @@
             {{ range ( where .Site.RegularPages.ByDate "Type" "updates" | last 5 ).Reverse  }}
             <li class="[ loop__item ] [ flex--between flex--wrap p--1 mb--050 ]">
                 <div>
-                  <h3 class="[ h5 mb--025 ]"><a href="{{ .Permalink }}">COVID-19 Vaccination Update {{ .Date.Format "060102" }}</a></h3>
+                  <h3 class="[ h5 mb--025 ]"><a href="{{ .Permalink | replaceRE "/$" "" }}">COVID-19 Vaccination Update {{ .Date.Format "060102" }}</a></h3>
                   <p>{{ .Date.Format "Monday, Jan 02, 2006" }}</p>
                 </div>
             </li>
