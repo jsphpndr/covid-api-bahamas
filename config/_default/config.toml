@@ -1,4 +1,4 @@
-baseURL = "https://covidbahamas.app/"
+baseURL = "https://covidbahamas.app"
 languageCode = "en-uk"
 title = "COVID-19 API Bahamas"
 upload_dir = "static/uploads"
