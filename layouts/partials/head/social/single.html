@@ -1,5 +1,5 @@
 <meta property="fb:app_id" content="384650276688740">
-<meta property="og:url" content="{{ .Permalink }}">{{ $report := .Scratch.Get "report" }}
+<meta property="og:url" content="{{ .Permalink | replaceRE "/$" "" }}">{{ $report := .Scratch.Get "report" }}
 <meta property="og:type" content="website">
 <meta property="og:title" content="{{ $report }} {{ .Title }} | COVID-19 API | Bahamas">
 <meta property="og:description" content="{{ $report }} {{ .Title }} issued on {{ .Date | dateFormat "Monday, Jan 2, 2006" }} from The Bahamas' Ministry of Health & Wellness.">

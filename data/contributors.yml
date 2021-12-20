@@ -29,6 +29,12 @@
 #   name: #Your Name
 #   website: #(www.)mywebsite.com #Personal or social media website
 
+con001:
+  name: Garnell Pinder
+
+con002:
+  name: Joe Mooring
+  website: https://github.com/jmooring
 
 con0003:
   name: Javano Collins
@@ -81,8 +87,3 @@ con013:
 # con014: 
 #   name: Raajni
 #   website: 
-
-con0014:
-  name: Joe Mooring
-  website: https://github.com/jmooring
-

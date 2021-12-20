@@ -1,5 +1,5 @@
-<link rel="alternate" href="{{.Permalink}}" hreflang="en-us">
-<link rel="alternate" href="{{.Permalink}}" hreflang="en-gb">
-<link rel="alternate" href="{{.Permalink}}" hreflang="en-ca">
-<link rel="alternate" href="{{.Permalink}}" hreflang="en">
-<link rel="canonical" href="{{.Permalink}}">
+<link rel="alternate" href="{{ .Permalink | replaceRE "/$" "" }}" hreflang="en-us">
+<link rel="alternate" href="{{ .Permalink | replaceRE "/$" "" }}" hreflang="en-gb">
+<link rel="alternate" href="{{ .Permalink | replaceRE "/$" "" }}" hreflang="en-ca">
+<link rel="alternate" href="{{ .Permalink | replaceRE "/$" "" }}" hreflang="en">
+<link rel="canonical" href="{{ .Permalink | replaceRE "/$" "" }}">
