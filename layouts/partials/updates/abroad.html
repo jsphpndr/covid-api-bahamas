@@ -1,22 +1,20 @@
-<section>
-  {{ $update := .Params.update }}
-  {{ $aggregate := $update.doses.aggregate }}
-  {{ $total := $aggregate.total }}
-  {{ $first := $aggregate.first }}
-  {{ $second := sub $total $first }}
-  {{ $full := $update.full }}
-  {{ $abroad := $update.abroad }}
-  {{ $jj := $update.jj }}
+{{ $update := .Params.update }}
+{{ $aggregate := $update.doses.aggregate }}
+{{ $total := $aggregate.total }}
+{{ $first := $aggregate.first }}
+{{ $second := sub $total $first }}
+{{ $full := $update.full }}
+{{ $abroad := $update.abroad }}
+{{ $jj := $update.jj }}
+{{ if gt $abroad 0 }}
+<section class="[ mb--2 ]">
   <h2 class="[ title--bar ] [ h4 p--050 mb--050 ]">Vaccinations Abroad</h2>
 
   <figure class="[ mb--2 ]">
-
+    {{ with .NextInSection }}
+    {{ $prevTotal := .Params.update.abroad }}
     <table class="[ table mb--1 ]">
       
-      {{ with .NextInSection }}
-      {{ $prevSecondTotal := sub  $abroad .Params.update.abroad }}
-      {{end}}
-
       <thead>
         <th class="[ column--head column--blue ] [ text--left pl--1 ]">Registered</th>
         <th class="[ text--center ]">New</th>
@@ -24,33 +22,18 @@
       </thead>
 
       <tbody>
-        <!-- <tr>
-          <th class="[ column--head column--blue ] [ text--left pl--050 ]">Locally</th>
-          <td class="[ text--center ]">{{ with .NextInSection }}{{ $prevTotal := sub .Params.update.doses.aggregate.total .Params.update.doses.aggregate.first }}{{ lang.NumFmt 0 (sub $second $prevTotal) }}{{end}}</td>
-          <td class="[ column--blue ] [ text--center ]">{{ lang.NumFmt 0 $second }}</td>
-        </tr> -->
         <tr>
           <th class="[ column--head column--blue ] [ text--left pl--1 ]">Totals</th>
-          <td class="[ text--center ]">{{ with .NextInSection }}{{ $prevTotal := .Params.update.abroad }}{{ lang.NumFmt 0 (sub $abroad $prevTotal) }}{{end}}</td>
+          <td class="[ text--center ]">{{ if eq (sub $abroad $prevTotal) 0 }}—{{else}}{{ lang.NumFmt 0 (sub $abroad $prevTotal) }}{{end}}</td>
           <td class="[ column--blue ] [ text--center ]">{{ if eq $second $full }}—{{else if and (eq $abroad 0) (lt $second $full) }}{{ lang.NumFmt 0 (sub $full $second) }}{{else}}{{ lang.NumFmt 0 $abroad }}{{end}}</td>
         </tr>
-      </tbody>
-      <!-- <tfoot>
-        <tr>
-          <th class="[ column--head column--blue ] [ text--left pl--050 ]">Totals</th>
-          <td class="[ text--center ]">{{ if eq $second $full }}—{{else if and (eq $abroad 0) (lt $second $full) }}{{ lang.NumFmt 0 (sub $full $second) }}{{else}}{{ lang.NumFmt 0 $abroad }}{{end}}</td>
-          <td class="[ column--blue ] [ text--center bold ]">{{ lang.NumFmt 0 $full }}</td>
-        </tr>
-      </tfoot> -->
-  
+      </tbody>  
     </table>
+    {{end}}
     <figcaption>
-      {{ if and (eq $abroad 0) (lt $second $full) }}
-      <p><strong>Note:</strong> Numbers of registrants vaccinated abroad are reflected in report as of Saturday, Jul 24, 2021.</p>
-      {{ end }}
-    
+      <p><strong>Note:</strong> Registrants vaccinated abroad introduced to numbers between Sunday, Jul 18, 2021 and Saturday, Jul 24, 2021.</p>
     </figcaption>
   </figure>
 
-
 </section>
+{{ end }}

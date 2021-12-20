@@ -7,18 +7,24 @@
   {{ $aggregate := $update.doses.aggregate }}
   {{ $total := $aggregate.total }}
   {{ $first := $aggregate.first }}
-  {{ $second := sub $total $first }}
+  {{ $withBooster := sub $total $first }}
   {{ $full := $update.full }}
   {{ $abroad := $update.abroad }}
+  {{ $second := sub $full $abroad }}
   {{ $jj := $update.jj }}
 
   <figure class="[ mb--2 ]">
 
     <table class="[ table mb--1 ]">
       {{ with .NextInSection }}
-        {{ $prevSecondTotal := sub .Params.update.doses.aggregate.total .Params.update.doses.aggregate.first }}
-      {{end}}
-
+      {{ $prevAggregate := .Params.update.doses.aggregate }}
+      {{ $prevTotal := $prevAggregate.total }}
+      {{ $prevFirst := $prevAggregate.first }}
+      {{ $prevWithBooster := sub $prevTotal $prevFirst }}
+      {{ $prevFull := .Params.update.full }}
+      {{ $prevAbroad := .Params.update.abroad }}
+      {{ $prevSecond := sub $prevFull $prevAbroad }}
+      {{ $prevBoosters := sub (sub $withBooster $second) (sub $prevWithBooster $prevSecond) }}
       <thead>
         <th class="[ column--head column--blue ] [ text--left pl--1 ]">Dosage</th>
         <th class="[ text--center ]" >New</th>
@@ -28,24 +34,26 @@
       <tbody>
         <tr>
           <th class="[ column--head column--blue ] [ text--left pl--1 ]">First</th>
-          <td class="[ text--center ]">{{ with .NextInSection }}{{ $prevTotal := .Params.update.doses.aggregate.first }}{{ lang.NumFmt 0 (sub $aggregate.first $prevTotal) }}{{end}}</td>
+          <td class="[ text--center ]">{{ if le (sub $first $prevFirst) 0 }}—{{else}}{{ lang.NumFmt 0 (sub $first $prevFirst) }}{{end}}</td>
           <td class="[ column--blue ] [ text--center ]">{{ lang.NumFmt 0 $first }}</td>
         </tr>
         <tr>
           <th class="[ column--head column--blue ] [ text--left pl--1 ]">{{ if $jj }}Fully Vaccinated{{else}}Second{{end}}</th>
-          <td class="[ text--center ]">{{ with .NextInSection }}{{ $prevTotal := sub .Params.update.doses.aggregate.total .Params.update.doses.aggregate.first }}{{ lang.NumFmt 0 (sub $second $prevTotal) }}{{end}}</td>
+          <td class="[ text--center ]">{{ if le (sub $second $prevSecond) 0 }}—{{else}}{{ lang.NumFmt 0 (sub $second $prevSecond) }}{{end}}</td>
           <td class="[ column--blue ] [ text--center ]">{{ lang.NumFmt 0 $second }}</td>
         </tr>
       </tbody>
       <tfoot>
         <tr>
           <th class="[ column--head column--blue ] [ text--left pl--1 ]">Totals</th>
-          <td class="[ text--center bold ]">{{ with .NextInSection }}{{ $prevTotal := .Params.update.doses.aggregate.total }}{{ lang.NumFmt 0 (sub $aggregate.total $prevTotal) }}{{end}}</td>
+          <td class="[ text--center bold ]">{{ lang.NumFmt 0 (sub $aggregate.total $prevTotal) }}</td>
           <td class="[ column--blue ] [ text--center bold ]">{{ lang.NumFmt 0 (add $first $second) }}</td>
         </tr>
       </tfoot>
   
     </table>
+    {{end}}
+
     <figcaption>
     {{ if .Params.errorTotal }}<p><strong>Note:</strong> {{ .Params.errorTotal  }}</p>{{end}}
     <p><strong>Note:</strong> Figures represent dosages of vaccinations administered locally. <b>First</b> refers to those persons having only received one dose of a two dose vaccination{{ if eq $jj true }} and exclusive of Johnson & Johnson{{end}}.</p>

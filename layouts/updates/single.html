@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>COVID-19 Vaccination Update {{ .Title }} | COVID-19 API | Bahamas</title>
-    <meta name="description" content="COVID-19 Vaccination Update {{ .Title }} issued on {{ .Date | dateFormat "Monday, Jan 2, 2006" }} from The Bahamas' Ministry of Health & Wellness.">
+    <meta name="description" content="COVID-19 Vaccination Update {{ .Title }} issued on {{ .Date | dateFormat "Monday, Jan 2, 2006" }} from The Bahamas' Ministry of Health &amp; Wellness.">
     {{ partial "head/defaults.html" . }}{{ .Scratch.Set "report" "COVID-19 Vaccination Update" }}
     {{ partial "head/social/single.html" . }}
     {{ partial "head/ga.html" . }}
@@ -19,7 +19,7 @@
       <div class="[ wrapper ] [ x--wide ]">
         <h1>COVID-19 Vaccination Update {{ .Title }}</h1>
 
-        <p class="ch--45">COVID-19 Vaccination Update {{ .Title }} issued on <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}">{{ .Date | dateFormat "Monday, Jan 2, 2006" }}</time> from The Bahamas' Ministry of Health & Wellness.</p>
+        <p class="ch--45">COVID-19 Vaccination Update {{ .Title }} issued on <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}">{{ .Date | dateFormat "Monday, Jan 2, 2006" }}</time> from The Bahamas' Ministry of Health &amp; Wellness.</p>
   
         <div class="[ flex--middle flex--wrap mb--1 ]">
           <a class="[ btn btn--solid--lg btn--blk btn--flex ] [ mr--1 ]" href="/">View Dashboard</a>
@@ -58,6 +58,8 @@
       {{ partial "updates/totals.html" .  }}
 
       {{ partial "updates/abroad.html" . }}
+
+      {{ partial "updates/boosters.html" . }}
 
       {{ partial "updates/pop.html" . }}
 

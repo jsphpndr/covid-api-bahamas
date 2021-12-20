@@ -1,0 +1,51 @@
+{{ $update := .Params.update }}
+{{ $aggregate := $update.doses.aggregate }}
+{{ $total := $aggregate.total }}
+{{ $first := $aggregate.first }}
+{{ $withBooster := sub $total $first }}
+{{ $full := $update.full }}
+{{ $abroad := $update.abroad }}
+{{ $second := sub $full $abroad }}
+{{ $jj := $update.jj }}
+
+{{ if .Params.booster }}
+<section class="[ mb--2 ]">
+
+  <h2 class="[ title--bar ] [ h4 p--050 mb--050 ]">Boosters by Dosage</h2>
+  <figure>
+ 
+    {{ with .NextInSection }}
+    {{ $prevAggregate := .Params.update.doses.aggregate }}
+    {{ $prevTotal := $prevAggregate.total }}
+    {{ $prevFirst := $prevAggregate.first }}
+    {{ $prevWithBooster := sub $prevTotal $prevFirst }}
+    {{ $prevFull := .Params.update.full }}
+    {{ $prevAbroad := .Params.update.abroad }}
+    {{ $prevSecond := sub $prevFull $prevAbroad }}
+    {{ $prevBoosters := sub (sub $withBooster $second) (sub $prevWithBooster $prevSecond) }}
+    <table class="[ table mb--1 ]">
+      
+      <thead>
+        <th class="[ column--head column--blue ] [ text--left pl--1 ]">Dosage</th>
+        <th class="[ text--center ]">New</th>
+        <th class="[ column--blue ] [ text--center ]">To Date</th>
+      </thead>
+
+      <tbody>
+        <tr>
+          <th class="[ column--head column--blue ] [ text--left pl--1 ]">Booster</th>
+          <td class="[ text--center ]">{{ if le $prevBoosters 0 }}—{{else}}{{ lang.NumFmt 0 $prevBoosters }}{{end}}</td>
+          <td class="[ column--blue ] [ text--center ]">{{ lang.NumFmt 0 (sub $withBooster $second) }}</td>
+        </tr>
+
+      </tbody>
+
+    </table>
+    {{end}}
+    <figcaption>
+      <p><strong>Note:</strong> {{ .Params.booster }}</p>
+    </figcaption>
+  </figure>
+
+</section>
+{{end}}
