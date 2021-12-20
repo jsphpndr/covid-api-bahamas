@@ -47,9 +47,9 @@
   
     </table>
     <figcaption>
+    {{ if .Params.errorTotal }}<p><strong>Note:</strong> {{ .Params.errorTotal  }}</p>{{end}}
     <p><strong>Note:</strong> Figures represent dosages of vaccinations administered locally. <b>First</b> refers to those persons having only received one dose of a two dose vaccination{{ if eq $jj true }} and exclusive of Johnson & Johnson{{end}}.</p>
     {{ if eq $update.pfizer true }}
-    
       <p><strong>Note:</strong> {{ $update.pfizernote }}</p>
       {{ if eq $jj true }}
       <p><strong>Note:</strong> {{ $update.jjnote }}</p>
