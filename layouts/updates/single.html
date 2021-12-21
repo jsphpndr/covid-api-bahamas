@@ -67,7 +67,9 @@
 
       {{ partial "updates/goal.html" . }}
       
-      {{ if eq .Params.update.jj true }}
+      {{ if and (eq .Params.update.jj true) (eq .Params.booster true) }}
+      {{ partial "updates/byIsland-booster.html" . }}
+      {{ else if eq .Params.update.jj true }}
       {{ partial "updates/byIsland-full.html" . }}
       {{ else }}
       {{ partial "updates/byIsland-second.html" . }}

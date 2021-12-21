@@ -22,15 +22,11 @@
           {{ $byIslandTotal := 0 }}
           <tr>
             <th class="[ column--head column--blue ] [ text--left pl--1 ]" rowspan="2">Island</td>
-            <th class="[ text--center ]" colspan="2">First</td>
-            <th class="[ column--blue ][ text--center ]" colspan="2">{{ if $jj }}Fully Vaccinated{{else}}Second{{end}}</td>
-            <th class="[ text--center ]" rowspan="2">Total</th>
+            <th class="[ text--center ]" colspan="2">{{ if $jj }}Fully Vaccinated{{else}}Second{{end}}</td>
           </tr>
           <tr>
             <td class="[ text--center ]">New</td>
             <td class="[ text--center ]">Total</td>
-            <td class="[ column--blue ] [ text--center ]">New</td>
-            <td class="[ column--blue ] [ text--center ]">Total</td>
           </tr>
     
         </thead>
@@ -66,14 +62,9 @@
           {{end}}
           <tr>
             <th class="[ column--head column--blue ] [ text--left pl--1 ]">{{ .island.name }}</th>
-            <!-- First -->
-            <td class="[ text--center ]">{{if le $newFirstDose 0}}—{{else}}{{ lang.NumFmt 0 $newFirstDose }}{{end}}</td>
-            <td class="[ text--center ]">{{ lang.NumFmt 0 (sub .island.first .island.fully) }}</td>
             <!-- Second -->
-            <td class="[ column--blue ][ text--center ]">{{ if ne $newFullyDose 0 }}{{ lang.NumFmt 0 $newFullyDose }}{{else}}—{{end}}</td>
-            <td class="[ column--blue ][ text--center ]">{{if ne .island.fully 0 }}{{ lang.NumFmt 0 .island.fully }}{{else}}—{{end}}</td>
-            <!-- Total -->
-            <td class="[ text--center ]">{{ lang.NumFmt 0 .island.first }}</td>
+            <td class="[ text--center ]">{{ if ne $newFullyDose 0 }}{{ lang.NumFmt 0 $newFullyDose }}{{else}}—{{end}}</td>
+            <td class="[ text--center ]">{{if ne .island.fully 0 }}{{ lang.NumFmt 0 .island.fully }}{{else}}—{{end}}</td>
           </tr>
           {{ $firstTotal = add $firstTotal (sub .island.first .island.fully) }}
           {{ $fullyTotal = add $fullyTotal .island.fully }}
@@ -84,11 +75,8 @@
 
           <tr>
             <th class="[ column--head column--blue ] [ text--left pl--1 ]">Totals</th>
-            <td class="[ text--center ]">{{ if ne $prevFirstDoseTotal 0 }}{{ lang.NumFmt 0 $prevFirstDoseTotal }}{{else}}—{{end}}</td>
-            <td class="[ text--center ]">{{ lang.NumFmt 0 $firstTotal }}</td>
-            <td class="[ column--blue ] [ text--center ]">{{ if ne $prevFullyDoseTotal 0 }}{{ lang.NumFmt 0 $prevFullyDoseTotal }}{{else}}—{{end}}</td>
-            <td class="[ column--blue ] [ text--center ]">{{ lang.NumFmt 0 $fullyTotal }}</td>
-            <td class="[ text--center ]">{{ lang.NumFmt 0 $byIslandTotal }}</td>
+            <td class="[ text--center ]">{{ if ne $prevFullyDoseTotal 0 }}{{ lang.NumFmt 0 $prevFullyDoseTotal }}{{else}}—{{end}}</td>
+            <td class="[ text--center ]">{{ lang.NumFmt 0 $fullyTotal }}</td>
           </tr>
         </tfoot>
     
@@ -106,6 +94,7 @@
         {{end}}
       {{end}}
       {{ if .Params.update.error }}<p><strong>Note:</strong> {{ .Params.update.error }}</p>{{end}}
+      <p><strong>Note:</strong> Due to the introduction of COVID-19 booster shots and deficiencies in The Government of The Bahamas' configuration and presentation of data, it is no longer possible to report on first doses and total vaccination doses.</p>
     </figcaption>
 
   </figure>
