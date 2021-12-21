@@ -25,7 +25,7 @@
         </tr>
         <tr>
           <th class="[ column--head column--sidebar column--blue ] [ text--left pl--050 ]">Reported</th>
-          <td class="[ text--center ]">{{ if .Params.report.reportedFatalities }}{{if gt (len .Params.report.reportedFatalities) 0 }}+{{end}}{{ len .Params.report.reportedFatalities }}{{else}}—{{end}}</td>
+          <td class="[ text--center ]">{{ if .Params.report.ifReported }}+{{ len .Params.report.reportedFatalities }}{{else}}—{{end}}</td>
           <td class="[ column--blue ] [ text--center ]">{{ if eq $last28 0 }}—{{else}}{{ $last28 }}{{end}}</td>
         </tr>
         <!-- <tr> 
