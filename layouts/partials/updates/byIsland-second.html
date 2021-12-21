@@ -60,13 +60,13 @@
           <tr>
             <th class="[ column--head column--blue ] [ text--left pl--1 ]">{{ .island.name }}</th>
             <!-- First -->
-            <td class="[ text--center ]">{{if ne $newFirstDose 0}}{{ $newFirstDose }}{{else}}—{{end}}</td>
-            <td class="[ text--center ]">{{ .island.first }}</td>
+            <td class="[ text--center ]">{{if ne $newFirstDose 0}}{{ lang.NumFmt 0 $newFirstDose }}{{else}}—{{end}}</td>
+            <td class="[ text--center ]">{{ lang.NumFmt 0 .island.first }}</td>
             <!-- Second -->
-            <td class="[ column--blue ] [ text--center ]">{{ if ne $newSecondDose 0 }}{{ $newSecondDose }}{{else}}—{{end}}</td>
-            <td class="[ column--blue ] [ text--center ]">{{if ne .island.second 0 }}{{ .island.second }}{{else}}—{{end}}</td>
+            <td class="[ column--blue ] [ text--center ]">{{ if ne $newSecondDose 0 }}{{ lang.NumFmt 0 $newSecondDose }}{{else}}—{{end}}</td>
+            <td class="[ column--blue ] [ text--center ]">{{if ne .island.second 0 }}{{ lang.NumFmt 0 .island.second }}{{else}}—{{end}}</td>
             <!-- Total -->
-            <td class="[ text--center ]">{{ add .island.first .island.second }}</td>
+            <td class="[ text--center ]">{{ lang.NumFmt 0 (add .island.first .island.second) }}</td>
           </tr>
           {{ $firstTotal = add $firstTotal .island.first }}
           {{ $secondTotal = add $secondTotal .island.second }}
@@ -78,11 +78,11 @@
 
           <tr>
             <th class="[ column--head column--blue ] [ text--left pl--1 ]">Totals</th>
-            <td class="[ text--center ]">{{ if ne $prevFirstDoseTotal 0 }}{{ $prevFirstDoseTotal }}{{else}}—{{end}}</td>
-            <td class="[ text--center ]">{{ $firstTotal }}</td>
-            <td class="[ column--blue ] [ text--center ]">{{ if ne $prevSecondDoseTotal 0 }}{{ $prevSecondDoseTotal }}{{else}}—{{end}}</td>
-            <td class="[ column--blue ] [ text--center ]">{{ $secondTotal }}</td>
-            <td class="[ text--center ]">{{ $byIslandTotal }}</td>
+            <td class="[ text--center ]">{{ if ne $prevFirstDoseTotal 0 }}{{ lang.NumFmt 0 $prevFirstDoseTotal }}{{else}}—{{end}}</td>
+            <td class="[ text--center ]">{{ lang.NumFmt 0 $firstTotal }}</td>
+            <td class="[ column--blue ] [ text--center ]">{{ if ne $prevSecondDoseTotal 0 }}{{ lang.NumFmt 0 $prevSecondDoseTotal }}{{else}}—{{end}}</td>
+            <td class="[ column--blue ] [ text--center ]">{{ lang.NumFmt 0 $secondTotal }}</td>
+            <td class="[ text--center ]">{{ lang.NumFmt 0 $byIslandTotal }}</td>
           </tr>
         </tfoot>
     

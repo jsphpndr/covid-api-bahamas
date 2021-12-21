@@ -6,7 +6,7 @@
 {{ $full := $update.full }}
 {{ $abroad := $update.abroad }}
 {{ $jj := $update.jj }}
-{{ if gt $abroad 0 }}
+{{ if or (gt $abroad 0) (and (eq $abroad 0) (lt $second $full) ) }}
 <section class="[ mb--2 ]">
   <h2 class="[ title--bar ] [ h4 p--050 mb--050 ]">Vaccinations Abroad</h2>
 
@@ -23,7 +23,7 @@
 
       <tbody>
         <tr>
-          <th class="[ column--head column--blue ] [ text--left pl--1 ]">Totals</th>
+          <th class="[ column--head column--blue ] [ text--left pl--1 ]">Abroad</th>
           <td class="[ text--center ]">{{ if eq (sub $abroad $prevTotal) 0 }}—{{else}}{{ lang.NumFmt 0 (sub $abroad $prevTotal) }}{{end}}</td>
           <td class="[ column--blue ] [ text--center ]">{{ if eq $second $full }}—{{else if and (eq $abroad 0) (lt $second $full) }}{{ lang.NumFmt 0 (sub $full $second) }}{{else}}{{ lang.NumFmt 0 $abroad }}{{end}}</td>
         </tr>
