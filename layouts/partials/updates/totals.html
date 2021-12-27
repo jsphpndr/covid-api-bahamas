@@ -46,7 +46,7 @@
       <tfoot>
         <tr>
           <th class="[ column--head column--blue ] [ text--left pl--1 ]">Totals</th>
-          <td class="[ text--center bold ]">{{ lang.NumFmt 0 (sub $aggregate.total $prevTotal) }}</td>
+          <td class="[ text--center bold ]">{{ if le (sub $first $prevFirst) 0 }}{{ lang.NumFmt 0 (add 0 (sub $second $prevSecond)) }}{{else}}{{ lang.NumFmt 0 (add (sub $first $prevFirst) (sub $second $prevSecond)) }}{{end}}</td>
           <td class="[ column--blue ] [ text--center bold ]">{{ lang.NumFmt 0 (add $first $second) }}</td>
         </tr>
       </tfoot>
